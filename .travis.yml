@@ -1,0 +1,51 @@
+---
+sudo: required
+language: objective-c
+# 10.14 (see https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version)
+osx_image: xcode10.2
+
+before_install:
+  # Uninstall existing Homebrew installation.
+  - curl --location --remote-name --silent \
+    https://raw.githubusercontent.com/Homebrew/install/master/uninstall
+  - chmod +x ./uninstall
+  - ./uninstall --force
+  - sudo rm --recursive --force /usr/local/Homebrew
+  - sudo rm --recursive --force /usr/local/Caskroom
+  - sudo rm --recursive --force /usr/local/bin/brew
+
+install:
+  # Install pip.
+  - sudo easy_install pip
+
+  # Install Ansible.
+  - sudo pip install ansible
+
+  # Add ansible.cfg to pick up roles path.
+  - "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
+
+  # Add a hosts file.
+  - sudo mkdir --parents /etc/ansible
+  - sudo touch /etc/ansible/hosts
+  # yamllint disable-line rule:line-length
+  - "echo -e '[local]\nlocalhost ansible_connection=local' | sudo tee --append /etc/ansible/hosts > /dev/null"
+
+script:
+  # Install dependencies.
+  - "ansible-galaxy install --role-file requirements.yml"
+
+  # Check the role/playbook's syntax.
+  - "ansible-playbook main.yml --syntax-check"
+
+  # Test the playbook.
+  # yamllint disable-line rule:line-length
+  - "travis_wait 30 ansible-playbook --extra-vars '{\"configure_sudoers\":\"false\"}' main.yml"
+
+  # Test the playbook's idempotence.
+  - idempotence=$(mktemp)
+  - "ansible-playbook main.yml | tee --append ${idempotence}"
+  - >
+    tail ${idempotence}
+    | grep -q 'changed=0.*failed=0'
+    && (echo 'Idempotence test: pass' && exit 0)
+    || (echo 'Idempotence test: fail' && exit 1)
