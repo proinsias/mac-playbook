@@ -1,6 +1,6 @@
 # Mac Ansible Playbook
 
-[![Build Status](https://travis-ci.org/proinsias/mac-playbook.svg?branch=master)](https://travis-ci.org/proinsias/mac-playbook)
+[![Build Status](https://travis-ci.org/proinsias/mac-playbook.svg?branch=master)](https://travis-ci.com/proinsias/mac-playbook)
 
 This playbook installs and configures most of the software I use on my Mac.
 It is inspired by and based on
@@ -73,4 +73,4 @@ see the supporting roles' documentation for a complete list of available variabl
 
 I use a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm)
 to test changes locally, and this project is
-[continuously tested on Travis CI's macOS infrastructure](https://travis-ci.org/proinsias/mac-playbook).
+[continuously tested on Travis CI's macOS infrastructure](https://travis-ci.com/proinsias/mac-playbook).
