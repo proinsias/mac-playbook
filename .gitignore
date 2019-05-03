@@ -1,0 +1,5 @@
+config.yml
+roles*
+.DS_Store
+*.retry
+*.vagrant
