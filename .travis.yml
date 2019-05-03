@@ -4,6 +4,15 @@ language: objective-c
 # 10.14 (see https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version)
 osx_image: xcode10.2
 
+matrix:
+  fast_finish: true
+  include:
+    - env:
+        - TAGS=extra-packages
+        - TAGS=homebrew
+        - TAGS=mas
+        - TAGS=osx-defaults
+
 before_install:
   # Uninstall existing Homebrew installation.
   # yamllint disable-line rule:line-length
@@ -37,14 +46,14 @@ script:
   # Check the role/playbook's syntax.
   - "ansible-playbook main.yml --syntax-check"
 
-  # Test the playbook.
-  - "travis_wait 30 ansible-playbook main.yml"
+  # Test the playbook, tag by tag
+  - "travis_wait 30 ansible-playbook main.yml --inventory inventory --ask-become-pass --tags ${TAGS}"
 
-  # Test the playbook's idempotence.
-  - idempotence=$(mktemp)
-  - "ansible-playbook main.yml | tee -a ${idempotence}"
-  - >
-    tail ${idempotence}
-    | grep -q 'changed=0.*failed=0'
-    && (echo 'Idempotence test: pass' && exit 0)
-    || (echo 'Idempotence test: fail' && exit 1)
+  # # Test the playbook's idempotence.
+  # - idempotence=$(mktemp)
+  # - "ansible-playbook main.yml | tee -a ${idempotence}"
+  # - >
+  #   tail ${idempotence}
+  #   | grep -q 'changed=0.*failed=0'
+  #   && (echo 'Idempotence test: pass' && exit 0)
+  #   || (echo 'Idempotence test: fail' && exit 1)
