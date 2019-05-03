@@ -100,7 +100,6 @@ Keyboard_PowerButtonSleepsSystem: false            # Prevent accidental Power bu
 Keyboard_PressAndHoldEnabled: false                # Disable press-and-hold for keys in favor of key repeat
 
 LanguageRegion_Enabled: true                     # Enable Language and Region configuration
-#FIXME: https://github.com/ansible/ansible-modules-extras/issues/2610
 #LanguageRegion_Languages: [ "en", "fr" ]        # Preferred languages (in order of preference e.g. [ "en", "fr" ])
 LanguageRegion_Locale: "en_US@currency=USD"      # Locale and Currency (United States : en_US@currency=USD, Great Britian : en_GB@currency=EUR)
 LanguageRegion_MeasurementUnits: "Inches"        # Measure Units (Inches, Centimeters)

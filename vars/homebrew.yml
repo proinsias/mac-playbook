@@ -291,7 +291,6 @@ homebrew_installed_packages:
   - zsh
 homebrew_uninstalled_packages: []
 homebrew_cask_apps:
-  # FIXME: Reduce this list!
   - java
   - java8
   - osxfuse

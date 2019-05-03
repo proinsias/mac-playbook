@@ -2,12 +2,11 @@
 pip_install_packages:
   - anaconda-client
   - argcomplete
-  - cheat # FIXME: homebrew?
+  - cheat
   - clf
   - csvkit
   - eg
   - emoji
-  - # flake8 stuff via homebrew? pipx?
   - flake8-bugbear
   - flake8-builtins
   - flake8-coding

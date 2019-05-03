@@ -1,6 +1,5 @@
 ---
 mas_installed_apps:
-  # FIXME: Add from firefly.
   - { id:  937984704, name: "Amphetamine" }
   - { id:  523620159, name: "CleanMyDrive 2 (2.1.12)" }
   - { id: 1055511498, name: "Day One" }

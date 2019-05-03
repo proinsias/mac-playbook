@@ -6,12 +6,12 @@
     - default.config.yml
     - vars/homebrew.yml  # geerlingguy.homebrew
     - vars/mas.yml  # geerlingguy.mas
-    - vars/osx-defaults  # lafarer.osx-defaults
+    - vars/osx-defaults.yml  # lafarer.osx-defaults
     - vars/pip.yml  # geerlingguy.pip
     - vars/ruby.yml  # geerlingguy.ruby
 
   vars:
-    ComputerName: "discovery"  # osx-computername # FIXME: Set per computer.
+    ComputerName: "discovery"  # osx-computername
     system:
       ui:
         # By default the macOS save/print dialog opens in a
