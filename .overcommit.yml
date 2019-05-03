@@ -188,7 +188,7 @@ PreCommit:
     enabled: true
   RubyLint:
     enabled: true
-    exclude: '**/mdl.rb'
+    exclude: '**/.mdl.rb'
   Safety:
     enabled: true
     required_executable: 'safety.sh'
