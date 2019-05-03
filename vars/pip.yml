@@ -1,0 +1,50 @@
+---
+pip_install_packages:
+  - anaconda-client
+  - argcomplete
+  - cheat # FIXME: homebrew?
+  - clf
+  - csvkit
+  - eg
+  - emoji
+  - # flake8 stuff via homebrew? pipx?
+  - flake8-bugbear
+  - flake8-builtins
+  - flake8-coding
+  - flake8-commas
+  - flake8-comprehensions
+  - flake8-debugger
+  - flake8-deprecated
+  - flake8-docstrings
+  - flake8_dodgy
+  - flake8-import-order
+  - flake8-imports
+  - flake8-isort
+  - flake8-mutable
+  - flake8-pep3101
+  - flake8-print
+  - flake8-string-format
+  - flake8-tidy-imports
+  - flake8-todo
+  - flake8_tuple
+  - glances
+  - hashin
+  - howdoi
+  - jupyter_contrib_nbextensions
+  - jupyterlab
+  - ntfy
+  - pip-tools
+  - proselint
+  - psutil
+  - pydocstyle
+  - pyflakes
+  - pylint
+  - pytest
+  - pytest-xdist
+  - rpy2
+  - r-essentials
+  - searchcmd
+  - slacker
+  - twine
+  - uncommitted
+  - yapf

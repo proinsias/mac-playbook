@@ -26,7 +26,7 @@ It is inspired by and based on
 
 You can filter which part of the provisioning process to run
 by specifying a set of tags using `ansible-playbook`'s `--tags` flag.
-The tags available are `dotfiles`, `homebrew`, `mas`, `extra-packages` and `osx`.
+The tags available are `dotfiles`, `homebrew`, `mas`, and `extra-packages`.
 
 ```bash
 ansible-playbook main.yml -i inventory -K --tags "dotfiles,homebrew"

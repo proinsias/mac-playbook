@@ -6,8 +6,8 @@ osx_image: xcode10.2
 
 before_install:
   # Uninstall existing Homebrew installation.
-  - curl --location --remote-name --silent \
-    https://raw.githubusercontent.com/Homebrew/install/master/uninstall
+  # yamllint disable-line rule:line-length
+  - curl --location --remote-name --silent https://raw.githubusercontent.com/Homebrew/install/master/uninstall
   - chmod +x ./uninstall
   - ./uninstall --force
   - sudo rm --recursive --force /usr/local/Homebrew
