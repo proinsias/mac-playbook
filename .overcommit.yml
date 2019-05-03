@@ -142,7 +142,8 @@ PreCommit:
     on_fail: 'warn'
     enabled: true
     flags:
-      # E703 statement ends with a semicolon. Need for matplotlib in Jupyter notebooks.
+      # E703 statement ends with a semicolon.
+      # Need for matplotlib in Jupyter notebooks.
       - '--ignore=E211,E231,E703,W291,W293'
       - '--max-line-length=120'
       # - '--show-source'  # Don't use!
