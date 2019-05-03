@@ -10,9 +10,9 @@ before_install:
   - curl --location --remote-name --silent https://raw.githubusercontent.com/Homebrew/install/master/uninstall
   - chmod +x ./uninstall
   - ./uninstall --force
-  - sudo rm --recursive --force /usr/local/Homebrew
-  - sudo rm --recursive --force /usr/local/Caskroom
-  - sudo rm --recursive --force /usr/local/bin/brew
+  - sudo rm -rf /usr/local/Homebrew
+  - sudo rm -rf /usr/local/Caskroom
+  - sudo rm -rf /usr/local/bin/brew
 
 install:
   # Install pip.
