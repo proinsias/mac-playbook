@@ -9,7 +9,6 @@ matrix:
   include:
     - env: TAGS=extra-packages
     - env: TAGS=homebrew
-    - env: TAGS=mas
     - env: TAGS=osx-defaults
 
 before_install:
