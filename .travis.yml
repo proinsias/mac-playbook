@@ -13,8 +13,8 @@ matrix:
     - env: TAGS=osx-defaults
 
 before_install:
+  # Uninstall existing Homebrew installation.
   - >
-    # Uninstall existing Homebrew installation.
     if test $TAGS = 'homebrew'; then
         curl --location --remote-name --silent https://raw.githubusercontent.com/Homebrew/install/master/uninstall
         chmod +x ./uninstall
