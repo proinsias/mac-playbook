@@ -3,27 +3,12 @@
   connection: local
 
   vars_files:
-    - default.config.yml
-    - vars/homebrew.yml  # geerlingguy.homebrew
     - vars/mas.yml  # geerlingguy.mas
+    - vars/macos.yml  # kinglouie.macos
     - vars/osx-defaults.yml  # lafarer.osx-defaults
     # - vars/pip.yml  # geerlingguy.pip
     # - vars/ruby.yml  # geerlingguy.ruby
-
-    # vars:
-    # ComputerName: "discovery"  # osx-computername
-    # system:
-    #   ui:
-    #     # By default the macOS save/print dialog opens in a
-    #     # simplified version, enable to show the full dialog
-    #     # by default.
-    #     expand_save_panel: yes
-    #     expand_print_panel: yes
-    #     # macOS ommits common file extensions by default
-    #     show_all_file_extensions: yes
-    #     # Open directory if you drag a file/folder onto it.
-    #     enable_springloading_directories: yes
-    #     springloading_directories_delay: 2
+    # - npm packages?
 
   pre_tasks:
     - include_vars: "{{ item }}"
@@ -32,13 +17,11 @@
       tags: ['always']
 
   roles:
-    - role: geerlingguy.homebrew
-      tags: ['homebrew']
     - role: geerlingguy.mas
       when: mas_installed_apps
       tags: ['mas']
-    # - kinglouie.macos
-    # - lafarer.osx-computername
+    - role: kinglouie.macos
+      tags: ['macos']
     - role: lafarer.osx-defaults
       tags: ['osx-defaults']
 
@@ -47,6 +30,12 @@
 
     - include_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
+
+    - include_tasks: tasks/homebrew.yml
+      tags: ['homebrew']
+
+    - include_tasks: tasks/homebrew-cask.yml
+      tags: ['homebrew-cask']
 
     - name: Run configured post-provision ansible task files.
       include_tasks: "{{ outer_item }}"

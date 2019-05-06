@@ -1,0 +1,9 @@
+---
+- hosts: all
+  connection: local
+
+  vars_files:
+    - vars/homebrew-cask.yml  # geerlingguy.homebrew
+
+  roles:
+    - role: geerlingguy.homebrew

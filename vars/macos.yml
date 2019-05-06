@@ -1,0 +1,13 @@
+---
+system:
+  ui:
+    # By default the macOS save/print dialog opens in a
+    # simplified version, enable to show the full dialog
+    # by default.
+    expand_save_panel: true
+    expand_print_panel: true
+    # macOS ommits common file extensions by default
+    show_all_file_extensions: true
+    # Open directory if you drag a file/folder onto it.
+    enable_springloading_directories: true
+    springloading_directories_delay: 2

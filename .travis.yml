@@ -7,9 +7,10 @@ osx_image: xcode10.2
 matrix:
   fast_finish: true
   include:
-    - env: TAGS=extra-packages
+    - env: TAGS=extra-packages,macos,osx-defaults
     - env: TAGS=homebrew
-    - env: TAGS=osx-defaults
+    - env: TAGS=homebrew-cask
+    # - env: TAGS=mas  # mas has automation issues.
 
 before_install:
   # Uninstall existing Homebrew installation.
