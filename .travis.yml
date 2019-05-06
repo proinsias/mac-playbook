@@ -48,7 +48,7 @@ script:
   - "ansible-playbook main.yml --syntax-check"
 
   # Test the playbook, tag by tag
-  - "travis_wait 30 ansible-playbook main.yml --inventory inventory --tags ${TAGS}"
+  - "travis_wait 60 ansible-playbook main.yml --inventory inventory --tags ${TAGS}"
 
   # # Test the playbook's idempotence.
   # - idempotence=$(mktemp)

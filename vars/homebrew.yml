@@ -317,11 +317,10 @@ homebrew_cask_apps:
   - dbeaver-enterprise
   - dbvisualizer
   - diskmaker-x
-  - diskwave
+  # - diskwave  # SSL certificate problem: certificate has expired.
   - dnscrypt
   - docker
   - docker-toolbox
-  - dockertoolbox
   - dropbox
   - emacs
   - filebot
