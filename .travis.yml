@@ -9,7 +9,6 @@ matrix:
   include:
     - env: TAGS=extra-packages,macos,osx-defaults
     - env: TAGS=homebrew
-    - env: TAGS=homebrew-cask
     # - env: TAGS=mas  # mas has automation issues.
 
 before_install:
@@ -48,8 +47,11 @@ script:
   # Check the role/playbook's syntax.
   - "ansible-playbook main.yml --syntax-check"
 
+  # Copy test config.yml into place.
+  - "cp tests/config.yml config.yml"
+
   # Test the playbook, tag by tag
-  - "travis_wait 60 ansible-playbook main.yml --inventory inventory --tags ${TAGS}"
+  - "travis_wait 30 ansible-playbook main.yml --inventory inventory --tags ${TAGS}"
 
   # # Test the playbook's idempotence.
   # - idempotence=$(mktemp)

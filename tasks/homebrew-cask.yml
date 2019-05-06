@@ -1,9 +1,0 @@
----
-- hosts: all
-  connection: local
-
-  vars_files:
-    - vars/homebrew-cask.yml  # geerlingguy.homebrew
-
-  include_role:
-    - name: geerlingguy.homebrew
