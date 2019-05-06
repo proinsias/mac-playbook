@@ -5,5 +5,5 @@
   vars_files:
     - vars/homebrew-cask.yml  # geerlingguy.homebrew
 
-  roles:
-    - role: geerlingguy.homebrew
+  include_role:
+    - name: geerlingguy.homebrew
