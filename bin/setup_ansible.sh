@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-brew install ansible
+sudo easy_install pip
+sudo pip install ansible
 
 sudo mkdir -p /etc/ansible
 
