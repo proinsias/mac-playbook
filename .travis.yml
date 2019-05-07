@@ -25,8 +25,11 @@ cache:
     - "node_modules"  # npm packages
 
 before_install:
-  # Copy test config.yml into place.
-  - cp tests/config.yml config.yml
+  # Copy overrides into place.
+  - |
+    if test $TAGS = 'homebrew'; then
+        cp vars/homebrew_travis.yml config.yml
+    fi
 
 install:
   # Install and configure Ansible.
