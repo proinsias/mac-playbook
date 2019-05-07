@@ -22,7 +22,8 @@ cache:
     - "${HOME}/.ccache"  # compiler cache
     - "${HOME}/.pip-cache"
     - "${HOME}/Library/Caches/Homebrew"
-    - node_modules  # NPM packages
+    - "/etc/ansible/roles"
+    - "node_modules"  # NPM packages
 
 before_install:
   # Uninstall existing Homebrew installation.
@@ -42,20 +43,7 @@ before_install:
     fi
 
 install:
-  # Install pip.
-  - sudo easy_install pip
-
-  # Install Ansible.
-  - sudo pip install ansible
-
-  # Add ansible.cfg to pick up roles path.
-  - "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
-
-  # Add a hosts file.
-  - sudo mkdir -p /etc/ansible
-  - sudo touch /etc/ansible/hosts
-  # yamllint disable-line rule:line-length
-  - "echo -e '[local]\nlocalhost ansible_connection=local' | sudo tee -a /etc/ansible/hosts > /dev/null"
+  - "./bin/setup_ansible.sh"
 
 script:
   # Install dependencies.
