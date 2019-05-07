@@ -21,8 +21,8 @@ cache:
     - "${HOME}/.cache"   # cython cache
     - "${HOME}/.ccache"  # compiler cache
     - "${HOME}/.pip-cache"
-    - "${HOME}"/Library/Caches/Homebrew
-    - node_modules # NPM packages
+    - "${HOME}/Library/Caches/Homebrew"
+    - node_modules  # NPM packages
 
 before_install:
   # Uninstall existing Homebrew installation.

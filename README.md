@@ -1,6 +1,7 @@
 # Mac Ansible Playbook
 
 [![Build Status](https://travis-ci.org/proinsias/mac-playbook.svg?branch=master)](https://travis-ci.com/proinsias/mac-playbook)
+[![Known Vulnerabilities](https://snyk.io/test/github/proinsias/mac-playbook/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/proinsias/mac-playbook?targetFile=Gemfile.lock)
 
 This playbook installs and configures most of the software I use on my Mac.
 It is inspired by and based on
