@@ -8,7 +8,7 @@ sudo mkdir -p /etc/ansible
 {
 echo '[local]'
 echo 'localhost ansible_connection=local'
-echo 'ansible_python_interpreter="/usr/bin/env python"'
+# echo 'ansible_python_interpreter="/usr/bin/env python"'
 } | sudo tee -a /etc/ansible/hosts > /dev/null
 
 {
