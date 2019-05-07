@@ -59,7 +59,7 @@ screensaver:
       name: Aerial
       path: ~/Library/Screen Savers/Aerial.saver
 
-  input:
+input:
 
     # Various spell correction settings
     # enable_auto_correct: yes
@@ -86,7 +86,7 @@ screensaver:
     # Space switching hotkeys (ctrl + 1-9)
     # enable_space_hotkeys: no
 
-  hostname:
+hostname:
     # computername is the so-called “user-friendly” name for the Mac,
     # it’s what will show up on the Mac itself and what will be
     # visible to others when connecting to it over a local network.
@@ -102,7 +102,7 @@ screensaver:
     # visible through file sharing services like AirDrop
     # localhostname: null
 
-  security:
+security:
     # Gatekeeper won't allow you to easily install
     # unsigned apps not downloaded from the Mac App Store
     # enable_gatekeeper: yes
@@ -111,7 +111,7 @@ screensaver:
     # to open a downloaded executable
     # enable_quarantine: yes
 
-  misc:
+misc:
 
     # save_application_state_on_quit: yes
 

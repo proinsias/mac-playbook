@@ -26,7 +26,27 @@ cache:
     - "node_modules"  # NPM packages
 
 before_install:
-  # Uninstall existing Homebrew installation.
+  # Copy test config.yml into place.
+  - "cp tests/config.yml config.yml"
+
+  # Check the role/playbook's syntax.
+  - "ansible-playbook --syntax-check main.yml"
+
+install:
+  # Install and configure Ansible.
+  - "./bin/setup_ansible.sh"
+
+  # Install dependencies.
+  - "ansible-galaxy install --role-file requirements.yml"
+
+  # Install aerial screensaver, if necessary.
+  - >
+    if [[ "${TAGS}" == *"macos"* ]]; then
+        brew cask install aerial
+    fi
+
+  # Uninstall existing Homebrew installation, if necessary.
+  # This step should be done at the end of this stage.
   - >
     if test $TAGS = 'homebrew'; then
         curl --location --remote-name --silent https://raw.githubusercontent.com/Homebrew/install/master/uninstall
@@ -36,25 +56,8 @@ before_install:
         sudo rm -rf /usr/local/Caskroom
         sudo rm -rf /usr/local/bin/brew
     fi
-  - >
-    if [[ "${TAGS}" == *"macos"* ]]; then
-        # We need to ensure aerial screensaver is installed.
-        brew cask install aerial
-    fi
-
-install:
-  - "./bin/setup_ansible.sh"
 
 script:
-  # Install dependencies.
-  - "ansible-galaxy install --role-file requirements.yml"
-
-  # Check the role/playbook's syntax.
-  - "ansible-playbook main.yml --syntax-check"
-
-  # Copy test config.yml into place.
-  - "cp tests/config.yml config.yml"
-
   # Test the playbook, tag by tag
   - "travis_wait 30 ansible-playbook main.yml --inventory inventory --tags ${TAGS}"
 
