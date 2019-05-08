@@ -1,6 +1,7 @@
 ---
 mas_installed_apps:
   - { id:  937984704, name: "Amphetamine" }
+  - { id: 1091189122, name: "Bear" }
   - { id:  523620159, name: "CleanMyDrive 2 (2.1.12)" }
   - { id: 1055511498, name: "Day One" }
   - { id:  642220194, name: "DeskConnect" }
@@ -10,6 +11,7 @@ mas_installed_apps:
   - { id:  671736912, name: "FruitJuice (2.3.4)" }
   - { id:  467939042, name: "Growl" }
   - { id:  409183694, name: "Keynote (8.1)" }
+  - { id:  883878097, name: "macOS Server" }
   - { id:  784801555, name: "Microsoft OneNote" }
   - { id: 1295203466, name: "Microsoft Remote Desktop (10.2.1)" }
   - { id:  409203825, name: "Numbers (5.1)" }

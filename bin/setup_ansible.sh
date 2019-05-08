@@ -5,11 +5,14 @@ sudo pip install ansible
 
 sudo mkdir -p /etc/ansible
 
+# echo 'ansible_python_interpreter="/usr/bin/env python"'
+
 {
 echo '[local]'
 echo 'localhost ansible_connection=local'
-# echo 'ansible_python_interpreter="/usr/bin/env python"'
 } | sudo tee -a /etc/ansible/hosts > /dev/null
+
+cat /etc/ansible/hosts
 
 {
 echo '[defaults]'
@@ -20,3 +23,5 @@ echo 'pipelining = True'
 echo 'control_path = /tmp/ansible-ssh-%%h-%%p-%%r'
 
 } | sudo tee -a /etc/ansible/ansible.cfg > /dev/null
+
+cat /etc/ansible/ansible.cfg

@@ -77,6 +77,6 @@ see the supporting roles' documentation for a complete list of available variabl
 
 ## Testing the Playbook
 
-I use a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm)
+I use a [Mac OS X VirtualBox VM](https://github.com/AlexanderWillner/runMacOSinVirtualBox)
 to test changes locally, and this project is
 [continuously tested on Travis CI's macOS infrastructure](https://travis-ci.com/proinsias/mac-playbook).

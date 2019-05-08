@@ -413,6 +413,7 @@ homebrew_cask_apps:
   - tresorit
   - unison
   - virtualbox
+  - virtualbox-extension-pack
   - vlc
   - webpquicklook
   - wireshark
