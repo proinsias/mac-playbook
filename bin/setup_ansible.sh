@@ -12,16 +12,14 @@ echo '[local]'
 echo 'localhost ansible_connection=local'
 } | sudo tee -a /etc/ansible/hosts > /dev/null
 
-cat /etc/ansible/hosts
+mkdir -p ~/.ansible/roles
 
 {
 echo '[defaults]'
-echo 'roles_path = /etc/ansible/roles'
+echo 'roles_path = ~/.ansible/roles'
 echo ''
 echo '[ssh_connection]'
 echo 'pipelining = True'
 echo 'control_path = /tmp/ansible-ssh-%%h-%%p-%%r'
 
-} | sudo tee -a /etc/ansible/ansible.cfg > /dev/null
-
-cat /etc/ansible/ansible.cfg
+} | sudo tee -a ~/.ansible.cfg > /dev/null
