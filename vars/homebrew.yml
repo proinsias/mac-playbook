@@ -65,6 +65,7 @@ homebrew_installed_packages:
   - ecj
   - ed
   - editorconfig
+  - eg-examples
   - { name: emacs, install_options: "with-cocoa,with-ctags,with-modules" }
   - epstool
   - faac
@@ -74,7 +75,7 @@ homebrew_installed_packages:
   - figlet
   - file-formula
   - findutils
-  - flake8
+  # - flake8  # Via pipx instead.
   - fontconfig
   - fortune
   - freetype
@@ -142,6 +143,7 @@ homebrew_installed_packages:
   - homebrew/science/suite-sparse421
   - homebrew/versions/perl518
   - homesick-completion
+  - howdoi
   - htop
   - httpie
   - hub
@@ -362,7 +364,6 @@ homebrew_cask_apps:
   - macfusion
   - mactex
   - makemkv
-  - marked
   - mendeley-desktop
   - metaz
   - mysqlworkbench
