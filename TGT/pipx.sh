@@ -10,7 +10,6 @@ pipx install clf --python /usr/local/bin/python3
 pipx install csvkit --python /usr/local/bin/python3
 pipx install eg --python /usr/local/bin/python3
 pipx install em-keyboard --python /usr/local/bin/python3
-pipx install emoji --python /usr/local/bin/python3
 pipx install glances --python /usr/local/bin/python3
 pipx install hashin --python /usr/local/bin/python3
 pipx install howdoi --python /usr/local/bin/python3
@@ -22,8 +21,6 @@ pipx install pyflakes --python /usr/local/bin/python3
 pipx install pyjokes --python /usr/local/bin/python3
 pipx install pylint --python /usr/local/bin/python3
 pipx install psutil --python /usr/local/bin/python3
-pipx install rpy2 --python /usr/local/bin/python3
-pipx install r-essential --python /usr/local/bin/python3
 pipx install safety --python /usr/local/bin/python3
 pipx install searchcmd --python /usr/local/bin/python3
 pipx install slacker --python /usr/local/bin/python3
@@ -50,7 +47,6 @@ pipx inject flake8 flake8-docstrings
 pipx inject flake8 flake8_dodgy
 pipx inject flake8 flake8-eradicate
 pipx inject flake8 flake8-fixme
-pipx inject flake8 flake8-function-definition
 pipx inject flake8 flake8-future-import
 pipx inject flake8 flake8-import-order
 pipx inject flake8 flake8-imports
@@ -59,7 +55,6 @@ pipx inject flake8 flake8-logging-format
 pipx inject flake8 flake8-mock
 pipx inject flake8 flake8-mutable
 pipx inject flake8 flake8-mypy
-pipx inject flake8 flake8-naming
 pipx inject flake8 flake8-pep3101
 pipx inject flake8 flake8-print
 pipx inject flake8 flake8-pyi
@@ -70,6 +65,12 @@ pipx inject flake8 flake8-string-format
 pipx inject flake8 flake8-tidy-imports
 pipx inject flake8 flake8-variables-names
 pipx inject flake8 flake8_tuple
+pipx inject flake8 pep8-naming
 
 pipx install pytest --python /usr/local/bin/python3
+pipx inject pytest pytest-profiling
+pipx inject pytest pytest-sugar
 pipx inject pytest pytest-xdist
+# pytest-cov
+# pytest-flakes
+# pytest-pep8
