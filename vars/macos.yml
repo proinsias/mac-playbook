@@ -92,6 +92,7 @@ hostname:
     # visible to others when connecting to it over a local network.
     # This is also what’s visible under the Sharing preference panel.
     # computername: null
+    # FIXME: Move to host-specific var files.
 
     # hostname is the name assigned to the computer as visible
     # from the command line, and it’s also used by local and
