@@ -1,0 +1,4 @@
+---
+# FIXME:
+#- name: Copy the NGINX repository definition
+#  copy: src=nginx.repo dest=/etc/yum.repos.d/

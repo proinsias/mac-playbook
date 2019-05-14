@@ -1,0 +1,22 @@
+---
+nodejs_npm_global_packages:
+  # Example of specifying pinned version.
+  # - name: jslint
+  #  version: 0.9.3
+  - csslint
+  - dockerlint
+  - dockerfile_lint
+  - electron@1.8.4
+  - eslint
+  - git-guilt
+  - how2  # https://github.com/santinic/how2
+  - htmlhint
+  - jscs
+  - jshint
+  - jslint
+  - orca
+  - semistandard
+  - standard
+  - svgo
+  - tldr  # http://tldr.sh/
+  # - wakatimecli  # https://www.npmjs.com/package/wakatimecli # https://wakatime.com

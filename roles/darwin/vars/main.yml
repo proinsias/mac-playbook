@@ -1,0 +1,24 @@
+---
+ComputerName: "discovery"  # osx-computername # FIXME: Set per computer, or use to identify host!
+
+macos_power_settings:
+  - {cmd: computersleep, desired_value: 'Never'}
+  - {cmd: displaysleep, desired_value: 'after 15 minutes'}
+  - {cmd: harddisksleep, desired_value: 'Never'}
+  - {cmd: restartfreeze, desired_value: 'Off'}
+  - {cmd: wakeonnetworkaccess, desired_value: 'On'}
+
+# FIXME: Compare to lafarer.osx-defaults.
+#system:
+#  ui:
+#    # By default the macOS save/print dialog opens in a
+#    # simplified version, enable to show the full dialog
+#    # by default.
+#    expand_save_panel: yes
+#    expand_print_panel: yes
+#    # macOS ommits common file extensions by default
+#    show_all_file_extensions: yes
+#    # Open directory if you drag a file/folder onto it.
+#    enable_springloading_directories: yes
+#    springloading_directories_delay: 2
+#    # FIXME: Finish https://github.com/kinglouie/ansible-role-macos/blob/master/defaults/main.yml

@@ -1,0 +1,8 @@
+---
+- name: Cleanup homebrew
+  shell: |
+         brew cleanup
+         brew prune
+  become: no
+  # args:
+  #   warn: false  # set warn=false to prevent warning

@@ -1,0 +1,411 @@
+---
+homebrew_upgrade_all_packages: yes
+homebrew_taps:
+  - alehouse/homebrew-unofficial
+  - alexdavid/homebrew-tap
+  - caskroom/versions  # For java8.
+  - dunn/emacs
+  - dunn/homebrew-emacs
+  - homebrew/cask
+  - homebrew/cask-drivers
+  - homebrew/bundle
+  - homebrew/command-not-found
+  - homebrew/services
+  - iterative/homebrew-dvc
+homebrew_use_brewfile: false
+homebrew_clear_cache: true
+homebrew_installed_packages:
+  - openssl
+  - { name: curl, install_options: "with-openssl,with-libssh2" }
+  - svn
+  - parallel  # Install before moreutils that also different `parallel` command.
+  - ack
+  - advancecomp
+  - ag
+  - ansible
+  - ant
+  - ant-contrib
+  - antiword
+  - archey
+  - arpack
+  - aspell
+  - autoconf
+  - automake
+  - autopep8
+  - aws-shell
+  - awscli
+  - bash
+  - bash-completion
+  - bash-snippets
+  - binutils
+  - brew-cask-completion
+  - bundler-completion
+  - c-ares
+  - cairo
+  - cask
+  - ccache  # For pyenv-ccache.
+  - certbot
+  # - cheat  # Get via bash-snippets.
+  - checkstyle
+  - cloog
+  - cmake
+  - colordiff
+  - cookiecutter
+  - coreutils
+  - cowsay
+  - cscope
+  - csvkit
+  - d-bus
+  - daq
+  - diffutils
+  - direnv
+  - docker-completion
+  - docker-compose-completion
+  - docker-machine-completion
+  - dos2unix
+  - dunn/emacs/dash-emacs
+  - dunn/emacs/git-messenger
+  - dunn/emacs/git-modes
+  - dunn/emacs/homebrew-mode
+  - dunn/emacs/hydra-emacs
+  - dunn/emacs/inf-ruby
+  - dunn/emacs/json-mode
+  - dunn/emacs/json-reformat
+  - dunn/emacs/json-snatcher
+  - dunn/emacs/markdown-mode
+  - dunn/emacs/org-mode
+  - dunn/emacs/pandoc-mode
+  - dunn/emacs/popup
+  - dunn/emacs/solarized-emacs
+  - dunn/emacs/yaml-mode
+  - ed
+  - editorconfig
+  - eg-examples
+  - { name: emacs, install_options: "with-cocoa,with-ctags,with-modules" }
+  - epstool
+  - faac
+  - fasd
+  - ffmpeg
+  - fftw
+  - figlet
+  - file-formula
+  - findutils
+  - flake8
+  - fontconfig
+  - fortune
+  - freetype
+  - fzf
+  - gawk
+  - { name: gcc, install_options: "with-jit,with-nls" }
+  - gd
+  - gdb
+  - gdbm
+  - gem-completion
+  - geoip
+  - gettext
+  - ghostscript
+  - gifsicle
+  - { name: git, install_options: "with-curl,with-openssl"}
+  - git-branch-status
+  - git-ftp
+  - git-lfs
+  - git-standup
+  - glances
+  - glib
+  - glpk
+  - gl2ps
+  - gmp
+  - gnutls
+  - gnu-getopt
+  - gnu-indent
+  - gnu-sed
+  - gnu-tar
+  - gnu-time
+  - gnu-units
+  - gnu-which
+  - { name: gnuplot, install_options: "with-qt,with-x11" }
+  - go
+  - gobject-introspection
+  - gpatch
+  - graphicsmagick
+  - graphviz
+  - grep
+  - gsmartcontrol
+  - gv
+  - gwt
+  - gzip
+  - hadolint
+  - hdf5
+  - homesick-completion
+  - howdoi
+  - htop
+  - httpie
+  - hub
+  - hunspell
+  - icdiff
+  - icu4c
+  - imagemagick
+  - isl
+  - ivy
+  - jbig2dec
+  - jenv
+  - jhead
+  - jonof/kenutils/pngout
+  - jpeg
+  - jpegoptim
+  - jq
+  - jsonlint
+  - keychain
+  - lame
+  - launchctl-completion
+  - less
+  - libdnet
+  - libdvdcss
+  - libffi
+  - libgcrypt
+  - libgpg-error
+  - libmpc
+  - libomp
+  - libpng
+  - libsodium
+  - libtasn1
+  - libtiff
+  - libtool
+  - libvo-aacenc
+  - libyaml
+  - little-cms2
+  - lsof
+  - lua
+  - luajit
+  - lynx
+  - lzip
+  - m4
+  - mackup
+  - macvim
+  - make
+  - makedepend
+  - mas
+  - mkdocs
+  - moreutils
+  - mosh
+  - mpfr
+  - mypy
+  - nano
+  - nettle
+  - nmap
+  - node
+  - ntfs-3g
+  - open-completion
+  - openjpeg
+  - optipng
+  - packer
+  - packer-completion
+  - pandoc
+  - pandoc-citeproc
+  - pcre
+  - pip-completion
+  - pipenv
+  - pixman
+  - pkg-config
+  - plotutils
+  - pngcrush
+  - pngquant
+  - poppler
+  - proselint
+  - pstoedit
+  - pv
+  - pwgen
+  - pycodestyle
+  - pyenv
+  - pyenv-ccache
+  - pyenv-pip-migrate
+  - pyenv-virtualenv
+  - pyenv-which-ext
+  - pyqt
+  - python
+  - python@2
+  - qhull
+  - qpdf
+  - qrupdate
+  - qscintilla2
+  - qt
+  # - rbenv
+  - readline  # For pyenv.
+  - rename
+  - restview
+  - rst-lint
+  - rsync
+  - ruby
+  - ruby-build
+  - ruby-completion
+  - scala
+  - screen
+  - screenfetch
+  - shellcheck
+  - sip
+  - snort
+  - sonar-completion
+  - sqlite
+  - ssh-copy-id
+  - stress
+  - stormssh-completion
+  - subversion
+  - suite-sparse
+  - svn
+  - szip
+  - tbb
+  - tcpdump
+  - tesseract
+  - texi2html
+  - texinfo
+  - the_silver_searcher
+  - thefuck
+  - tig
+  # - tivodecode
+  - tmux
+  - tmuxinator-completion
+  - trash
+  - tree
+  - unzip
+  - vagrant-completion
+  - veclibfort
+  - vim
+  - vitorgalvao/tiny-scripts/cask-repair
+  - watch
+  - wdiff
+  - webkit2png
+  - wget
+  # - wine
+  # - winetricks
+  - wireshark
+  - x264
+  - xvid
+  - xz  # For pyenv.
+  - yamllint
+  - yasm
+  # - youtube-dl
+  - zlib  # For pyenv.
+  - zopfli
+  - zsh
+homebrew_uninstalled_packages: []
+homebrew_cask_apps:
+  # - java  # Need java8 for Spark.
+  - java8
+  - osxfuse
+  - xquartz
+  - 1password
+  - adobe-reader
+  - aerial
+  - appfresh
+  - apptrap
+  - bartender
+  - bbedit
+  - bettertouchtool
+  - betterzip
+  - box-sync
+  - cakebrew
+  - cheatsheet
+  # - choosy
+  # - chrome-remote-desktop-host
+  - coconutBattery
+  - controlplane
+  - cord
+  - dash
+  # - dbeaver-enterprise
+  # - dbvisualizer
+  - diskmaker-x
+  - diskwave
+  - dnscrypt
+  - docker
+  - docker-toolbox
+  - dockertoolbox
+  - dropbox
+  - dvc
+  - emacs
+  - filebot
+  # - filezilla
+  - firefox
+  - flashlight
+  - flux
+  # - ganttproject
+  - geektool
+  # - gephi
+  - gimp
+  - google-chrome
+  - gpg-suite
+  - grammarly
+  - grandperspective
+  # - growlnotify
+  # - growlvoice
+  # - handylock
+  # - haptic-touch-bar
+  - ibettercharge
+  - imageoptim
+  - imazing
+  - inklet
+  - intellij-idea-ce
+  - iterm2
+  - jing
+  - karabiner
+  - keka
+  - keybase
+  - kindle
+  - kite
+  # - lastpass
+  - libdvdcss
+  - lingon-x
+  - macdown
+  - macfusion
+  - mactex
+  - makemkv
+  - metaz
+  - nightowl
+  - no-ip-duc
+  - omnidisksweeper
+  - omnifocus
+  # - onyx  # FIXME: Mojave version?
+  - oversight
+  - p4merge
+  - pacifist
+  - podcastmenu
+  # - prey  # FIXME: Install separately with correct API key - move to hostname specific
+  - qlcolorcode
+  - qlmarkdown
+  - qlprettypatch
+  - qlstephen
+  - quicklook-csv
+  - quicklook-json
+  - send-to-kindle
+  - signal
+  - silverlight
+  - skyfonts
+  - skype
+  - slack
+  - slimbatterymonitor
+  - sourcetree
+  - spectacle
+  - spotdox
+  - sshfs
+  - sublime-text
+  - suspicious-package
+  # - texshop
+  # - texstudio
+  - the-unarchiver
+  - tigervnc-viewer
+  # - tonido
+  # - tonidosync
+  # - transmission
+  # - transmit
+  # - tresorit
+  # - unison
+  - virtualbox
+  - vlc
+  - webpquicklook
+  - xquartz
+  - yubico-authenticator
+  - yubico-yubikey-manager
+  - yubico-yubikey-personalization-gui
+  - yubico-yubikey-piv-manager
+  - yujitach-menumeters
+  # - zotero
+homebrew_cask_uninstalled_apps: []
