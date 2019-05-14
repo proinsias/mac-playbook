@@ -1,4 +1,16 @@
 ---
+- hosts: firefly.local
+  connection: local
+
+  vars_files:
+    - vars/homebrew.firefly.yml  # geerlingguy.homebrew
+    - vars/mas.firefly.yml  # geerlingguy.mas
+
+  roles:
+    - role: geerlingguy.homebrew
+    - role: geerlingguy.mas
+      when: mas_installed_apps
+
 - hosts: ospideal.local
   connection: local
 
@@ -11,17 +23,14 @@
     - role: geerlingguy.mas
       when: mas_installed_apps
 
-- hosts: firefly.local
+- hosts: travis.dev
   connection: local
 
   vars_files:
-    - vars/homebrew.firefly.yml  # geerlingguy.homebrew
-    - vars/mas.firefly.yml  # geerlingguy.mas
+    - vars/homebrew.travis.yml  # geerlingguy.homebrew
 
   roles:
     - role: geerlingguy.homebrew
-    - role: geerlingguy.mas
-      when: mas_installed_apps
 
 # FIXME: Add hosts: travis?
 

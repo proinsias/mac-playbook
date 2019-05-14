@@ -16,8 +16,3 @@ homebrew_cask_apps:
   - firefox
   - limechat
   - macvim
-
-# kinglouie.macos
-system:
-  ui:
-    interface_style: "Dark"
