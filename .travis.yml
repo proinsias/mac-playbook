@@ -30,6 +30,16 @@ before_install:
     if test $TAGS = 'homebrew'; then
         cp vars/homebrew_travis.yml config.yml
     fi
+  # Uninstall existing Homebrew installation, if necessary.
+  - |
+    if test $TAGS = 'homebrew'; then
+        curl --location --remote-name --silent https://raw.githubusercontent.com/Homebrew/install/master/uninstall
+        chmod +x ./uninstall
+        ./uninstall --force
+        sudo rm -rf /usr/local/Homebrew
+        sudo rm -rf /usr/local/Caskroom
+        sudo rm -rf /usr/local/bin/brew
+    fi
 
 install:
   # Install and configure Ansible.
@@ -42,18 +52,6 @@ install:
   - |
     if [[ "${TAGS}" == *"macos"* ]]; then
         brew cask install aerial
-    fi
-
-  # Uninstall existing Homebrew installation, if necessary.
-  # This step should be done at the end of this stage.
-  - |
-    if test $TAGS = 'homebrew'; then
-        curl --location --remote-name --silent https://raw.githubusercontent.com/Homebrew/install/master/uninstall
-        chmod +x ./uninstall
-        ./uninstall --force
-        sudo rm -rf /usr/local/Homebrew
-        sudo rm -rf /usr/local/Caskroom
-        sudo rm -rf /usr/local/bin/brew
     fi
 
 script:
