@@ -1,0 +1,23 @@
+---
+homebrew_upgrade_all_packages: yes
+homebrew_taps:
+  - homebrew/cask
+  - homebrew/core
+homebrew_use_brewfile: false
+homebrew_clear_cache: false
+homebrew_installed_packages: []
+homebrew_uninstalled_packages: []
+homebrew_cask_apps:
+  - backblaze
+  - carmaintenance
+  - google-backup-and-sync
+  - google-photos-backup
+  - growlnotify
+  - growlvoice
+  - handbrake
+  - pycharm-ce
+  - steam
+  - subler
+  - wireshark
+homebrew_cask_uninstalled_apps: []
+homebrew_cask_appdir: /Applications

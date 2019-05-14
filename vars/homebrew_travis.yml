@@ -1,3 +1,4 @@
+# geerlingguy.homebrew
 homebrew_installed_packages:
   - autoconf
   - bash-completion
@@ -10,7 +11,13 @@ homebrew_installed_packages:
   - wget
   - wrk
 
+# geerlingguy.homebrew
 homebrew_cask_apps:
   - firefox
   - limechat
   - macvim
+
+# kinglouie.macos
+system:
+  ui:
+    interface_style: "Dark"

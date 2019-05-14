@@ -1,0 +1,10 @@
+---
+mas_installed_apps:
+  - { id: 1091189122, name: "Bear" }
+  - { id: 1055511498, name: "Day One" }
+  - { id:  586862299, name: "Duplicate Cleaner For iPhoto" }
+  - { id:  467939042, name: "Growl" }
+  - { id:  883878097, name: "macOS Server" }
+  - { id:  415139197, name: "WhiteNoise" }
+  - { id:  494803304, name: "WiFi Explorer" }
+mas_upgrade_all_apps: yes
