@@ -80,3 +80,14 @@ see the supporting roles' documentation for a complete list of available variabl
 I use a [Mac OS X VirtualBox VM](https://github.com/AlexanderWillner/runMacOSinVirtualBox)
 to test changes locally, and this project is
 [continuously tested on Travis CI's macOS infrastructure](https://travis-ci.com/proinsias/mac-playbook).
+
+<!-- FIXME: Setup local VM to test -->
+<!-- FIXME: Confirm above installation steps. -->
+<!-- FIXME: Update list of tags. -->
+
+<!-- FIXME: Try `--check` (with `--diff`?) to just report differences. -->
+<!-- https://github.com/ansible/ansible-modules-core/issues/960 -->
+
+<!-- ansible-playbook site.yml --forks 10 --ask-become-pass --check -->
+
+<!-- FIXME: Executing one role - https://stackoverflow.com/a/38384205 -->
