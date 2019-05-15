@@ -4,10 +4,6 @@ language: objective-c
 # 10.14 (see https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version)
 osx_image: xcode10.2
 
-addons:
-  hosts:
-    - travis.dev
-
 matrix:
   fast_finish: true
   include:
