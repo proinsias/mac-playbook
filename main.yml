@@ -1,77 +1,8 @@
 ---
-- hosts: firefly.local
-  connection: local
-
-  vars_files:
-    - vars/homebrew.firefly.yml  # geerlingguy.homebrew
-    - vars/mas.firefly.yml  # geerlingguy.mas
-
-  roles:
-    - role: geerlingguy.homebrew
-      tags: ['homebrew']
-    - role: geerlingguy.mas
-      when: mas_installed_apps
-      tags: ['mas']
-
-- hosts: ospideal.local
-  connection: local
-
-  vars_files:
-    - vars/homebrew.ospideal.yml  # geerlingguy.homebrew
-    - vars/mas.ospideal.yml  # geerlingguy.mas
-
-  roles:
-    - role: geerlingguy.homebrew
-      tags: ['homebrew']
-    - role: geerlingguy.mas
-      when: mas_installed_apps
-      tags: ['mas']
-
-- hosts: travis.dev  # FIXME: Pick one.
-  connection: local
-
-  vars_files:
-    - vars/homebrew.travis.yml  # geerlingguy.homebrew
-
-  roles:
-    - role: geerlingguy.homebrew
-      tags: ['homebrew']
-
-- hosts: Traviss-Mac.local  # FIXME: Pick one.
-  connection: local
-
-  vars_files:
-    - vars/homebrew.travis.yml  # geerlingguy.homebrew
-
-  roles:
-    - role: geerlingguy.homebrew
-      tags: ['homebrew']
-
 - hosts: all
   connection: local
 
-  vars_files:
-    - vars/homebrew.yml  # geerlingguy.homebrew
-    - vars/mas.yml  # geerlingguy.mas
-    - vars/macos.yml  # kinglouie.macos
-    - vars/osx-defaults.yml  # lafarer.osx-defaults
-    # FIXME: Add tags below.
-    # - vars/pip.yml  # geerlingguy.pip
-    # - vars/ruby.yml  # geerlingguy.ruby
-    # - npm packages?
-
   roles:
-    - role: geerlingguy.homebrew
-      tags: ['homebrew', 'always']
-    - role: geerlingguy.mas
-      when: mas_installed_apps
-      tags: ['mas']
-    # FIXME: Why broken?
-    # - role: kinglouie.macos
-    #   tags: ['macos']
-    - role: lafarer.osx-defaults
-      tags: ['osx-defaults']
-
       # # FIXME: Put macos_power_settings in var file?
       # - {role: appian.macos-power,
       #    become: yes,
@@ -83,14 +14,66 @@
       #      {cmd: wakeonnetworkaccess, desired_value: 'On'},
       #    ]
       # }
+      # FIXME:
       # - geerlingguy.nodejs
-      # - geerlingguy.pip
-      # - geerlingguy.ruby
+      # - geerlingguy.pip, vars/pip.yml
+      # - geerlingguy.ruby, vars/ruby.yml
 
   tasks:
     # - name: print facts
     #   debug:
     #     var: ansible_facts
+
+    - name: Run all homebrew role.
+      include_role:
+        name: all.homebrew
+      tags: ['homebrew', 'always']
+
+    # FIXME: Why broken?
+    # - name: Run all macos role.
+    #   include_role:
+    #     name: all.macos
+    #   tags: ['macos']
+
+    - name: Run all mas role.
+      include_role:
+        name: all.mas
+      tags: ['mas']
+
+    - name: Run all osx-defaults role.
+      include_role:
+        name: all.osx-defaults
+      tags: ['osx-defaults']
+
+    - name: Run firefly homebrew role.
+      include_role:
+        name: firefly.homebrew
+      tags: ['homebrew']
+      when: ansible_hostname == "firefly.local"
+
+    - name: Run firefly mas role.
+      include_role:
+        name: firefly.mas
+      tags: ['mas']
+      when: ansible_hostname == "firefly.local"
+
+    - name: Run ospideal homebrew role.
+      include_role:
+        name: ospideal.homebrew
+      tags: ['homebrew']
+      when: ansible_hostname == "ospideal.local"
+
+    - name: Run ospideal mas role.
+      include_role:
+        name: ospideal_mas
+      tags: ['mas']
+      when: ansible_hostname == "ospideal.local"
+
+    - name: Run travis homebrew role.
+      include_role:
+        name: travis.homebrew
+      tags: ['homebrew']
+      when: ansible_hostname == "travis.dev"
 
     # FIXME: Replace with geerlingguy.pip/geerlingguy.ruby/npm ???
     - include_tasks: tasks/extra-packages.yml
@@ -108,13 +91,6 @@
     #   when: ansible_facts['os_family']|lower == 'redhat'
     # - include_role:
     #     name: common
-
-    - name: Run configured post-provision ansible task files.
-      include_tasks: "{{ outer_item }}"
-      loop_control:
-        loop_var: outer_item
-      with_fileglob: "{{ post_provision_tasks|default(omit) }}"
-
 
 # FIXME: Cheatsheet installed via cask **and** mas?
 

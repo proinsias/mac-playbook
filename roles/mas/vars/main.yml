@@ -1,14 +1,16 @@
 ---
 mas_installed_apps:
   - {id: 937984704, name: "Amphetamine"}
-  - {id: 1091189122, name: "Bear"}
-  - {id: 523620159, name: "CleanMyDrive 2"}
-  - {id: 524373870, name: "Due"}
-  - {id: 671736912, name: "FruitJuice"}
-  - {id: 407721554, name: "SmartSleep"}
+  - {id: 523620159, name: "CleanMyDrive 2 (2.1.12)"}
+  - {id: 642220194, name: "DeskConnect"}
+  - {id: 672206759, name: "Disk Diag"}
+  - {id: 524373870, name: "Due (1.5.1)"}
+  - {id: 671736912, name: "FruitJuice (2.3.4)"}
+  - {id: 784801555, name: "Microsoft OneNote"}
+  - {id: 1295203466, name: "Microsoft Remote Desktop (10.2.1)"}
+  - {id: 568494494, name: "Pocket (1.7.9)"}
+  - {id: 439845554, name: "Reeder"}
+  - {id: 407721554, name: "SmartSleep (3.10)"}
   - {id: 509148961, name: "SMARTReporter"}
   - {id: 423123087, name: "UnPlugged"}
-  - {id: 494803304, name: "WiFi Explorer"}
-  - {id: 497799835, name: "Xcode"}
-mas_signin_dialog: true
 mas_upgrade_all_apps: true

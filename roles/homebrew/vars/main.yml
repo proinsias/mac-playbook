@@ -3,19 +3,20 @@ homebrew_upgrade_all_packages: true
 homebrew_taps:
   - alehouse/homebrew-unofficial
   - alexdavid/homebrew-tap
-  - caskroom/versions  # For java8.
   - dunn/emacs
   - dunn/homebrew-emacs
+  - homebrew/bundle
   - homebrew/cask
   - homebrew/cask-drivers
-  - homebrew/bundle
   - homebrew/command-not-found
+  - homebrew/core
   - homebrew/services
   - iterative/homebrew-dvc
 homebrew_use_brewfile: false
-homebrew_clear_cache: true
+homebrew_clear_cache: false
 homebrew_installed_packages:
   - openssl
+  - {name: openssh, install_options: "with-brewed-openssl,with-keychain-support"}
   - {name: curl, install_options: "with-openssl,with-libssh2"}
   - svn
   - parallel  # Install before moreutils that also different `parallel` command.
@@ -23,9 +24,11 @@ homebrew_installed_packages:
   - advancecomp
   - ag
   - ansible
+  - ansible-lint
   - ant
   - ant-contrib
   - antiword
+  - apg
   - archey
   - arpack
   - aspell
@@ -59,9 +62,11 @@ homebrew_installed_packages:
   - daq
   - diffutils
   - direnv
+  - docker-clean
   - docker-completion
   - docker-compose-completion
   - docker-machine-completion
+  - docmunch/pdftk/pdftk
   - dos2unix
   - dunn/emacs/dash-emacs
   - dunn/emacs/git-messenger
@@ -78,6 +83,7 @@ homebrew_installed_packages:
   - dunn/emacs/popup
   - dunn/emacs/solarized-emacs
   - dunn/emacs/yaml-mode
+  - ecj
   - ed
   - editorconfig
   - eg-examples
@@ -90,7 +96,7 @@ homebrew_installed_packages:
   - figlet
   - file-formula
   - findutils
-  - flake8
+  # - flake8  # Via pipx instead.
   - fontconfig
   - fortune
   - freetype
@@ -111,22 +117,24 @@ homebrew_installed_packages:
   - git-lfs
   - git-standup
   - glances
+  - gl2ps
   - glib
   - glpk
-  - gl2ps
   - gmp
-  - gnutls
   - gnu-getopt
   - gnu-indent
   - gnu-sed
   - gnu-tar
   - gnu-time
-  - gnu-units
+  - gnu-utils
   - gnu-which
   - {name: gnuplot, install_options: "with-qt,with-x11"}
+  - gnutls
   - go
   - gobject-introspection
   - gpatch
+  - gpg
+  - gpg-agent
   - graphicsmagick
   - graphviz
   - grep
@@ -136,6 +144,23 @@ homebrew_installed_packages:
   - gzip
   - hadolint
   - hdf5
+  - homebrew/emacs/dash-emacs
+  - homebrew/emacs/git-messenger
+  - homebrew/emacs/git-modes
+  - homebrew/emacs/homebrew-mode
+  - homebrew/emacs/hydra-emacs
+  - homebrew/emacs/inf-ruby
+  - homebrew/emacs/json-mode
+  - homebrew/emacs/json-reformat
+  - homebrew/emacs/json-snatcher
+  - homebrew/emacs/markdown-mode
+  - homebrew/emacs/org-mode
+  - homebrew/emacs/pandoc-mode
+  - homebrew/emacs/popup
+  - homebrew/emacs/solarized-emacs
+  - homebrew/emacs/yaml-mode
+  - homebrew/gui/gsmartcontrol
+  - homebrew/science/suite-sparse421
   - homesick-completion
   - howdoi
   - htop
@@ -194,9 +219,10 @@ homebrew_installed_packages:
   - nettle
   - nmap
   - node
-  - ntfs-3g
   - open-completion
   - openjpeg
+  - openssh
+  - openssl
   - optipng
   - packer
   - packer-completion
@@ -205,6 +231,7 @@ homebrew_installed_packages:
   - pcre
   - pip-completion
   - pipenv
+  - pipx
   - pixman
   - pkg-config
   - plotutils
@@ -229,7 +256,7 @@ homebrew_installed_packages:
   - qrupdate
   - qscintilla2
   - qt
-  # - rbenv
+  - rbenv
   - readline  # For pyenv.
   - rename
   - restview
@@ -238,7 +265,6 @@ homebrew_installed_packages:
   - ruby
   - ruby-build
   - ruby-completion
-  - scala
   - screen
   - screenfetch
   - shellcheck
@@ -261,11 +287,12 @@ homebrew_installed_packages:
   - the_silver_searcher
   - thefuck
   - tig
-  # - tivodecode
+  - tivodecode
   - tmux
   - tmuxinator-completion
   - trash
   - tree
+  - units
   - unzip
   - vagrant-completion
   - veclibfort
@@ -275,22 +302,21 @@ homebrew_installed_packages:
   - wdiff
   - webkit2png
   - wget
-  # - wine
-  # - winetricks
+  - wine
+  - winetricks
   - wireshark
   - x264
   - xvid
   - xz  # For pyenv.
   - yamllint
   - yasm
-  # - youtube-dl
+  - youtube-dl
   - zlib  # For pyenv.
   - zopfli
   - zsh
 homebrew_uninstalled_packages: []
 homebrew_cask_apps:
-  # - java  # Need java8 for Spark.
-  - java8
+  - java
   - osxfuse
   - xquartz
   - 1password
@@ -305,40 +331,36 @@ homebrew_cask_apps:
   - box-sync
   - cakebrew
   - cheatsheet
-  # - choosy
-  # - chrome-remote-desktop-host
+  - choosy
+  - chrome-remote-desktop-host
   - coconutBattery
   - controlplane
   - cord
   - dash
-  # - dbeaver-enterprise
-  # - dbvisualizer
+  - dbeaver-enterprise
+  - dbvisualizer
   - diskmaker-x
   - diskwave
   - dnscrypt
   - docker
   - docker-toolbox
-  - dockertoolbox
   - dropbox
   - dvc
   - emacs
   - filebot
-  # - filezilla
+  - filezilla
   - firefox
   - flashlight
   - flux
-  # - ganttproject
+  - ganttproject
   - geektool
-  # - gephi
+  - gephi
   - gimp
   - google-chrome
   - gpg-suite
   - grammarly
   - grandperspective
-  # - growlnotify
-  # - growlvoice
-  # - handylock
-  # - haptic-touch-bar
+  - handylock
   - ibettercharge
   - imageoptim
   - imazing
@@ -351,7 +373,7 @@ homebrew_cask_apps:
   - keybase
   - kindle
   - kite
-  # - lastpass
+  - lastpass
   - libdvdcss
   - lingon-x
   - macdown
@@ -359,11 +381,13 @@ homebrew_cask_apps:
   - mactex
   - makemkv
   - metaz
+  - muzzle
   - nightowl
   - no-ip-duc
   - omnidisksweeper
   - omnifocus
   # - onyx  # FIXME: Mojave version?
+  - osxfuse
   - oversight
   - p4merge
   - pacifist
@@ -388,17 +412,10 @@ homebrew_cask_apps:
   - sshfs
   - sublime-text
   - suspicious-package
-  # - texshop
-  # - texstudio
   - the-unarchiver
   - tigervnc-viewer
-  # - tonido
-  # - tonidosync
-  # - transmission
-  # - transmit
-  # - tresorit
-  # - unison
   - virtualbox
+  - virtualbox-extension-pack
   - vlc
   - webpquicklook
   - xquartz
@@ -407,5 +424,5 @@ homebrew_cask_apps:
   - yubico-yubikey-personalization-gui
   - yubico-yubikey-piv-manager
   - yujitach-menumeters
-  # - zotero
 homebrew_cask_uninstalled_apps: []
+homebrew_cask_appdir: /Applications
