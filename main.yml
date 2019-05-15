@@ -27,7 +27,7 @@
       when: mas_installed_apps
       tags: ['mas']
 
-- hosts: travis.dev
+- hosts: travis.dev  # FIXME: Pick one.
   connection: local
 
   vars_files:
@@ -37,12 +37,18 @@
     - role: geerlingguy.homebrew
       tags: ['homebrew']
 
-# FIXME: Add hosts: travis?
+- hosts: Traviss-Mac.local  # FIXME: Pick one.
+  connection: local
+
+  vars_files:
+    - vars/homebrew.travis.yml  # geerlingguy.homebrew
+
+  roles:
+    - role: geerlingguy.homebrew
+      tags: ['homebrew']
 
 - hosts: all
   connection: local
-
-  # FIXME: GT dotfiles/ansible*
 
   vars_files:
     - vars/homebrew.yml  # geerlingguy.homebrew
@@ -54,15 +60,9 @@
     # - vars/ruby.yml  # geerlingguy.ruby
     # - npm packages?
 
-  pre_tasks:
-    - include_vars: "{{ item }}"
-      with_fileglob:
-        - "{{ playbook_dir }}/config.yml"
-      tags: ['always']
-
   roles:
     - role: geerlingguy.homebrew
-      tags: ['homebrew']
+      tags: ['homebrew', 'always']
     - role: geerlingguy.mas
       when: mas_installed_apps
       tags: ['mas']

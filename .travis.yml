@@ -29,11 +29,6 @@ cache:
     - "node_modules"  # npm packages
 
 before_install:
-  # Copy overrides into place.
-  - |
-    if test $TAGS = 'homebrew'; then
-        cp vars/homebrew_travis.yml config.yml
-    fi
   # Uninstall existing Homebrew installation, if necessary.
   - |
     if test $TAGS = 'homebrew'; then
@@ -63,7 +58,7 @@ script:
   - "ansible-playbook --syntax-check main.yml"
 
   # Test the playbook, tag by tag
-  - "travis_wait 30 ansible-playbook main.yml --inventory inventory --tags ${TAGS}"
+  - "travis_wait 30 ansible-playbook main.yml --inventory inventory --tags ${TAGS} --skip-tags always"
 
 before_cache:
   - brew cleanup
