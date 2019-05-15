@@ -1,5 +1,5 @@
 ---
-homebrew_upgrade_all_packages: yes
+homebrew_upgrade_all_packages: true
 homebrew_taps:
   - alexdavid/homebrew-tap
   - dunn/emacs
@@ -12,8 +12,8 @@ homebrew_use_brewfile: false
 homebrew_clear_cache: false
 homebrew_installed_packages:
   - openssl
-  - { name: openssh, install_options: "with-brewed-openssl,with-keychain-support" }
-  - { name: curl, install_options: "with-ssl,with-libssh2" }
+  - {name: openssh, install_options: "with-brewed-openssl,with-keychain-support"}
+  - {name: curl, install_options: "with-ssl,with-libssh2"}
   - svn
   - parallel  # Install before moreutils that also different `parallel` command.
   - ack
@@ -65,7 +65,7 @@ homebrew_installed_packages:
   - ed
   - editorconfig
   - eg-examples
-  - { name: emacs, install_options: "with-cocoa,with-ctags,with-modules" }
+  - {name: emacs, install_options: "with-cocoa,with-ctags,with-modules"}
   - epstool
   - faac
   - fasd
@@ -80,7 +80,7 @@ homebrew_installed_packages:
   - freetype
   - fzf
   - gawk
-  - { name: gcc, install_options: "with-jit,with-nls" }
+  - {name: gcc, install_options: "with-jit,with-nls"}
   - gd
   - gdb
   - gdbm
@@ -89,7 +89,7 @@ homebrew_installed_packages:
   - gettext
   - ghostscript
   - gifsicle
-  - { name: git, install_options: "with-curl,with-gettext,with-openssl,with-pcre,with-persistent-https,with-subversion"}
+  - {name: git, install_options: "with-curl,with-gettext,with-openssl,with-pcre,with-persistent-https,with-subversion"}
   - git-branch-status
   - git-ftp
   - git-lfs
@@ -103,7 +103,7 @@ homebrew_installed_packages:
   - gnu-sed
   - gnu-tar
   - gnu-which
-  - { name: gnuplot, install_options: "with-qt,with-x11" }
+  - {name: gnuplot, install_options: "with-qt,with-x11"}
   - gnutls
   - go
   - gobject-introspection
@@ -266,7 +266,7 @@ homebrew_installed_packages:
   - vim
   - vitorgalvao/tiny-scripts/cask-repair
   - watch
-  - { name: wdiff, install_options: "with-gettext" }
+  - {name: wdiff, install_options: "with-gettext"}
   - webkit2png
   - wget
   - wine

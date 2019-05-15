@@ -1,5 +1,5 @@
 ---
-homebrew_upgrade_all_packages: yes
+homebrew_upgrade_all_packages: true
 homebrew_taps:
   - homebrew/cask
   - homebrew/core

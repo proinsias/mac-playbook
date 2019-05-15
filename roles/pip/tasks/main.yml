@@ -10,7 +10,7 @@
     - eg  # FIXME: via homebrew?
     - emoji  # FIXME: via homebrew?
     - em-keyboard  # FIXME: via homebrew?
-    - # FIXME: flake8 stuff via homebrew?
+    -  # FIXME: flake8 stuff via homebrew?
     - flake8-bugbear
     - flake8-builtins
     - flake8-coding
@@ -49,4 +49,4 @@
     - twine
     - uncommitted  # FIXME: via homebrew?
     - yapf  # FIXME: via homebrew?
-  become: yes
+  become: true

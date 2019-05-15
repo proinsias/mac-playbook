@@ -2,7 +2,7 @@
 nodejs_npm_global_packages:
   # Example of specifying pinned version.
   # - name: jslint
-  #  version: 0.9.3
+  #   version: 0.9.3
   - csslint
   - dockerlint
   - dockerfile_lint

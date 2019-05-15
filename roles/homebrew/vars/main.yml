@@ -1,5 +1,5 @@
 ---
-homebrew_upgrade_all_packages: yes
+homebrew_upgrade_all_packages: true
 homebrew_taps:
   - alehouse/homebrew-unofficial
   - alexdavid/homebrew-tap
@@ -16,7 +16,7 @@ homebrew_use_brewfile: false
 homebrew_clear_cache: true
 homebrew_installed_packages:
   - openssl
-  - { name: curl, install_options: "with-openssl,with-libssh2" }
+  - {name: curl, install_options: "with-openssl,with-libssh2"}
   - svn
   - parallel  # Install before moreutils that also different `parallel` command.
   - ack
@@ -81,7 +81,7 @@ homebrew_installed_packages:
   - ed
   - editorconfig
   - eg-examples
-  - { name: emacs, install_options: "with-cocoa,with-ctags,with-modules" }
+  - {name: emacs, install_options: "with-cocoa,with-ctags,with-modules"}
   - epstool
   - faac
   - fasd
@@ -96,7 +96,7 @@ homebrew_installed_packages:
   - freetype
   - fzf
   - gawk
-  - { name: gcc, install_options: "with-jit,with-nls" }
+  - {name: gcc, install_options: "with-jit,with-nls"}
   - gd
   - gdb
   - gdbm
@@ -105,7 +105,7 @@ homebrew_installed_packages:
   - gettext
   - ghostscript
   - gifsicle
-  - { name: git, install_options: "with-curl,with-openssl"}
+  - {name: git, install_options: "with-curl,with-openssl"}
   - git-branch-status
   - git-ftp
   - git-lfs
@@ -123,7 +123,7 @@ homebrew_installed_packages:
   - gnu-time
   - gnu-units
   - gnu-which
-  - { name: gnuplot, install_options: "with-qt,with-x11" }
+  - {name: gnuplot, install_options: "with-qt,with-x11"}
   - go
   - gobject-introspection
   - gpatch

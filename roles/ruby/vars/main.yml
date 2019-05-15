@@ -5,14 +5,14 @@ rbenv_default_ruby_version: "2.5.1"
 # Any global gems to be installed with the default Ruby version.
 rbenv_global_gems:
   - bundle-audit
-  - bundler # http://bundler.io/
+  - bundler  # http://bundler.io/
   - danger
   - html-proofer
   - image_optim
   - image_optim_pack
   - jekyll
   - json
-  - overcommit # https://github.com/brigade/overcommit
+  - overcommit  # https://github.com/brigade/overcommit
   - rspec
   - rubocop  # https://github.com/bbatsov/rubocop
   - sqlint

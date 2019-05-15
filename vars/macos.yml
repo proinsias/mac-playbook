@@ -45,96 +45,96 @@ system:
 
 screensaver:
 
-    # Screensaver activation delay in seconds
-    # 0 disables the screensaver
-    activation_delay: 300
+  # Screensaver activation delay in seconds
+  # 0 disables the screensaver
+  activation_delay: 300
 
-    # Ask for user password when screensaver is active
-    ask_password: yes
+  # Ask for user password when screensaver is active
+  ask_password: true
 
-    # Delay in seconds after which password is asked
-    # ask_password_delay: 0
+  # Delay in seconds after which password is asked
+  # ask_password_delay: 0
 
-    screensaver:
-      name: Aerial
-      path: ~/Library/Screen Savers/Aerial.saver
+  screensaver:
+    name: Aerial
+    path: ~/Library/Screen Savers/Aerial.saver
 
 input:
 
-    # Various spell correction settings
-    # enable_auto_correct: yes
-    enable_smart_quotes: no
-    # enable_smart_dashes: yes
-    # enable_automatic_capitalization: yes
-    # enable_automatic_periods: yes
-    # enable_continuous_spell_checking: yes
+  # Various spell correction settings
+  # enable_auto_correct: yes
+  enable_smart_quotes: false
+  # enable_smart_dashes: yes
+  # enable_automatic_capitalization: yes
+  # enable_automatic_periods: yes
+  # enable_continuous_spell_checking: yes
 
-    # If enabled, you get a special char menu on
-    # certain letters instead of key repeat
-    # enable_press_and_hold: yes
+  # If enabled, you get a special char menu on
+  # certain letters instead of key repeat
+  # enable_press_and_hold: yes
 
-    # Key repeat speed
-    # Min value is 1
-    # key_repeat_rate: 2
+  # Key repeat speed
+  # Min value is 1
+  # key_repeat_rate: 2
 
-    # Delay time until key repeat kicks in
-    # initial_key_repeat_delay: 22
+  # Delay time until key repeat kicks in
+  # initial_key_repeat_delay: 22
 
-    # Enables selections of dialog buttons with tab key
-    enable_full_keyboard_access: yes
+  # Enables selections of dialog buttons with tab key
+  enable_full_keyboard_access: true
 
-    # Space switching hotkeys (ctrl + 1-9)
-    # enable_space_hotkeys: no
+  # Space switching hotkeys (ctrl + 1-9)
+  # enable_space_hotkeys: no
 
 hostname:
-    # computername is the so-called “user-friendly” name for the Mac,
-    # it’s what will show up on the Mac itself and what will be
-    # visible to others when connecting to it over a local network.
-    # This is also what’s visible under the Sharing preference panel.
-    # computername: null
-    # FIXME: Move to host-specific var files.
+# computername is the so-called “user-friendly” name for the Mac,
+# it’s what will show up on the Mac itself and what will be
+# visible to others when connecting to it over a local network.
+# This is also what’s visible under the Sharing preference panel.
+# computername: null
+# FIXME: Move to host-specific var files.
 
-    # hostname is the name assigned to the computer as visible
-    # from the command line, and it’s also used by local and
-    # remote networks when connecting through SSH and Remote Login.
-    # hostname: null
+# hostname is the name assigned to the computer as visible
+# from the command line, and it’s also used by local and
+# remote networks when connecting through SSH and Remote Login.
+# hostname: null
 
-    # localhostname is the name identifier used by Bonjour and
-    # visible through file sharing services like AirDrop
-    # localhostname: null
+# localhostname is the name identifier used by Bonjour and
+# visible through file sharing services like AirDrop
+# localhostname: null
 
 security:
-    # Gatekeeper won't allow you to easily install
-    # unsigned apps not downloaded from the Mac App Store
-    # enable_gatekeeper: yes
+# Gatekeeper won't allow you to easily install
+# unsigned apps not downloaded from the Mac App Store
+# enable_gatekeeper: yes
 
-    # Quarantine asks you if you really want
-    # to open a downloaded executable
-    # enable_quarantine: yes
+# Quarantine asks you if you really want
+# to open a downloaded executable
+# enable_quarantine: yes
 
 misc:
 
-    # save_application_state_on_quit: yes
+  # save_application_state_on_quit: yes
 
-    disable_dsstore_on_network_shares: yes
+  disable_dsstore_on_network_shares: true
 
-    disable_dsstore_on_usb_drives: yes
+  disable_dsstore_on_usb_drives: true
 
-    disable_disk_image_verification: yes
+  disable_disk_image_verification: true
 
-    disable_spotlight_network_indexing: yes
+  disable_spotlight_network_indexing: true
 
-    save_new_docs_to_icloud: no
+  save_new_docs_to_icloud: false
 
-    enable_ssh: yes
+  enable_ssh: true
 
-    # enable_crash_reporter: yes
+  # enable_crash_reporter: yes
 
-    enable_startup_sound: no
+  enable_startup_sound: false
 
-    # enable_sudden_motion_sensor: yes
+  # enable_sudden_motion_sensor: true
 
-    # enable_hibernation: yes
+  # enable_hibernation: true
 
   # Default filetype <-> app associations
   # Values:
@@ -157,28 +157,28 @@ finder:
   # new_window_target: "PfHm"
 
   # Finder warns when you are changing a file extension.
-  # show_file_extensions_warning: yes
+  # show_file_extensions_warning: true
 
-  # warn_before_emptying_the_trash: yes
+  # warn_before_emptying_the_trash: true
 
   # Should dotfiles be shown?
   # "cmd + shift - ." toggles this
-  show_all_files: yes
+  show_all_files: true
 
   # Keep folders on top when you sort by name?
-  # keep_folders_on_top: no
+  # keep_folders_on_top: false
 
   # Show posix path in finder titlebar?
-  show_full_path_in_titlebar: yes
+  show_full_path_in_titlebar: true
 
   # Show interactive pathbar at the bottom?
-  show_pathbar: yes
+  show_pathbar: true
 
   # Show statusbar with selection and filesize info at the bottom?
-  show_statusbar: yes
+  show_statusbar: true
 
   # Should finder be quitable? (It instantly restarts anyway)
-  enable_quit_menu_item: yes
+  enable_quit_menu_item: true
 
   # VALUES: "icnv" for icon view, "clmv" for column view, "Flwv" for cover flow view
   default_view_style: "clmv"
@@ -190,20 +190,20 @@ finder:
   # show_removable_media_on_desktop: yes
 
   # Hide ~/Library ?
-  hide_user_library: no
+  hide_user_library: false
 
   # Hide /Volumes ?
-  hide_system_volumes: no
+  hide_system_volumes: false
 
   # Which panes of the Getinfo window should be expanded by default?
   # expand_infopane:
-  #   - { name: General , value: yes }
-  #   - { name: MetaData , value: no }
-  #   - { name: OpenWith , value: no }
-  #   - { name: Name , value: no }
-  #   - { name: Comments , value: no }
-  #   - { name: Preview , value: yes }
-  #   - { name: Privileges , value: no }
+  #   - { name: General , value: true }
+  #   - { name: MetaData , value: false }
+  #   - { name: OpenWith , value: false }
+  #   - { name: Name , value: false }
+  #   - { name: Comments , value: false }
+  #   - { name: Preview , value: true }
+  #   - { name: Privileges , value: false }
 
   # Automatic arrangement of icons
   # Values: "none", "grid", "name", "kind", "dateModified",
@@ -218,22 +218,22 @@ finder:
   # iconview_icon_size: 64
 
   # Show item info below item name?
-  # iconview_show_item_info: no
+  # iconview_show_item_info: false
 
   # Font size
   # iconview_text_size: 12
 
   # Show item preview as icon? (mostly useful for images)
-  # iconview_show_icon_preview: yes
+  # iconview_show_icon_preview: true
 
   # When disabled label is shown to the right of icons
-  # iconview_show_label_on_bottom: yes
+  # iconview_show_label_on_bottom: true
 
   # Doesn't work on newer macOS versions
-  # enable_quicklook_text_selection: no
+  # enable_quicklook_text_selection: false
 
   #
-  # disable_all_animations: no
+  # disable_all_animations: false
 
 
 ######################################
@@ -245,23 +245,23 @@ dock:
   # icon size
   # tile_size: 50
 
-  # show_idicator_lights: yes
+  # show_idicator_lights: true
 
-  # hidden_items_translucent: no
+  # hidden_items_translucent: false
 
   # fade_in_time: 0
 
-  # rearrange_spaces_by_last_use: yes
+  # rearrange_spaces_by_last_use: true
 
-  autohide: yes
+  autohide: true
 
   # if enabled configured apps will be added
   # even if they're not installed
-  # apps_force_install: no
+  # apps_force_install: false
 
   # removes apps from the dock that are
   # not defined in the apps list
-  # apps_remove_undefined: no
+  # apps_remove_undefined: false
 
   # Apps to add to dock
   # example item:
@@ -281,21 +281,21 @@ dock:
 
 safari:
 
-  show_full_url_in_address_bar: yes
+  show_full_url_in_address_bar: true
 
-  # open_safe_files_automatically: no
+  # open_safe_files_automatically: false
 
-  enable_status_bar: yes
+  enable_status_bar: true
 
-  enable_developer_menu: yes
+  enable_developer_menu: true
 
-  autofill_passwords: no
+  autofill_passwords: false
 
-  show_favorites_bar: yes
+  show_favorites_bar: true
 
-  # disable_thumbnail_cache: no
+  # disable_thumbnail_cache: false
 
-  # search_with_word_start_only: yes
+  # search_with_word_start_only: true
 
 
 ######################################
@@ -304,7 +304,7 @@ safari:
 
 mail:
 
-  # address_include_name_on_pasteboard: yes
+# address_include_name_on_pasteboard: true
 
 
 ######################################
@@ -313,7 +313,7 @@ mail:
 
 textedit:
 
-  default_doc_plaintext: yes
+  default_doc_plaintext: true
 
 
 ######################################
@@ -322,4 +322,4 @@ textedit:
 
 terminal:
 
-  # enable_secure_keyboard_entry: yes
+# enable_secure_keyboard_entry: true

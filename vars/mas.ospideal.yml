@@ -1,7 +1,7 @@
 ---
 mas_installed_apps:
-  - { id:  409183694, name: "Keynote (8.1)" }
-  - { id:  409203825, name: "Numbers (5.1)" }
-  - { id:  409201541, name: "Pages (7.1)" }
-  - { id:  497799835, name: "Xcode (9.4.1)" }
-mas_upgrade_all_apps: yes
+  - {id: 409183694, name: "Keynote (8.1)"}
+  - {id: 409203825, name: "Numbers (5.1)"}
+  - {id: 409201541, name: "Pages (7.1)"}
+  - {id: 497799835, name: "Xcode (9.4.1)"}
+mas_upgrade_all_apps: true

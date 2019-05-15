@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - { role: appian.macos-power, become: yes, }
+  - {role: appian.macos-power, become: true}
   - homebrew
   # - geerlingguy.mas  # FIXME: Broken on latest OSs.
   - lafarer.osx-computername

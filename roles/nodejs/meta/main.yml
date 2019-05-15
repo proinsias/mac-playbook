@@ -1,4 +1,5 @@
+---
 dependencies:
-  # FIXME: Use module instead - npm is installed via brew.
-  # - {role: geerlingguy.nodejs}
-  # https://github.com/geerlingguy/ansible-role-nodejs/blob/master/tasks/main.yml
+# FIXME: Use module instead - npm is installed via brew.
+# - {role: geerlingguy.nodejs}
+# https://github.com/geerlingguy/ansible-role-nodejs/blob/master/tasks/main.yml

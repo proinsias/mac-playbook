@@ -72,20 +72,20 @@
     - role: lafarer.osx-defaults
       tags: ['osx-defaults']
 
-    # # FIXME: Put macos_power_settings in var file?
-    # - {role: appian.macos-power,
-    #    become: yes,
-    #    macos_power_settings: [
-    #      {cmd: computersleep, desired_value: 'Never'},
-    #      {cmd: displaysleep, desired_value: 'after 15 minutes'},
-    #      {cmd: harddisksleep, desired_value: 'Never'},
-    #      {cmd: restartfreeze, desired_value: 'Off'},
-    #      {cmd: wakeonnetworkaccess, desired_value: 'On'},
-    #    ]
-    # }
-    # - geerlingguy.nodejs
-    # - geerlingguy.pip
-    # - geerlingguy.ruby
+      # # FIXME: Put macos_power_settings in var file?
+      # - {role: appian.macos-power,
+      #    become: yes,
+      #    macos_power_settings: [
+      #      {cmd: computersleep, desired_value: 'Never'},
+      #      {cmd: displaysleep, desired_value: 'after 15 minutes'},
+      #      {cmd: harddisksleep, desired_value: 'Never'},
+      #      {cmd: restartfreeze, desired_value: 'Off'},
+      #      {cmd: wakeonnetworkaccess, desired_value: 'On'},
+      #    ]
+      # }
+      # - geerlingguy.nodejs
+      # - geerlingguy.pip
+      # - geerlingguy.ruby
 
   tasks:
     # - name: print facts
@@ -135,7 +135,8 @@
 # FIXME: ansible-role-dotfiles!
 
 # FIXME: GT FIXMEs in:
-#./roles/darwin/vars/main.yml:  ComputerName: "discovery"  # osx-computername # FIXME: Set per computer, or use to identify host!
+# ./roles/darwin/vars/main.yml:  ComputerName: "discovery"  # osx-computername
+# FIXME: Set per computer, or use to identify host!
 # https://github.com/lafarer/ansible-role-osx-computername/blob/master/tasks/main.yml
 
 # FIXME: Move brewup, gemupdate to here?
@@ -154,30 +155,28 @@
 # https://galaxy.ansible.com/shashikant86/ios-dev
 # ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
 # https://galaxy.ansible.com/bjoernalbers/sysctl
-#https://github.com/feffi/ansible-macos-softwareupdate
-#https://github.com/dotstrap/ansible-xcode
-#https://github.com/ansible/ansible-modules-extras/blob/devel/system/osx_defaults.py
+# https://github.com/feffi/ansible-macos-softwareupdate
+# https://github.com/dotstrap/ansible-xcode
+# https://github.com/ansible/ansible-modules-extras/blob/devel/system/osx_defaults.py
 #
-#https://github.com/mego22/ansible-role-osx-settings
+# https://github.com/mego22/ansible-role-osx-settings
 #
-#https://github.com/0x4e3/osx-bootstrap-defaults
-#https://github.com/osxstrap/ansible-osx-user-picture
+# https://github.com/0x4e3/osx-bootstrap-defaults
+# https://github.com/osxstrap/ansible-osx-user-picture
 # https://en.gravatar.com/userimage/34741261/b37d9ade8b8cea564bc47268db650c84.jpg?size=200
-#https://github.com/osxstrap/ansible-osx-software-update
+# https://github.com/osxstrap/ansible-osx-software-update
 # drew-kun/ansible-dnscrypt
 # drew-kun/ansible-sshd
 # drew-kun/ansible-macos_terminal
 
-#all:
+# all:
 # https://github.com/feffi/ansible-macos-git-repos
 
-#darwin:
+# darwin:
 # https://github.com/feffi/ansible-macos-standby
 
-#darwin/firefly:
+# darwin/firefly:
 # https://github.com/feffi/ansible-macos-timemachine
-
-
 
 # FIXME: Use roles and separate files to setup mac/ubuntu/centos machines.
 # https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
@@ -200,21 +199,21 @@
 # https://galaxy.ansible.com/drew-kun/macos_terminal
 # https://galaxy.ansible.com/mhalano/dropbox
 # https://galaxy.ansible.com/bjoernalbers/sysctl
-#https://github.com/juju4/ansible-harden-darwin
-#https://github.com/feffi/ansible-macos-softwareupdate
-#https://github.com/dotstrap/ansible-xcode
-#https://github.com/ansible/ansible-modules-extras/blob/devel/system/osx_defaults.py
+# https://github.com/juju4/ansible-harden-darwin
+# https://github.com/feffi/ansible-macos-softwareupdate
+# https://github.com/dotstrap/ansible-xcode
+# https://github.com/ansible/ansible-modules-extras/blob/devel/system/osx_defaults.py
 #
-#https://github.com/mego22/ansible-role-osx-settings
-#https://github.com/lafarer/ansible-role-osx-jenv
-#https://github.com/fubarhouse/ansible-role-macfonts
-#https://github.com/0x4e3/osx-bootstrap-defaults
-#https://github.com/osxstrap/ansible-osx-user-picture
-#https://github.com/osxstrap/ansible-osx-software-update
-#https://github.com/feffi/ansible-macos-git-repos
-#https://github.com/feffi/ansible-macos-timemachine
-#https://github.com/feffi/ansible-macos-standby
-#https://github.com/openstack/ansible-hardening
+# https://github.com/mego22/ansible-role-osx-settings
+# https://github.com/lafarer/ansible-role-osx-jenv
+# https://github.com/fubarhouse/ansible-role-macfonts
+# https://github.com/0x4e3/osx-bootstrap-defaults
+# https://github.com/osxstrap/ansible-osx-user-picture
+# https://github.com/osxstrap/ansible-osx-software-update
+# https://github.com/feffi/ansible-macos-git-repos
+# https://github.com/feffi/ansible-macos-timemachine
+# https://github.com/feffi/ansible-macos-standby
+# https://github.com/openstack/ansible-hardening
 
 # FIXME:
 # https://stackoverflow.com/questions/25230376/how-to-automatically-install-ansible-galaxy-roles
