@@ -2,7 +2,7 @@
   - name: Run all homebrew role.
     include_role:
       name: all-homebrew
-    tags: ['homebrew']
+    tags: ['homebrew', 'always']  # Enable skipping using always tag – for testing on travis.
 
   # FIXME: Why broken?
   # - name: Run all macos role.

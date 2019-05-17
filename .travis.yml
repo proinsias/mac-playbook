@@ -8,8 +8,8 @@ matrix:
   fast_finish: true
   include:
     - env: TAGS=extra-packages,macos,osx-defaults
-    - env: TAGS=homebrew
-    # - env: TAGS=mas  # mas has automation issues.
+    - env: TAGS=homebrew,travis
+    # - env: TAGS=mas,travis  # mas has automation issues.
 
 cache:
   apt: true
