@@ -24,71 +24,27 @@
     # - name: print facts
     #   debug:
     #     var: ansible_facts
-    - name: Get hostname
-      command: "hostname"
-      register: hostname_cmd
-
-    - name: debug
-      debug: var=hostname_cmd
-
-    - set_fact: hname="{{hostname_cmd.stdout}}"
-
-    - name: debug
-      debug: var=hname
-
-    - name: Run all homebrew role.
+    - name: Run all role.
       include_role:
-        name: all-homebrew
-      tags: ['homebrew', 'always']
+        name: all
+      tags: ['always']
 
     # FIXME: GT ./all-osx-defaults/vars/extra.yml ./ruby/vars/ruby.yml
-    # FIXME: GT
 
-    # FIXME: Why broken?
-    # - name: Run all macos role.
-    #   include_role:
-    #     name: all.macos
-    #   tags: ['macos']
-
-    - name: Run all mas role.
+    - name: Run firefly role.
       include_role:
-        name: all-mas
-      tags: ['mas']
+        name: firefly
+      tags: ['firefly', 'never']
 
-    - name: Run all osx-defaults role.
+    - name: Run ospideal role.
       include_role:
-        name: all-osx-defaults
-      tags: ['osx-defaults']
+        name: ospideal
+      tags: ['ospideal', 'never']
 
-    - name: Run firefly homebrew role.
+    - name: Run travis role.
       include_role:
-        name: firefly-homebrew
-      tags: ['homebrew']
-      when: hname == "firefly.local"
-
-    - name: Run firefly mas role.
-      include_role:
-        name: firefly-mas
-      tags: ['mas']
-      when: hname == "firefly.local"
-
-    - name: Run ospideal homebrew role.
-      include_role:
-        name: ospideal-homebrew
-      tags: ['homebrew']
-      when: hname == "ospideal.local"
-
-    - name: Run ospideal mas role.
-      include_role:
-        name: ospideal-mas
-      tags: ['mas']
-      when: hname == "ospideal.local"
-
-    - name: Run travis homebrew role.
-      include_role:
-        name: travis-homebrew
-      tags: ['homebrew']
-      when: hname == "Traviss-Mac.local"
+        name: travis
+      tags: ['travis', 'never']
 
     # FIXME: Replace with geerlingguy.pip/geerlingguy.ruby/npm ???
     - include_tasks: tasks/extra-packages.yml

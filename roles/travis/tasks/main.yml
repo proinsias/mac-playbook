@@ -1,0 +1,5 @@
+---
+  - name: Run travis homebrew role.
+    include_role:
+      name: travis-homebrew
+    tags: ['homebrew']

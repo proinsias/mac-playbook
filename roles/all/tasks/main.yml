@@ -1,0 +1,21 @@
+---
+  - name: Run all homebrew role.
+    include_role:
+      name: all-homebrew
+    tags: ['homebrew']
+
+  # FIXME: Why broken?
+  # - name: Run all macos role.
+  #   include_role:
+  #     name: all.macos
+  #   tags: ['macos']
+
+  - name: Run all mas role.
+    include_role:
+      name: all-mas
+    tags: ['mas']
+
+  - name: Run all osx-defaults role.
+    include_role:
+      name: all-osx-defaults
+    tags: ['osx-defaults']
