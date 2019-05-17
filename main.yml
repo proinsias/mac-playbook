@@ -27,6 +27,7 @@
     - name: Run all role.
       include_role:
         name: all
+      tags: ['always']
 
     # FIXME: GT ./all-osx-defaults/vars/extra.yml ./ruby/vars/ruby.yml
 

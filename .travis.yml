@@ -54,7 +54,7 @@ script:
   - "ansible-playbook --syntax-check main.yml"
 
   # Test the playbook, tag by tag
-  - "travis_wait 30 ansible-playbook main.yml --inventory inventory --tags ${TAGS} --skip-tags always"
+  - "travis_wait 30 ansible-playbook main.yml --inventory inventory --tags ${TAGS} --skip-tags skip-travis"
 
 before_cache:
   - brew cleanup
