@@ -1,0 +1,76 @@
+---
+macos_standby:
+  # Restart automatically if the computer freezes
+  restart_on_freeze: true
+
+  # Set standby delay in seconds, default = 3600, 24 hours = 86400, disabled = false
+  standby_delay: 3600
+
+  # Set hibernate mode:
+  # hibernatemode = 0 (binary 0000) by default on supported desktops.
+  # The system will not back memory up to persistent storage.
+  # The system must wake from the contents of memory;
+  # the system will lose context on power loss.
+  # This is, historically, plain old sleep.
+  #
+  # hibernatemode = 3 (binary 0011) by default on supported portables.
+  # The system will store a copy of memory to persistent storage (the disk),
+  # and will power memory during sleep.
+  # The system will wake from memory, unless a power loss forces it to restore from disk image.
+  #
+  # hibernatemode = 25 (binary 0001 1001) is only settable via pmset.
+  # The system will store a copy of memory to persistent storage (the disk),
+  # and will remove power to memory.
+  # The system will restore from disk image.
+  # If you want "hibernation" - slower sleeps, slower wakes, and better battery life,
+  # you should use this setting.
+  hibernate_mode: 3
+
+  # Remove the sleep image file to save disk space
+  # remove_sleepimage: false
+
+  # Automatically illuminate built-in MacBook keyboard in low light
+  # bezel_dim: true
+
+  # Turn off keyboard illumination when computer is not used for x seconds
+  # bezel_dim_delay: 300
+
+  # Automatic termination of inactive apps
+  # terminate_inactive: false
+
+  # Set display sleep time delay in minutes
+  sleep_display: 15
+
+  # Set computer sleep time delay in minutes
+  sleep_computer: 30
+
+  # Set harddisk sleep time delay in minutes
+  sleep_harddisk: 15
+
+  # Set wake on network access to either <on> or <off>
+  # wake_on_lan: true
+
+  # Sleep on pressing the power button, direct sleep = true, show dialog = false
+  # powerbutton_sleep: false
+
+  # Set usage of PowerNap
+  # powernap: true
+
+  # wake the machine when the laptop lid (or clamshell) is opened
+  # lidwake: true
+
+  # wake the machine when power source (AC/battery) is changed
+  # acwake: false
+
+  # display sleep will use an intermediate half-brightness state
+  # between full brightness and fully off
+  # halfdim: true
+
+  # prevent idle system sleep when any tty (e.g. remote login session) is 'active'.
+  # A tty is 'inactive' only when its idle time exceeds the system sleep timer.
+  # ttyskeepawake: true
+
+  # Destroy File Vault Key when going to standby mode. By default File vault keys are retained even
+  # when system goes to standby. If the keys are destroyed, user will be prompted to enter the
+  # password while coming out of standby mode.
+  # destroyfvkeyonstandby: false

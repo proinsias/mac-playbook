@@ -3,6 +3,7 @@
 
 - src: appian.macos-power  # Install a role from the Ansible Galaxy.
 - src: danbohea.rbenv
+- src: feffi.macos-standby
 - src: fubarhouse.macdock
 - src: geerlingguy.homebrew
 - src: geerlingguy.mas

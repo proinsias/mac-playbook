@@ -20,6 +20,11 @@
       name: all-mas
     tags: ['mas']
 
+  - name: Run all macos-standby role.
+    include_role:
+      name: all-macos-standby
+    tags: ['macos-standby']
+
   - name: Run all osx-defaults role.
     include_role:
       name: all-osx-defaults

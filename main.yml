@@ -136,7 +136,6 @@
 # https://github.com/osxstrap/ansible-osx-software-update
 # https://github.com/feffi/ansible-macos-git-repos
 # https://github.com/feffi/ansible-macos-timemachine
-# https://github.com/feffi/ansible-macos-standby
 # https://github.com/openstack/ansible-hardening
 
 # FIXME:
