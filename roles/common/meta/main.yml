@@ -1,6 +1,0 @@
----
-dependencies:
-  # FIXME: Use module instead - npm is installed via brew.
-  # - {role: nodejs}
-  - pip
-  - ruby

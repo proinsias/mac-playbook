@@ -3,3 +3,8 @@
     include_role:
       name: travis-homebrew
     tags: ['homebrew']
+
+  - name: Run travis macdock role after homebrew role.
+    include_role:
+      name: travis-macdock
+    tags: ['macdock']

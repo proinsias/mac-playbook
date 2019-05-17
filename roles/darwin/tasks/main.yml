@@ -1,7 +1,0 @@
----
-# - name: Copy the NGINX repository definition
-#   copy: src=nginx.repo dest=/etc/yum.repos.d/
-
-# FIXME: juju4/ansible-harden-darwin
-
-# FIXME: lafarer/ansible-role-osx-jenv ?

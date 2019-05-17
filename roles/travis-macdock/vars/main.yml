@@ -1,0 +1,22 @@
+---
+dockitems_disabled:
+  - Launchpad
+  - Mail
+  - Safari
+  - Contacts
+  - Notes
+  - Reminders
+  - Maps
+  - Photos
+  - Messages
+  - FaceTime
+  - iTunes
+  - iBooks
+  - App Store
+  - System Preferences
+  - Calendar
+  - Terminal
+dockitems_enabled:
+  - name: Firefox
+    path: "/Applications/Firefox.app"
+    pos: 1

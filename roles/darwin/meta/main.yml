@@ -1,8 +1,0 @@
----
-dependencies:
-  - {role: appian.macos-power, become: true}
-  - homebrew
-  # - geerlingguy.mas  # FIXME: Broken on latest OSs.
-  - lafarer.osx-computername
-  # - {role: kinglouie.macos}  # FIXME: TO TEST!
-  # - {role: lafarer.osx-defaults}  # FIXME: TO TEST!

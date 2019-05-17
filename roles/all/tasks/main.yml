@@ -10,6 +10,11 @@
   #     name: all.macos
   #   tags: ['macos']
 
+  - name: Run all macdock role after homebrew role.
+    include_role:
+      name: all-macdock
+    tags: ['macdock', 'always']
+
   - name: Run all mas role.
     include_role:
       name: all-mas
