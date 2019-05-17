@@ -1,0 +1,12 @@
+---
+
+- homebrew:
+    name: "{{ item.name }}"
+    state: present
+  with_items:
+    - python
+    - pipx
+
+- name: Install global pipx packages.
+  command: pipx install {{ item.name }}  --python /usr/local/bin/python3
+  with_items: "{{ pipx_packages }}"

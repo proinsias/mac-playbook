@@ -1,0 +1,26 @@
+---
+pipx_packages:
+  - argcomplete
+  - clf
+  - csvkit
+  - eg
+  - em-keyboard
+  - flake8
+  - glances
+  - hashin
+  - howdoi
+  - ntfy[pid,emoji,slack]
+  - pip-tools
+  - proselint
+  - pydocstyle
+  - pyflakes
+  - pyjokes
+  - pylint
+  - pytest
+  - safety
+  - searchcmd
+  - slacker
+  - tldr
+  - twine
+  - uncommitted
+  - yapf

@@ -16,9 +16,8 @@
   #    ]
   # }
   # FIXME:
-  # - geerlingguy.nodejs
-  # - geerlingguy.pip, vars/pip.yml
-  # - geerlingguy.ruby, vars/ruby.yml
+  # - geerlingguy.nodejs roles/nodejs
+  # - geerlingguy.ruby, roles/ruby
 
   tasks:
     # - name: print facts
@@ -46,11 +45,11 @@
         name: travis
       tags: ['travis', 'never']
 
-    # FIXME: Replace with geerlingguy.pip/geerlingguy.ruby/npm ???
+    # FIXME: Replace with geerlingguy.ruby/nodejs ???
     - include_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
 
-# FIXME: - add firefly-macbook, ospideal-macbook.
+# FIXME: GT TGT folder
 
 # FIXME: Cheatsheet installed via cask **and** mas?
 
@@ -137,15 +136,14 @@
 # https://github.com/osxstrap/ansible-osx-software-update
 # https://github.com/feffi/ansible-macos-git-repos
 # https://github.com/feffi/ansible-macos-timemachine
-# https://github.com/openstack/ansible-hardening
+# https://github.com/openstack/ansible-hardening - for ubuntu etc.
+# FIXME: https://github.com/dev-sec/ansible-os-hardening
 
 # FIXME:
 # https://stackoverflow.com/questions/25230376/how-to-automatically-install-ansible-galaxy-roles
 # When creating galaxy requirements, specify hash so they are pinned!
 
 
-# FIXME: openstack/ansible-hardening
-# FIXME: https://github.com/dev-sec/ansible-os-hardening
 
 # FIXME: juju4/ansible-harden-darwin
 

@@ -1,0 +1,5 @@
+---
+pipx_packages:
+  - flake8
+
+# FIXME: Add in pipx inject flake8 cohesion

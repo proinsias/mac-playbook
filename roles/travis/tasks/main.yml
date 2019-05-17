@@ -8,3 +8,8 @@
     include_role:
       name: travis-macdock
     tags: ['macdock']
+
+  - name: Run travis pipx role.
+    include_role:
+      name: travis-pipx
+    tags: ['pipx']

@@ -10,6 +10,7 @@ matrix:
     - env: TAGS=extra-packages,macos,macos-standby,osx-defaults
     - env: TAGS=homebrew,macdock,travis
     # - env: TAGS=mas,travis  # mas has automation issues.
+    - env: TAGS=pipx,travis
 
 cache:
   apt: true
@@ -58,7 +59,7 @@ script:
 
 before_cache:
   - brew cleanup
-  - rm --force "${HOME}/.cache/pip/log/debug.log"
+  - rm -f "${HOME}/.cache/pip/log/debug.log"
 
 notifications:
   slack:

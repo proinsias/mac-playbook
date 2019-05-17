@@ -1,35 +1,3 @@
-#!/usr/bin/env bash
-
-if ! pipx -h > /dev/null 2>&1 ; then
-  echo Installing pipx...
-  brew install pipx
-fi
-
-pipx install argcomplete --python /usr/local/bin/python3
-pipx install clf --python /usr/local/bin/python3
-pipx install csvkit --python /usr/local/bin/python3
-pipx install eg --python /usr/local/bin/python3
-pipx install em-keyboard --python /usr/local/bin/python3
-pipx install glances --python /usr/local/bin/python3
-pipx install hashin --python /usr/local/bin/python3
-pipx install howdoi --python /usr/local/bin/python3
-pipx install ntfy[pid,emoji,slack] --python /usr/local/bin/python3
-pipx install pip-tools --python /usr/local/bin/python3
-pipx install proselint --python /usr/local/bin/python3
-pipx install pydocstyle --python /usr/local/bin/python3
-pipx install pyflakes --python /usr/local/bin/python3
-pipx install pyjokes --python /usr/local/bin/python3
-pipx install pylint --python /usr/local/bin/python3
-pipx install psutil --python /usr/local/bin/python3
-pipx install safety --python /usr/local/bin/python3
-pipx install searchcmd --python /usr/local/bin/python3
-pipx install slacker --python /usr/local/bin/python3
-pipx install tldr --python /usr/local/bin/python3
-pipx install twine --python /usr/local/bin/python3
-pipx install uncommitted --python /usr/local/bin/python3
-pipx install yapf --python /usr/local/bin/python3
-
-pipx install flake8 --python /usr/local/bin/python3
 pipx inject flake8 cohesion
 pipx inject flake8 flake8-annotations-complexity
 pipx inject flake8 flake8-annotations-coverage
@@ -67,7 +35,6 @@ pipx inject flake8 flake8-variables-names
 pipx inject flake8 flake8_tuple
 pipx inject flake8 pep8-naming
 
-pipx install pytest --python /usr/local/bin/python3
 pipx inject pytest pytest-profiling
 pipx inject pytest pytest-sugar
 pipx inject pytest pytest-xdist

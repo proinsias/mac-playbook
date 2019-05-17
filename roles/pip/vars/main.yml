@@ -1,7 +1,0 @@
----
-pip_install_packages:
-  - emoji
-  - jupyter_contrib_nbextensions  # FIXME:???
-  - psutil
-  - rpy2
-  - r-essential

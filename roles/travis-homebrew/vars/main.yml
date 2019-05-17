@@ -3,12 +3,14 @@
 homebrew_installed_packages:
   - autoconf
   - bash-completion
+  - cowsay
   - gettext
+  - pipx
+  - python
+  - pv
+  - readline
   - sqlite
   - ssh-copy-id
-  - cowsay
-  - readline
-  - pv
   - wget
   - wrk
 
