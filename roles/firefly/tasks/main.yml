@@ -1,10 +1,10 @@
 ---
-  - name: Run firefly homebrew role.
-    include_role:
-      name: firefly-homebrew
-    tags: ['homebrew']
+- name: Run firefly homebrew role.
+  include_role:
+    name: firefly-homebrew
+  tags: ['homebrew']
 
-  - name: Run firefly mas role.
-    include_role:
-      name: firefly-mas
-    tags: ['mas']
+- name: Run firefly mas role.
+  include_role:
+    name: firefly-mas
+  tags: ['mas']

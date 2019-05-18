@@ -10,7 +10,7 @@ matrix:
     - env: TAGS=extra-packages,macos,macos-standby,osx-defaults
     - env: TAGS=homebrew,macdock,travis
     # - env: TAGS=mas,travis  # mas has automation issues.
-    - env: TAGS=pipx,travis
+    - env: TAGS=pipx,nodejs,travis
 
 cache:
   apt: true

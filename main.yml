@@ -16,7 +16,6 @@
   #    ]
   # }
   # FIXME:
-  # - geerlingguy.nodejs roles/nodejs
   # - geerlingguy.ruby, roles/ruby
 
   tasks:
@@ -45,11 +44,13 @@
         name: travis
       tags: ['travis', 'never']
 
-    # FIXME: Replace with geerlingguy.ruby/nodejs ???
+    # FIXME: Replace with geerlingguy.ruby ???
     - include_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
 
 # FIXME: GT TGT folder
+
+# FIXME: Test VM - create snapshot for rapid rollback.
 
 # FIXME: Cheatsheet installed via cask **and** mas?
 
@@ -149,9 +150,6 @@
 
 # FIXME: lafarer/ansible-role-osx-jenv ?
 
-#  - {role: appian.macos-power, become: true}
-#  - homebrew
-#  # - geerlingguy.mas  # FIXME: Broken on latest OSs.
 #  - lafarer.osx-computername
 #  # - {role: kinglouie.macos}  # FIXME: TO TEST!
 #  # - {role: lafarer.osx-defaults}  # FIXME: TO TEST!
@@ -174,5 +172,4 @@
 #     # FIXME: Finish https://github.com/kinglouie/ansible-role-macos/blob/master/defaults/main.yml
 
 
-# FIXME: Add pipx,
 # FIXME: GT .bashrc .profile.

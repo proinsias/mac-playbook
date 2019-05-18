@@ -1,15 +1,20 @@
 ---
-  - name: Run travis homebrew role.
-    include_role:
-      name: travis-homebrew
-    tags: ['homebrew']
+- name: Run travis homebrew role.
+  include_role:
+    name: travis-homebrew
+  tags: ['homebrew']
 
-  - name: Run travis macdock role after homebrew role.
-    include_role:
-      name: travis-macdock
-    tags: ['macdock']
+- name: Run travis macdock role after homebrew role.
+  include_role:
+    name: travis-macdock
+  tags: ['macdock']
 
-  - name: Run travis pipx role.
-    include_role:
-      name: travis-pipx
-    tags: ['pipx']
+- name: Run travis nodejs role.
+  include_role:
+    name: travis-nodejs
+  tags: ['nodejs']
+
+- name: Run travis pipx role.
+  include_role:
+    name: travis-pipx
+  tags: ['pipx']

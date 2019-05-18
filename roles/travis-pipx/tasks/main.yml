@@ -1,5 +1,4 @@
 ---
-
 - homebrew:
     name: "{{ item.name }}"
     state: present
