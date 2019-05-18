@@ -18,3 +18,8 @@
   include_role:
     name: travis-pipx
   tags: ['pipx']
+
+- name: Run travis ruby role.
+  include_role:
+    name: travis-ruby
+  tags: ['ruby']

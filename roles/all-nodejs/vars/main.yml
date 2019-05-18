@@ -1,5 +1,5 @@
 ---
-nodejs_npm_global_packages:
+nodejs_global_packages:
   # Example of specifying pinned version.
   # - name: jslint
   #   version: 0.9.3

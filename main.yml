@@ -44,10 +44,6 @@
         name: travis
       tags: ['travis', 'never']
 
-    # FIXME: Replace with geerlingguy.ruby ???
-    - include_tasks: tasks/extra-packages.yml
-      tags: ['extra-packages']
-
 # FIXME: GT TGT folder
 
 # FIXME: Test VM - create snapshot for rapid rollback.

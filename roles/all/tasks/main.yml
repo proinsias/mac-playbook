@@ -39,3 +39,8 @@
   include_role:
     name: all-pipx
   tags: ['pipx', 'skip-travis']
+
+- name: Run all ruby role.
+  include_role:
+    name: all-ruby
+  tags: ['ruby']

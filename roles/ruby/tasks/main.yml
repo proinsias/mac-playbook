@@ -1,6 +1,0 @@
----
-- name: Install overcommit in system gem
-  gem:
-    name: overcommit  # https://github.com/brigade/overcommit
-    source: 'https://rubygems.org'
-    state: present

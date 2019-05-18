@@ -7,4 +7,4 @@
 
 - name: Install global nodejs packages.
   command: npm install --global {{ item.name }}
-  with_items: "{{ nodejs_npm_global_packages }}"
+  with_items: "{{ nodejs_global_packages }}"

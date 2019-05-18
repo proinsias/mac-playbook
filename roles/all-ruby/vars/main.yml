@@ -1,5 +1,4 @@
 ---
-ruby_install_bundler: true
 ruby_install_gems:
   - bundle-audit
   - bundler  # http://bundler.io/
