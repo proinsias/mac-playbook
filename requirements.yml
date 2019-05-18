@@ -11,7 +11,7 @@
 - src: geerlingguy.homebrew
 - src: geerlingguy.mas
 - src: kinglouie.macos
-- src: lafarer.osx-computername
+# - src: lafarer.osx-computername
 - src: lafarer.osx-defaults
 
 # # Install a role from GitHub

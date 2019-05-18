@@ -3,21 +3,6 @@
   connection: local
   gather_facts: true
 
-  roles:
-  # # FIXME: Put macos_power_settings in var file?
-  # - {role: appian.macos-power,
-  #    become: yes,
-  #    macos_power_settings: [
-  #      {cmd: computersleep, desired_value: 'Never'},
-  #      {cmd: displaysleep, desired_value: 'after 15 minutes'},
-  #      {cmd: harddisksleep, desired_value: 'Never'},
-  #      {cmd: restartfreeze, desired_value: 'Off'},
-  #      {cmd: wakeonnetworkaccess, desired_value: 'On'},
-  #    ]
-  # }
-  # FIXME:
-  # - geerlingguy.ruby, roles/ruby
-
   tasks:
     # - name: print facts
     #   debug:
@@ -27,12 +12,10 @@
         name: all
       tags: ['always']
 
-    # FIXME: GT ./all-osx-defaults/vars/extra.yml ./ruby/vars/ruby.yml
-
     - name: Run firefly role.
       include_role:
         name: firefly
-      tags: ['firefly', 'never']
+      tags: ['firefly', 'never']  # This won't run unless you specify the 'firefly' tag.
 
     - name: Run ospideal role.
       include_role:
@@ -47,125 +30,3 @@
 # FIXME: GT TGT folder
 
 # FIXME: Test VM - create snapshot for rapid rollback.
-
-# FIXME: Cheatsheet installed via cask **and** mas?
-
-# FIXME: Add:
-# sudo echo /usr/local/bin/bash >> /etc/shells
-# npm install -g git-guilt
-# gem install bundler
-# gem install bundler-audit
-
-# FIXME: Add installation of bashhub - via pipx?
-
-# FIXME: ansible-role-dotfiles!
-
-# FIXME: Set per computer, or use to identify host!
-# https://github.com/lafarer/ansible-role-osx-computername/blob/master/tasks/main.yml
-
-# FIXME: Move brewup, gemupdate to here?
-
-# FIXME: Eventually Look up roles for redhat/debian stuff similar to macos stuff
-
-# FIXME: Can use prompts
-
-# FIXME:
-#
-# https://github.com/danbohea/ansible-role-macos-dock
-# https://galaxy.ansible.com/danbohea/flux - flux configuration?
-# https://galaxy.ansible.com/shashikant86/ios-dev
-# ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
-# https://galaxy.ansible.com/bjoernalbers/sysctl
-# https://github.com/feffi/ansible-macos-softwareupdate
-# https://github.com/dotstrap/ansible-xcode
-# https://github.com/ansible/ansible-modules-extras/blob/devel/system/osx_defaults.py
-#
-# https://github.com/mego22/ansible-role-osx-settings
-#
-# https://github.com/0x4e3/osx-bootstrap-defaults
-# https://github.com/osxstrap/ansible-osx-user-picture
-# https://en.gravatar.com/userimage/34741261/b37d9ade8b8cea564bc47268db650c84.jpg?size=200
-# https://github.com/osxstrap/ansible-osx-software-update
-# drew-kun/ansible-dnscrypt
-# drew-kun/ansible-sshd
-# drew-kun/ansible-macos_terminal
-
-# all:
-# https://github.com/feffi/ansible-macos-git-repos
-
-# darwin:
-# https://github.com/feffi/ansible-macos-standby
-
-# darwin/firefly:
-# https://github.com/feffi/ansible-macos-timemachine
-
-# FIXME: Use roles and separate files to setup mac/ubuntu/centos machines.
-# https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
-# Or maybe different things via ansible galaxy?
-# See
-# https://github.com/lafarer/ansible-role-osx-defaults/blob/18072c8e68afb2e2244825ad1a6f42affd75f1ed/tasks/main.yml
-
-# FIXME: Can use same tag on multiple tasks to group tasks.
-
-# FIXME: Can use prompts
-
-# FIXME:
-# ansible-role-pip
-# ansible-role-dotfiles
-# https://github.com/danbohea/ansible-role-rbenv
-# https://github.com/fubarhouse/ansible-role-macdock
-# https://github.com/danbohea/ansible-role-macos-dock
-# https://galaxy.ansible.com/danbohea/flux - flux configuration?
-# https://galaxy.ansible.com/shashikant86/ios-dev
-# https://galaxy.ansible.com/drew-kun/macos_terminal
-# https://galaxy.ansible.com/mhalano/dropbox
-# https://galaxy.ansible.com/bjoernalbers/sysctl
-# https://github.com/juju4/ansible-harden-darwin
-# https://github.com/feffi/ansible-macos-softwareupdate
-# https://github.com/dotstrap/ansible-xcode
-# https://github.com/ansible/ansible-modules-extras/blob/devel/system/osx_defaults.py
-#
-# https://github.com/mego22/ansible-role-osx-settings
-# https://github.com/lafarer/ansible-role-osx-jenv
-# https://github.com/fubarhouse/ansible-role-macfonts
-# https://github.com/0x4e3/osx-bootstrap-defaults
-# https://github.com/osxstrap/ansible-osx-user-picture
-# https://github.com/osxstrap/ansible-osx-software-update
-# https://github.com/feffi/ansible-macos-git-repos
-# https://github.com/feffi/ansible-macos-timemachine
-# https://github.com/openstack/ansible-hardening - for ubuntu etc.
-# FIXME: https://github.com/dev-sec/ansible-os-hardening
-
-# FIXME:
-# https://stackoverflow.com/questions/25230376/how-to-automatically-install-ansible-galaxy-roles
-# When creating galaxy requirements, specify hash so they are pinned!
-
-
-
-# FIXME: juju4/ansible-harden-darwin
-
-# FIXME: lafarer/ansible-role-osx-jenv ?
-
-#  - lafarer.osx-computername
-#  # - {role: kinglouie.macos}  # FIXME: TO TEST!
-#  # - {role: lafarer.osx-defaults}  # FIXME: TO TEST!
-
-#ComputerName: "discovery"  # osx-computername # FIXME: Set per computer, or use to identify host!
-
-# FIXME: Compare to lafarer.osx-defaults.
-# system:
-#   ui:
-#     # By default the macOS save/print dialog opens in a
-#     # simplified version, enable to show the full dialog
-#     # by default.
-#     expand_save_panel: yes
-#     expand_print_panel: yes
-#     # macOS ommits common file extensions by default
-#     show_all_file_extensions: yes
-#     # Open directory if you drag a file/folder onto it.
-#     enable_springloading_directories: yes
-#     springloading_directories_delay: 2
-#     # FIXME: Finish https://github.com/kinglouie/ansible-role-macos/blob/master/defaults/main.yml
-
-
-# FIXME: GT .bashrc .profile.

@@ -9,3 +9,11 @@
 - name: Install global pipx packages.
   command: pipx install {{ item.name }} --python /usr/local/bin/python3
   with_items: "{{ pipx_packages }}"
+
+- name: Install global pipx flake8 packages.
+  command: pipx inject flake8 {{ item.name }}
+  with_items: "{{ pipx_flake8_packages }}"
+
+- name: Install global pipx pytest packages.
+  command: pipx inject pytest {{ item.name }}
+  with_items: "{{ pipx_pytest_packages }}"

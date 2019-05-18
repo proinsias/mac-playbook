@@ -24,3 +24,46 @@ pipx_packages:
   - twine
   - uncommitted
   - yapf
+
+pipx_flake8_packages:
+  - cohesion
+  - flake8-annotations-complexity
+  - flake8-annotations-coverage
+  - flake8-assertive
+  - flake8-bandit
+  - flake8-broken-line
+  - flake8-bugbear
+  - flake8-builtins
+  - flake8-coding
+  - flake8-commas
+  - flake8-comprehensions
+  - flake8-debugger
+  - flake8-deprecated
+  - flake8-docstrings
+  - flake8_dodgy
+  - flake8-eradicate
+  - flake8-fixme
+  - flake8-future-import
+  - flake8-import-order
+  - flake8-imports
+  - flake8-isort
+  - flake8-logging-format
+  - flake8-mock
+  - flake8-mutable
+  - flake8-mypy
+  - flake8-pep3101
+  - flake8-print
+  - flake8-pyi
+  - flake8-quotes
+  - flake8-spellcheck
+  - flake8-strict
+  - flake8-string-format
+  - flake8-tidy-imports
+  - flake8-variables-names
+  - flake8_tuple
+  - pep8-naming
+
+pipx_pytest_packages:
+  - pytest-profiling
+  - pytest-sugar
+  - pytest-xdist

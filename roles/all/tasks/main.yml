@@ -24,6 +24,7 @@
   include_role:
     name: all-macos-standby
   tags: ['macos-standby']
+  # An alternative is appian.macos-power.
 
 - name: Run all nodejs role.
   include_role:
@@ -44,3 +45,6 @@
   include_role:
     name: all-ruby
   tags: ['ruby']
+
+# Set computer name, or use to identify host!
+# https://github.com/lafarer/ansible-role-osx-computername/blob/master/tasks/main.yml
