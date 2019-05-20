@@ -8,3 +8,8 @@
   include_role:
     name: ospideal-mas
   tags: ['mas']
+
+- name: Run ospideal osx-user-picture role.
+  include_role:
+    name: ospideal-osx-user-picture
+  tags: ['osx-user-picture']

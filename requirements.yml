@@ -10,6 +10,7 @@
 - src: fubarhouse.macdock
 - src: geerlingguy.homebrew
 - src: geerlingguy.mas
+- src: jeremyltn.osx-user-picture
 - src: kinglouie.macos
 # - src: lafarer.osx-computername
 - src: lafarer.osx-defaults

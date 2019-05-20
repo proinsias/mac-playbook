@@ -1,6 +1,13 @@
-Cheatsheet installed via cask **and** mas?
+use osx_defaults module - for any remaining defaults.
+use sysctl module - for any remaining sysctls?
+flux configuration - https://github.com/danbohea/ansible-role-flux/blob/master/tasks/main.yml
+
+
+
 Add: sudo echo /usr/local/bin/bash >> /etc/shells
-Add installation of bashhub - via pipx?
+https://github.com/hnakamur/ansible-role-osx-login-shell
+
+Add installation of bashhub.
 
 Compare to lafarer.osx-defaults.
 system:
@@ -17,16 +24,14 @@ system:
     springloading_directories_delay: 2
     # FIXME: Finish https://github.com/kinglouie/ansible-role-macos/blob/master/defaults/main.yml
 
-ansible-role-dotfiles
-https://galaxy.ansible.com/danbohea/flux - flux configuration?
-https://galaxy.ansible.com/shashikant86/ios-dev
+
+
+
+
 ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
-https://galaxy.ansible.com/bjoernalbers/sysctl
-https://github.com/ansible/ansible-modules-extras/blob/devel/system/osx_defaults.py
+
+
 https://github.com/mego22/ansible-role-osx-settings
-https://github.com/0x4e3/osx-bootstrap-defaults
-https://github.com/osxstrap/ansible-osx-user-picture
-https://en.gravatar.com/userimage/34741261/b37d9ade8b8cea564bc47268db650c84.jpg?size=200
 https://github.com/osxstrap/ansible-osx-software-update
 https://github.com/drew-kun/ansible-dnscrypt
 https://github.com/drew-kun/ansible-sshd
@@ -34,7 +39,6 @@ https://github.com/drew-kun/ansible-macos_terminal
 https://github.com/feffi/ansible-macos-git-repos
 https://github.com/fubarhouse/ansible-role-macdock
 https://github.com/danbohea/ansible-role-macos-dock
-https://github.com/dotstrap/ansible-xcode
 https://github.com/juju4/ansible-harden-darwin
 
 GT .bashrc .profile.
@@ -92,9 +96,6 @@ select yn in "Yes" "No"; do
   esac
 done
 
-# Check if license accepted!
-sudo xcodebuild -license accept
-
 echo "Want to set the computer name? (as done via System Preferences → Sharing)"
 select yn in "Yes" "No"; do
   case $yn in
@@ -110,3 +111,6 @@ select yn in "Yes" "No"; do
     No )  exit;;
   esac
 done
+
+
+ansible-role-dotfiles

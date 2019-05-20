@@ -1,0 +1,21 @@
+---
+osx_user_picture_username: "francis"
+
+# Enable changing OSX user picture
+osx_user_picture_enable: true
+
+# Only uncomment osx_user_picture_file if
+# you want to put your source image
+# somewhere in Ansible so it can be moved
+# into place with the copy module.
+# osx_user_picture_file: "files/user.jpg"
+
+# Uncomment osx_user_picture_path if the
+# image is already on the machine that
+# this role is being run on.
+#osx_user_picture_path: "/vagrant/osxstrap/download.jpeg"
+
+# Uncomment osx_user_picture_url if you
+# want your picture to be downloaded
+# from a remote URL.
+osx_user_picture_url: "https://en.gravatar.com/userimage/34741261/b37d9ade8b8cea564bc47268db650c84.jpg?size=200"

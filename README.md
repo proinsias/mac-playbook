@@ -11,7 +11,7 @@ It is inspired by and based on
 ## Installation
 
 1. Ensure Apple's command line tools are installed (`xcode-select --install`
-   to launch the installer).
+   to launch the installer, and `sudo xcodebuild -license accept` to accept license agreement).
 2. Clone this repository to your local drive.
 3. Run `$ ./bin/setup_ansible.sh` inside this directory to install and configure Ansible.
 4. Run `$ ansible-galaxy install --role-file  requirements.yml` inside this directory
