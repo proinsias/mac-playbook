@@ -5,33 +5,12 @@ echo "NSGlobalDomain and Apple Global Domain"
 echo "###############################################################################"
 
 #echo ""
-#echo "Menu bar: disable transparency"
-#defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
-
-#echo ""
 #echo "Set highlight color to a specific yellow"
 #defaults write NSGlobalDomain AppleHighlightColor -string '0.984300 0.929400 0.450900'
 
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
 #defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
-
-echo ""
-echo "Always show scrollbars"
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
-
-echo ""
-echo "Disable opening and closing window animations"
-defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-
-echo ""
-echo "Increasing the window resize speed for Cocoa applications"
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
-
-echo ""
-echo "Expanding the save panel by default"
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 echo ""
 echo "Displaying ASCII control characters using caret notation in standard text views"
@@ -99,6 +78,3 @@ echo ""
 echo "Add a context menu item for showing the Web Inspector in web views"
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-echo ""
-echo "Enable subpixel font rendering on non-Apple LCDs"
-defaults write NSGlobalDomain AppleFontSmoothing -int 2

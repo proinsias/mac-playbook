@@ -72,14 +72,6 @@ echo "When performing a search, search This Mac by default"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCev"
 
 echo ""
-echo "Enable spring loading for directories"
-defaults write NSGlobalDomain com.apple.springing.enabled -bool true
-
-echo ""
-echo "Remove the spring loading delay for directories"
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
-
-echo ""
 echo "Disable disk image verification"
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true

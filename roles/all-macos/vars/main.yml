@@ -11,3 +11,47 @@ system:
     expand_save_panel: true
     expand_print_panel: true
 
+    # Window action when double clicking on the titlebar of a window.
+    # VALUES: "Maximize", "Minimize"
+    # titlebar_doubleclick_action: "Maximize"
+
+    # Font smoothing on non apple displays
+    enable_subpixel_font_rendering: true
+
+    # Focus ring is drawn around focused dialog
+    # elements like buttons and textfields
+    # enable_focus_ring: true
+
+    # macOS ommits common file extensions by default.
+    show_all_file_extensions: true
+
+    # Antique osx dashboard, this was more or less replaced by the sidebar.
+    disable_dashboard: true
+
+    # Open directory if you drag a file/folder onto it.
+    enable_springloading_directories: true
+    springloading_directories_delay: 0
+
+    window_resize_speed: 0.001
+    enable_opening_closing_window_animations: false
+
+    # Show scrollbars
+    # Values: "WhenScrolling", "Always"
+    show_scrollbars: "Always"
+
+    enable_menubar_transparency: false
+
+screensaver:
+  # Screensaver activation delay in seconds
+  # 0 disables the screensaver
+  activation_delay: 300
+
+  # Ask for user password when screensaver is active
+  ask_password: true
+
+  # Delay in seconds after which password is asked
+  ask_password_delay: 0
+
+  screensaver:
+    name: Aerial
+    path: ~/Library/Screen Savers/Aerial.saver

@@ -18,12 +18,6 @@ defaults -currentHost write com.apple.screensaver showClock 1
 #DisplayResolutionEnabled -bool true
 
 echo ""
-echo "Require password immediately after sleep or screen saver begins"
-defaults write com.apple.screensaver askForPassword -bool true
-defaults write /Library/Preferences/com.apple.screensaver askForPassword -bool true
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-echo ""
 echo "Save screenshots to the desktop"
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
