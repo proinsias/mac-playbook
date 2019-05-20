@@ -1,0 +1,18 @@
+---
+## App Store
+
+# Enable the WebKit Developer Tools in the Mac App Store
+- osx_defaults:
+    domain: com.apple.appstore
+    key: WebKitDeveloperExtras
+    type: bool
+    value: true
+    state: present
+
+# Enable Debug Menu in the Mac App Store
+- osx_defaults:
+    domain: com.apple.appstore
+    key: ShowDebugMenu
+    type: bool
+    value: true
+    state: present

@@ -14,6 +14,11 @@
     name: travis-nodejs
   tags: ['nodejs']
 
+- name: Run travis osx_defaults role.
+  include_role:
+    name: travis-osx_defaults
+  tags: ['osx-defaults']
+
 - name: Run travis osx-user-picture role.
   include_role:
     name: travis-osx-user-picture

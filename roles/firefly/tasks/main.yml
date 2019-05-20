@@ -9,6 +9,11 @@
     name: firefly-mas
   tags: ['mas']
 
+- name: Run firefly osx_defaults role.
+  include_role:
+    name: firefly-osx_defaults
+  tags: ['osx-defaults']
+
 - name: Run firefly osx-user-picture role.
   include_role:
     name: firefly-osx-user-picture

@@ -1,0 +1,106 @@
+---
+## DayOne
+
+# Enable auto backup
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: AutoBackupEnabled
+    type: bool
+    value: true
+    state: present
+
+# Enable correct spelling in editor
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: EditorCorrectSpellingEnabled
+    type: bool
+    value: true
+    state: present
+
+# Enable grammar check in editor
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: EditorGrammarCheckEnabled
+    type: bool
+    value: true
+    state: present
+
+# Enable spell check in editor
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: EditorSpellCheckEnabled
+    type: bool
+    value: true
+    state: present
+
+# Enable embedded media
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: EmbedMediaEnabled
+    type: bool
+    value: true
+    state: present
+
+# Set font size
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: FontSize
+    type: string
+    value: "16"
+    state: present
+
+# Enable inspirational messages
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: InspirationalMessagesEnabled
+    type: bool
+    value: true
+    state: present
+
+# Link twitter handles
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: LinkTwitterHandles
+    type: bool
+    value: true
+    state: present
+
+# Enable markdown support
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: MarkdownEnabled
+    type: bool
+    value: true
+    state: present
+
+# Lock if idle
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: SecurityIdleLockEnabled
+    type: bool
+    value: true
+    state: present
+
+# Set lock time
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: SecurityIdleLockTime
+    type: string
+    value: "20"
+    state: present
+
+# Enable password protection
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: SecurityPasswordProtectionEnabled
+    type: bool
+    value: true
+    state: present
+
+# Enable lock on sleep
+- osx_defaults:
+    domain: com.dayoneapp.dayone.plist
+    key: SecuritySleepLockEnabled
+    type: bool
+    value: true
+    state: present

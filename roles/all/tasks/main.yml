@@ -35,6 +35,11 @@
     name: all-osx-defaults
   tags: ['osx-defaults']
 
+- name: Run all osx_defaults role.
+  include_role:
+    name: all-osx_defaults
+  tags: ['osx-defaults']
+
 - name: Run all pipx role.
   include_role:
     name: all-pipx
