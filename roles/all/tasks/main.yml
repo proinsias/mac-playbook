@@ -44,6 +44,3 @@
   include_role:
     name: all-ruby
   tags: ['ruby']
-
-# Set computer name, or use to identify host!
-# https://github.com/lafarer/ansible-role-osx-computername/blob/master/tasks/main.yml

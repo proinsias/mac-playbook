@@ -27,10 +27,3 @@ defaults write ~/Library/Preferences/com.apple.alf stealthenabled -bool true
 echo ""
 echo "Allow signed applications to receive incoming connections"
 defaults write /Library/Preferences/com.apple.alf allowsignedenabled 1
-
-#echo ""
-#echo "Disabling OS X Gate Keeper"
-#echo "(You'll be able to install any app you want from here on, not just Mac App Store apps)"
-#spctl --master-disable
-#defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
-#defaults write com.apple.LaunchServices LSQuarantine -bool false

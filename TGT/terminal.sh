@@ -16,8 +16,3 @@ defaults write com.apple.Terminal "NSWindow Frame NSFontPanel" "929 42 445 105 0
 ## i.e. hover over a window and start typing in it without clicking
 ## first
 #defaults write com.apple.terminal FocusFollowsMouse -bool true
-
-echo ""
-echo "Enable Secure Keyboard Entry in Terminal.app"
-# See: https://security.stackexchange.com/a/47786/8918
-defaults write com.apple.terminal SecureKeyboardEntry -bool true

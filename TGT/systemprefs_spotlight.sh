@@ -8,12 +8,6 @@ echo "##########################################################################
 #echo "Hide Spotlight tray-icon (and subsequent helper)"
 #chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
-#echo ""
-#echo "Disable Spotlight indexing for any volume that gets mounted" \
-#     "and has not yet been indexed before."
-# Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-#defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
-#echo ""
 #echo "Change indexing order and disable some search results"
 #defaults write com.apple.spotlight orderedItems -array \
 # '{"enabled" = 1;"name" = "APPLICATIONS";}' \

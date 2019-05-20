@@ -4,16 +4,6 @@ echo "##########################################################################
 echo "System Preferences/Dock"
 echo "###############################################################################"
 
-echo "Wipe all (default) app icons from the Dock? (y/n)"
-echo "(This is only really useful when setting up a new Mac, or if you
-don't use the Dock to launch apps.)"
-select yn in "Yes" "No"; do
-  case $yn in
-    Yes ) defaults write com.apple.dock persistent-apps -array
-      break;;
-    No ) exit;;
-  esac
-done
 
 #echo ""
 #echo "Enable the 2D Dock"
@@ -47,14 +37,6 @@ echo "Enable spring loading for all Dock items"
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
 echo ""
-echo "Show indicator lights for open applications in the Dock"
-defaults write com.apple.dock show-process-indicators -bool true
-
-echo ""
-echo "Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
-defaults write com.apple.dock tilesize -int 36
-
-echo ""
 echo "Speeding up Mission Control animations and grouping windows by application"
 defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock "expose-group-by-app" -bool true
@@ -83,14 +65,6 @@ defaults write com.apple.dock launchanim -bool false
 echo ""
 echo "Don’t show Dashboard as a Space"
 defaults write com.apple.dock dashboard-in-overlay -bool true
-
-#echo ""
-#echo "Don’t automatically rearrange Spaces based on most recent use"
-#defaults write com.apple.dock mru-spaces -bool false
-
-echo ""
-echo "Make Dock icons of hidden applications translucent"
-defaults write com.apple.dock showhidden -bool true
 
 #echo ""
 #echo "Disable the Launchpad gesture (pinch with thumb and three fingers)"
