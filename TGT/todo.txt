@@ -1,6 +1,3 @@
-https://github.com/feffi/ansible-macos-softwareupdate
-GT ./all-osx-defaults/vars/extra.yml
-
 Cheatsheet installed via cask **and** mas?
 Add: sudo echo /usr/local/bin/bash >> /etc/shells
 Add installation of bashhub - via pipx?
@@ -38,11 +35,9 @@ https://github.com/feffi/ansible-macos-git-repos
 https://github.com/fubarhouse/ansible-role-macdock
 https://github.com/danbohea/ansible-role-macos-dock
 https://github.com/dotstrap/ansible-xcode
-https://github.com/fubarhouse/ansible-role-macfonts
 https://github.com/juju4/ansible-harden-darwin
 
 GT .bashrc .profile.
-
 
 # https://docs.ansible.com/ansible/2.5/modules/npm_module.html
 npm config set cache-min 9999999  # Setup caching

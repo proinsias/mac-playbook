@@ -2,11 +2,11 @@
 AppStore_Enabled: true                           # Enable AppStore configuration
 AppStore_AutomaticCheckEnabled: true             # Automatically check for updates
 AppStore_AutomaticDownload: true                 # Download newly available updates in the background
-AppStore_AutoUpdate: false                       # Install app updates
-AppStore_AutoUpdateRestartRequired: false        # Install OSX updates
+AppStore_AutoUpdate: true                        # Install app updates
+AppStore_AutoUpdateRestartRequired: true         # Install OSX updates
 AppStore_ConfigDataInstall: true                 # Install system data files (XProtect and Gatekeeper)
 AppStore_CriticalUpdateInstall: true             # Install security updates
-AppStore_ScheduleFrequency: 7                    # Check for software updates (in days)
+AppStore_ScheduleFrequency: 1                    # Check for software updates (in days)
 AppStore_ShowDebugMenu: true                     # Show debug menu
 
 Bluetooth_Enabled: true                          # Enable Bluetooth configuration
