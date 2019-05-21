@@ -116,10 +116,20 @@
 
 ## Reminders
 
-# Show debug menu"
+# Show debug menu
 - osx_defaults:
     domain: com.apple.reminders
     key: RemindersDebugMenu
     type: bool
     value: true
+    state: present
+
+## System Preferences/Users & Groups
+
+# Show fast user switching menu as [Icon]
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: userMenuExtraStyle
+    type: int
+    value: 2
     state: present
