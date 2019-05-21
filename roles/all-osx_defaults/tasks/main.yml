@@ -104,6 +104,16 @@
     value: true
     state: present
 
+## Photo Booth
+
+# Enable the debug menu in Photo Booth
+- osx_defaults:
+    domain: com.apple.PhotoBooth
+    key: EnableDebugMenu
+    type: bool
+    value: true
+    state: present
+
 ## QuickTime Player
 
 # Don't auto-play videos when opened with QuickTime Player
