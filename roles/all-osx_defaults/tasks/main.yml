@@ -59,6 +59,16 @@
     value: true
     state: present
 
+## Dictionary
+
+# Reuse dictionary definition window
+- osx_defaults:
+    domain: com.apple.Dictionary
+    key: ProhibitNewWindowForRequest
+    type: bool
+    value: true
+    state: present
+
 ## Disk Utility
 
 # Enable the debug menu in Disk Utility
