@@ -8,10 +8,6 @@ echo ""
 echo "Organize System Preferences Alphabetically"
 defaults write com.apple.systempreferences ShowAllMode -bool true
 
-#echo ""
-#echo "Allow unsupported devices"
-#defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes -bool YES
-
 core_apps="/System/Library/CoreServices/Applications"
 archives_pref="${core_apps}/Archive Utility.app/Contents/Resources/Archives.prefPane"
 

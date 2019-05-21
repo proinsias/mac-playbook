@@ -10,6 +10,8 @@ Add installation of bashhub.
 
 ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
 
+bbedit - defaults?
+
 
 https://github.com/mego22/ansible-role-osx-settings
 https://github.com/osxstrap/ansible-osx-software-update
