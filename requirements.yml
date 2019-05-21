@@ -10,7 +10,7 @@
 - src: fubarhouse.macdock
 - src: geerlingguy.homebrew
 - src: geerlingguy.mas
-- src: https://github.com/osxstrap/ansible-osx-user-picture.git
+- src: https://github.com/proinsias/ansible-osx-user-picture.git  # My fork.
   name: jeremyltn.osx-user-picture
 - src: kinglouie.macos
 # - src: lafarer.osx-computername
