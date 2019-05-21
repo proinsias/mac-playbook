@@ -93,3 +93,13 @@
     type: bool
     value: false
     state: present
+
+## Help Viewer
+
+# Set Help Viewer windows to non-floating mode
+- osx_defaults:
+    domain: com.apple.helpviewer
+    key: DevMode
+    type: bool
+    value: true
+    state: present
