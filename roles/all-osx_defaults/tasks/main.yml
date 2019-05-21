@@ -103,3 +103,13 @@
     type: bool
     value: true
     state: present
+
+## QuickTime Player
+
+# Don't auto-play videos when opened with QuickTime Player
+- osx_defaults:
+    domain: com.apple.QuickTimePlayerX
+    key: MGPlayMovieOnOpen
+    type: bool
+    value: false
+    state: present
