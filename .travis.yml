@@ -7,10 +7,9 @@ osx_image: xcode10.2
 matrix:
   fast_finish: true
   include:
-    - env: TAGS=macos,macos-standby,osx-defaults,osx-user-picture
-    - env: TAGS=homebrew,macdock,travis
+    - env: TAGS=macos,macos-standby,nodejs,ruby,osx-defaults
+    - env: TAGS=homebrew,macdock,pipx,travis,osx-user-picture
     # - env: TAGS=mas,travis  # mas has automation issues.
-    - env: TAGS=nodejs,pipx,ruby,travis
 
 cache:
   apt: true
