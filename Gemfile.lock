@@ -52,7 +52,7 @@ GEM
     fasterer (0.5.1)
       colorize (~> 0.7)
       ruby_parser (>= 3.13.0)
-    ffi (1.11.0)
+    ffi (1.11.1)
     gh (0.15.1)
       addressable (~> 2.4.0)
       backports

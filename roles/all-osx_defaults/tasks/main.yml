@@ -58,3 +58,28 @@
     type: bool
     value: true
     state: present
+
+## Disk Utility
+
+# Enable the debug menu in Disk Utility
+- osx_defaults:
+    domain: com.apple.DiskUtility
+    key: DUDebugMenuEnabled
+    type: bool
+    value: true
+    state: present
+
+- osx_defaults:
+    domain: com.apple.DiskUtility
+    key: advanced-image-options
+    type: bool
+    value: true
+    state: present
+
+# Hide hidden Partitions
+- osx_defaults:
+    domain: com.apple.DiskUtility
+    key: DUShowEveryPartition
+    type: bool
+    value: false
+    state: present
