@@ -113,3 +113,13 @@
     type: bool
     value: false
     state: present
+
+## Reminders
+
+# Show debug menu"
+- osx_defaults:
+    domain: com.apple.reminders
+    key: RemindersDebugMenu
+    type: bool
+    value: true
+    state: present
