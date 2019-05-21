@@ -94,6 +94,16 @@
     value: false
     state: present
 
+## GPGMail 2
+
+# Disable signing emails by default"
+- osx_defaults:
+    domain: org.gpgtools.gpgmail
+    key: SignNewEmailsByDefault
+    type: bool
+    value: false
+    state: present
+
 ## Help Viewer
 
 # Set Help Viewer windows to non-floating mode
@@ -102,6 +112,16 @@
     key: DevMode
     type: bool
     value: true
+    state: present
+
+## Menu Meters
+
+# Update disk information only every 1s
+- osx_defaults:
+    domain: com.ragingmenace.MenuMeters
+    key: DiskInterval
+    type: int
+    value: 1.0
     state: present
 
 ## Photo Booth
