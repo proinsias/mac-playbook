@@ -134,6 +134,16 @@
     value: true
     state: present
 
+## System Preferences/Displays
+
+# Enable display from automatically adjusting brightness
+- osx_defaults:
+    domain: com.apple.iokit.AmbientLightSensor
+    key: "Automatic Display Enabled"
+    type: bool
+    value: true
+    state: present
+
 ## System Preferences/Users & Groups
 
 # Show fast user switching menu as [Icon]
