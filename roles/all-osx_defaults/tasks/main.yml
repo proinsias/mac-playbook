@@ -114,6 +114,119 @@
     value: true
     state: present
 
+## Input Settings
+
+# Automatically illuminate built-in MacBook keyboard in low light
+- osx_defaults:
+    domain: com.apple.BezelServices
+    key: kDim
+    type: bool
+    value: true
+    state: present
+
+# Turn off keyboard illumination when computer is not used for 5 minutes
+- osx_defaults:
+    domain: com.apple.BezelServices
+    key: kDimTime
+    type: int
+    value: 300
+    state: present
+
+# Trackpad: enable tap to click for this user and for the login screen
+- osx_defaults:
+    domain: com.apple.helpviewer
+    key: DevMode
+    type: bool
+    value: true
+    state: present
+
+# Trackpad: enable click and drag
+- osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    key: Dragging
+    type: bool
+    value: true
+    state: present
+
+# Bluetooth Trackpad: enable click and drag
+- osx_defaults:
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Dragging
+    type: bool
+    value: true
+    state: present
+
+# Setting trackpad speed to a reasonable number
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.trackpad.scaling
+    type: int
+    value: 2
+    state: present
+
+# Setting mouse speed to a reasonable number
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.mouse.scaling
+    type: float
+    value: 2.5
+    state: present
+
+# Trackpad: enable tap to click for this user and for the login screen
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.mouse.tapBehavior
+    type: bool
+    value: true
+    state: present
+
+## Login Window
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
+- osx_defaults:
+    domain: com.apple.loginwindow
+    key: AdminHostInfo
+    type: string
+    value: "HostName"
+    state: present
+
+## Mail
+
+# Disable reply animations in Mail.app
+- osx_defaults:
+    domain: com.apple.mail
+    key: DisableReplyAnimations
+    type: bool
+    value: true
+    state: present
+
+# Disable send animations in Mail.app
+- osx_defaults:
+    domain: com.apple.mail
+    key: DisableSendAnimations
+    type: bool
+    value: true
+    state: present
+
+## Menu Extras
+
+# Use 24-hour format
+# Other values, e.g., "EEE MMM d  h:mm a"
+- osx_defaults:
+    domain: com.apple.menuextra.clock
+    key: DateFormat
+    type: string
+    value: "EEE HH:mm"
+    state: present
+
+# Show battery percentage
+- osx_defaults:
+    domain: com.apple.menuextra.battery
+    key: ShowPercent
+    type: string
+    value: "YES"
+    state: present
+
 ## Menu Meters
 
 # Update disk information only every 1s
@@ -144,6 +257,42 @@
     value: true
     state: present
 
+## Preview
+
+# Scale images by default when printing
+- osx_defaults:
+    domain: com.apple.Preview
+    key: PVImagePrintingScaleMode
+    type: bool
+    value: true
+    state: present
+
+# Preview Auto-rotate by default when printing
+- osx_defaults:
+    domain: com.apple.Preview
+    key: PVImagePrintingAutoRotate
+    type: bool
+    value: true
+    state: present
+
+# Quit Always Keeps Windows
+- osx_defaults:
+    domain: com.apple.Preview
+    key: NSQuitAlwaysKeepsWindows
+    type: bool
+    value: true
+    state: present
+
+## Printing
+
+# Automatically quit printer app once the print jobs complete
+- osx_defaults:
+    domain: com.apple.print.PrintingPrefs
+    key: "Quit When Finished"
+    type: bool
+    value: true
+    state: present
+
 ## QuickTime Player
 
 # Don't auto-play videos when opened with QuickTime Player
@@ -160,6 +309,58 @@
 - osx_defaults:
     domain: com.apple.reminders
     key: RemindersDebugMenu
+    type: bool
+    value: true
+    state: present
+
+## Screen Sharing
+
+# Turn on Bonjour browser
+- osx_defaults:
+    domain: com.apple.ScreenSharing
+    key: ShowBonjourBrowser_Debug
+    type: bool
+    value: true
+    state: present
+
+## Skype
+
+# Include debug menu
+- osx_defaults:
+    domain: com.skype.skype
+    key: IncludeDebugMenu
+    type: bool
+    value: true
+    state: present
+
+# Don't show welcome tour
+- osx_defaults:
+    domain: com.skype.skype
+    key: SKShowWelcomeTour
+    type: bool
+    value: true
+    state: present
+
+# Disable welcome tour
+- osx_defaults:
+    domain: com.skype.skype
+    key: SKDisableWelcomeTour
+    type: bool
+    value: true
+    state: present
+
+# Enable developer extras
+- osx_defaults:
+    domain: com.skype.skype
+    key: WebKitDeveloperExtras
+    type: bool
+    value: true
+    state: present
+
+# Don't disable developer extras
+- osx_defaults:
+    domain: com.skype.skype
+    key: DisableWebKitDeveloperExtras
     type: bool
     value: true
     state: present
@@ -574,6 +775,40 @@
     key: userMenuExtraStyle
     type: int
     value: 2
+    state: present
+
+## Terminal
+
+# Enable UTF-8 ONLY
+- osx_defaults:
+    domain: com.apple.Terminal
+    key: StringEncodings
+    type: array
+    value: 4
+    state: present
+
+# Set Pro theme as default
+- osx_defaults:
+    domain: com.apple.Terminal
+    key: "Default Window Settings"
+    type: string
+    value: "Pro"
+    state: present
+
+# Set Pro theme as startup
+- osx_defaults:
+    domain: com.apple.Terminal
+    key: "Startup Window Settings"
+    type: string
+    value: "Pro"
+    state: present
+
+# Set the size 18 by default
+- osx_defaults:
+    domain: com.apple.Terminal
+    key: "NSWindow Frame NSFontPanel"
+    type: string
+    value: "929 42 445 105 0 0 1440 900"
     state: present
 
 ## TextEdit
