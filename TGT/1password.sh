@@ -44,14 +44,6 @@ echo ""
 echo "Lock on sleep"
 defaults write com.agilebits.onepassword4.plist LockOnSleep -bool true
 
-#echo ""
-#echo "Lock when computer is idle"
-#defaults write com.agilebits.onepassword4.plist LockTimeout -string "5"
-
-#echo
-#echo "1Password, View, Item List Layout - [x] Top"
-#defaults write com.agilebits.onepassword4 MainWindowLayout 'H'
-
 echo ""
 echo "Setting timeout for pasteboard clearing"
 defaults write com.agilebits.onepassword4.plist PasteboardClearTimeout -string "90"
@@ -84,10 +76,6 @@ echo ""
 echo "Turn off welcome window"
 defaults write com.agilebits.onepassword4.plist WelcomeWindowShown -bool false
 
-#echo ""
-#echo ""
-#defaults write com.agilebits.onepassword4.plist animateFill -bool true
-
 echo ""
 echo "Turn on autosave"
 defaults write com.agilebits.onepassword4.plist autosave -bool true
@@ -117,10 +105,6 @@ echo ""
 echo "Disable 3rd party integration"
 defaults write com.agilebits.onepassword4-helper.plist Enable3rdPartyIntegration -bool false
 
-#echo ""
-#echo ""
-#defaults write com.agilebits.onepassword4-helper.plist HashSectionIsSortedFirst -bool false
-
 echo ""
 echo "Lock on idle"
 defaults write com.agilebits.onepassword4-helper.plist LockOnIdle -bool true
@@ -141,17 +125,9 @@ echo ""
 echo "Lock on user switch"
 defaults write com.agilebits.onepassword4-helper.plist LockOnUserSwitch -bool true
 
-#echo ""
-#echo "Lock when computer idle"
-#defaults write com.agilebits.onepassword4-helper.plist LockTimeout -string 5
-
 echo ""
 echo "Set default password length"
 defaults write com.agilebits.onepassword4-helper.plist PasswordLength 50
-
-#echo ""
-#echo ""
-#defaults write com.agilebits.onepassword4-helper.plist PasswordPronounceable -bool true
 
 echo ""
 echo "Password recipe is visible"
@@ -201,10 +177,6 @@ defaults write 2BUA8C4S2C.com.agilebits.onepassword4-helper \
 echo ""
 echo "Disable welcome window"
 defaults write com.agilebits.onepassword4-helper.plist WelcomeWindowShown -bool false
-
-#echo ""
-#echo ""
-#defaults write com.agilebits.onepassword4-helper.plist animateFill -bool true
 
 echo ""
 echo "Turn on autosave"

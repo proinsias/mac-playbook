@@ -4,10 +4,6 @@ echo "##########################################################################
 echo "System Preferences"
 echo "###############################################################################"
 
-echo ""
-echo "Organize System Preferences Alphabetically"
-defaults write com.apple.systempreferences ShowAllMode -bool true
-
 core_apps="/System/Library/CoreServices/Applications"
 archives_pref="${core_apps}/Archive Utility.app/Contents/Resources/Archives.prefPane"
 

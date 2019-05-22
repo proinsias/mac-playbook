@@ -7,7 +7,7 @@ echo "##########################################################################
 echo ""
 echo "Use 24-hour format"
 defaults write com.apple.menuextra.clock DateFormat "EEE HH:mm"
-#defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm a"
+# "EEE MMM d  h:mm a"
 
 echo ""
 echo "Show battery percentage"

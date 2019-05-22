@@ -4,10 +4,6 @@ echo "##########################################################################
 echo "System Preferences/Spotlight"
 echo "###############################################################################"
 
-#echo ""
-#echo "Hide Spotlight tray-icon (and subsequent helper)"
-#chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-
 #echo "Change indexing order and disable some search results"
 #defaults write com.apple.spotlight orderedItems -array \
 # '{"enabled" = 1;"name" = "APPLICATIONS";}' \

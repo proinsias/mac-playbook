@@ -26,7 +26,7 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 #echo ""
 #echo "Force Safari to open target links in new tabs"
-#defaults write com.apple.Safari TargetedClicksCreateTabs -bool true
+defaults write com.apple.Safari TargetedClicksCreateTabs -bool true
 
 echo ""
 echo "Make Safari’s search banners default to Contains instead of Starts With"
@@ -70,10 +70,6 @@ echo "Disable AutoFill from Credit Card"
 defaults write com.apple.Safari AutoFillCreditCardData -bool false
 defaults -currentHost write ~/Library/Preferences/com.apple.Safari AutoFillCreditCardData -bool false
 
-#echo ""
-#echo "Disable AutoFill from Misc Forms"
-#defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
-
 echo ""
 echo "Warn About Fraudulent Websites"
 defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
@@ -83,11 +79,6 @@ echo ""
 echo "Enable plug-ins"
 defaults write com.apple.Safari WebKitPluginsEnabled -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool true
-
-#echo ""
-#echo "Enable Java"
-#defaults write com.apple.Safari WebKitJavaEnabled -bool true
-#defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool true
 
 echo ""
 echo "Enable JavaScript"
@@ -112,26 +103,10 @@ defaults write com.apple.Safari com.apple.Safari.ReadingListFetcher.WebKit2Loads
 defaults write com.apple.Safari com.apple.Safari.ReadingListFetcher.WebKit2LoadsSiteIconsIgnoringImageLoadingPreference -bool true
 defaults write com.apple.Safari com.apple.Safari.ReadingListFetcher.WebKit2JavaScriptEnabled -bool false
 
-#echo ""
-#echo "Do not track"
-#defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
-
 echo ""
 echo "Update extensions automatically"
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
-#echo ""
-#echo "Privacy: don’t send search queries to Apple"
-#defaults write com.apple.Safari UniversalSearchEnabled -bool false
-#defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-
-#echo ""
-#echo "Press Tab to highlight each item on a web page"
-#defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool
-#true
-#defaults write com.apple.Safari
-#com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool
-#true
 
 echo ""
 echo "Enable continuous spellchecking"

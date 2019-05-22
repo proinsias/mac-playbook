@@ -164,6 +164,60 @@
     value: true
     state: present
 
+## System Configuration
+
+- osx_defaults:
+    domain: com.apple.captive.control
+    key: Active
+    type: bool
+    value: false
+    state: present
+
+- osx_defaults:
+    domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: bool
+    value: true
+    state: present
+
+## System Preferences
+
+# Organize System Preferences Alphabetically
+- osx_defaults:
+    domain: com.apple.systempreferences
+    key: ShowAllMode
+    type: bool
+    value: true
+    state: present
+
+## System Preferences/App Sound
+
+# Disable UI sounds
+- osx_defaults:
+    domain: com.apple.systemsound
+    key: com.apple.sound.uiaudio.enabled
+    type: int
+    value: 0
+    state: present
+
+# Disable beeps on sound level change
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.sound.beep.feedback
+    type: int
+    value: 0
+    state: present
+
+## System Preferences/Bluetooth
+
+# Increase sound quality for Bluetooth headphones/headsets
+- osx_defaults:
+    domain: com.apple.BluetoothAudioAgent
+    key: "Apple Bitpool Min (editable)"
+    type: int
+    value: 40
+    state: present
+
 ## System Preferences/Displays
 
 # Enable display from automatically adjusting brightness
@@ -174,6 +228,204 @@
     value: true
     state: present
 
+## System Preferences/Dock
+
+# Turn off bouncing icons in dock
+- osx_defaults:
+    domain: com.apple.dock
+    key: no-bouncing
+    type: bool
+    value: true
+    state: present
+
+# Change minimize/maximize window effect
+- osx_defaults:
+    domain: com.apple.dock
+    key: mineffect
+    type: string
+    value: "scale"
+    state: present
+
+# Move dock to bottom middle of the screen
+# Other options: "start", "end"
+- osx_defaults:
+    domain: com.apple.dock
+    key: pinning
+    type: string
+    value: "middle"
+    state: present
+# Other options: "left", "right"
+- osx_defaults:
+    domain: com.apple.dock
+    key: orientation
+    type: string
+    value: "bottom"
+    state: present
+
+# Enable spring loading for all Dock items
+- osx_defaults:
+    domain: com.apple.dock
+    key: enable-spring-load-actions-on-all-items
+    type: bool
+    value: true
+    state: present
+
+# Speeding up Mission Control animations and grouping windows by application
+- osx_defaults:
+    domain: com.apple.dock
+    key: expose-animation-duration
+    type: float
+    value: 0.1
+    state: present
+
+- osx_defaults:
+    domain: com.apple.dock
+    key: expose-group-by-app
+    type: bool
+    value: true
+    state: present
+
+# Setting Dock to auto-hide and removing the auto-hiding delay
+- osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+    state: present
+
+# Setting Dock to auto-hide and removing the auto-hiding delay
+- osx_defaults:
+    domain: com.apple.dock
+    key: autohide-delay
+    type: float
+    value: 0
+    state: present
+
+# Setting Dock to auto-hide and removing the auto-hiding delay
+- osx_defaults:
+    domain: com.apple.dock
+    key: autohide-time-modifier
+    type: float
+    value: 0
+    state: present
+
+# Enabling iTunes track notifications in the Dock
+- osx_defaults:
+    domain: com.apple.dock
+    key: itunes-notifications
+    type: bool
+    value: true
+    state: present
+
+# Disable the over-the-top focus ring animation
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: NSUseAnimatedFocusRing
+    type: bool
+    value: false
+    state: present
+
+# Don’t animate opening applications from the Dock
+- osx_defaults:
+    domain: com.apple.dock
+    key: launchanim
+    type: bool
+    value: false
+    state: present
+
+# Don’t show Dashboard as a Space
+- osx_defaults:
+    domain: com.apple.dock
+    key: dashboard-in-overlay
+    type: bool
+    value: true
+    state: present
+
+# Making launchpad better
+- osx_defaults:
+    domain: com.apple.dock
+    key: springboard-rows
+    type: int
+    value: 8
+    state: present
+
+# Making launchpad better
+- osx_defaults:
+    domain: com.apple.dock
+    key: springboard-columns
+    type: int
+    value: 8
+    state: present
+
+# Making launchpad better
+- osx_defaults:
+    domain: com.apple.dock
+    key: ResetLaunchPad
+    type: bool
+    value: true
+    state: present
+
+# Add a Stack with Recent Applications
+- osx_defaults:
+    domain: com.apple.dock
+    key: persistent-others
+    type: array-add
+    value: '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
+    state: present
+
+# Hot corners
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+
+# Top left screen corner → Disable screen saver
+- osx_defaults:
+    domain: com.apple.dock
+    key: wvous-tl-corner
+    type: int
+    value: 6
+    state: present
+
+# Top left screen corner → Disable screen saver
+- osx_defaults:
+    domain: com.apple.dock
+    key: wvous-tl-modifier
+    type: int
+    value: 0
+    state: present
+
+# Bottom right screen corner → Start screen saver
+- osx_defaults:
+    domain: com.apple.dock
+    key: wvous-br-corner
+    type: int
+    value: 5
+    state: present
+
+# Bottom right screen corner → Start screen saver
+- osx_defaults:
+    domain: com.apple.dock
+    key: wvous-br-modifier
+    type: int
+    value: 0
+    state: present
+
+# Make animation snappier
+- osx_defaults:
+    domain: com.apple.dock
+    key: workspaces-edge-delay
+    type: float
+    value: 0.1
+    state: present
+
 ## System Preferences/Keyboard
 
 # Disable keyboard from automatically adjusting backlight brightness in low light
@@ -182,6 +434,56 @@
     key: "Automatic Keyboard Enabled"
     type: bool
     value: false
+    state: present
+
+## System Preferences/Language & Region
+
+# Set language and text formats
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleLanguages
+    type: array
+    value: "en"
+    state: present
+
+# Set language and text formats
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleLocale
+    type: string
+    value: "en_US@currency=USD"
+    state: present
+
+# Set language and text formats
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleMeasurementUnits
+    type: string
+    value: "Inches"
+    state: present
+
+# Set language and text formats
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleMetricUnits
+    type: bool
+    value: false
+    state: present
+
+# Use 24-hour format
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleICUForce24HourTime
+    type: bool
+    value: true
+    state: present
+
+# Use Monday as the first day of the week
+- osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleFirstWeekday
+    type: string
+    value: '{gregorian = 2;}'
     state: present
 
 ## System Preferences/Network
@@ -200,6 +502,58 @@
     key: VPNShowTime
     type: int
     value: 1
+    state: present
+
+## System Preferences/Screen
+
+# Show screensaver with clock
+- osx_defaults:
+    domain: com.apple.screensaver
+    key: showClock
+    type: bool
+    value: true
+    state: present
+
+# Save screenshots to the desktop
+- osx_defaults:
+    domain: com.apple.screencapture
+    key: location
+    type: string
+    value: "${HOME}/Desktop"
+    state: present
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+- osx_defaults:
+    domain: com.apple.screencapture
+    key: type
+    type: string
+    value: "png"
+    state: present
+
+## System Preferences/Security & Privacy
+
+# Turn on Firewall
+- osx_defaults:
+    domain: com.apple.alf
+    key: globalstate
+    type: bool
+    value: true
+    state: present
+
+# Enable stealth mode
+- osx_defaults:
+    domain: com.apple.alf
+    key: stealthenabled
+    type: bool
+    value: true
+    state: present
+
+# Allow signed applications to receive incoming connections
+- osx_defaults:
+    domain: com.apple.alf
+    key: allowsignedenabled
+    type: bool
+    value: true
     state: present
 
 ## System Preferences/Time Machine
@@ -248,4 +602,14 @@
     key: XCShowWelcomeWindow
     type: bool
     value: false
+    state: present
+
+## X11
+
+# Auto-quit on close last window (XQuartz)
+- osx_defaults:
+    domain: org.macosforge.xquartz.X11
+    key: wm_auto_quit
+    type: bool
+    value: true
     state: present

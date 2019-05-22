@@ -6,14 +6,6 @@ echo "##########################################################################
 
 plist="com.surteesstudios.Bartender.plist"
 
-#echo ""
-#echo ""
-#defaults write "${plist}" barLocationPercentage -1
-
-#echo ""
-#echo ""
-#defaults write "${plist}" bartenderClick 1
-
 echo ""
 echo "Show menu bar icon"
 defaults write "${plist}" showMenuBarIcon -bool true
