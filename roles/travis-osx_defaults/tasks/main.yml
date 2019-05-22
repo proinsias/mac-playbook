@@ -1,6 +1,4 @@
 ---
-## DayOne
-
 # Enable auto backup
 - osx_defaults:
     domain: com.dayoneapp.dayone.plist
@@ -9,98 +7,34 @@
     value: true
     state: present
 
-# Enable correct spelling in editor
+# Add a Stack with Recent Applications
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: EditorCorrectSpellingEnabled
-    type: bool
-    value: true
+    domain: com.apple.dock
+    key: persistent-others
+    type: array-add
+    value: '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
     state: present
 
-# Enable grammar check in editor
+# Use Monday as the first day of the week
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: EditorGrammarCheckEnabled
-    type: bool
-    value: true
-    state: present
-
-# Enable spell check in editor
-- osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: EditorSpellCheckEnabled
-    type: bool
-    value: true
-    state: present
-
-# Enable embedded media
-- osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: EmbedMediaEnabled
-    type: bool
-    value: true
-    state: present
-
-# Set font size
-- osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: FontSize
+    domain: NSGlobalDomain
+    key: AppleFirstWeekday
     type: string
-    value: "16"
+    value: '{gregorian = 2;}'
     state: present
 
-# Enable inspirational messages
+# Save screenshots to the desktop
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: InspirationalMessagesEnabled
-    type: bool
-    value: true
-    state: present
-
-# Link twitter handles
-- osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: LinkTwitterHandles
-    type: bool
-    value: true
-    state: present
-
-# Enable markdown support
-- osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: MarkdownEnabled
-    type: bool
-    value: true
-    state: present
-
-# Lock if idle
-- osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: SecurityIdleLockEnabled
-    type: bool
-    value: true
-    state: present
-
-# Set lock time
-- osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: SecurityIdleLockTime
+    domain: com.apple.screencapture
+    key: location
     type: string
-    value: "20"
+    value: "${HOME}/Desktop"
     state: present
 
-# Enable password protection
+# Set the size 18 by default
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: SecurityPasswordProtectionEnabled
-    type: bool
-    value: true
-    state: present
-
-# Enable lock on sleep
-- osx_defaults:
-    domain: com.dayoneapp.dayone.plist
-    key: SecuritySleepLockEnabled
-    type: bool
-    value: true
+    domain: com.apple.Terminal
+    key: "NSWindow Frame NSFontPanel"
+    type: string
+    value: "929 42 445 105 0 0 1440 900"
     state: present
