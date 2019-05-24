@@ -10,23 +10,29 @@
     - name: Run all role.
       include_role:
         name: all
+        apply:
+          tags: ['always']
       tags: ['always']
 
     - name: Run firefly role.
       include_role:
         name: firefly
+        apply:
+          tags: ['firefly', 'never']
       tags: ['firefly', 'never']  # This won't run unless you specify the 'firefly' tag.
 
     - name: Run ospideal role.
       include_role:
         name: ospideal
+        apply:
+          tags: ['ospideal', 'never']
       tags: ['ospideal', 'never']
 
     - name: Run travis role.
       include_role:
         name: travis
+        apply:
+          tags: ['travis', 'never']
       tags: ['travis', 'never']
 
 # FIXME: GT TGT folder
-
-# FIXME: Test VM - create snapshot for rapid rollback.

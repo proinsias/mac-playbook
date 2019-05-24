@@ -7,8 +7,8 @@ osx_image: xcode10.2
 matrix:
   fast_finish: true
   include:
-    - env: TAGS=macos,macos-standby,nodejs,ruby,osx-defaults
-    - env: TAGS=homebrew,macdock,pipx,travis,osx-user-picture
+    - env: TAGS=macos,macos-standby,nodejs,osx-defaults,ruby,travis
+    - env: TAGS=homebrew,macdock,osx-user-picture,pipx,travis
     # - env: TAGS=mas,travis  # mas has automation issues.
 
 cache:
@@ -41,7 +41,7 @@ install:
   - "./bin/setup_ansible.sh"
 
   # Install dependencies.
-  - "ansible-galaxy install --role-file requirements.yml"
+  - "./bin/install_dependencies.sh"
 
   # Install aerial screensaver, if necessary.
   - |
@@ -54,7 +54,7 @@ script:
   - "ansible-playbook --syntax-check main.yml"
 
   # Test the playbook, tag by tag
-  - "travis_wait 30 ansible-playbook main.yml --inventory inventory --tags ${TAGS} --skip-tags skip-travis"
+  - "travis_wait 30 ./bin/travis.sh"
 
 before_cache:
   - brew cleanup
