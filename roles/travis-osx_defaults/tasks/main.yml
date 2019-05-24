@@ -1,7 +1,7 @@
 ---
 # Enable auto backup
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: AutoBackupEnabled
     type: bool
     value: true

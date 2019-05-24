@@ -41,6 +41,32 @@
     value: 0
     state: present
 
+## Address Book
+
+# Enable the debug menu in Address Book
+- osx_defaults:
+    domain: com.apple.addressbook
+    key: ABShowDebugMenu
+    type: bool
+    value: true
+    state: present
+
+# Show first name before last name
+- osx_defaults:
+    domain: com.apple.addressbook
+    key: ABNameDisplay
+    type: int
+    value: 0
+    state: present
+
+# Sort by last name
+- osx_defaults:
+    domain: com.apple.addressbook
+    key: ABNameSortingFormat
+    type: string
+    value: 'sortingFirstName sortingLastName'
+    state: present
+
 ## App Store
 
 # Enable the WebKit Developer Tools in the Mac App Store
@@ -59,11 +85,73 @@
     value: true
     state: present
 
+## Bartender
+
+# Show menu bar icon
+- osx_defaults:
+    domain: com.surteesstudios.Bartender
+    key: showMenuBarIcon
+    type: bool
+    value: true
+    state: present
+
+# Show menu bar at startup
+- osx_defaults:
+    domain: com.surteesstudios.Bartender
+    key: showBarAtStartup
+    type: bool
+    value: true
+    state: present
+
+## Caffeine"
+
+# Activate on launch
+- osx_defaults:
+    domain: com.lightheadsw.caffeine
+    key: ActivateOnLaunch
+    type: bool
+    value: false
+    state: present
+
+# Suppress launch message
+- osx_defaults:
+    domain: com.lightheadsw.caffeine
+    key: SuppressLaunchMessage
+    type: bool
+    value: true
+    state: present
+
+# Set duration to infinity
+- osx_defaults:
+    domain: com.lightheadsw.caffeine
+    key: DefaultDuration
+    type: string
+    value: "0"
+    state: present
+
+## Calendar
+
+# Enable the debug menu in iCal (pre-10.8)
+- osx_defaults:
+    domain: com.apple.iCal
+    key: IncludeDebugMenu
+    type: bool
+    value: true
+    state: present
+
+# Default duration for new event
+- osx_defaults:
+    domain: com.apple.iCal
+    key: "Default duration in minutes for new event"
+    type: int
+    value: 60
+    state: present
+
 ## DayOne
 
 # Enable auto backup
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: AutoBackupEnabled
     type: bool
     value: true
@@ -71,7 +159,7 @@
 
 # Enable correct spelling in editor
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: EditorCorrectSpellingEnabled
     type: bool
     value: true
@@ -79,7 +167,7 @@
 
 # Enable grammar check in editor
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: EditorGrammarCheckEnabled
     type: bool
     value: true
@@ -87,7 +175,7 @@
 
 # Enable spell check in editor
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: EditorSpellCheckEnabled
     type: bool
     value: true
@@ -95,7 +183,7 @@
 
 # Enable embedded media
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: EmbedMediaEnabled
     type: bool
     value: true
@@ -103,7 +191,7 @@
 
 # Set font size
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: FontSize
     type: string
     value: "16"
@@ -111,7 +199,7 @@
 
 # Enable inspirational messages
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: InspirationalMessagesEnabled
     type: bool
     value: true
@@ -119,7 +207,7 @@
 
 # Link twitter handles
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: LinkTwitterHandles
     type: bool
     value: true
@@ -127,7 +215,7 @@
 
 # Enable markdown support
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: MarkdownEnabled
     type: bool
     value: true
@@ -135,7 +223,7 @@
 
 # Lock if idle
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: SecurityIdleLockEnabled
     type: bool
     value: true
@@ -143,7 +231,7 @@
 
 # Set lock time
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: SecurityIdleLockTime
     type: string
     value: "20"
@@ -151,7 +239,7 @@
 
 # Enable password protection
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: SecurityPasswordProtectionEnabled
     type: bool
     value: true
@@ -159,7 +247,7 @@
 
 # Enable lock on sleep
 - osx_defaults:
-    domain: com.dayoneapp.dayone.plist
+    domain: com.dayoneapp.dayone
     key: SecuritySleepLockEnabled
     type: bool
     value: true
@@ -941,7 +1029,7 @@
 
 # Turn off welcome windows
 - osx_defaults:
-    domain: com.apple.dt.Xcode.plist
+    domain: com.apple.dt.Xcode
     key: XCShowWelcomeWindow
     type: bool
     value: false
