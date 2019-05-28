@@ -10,8 +10,6 @@
     - name: Run all role.
       include_role:
         name: all
-        apply:
-          tags: ['always']
       tags: ['always']
 
     - name: Run firefly role.

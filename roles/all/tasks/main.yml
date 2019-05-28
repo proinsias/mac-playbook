@@ -14,16 +14,16 @@
     name: all-macos
   tags: ['macos']
 
-- name: Run all mas role.
-  include_role:
-    name: all-mas
-  tags: ['mas']
-
 - name: Run all macos-standby role.
   include_role:
     name: all-macos-standby
   tags: ['macos-standby']
   # An alternative is appian.macos-power.
+
+- name: Run all mas role.
+  include_role:
+    name: all-mas
+  tags: ['mas', 'skip-travis']
 
 - name: Run all nodejs role.
   include_role:
@@ -38,7 +38,7 @@
 - name: Run all osx_defaults role.
   include_role:
     name: all-osx_defaults
-  tags: ['osx-defaults']
+  tags: ['osx-defaults', 'skip-travis']
 
 - name: Run all pipx role.
   include_role:
@@ -48,4 +48,4 @@
 - name: Run all ruby role.
   include_role:
     name: all-ruby
-  tags: ['ruby']
+  tags: ['ruby', 'skip-travis']
