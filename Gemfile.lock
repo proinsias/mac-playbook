@@ -115,7 +115,7 @@ GEM
     ruby-lint (2.3.1)
       parser (~> 2.2)
       slop (~> 3.4, >= 3.4.7)
-    ruby-progressbar (1.10.0)
+    ruby-progressbar (1.10.1)
     ruby_parser (3.13.1)
       sexp_processor (~> 4.9)
     sawyer (0.8.2)
