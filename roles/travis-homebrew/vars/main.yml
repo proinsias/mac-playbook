@@ -16,7 +16,4 @@ homebrew_installed_packages:
 
 # geerlingguy.homebrew
 homebrew_cask_apps:
-  - dayone
   - firefox
-  - limechat
-  - macvim
