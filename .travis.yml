@@ -4,11 +4,11 @@ language: objective-c
 # 10.14 (see https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version)
 osx_image: xcode10.2
 
-matrix:
-  fast_finish: true
-  include:
-    - env: TAGS=homebrew,macdock,macos,macos-standby,nodejs,osx-defaults,osx-user-picture,pipx,ruby,travis
-    # - env: TAGS=mas,travis  # mas has automation issues.
+# matrix:
+ # fast_finish: true
+ # include:
+   # - env: TAGS=homebrew,macdock,macos,macos-standby,nodejs,osx-defaults,osx-user-picture,pipx,ruby,travis
+   # - env: TAGS=mas,travis  # mas has automation issues.
 
 cache:
   apt: true
@@ -26,14 +26,15 @@ cache:
 before_install:
   # Uninstall existing Homebrew installation, if necessary.
   - |
-    if test $TAGS = 'homebrew'; then
-        curl --location --remote-name --silent https://raw.githubusercontent.com/Homebrew/install/master/uninstall
-        chmod +x ./uninstall
-        ./uninstall --force
-        sudo rm -rf /usr/local/Homebrew
-        sudo rm -rf /usr/local/Caskroom
-        sudo rm -rf /usr/local/bin/brew
-    fi
+    curl --location --remote-name --silent https://raw.githubusercontent.com/Homebrew/install/master/uninstall
+    chmod +x ./uninstall
+    ./uninstall --force
+    sudo rm -rf /usr/local/Homebrew
+    sudo rm -rf /usr/local/Caskroom
+    sudo rm -rf /usr/local/bin/brew
+    # if test $TAGS = 'homebrew'; then
+    # fi
+
 
 install:
   # Install and configure Ansible.
@@ -43,17 +44,17 @@ install:
   - "./bin/install_dependencies.sh"
 
   # Install aerial screensaver, if necessary.
-  - |
-    if [[ "${TAGS}" == *"macos"* ]]; then
-        brew cask install aerial
-    fi
+  # - |
+  #   if [[ "${TAGS}" == *"macos"* ]]; then
+  #       brew cask install aerial
+  #   fi
 
 script:
   # Check the role/playbook's syntax.
   - "ansible-playbook --syntax-check main.yml"
 
   # Test the playbook, tag by tag
-  - "travis_wait 30 ./bin/travis.sh"
+  - "travis_wait 30 ./bin/travis_all_tags.sh"
 
 before_cache:
   - brew cleanup

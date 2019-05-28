@@ -1,10 +1,13 @@
 ---
+# geerlingguy.homebrew
+homebrew_cask_appdir: /Applications
+homebrew_clear_cache: false
 homebrew_upgrade_all_packages: true
+homebrew_use_brewfile: false
+
 homebrew_taps:
   - homebrew/cask
   - homebrew/core
-homebrew_use_brewfile: false
-homebrew_clear_cache: false
 homebrew_installed_packages:
   - apache-spark
   - gbeine/homebrew-java/postgresql-jdbc
@@ -25,4 +28,3 @@ homebrew_cask_apps:
   - pycharm
   - sequel-pro
 homebrew_cask_uninstalled_apps: []
-homebrew_cask_appdir: /Applications
