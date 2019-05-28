@@ -29,8 +29,8 @@
     - name: Run travis role.
       include_role:
         name: travis
-        # apply:
-        #   tags: ['travis', 'never']
+        apply:
+          tags: ['travis', 'never']
       tags: ['travis', 'never']
 
 # FIXME: GT TGT folder
