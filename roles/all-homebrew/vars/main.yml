@@ -342,6 +342,7 @@ homebrew_cask_apps:
   - controlplane
   - cord
   - dash
+  - daisydisk
   - dbeaver-enterprise
   - dbvisualizer
   - diskmaker-x
