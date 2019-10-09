@@ -27,4 +27,5 @@ homebrew_cask_apps:
   - notebook
   - pycharm
   - sequel-pro
+  - zotero
 homebrew_cask_uninstalled_apps: []
