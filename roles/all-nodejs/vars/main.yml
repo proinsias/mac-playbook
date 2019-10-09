@@ -6,6 +6,7 @@ nodejs_global_packages:
   - csslint
   - dockerlint
   - dockerfile_lint
+  - emoj  # https://github.com/sindresorhus/emoj
   - eslint
   - git-guilt
   - how2  # https://github.com/santinic/how2

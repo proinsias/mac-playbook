@@ -92,6 +92,7 @@ homebrew_installed_packages:
   - eg-examples
   - {name: emacs, install_options: "with-cocoa,with-ctags,with-modules"}
   - epstool
+  - exiftool
   - faac
   - fasd
   - ffmpeg
@@ -291,6 +292,7 @@ homebrew_installed_packages:
   - texinfo
   - the_silver_searcher
   - thefuck
+  - tidy-html5
   - tig
   - tivodecode
   - tmux
@@ -333,6 +335,7 @@ homebrew_cask_apps:
   - bbedit
   - bettertouchtool
   - betterzip
+  - bfg
   - box-sync
   - cakebrew
   - cheatsheet
@@ -361,7 +364,9 @@ homebrew_cask_apps:
   - geektool
   - gephi
   - gimp
+  - git-sizer
   - google-chrome
+  - go64
   - gpg-suite
   - grammarly
   - grandperspective
@@ -371,6 +376,7 @@ homebrew_cask_apps:
   - imazing
   - inklet
   - intellij-idea-ce
+  - intel-power-gadget
   - iterm2
   - jing
   - karabiner
@@ -385,6 +391,7 @@ homebrew_cask_apps:
   - macfusion
   - mactex
   - makemkv
+  - mediainfo
   - metaz
   - muzzle
   - nightowl
@@ -415,10 +422,12 @@ homebrew_cask_apps:
   - spectacle
   - spotdox
   - sshfs
+  - stretchly
   - sublime-text
   - suspicious-package
   - the-unarchiver
   - tigervnc-viewer
+  - tripmode
   - virtualbox
   - virtualbox-extension-pack
   - vlc
