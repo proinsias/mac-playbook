@@ -1,10 +1,8 @@
 ---
 - homebrew:
-    name: "{{ item.name }}"
+    name: ['ruby']
     state: present
-  with_items:
-    - ruby
 
 - name: Install global ruby packages.
-  command: gem install {{ item.name }}
+  command: gem install {{ item }}
   with_items: "{{ ruby_install_gems }}"

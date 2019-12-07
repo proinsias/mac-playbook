@@ -1,19 +1,16 @@
 ---
 - homebrew:
-    name: "{{ item.name }}"
+    name: ['python', 'pipx']
     state: present
-  with_items:
-    - python
-    - pipx
 
 - name: Install global pipx packages.
-  command: pipx install {{ item.name }} --python /usr/local/bin/python3
+  command: pipx install {{ item }} --python /usr/local/bin/python3
   with_items: "{{ pipx_packages }}"
 
 - name: Install global pipx flake8 packages.
-  command: pipx inject flake8 {{ item.name }}
+  command: pipx inject flake8 {{ item }}
   with_items: "{{ pipx_flake8_packages }}"
 
 - name: Install global pipx pytest packages.
-  command: pipx inject pytest {{ item.name }}
+  command: pipx inject pytest {{ item }}
   with_items: "{{ pipx_pytest_packages }}"

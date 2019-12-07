@@ -1,10 +1,10 @@
 ---
 - homebrew:
-    name: "{{ item.name }}"
+    name: ["{{ item }}"]
     state: present
   with_items:
     - node
 
 - name: Install global nodejs packages.
-  command: npm install --global {{ item.name }}
+  command: npm install --global {{ item }}
   with_items: "{{ nodejs_global_packages }}"
