@@ -18,9 +18,6 @@ homebrew_taps:
   - homebrew/services
   - iterative/homebrew-dvc
 homebrew_installed_packages:
-  - openssl
-  - {name: openssh, install_options: "with-brewed-openssl,with-keychain-support"}
-  - {name: curl, install_options: "with-openssl,with-libssh2"}
   - svn
   - parallel  # Install before moreutils that also different `parallel` command.
   - ack
@@ -61,6 +58,7 @@ homebrew_installed_packages:
   - cowsay
   - cscope
   - csvkit
+  - curl
   - d-bus
   - daq
   - diffutils
@@ -90,7 +88,7 @@ homebrew_installed_packages:
   - ed
   - editorconfig
   - eg-examples
-  - {name: emacs, install_options: "with-cocoa,with-ctags,with-modules"}
+  - {name: emacs, install_options: "with-modules"}
   - epstool
   - exiftool
   - faac
@@ -106,7 +104,7 @@ homebrew_installed_packages:
   - freetype
   - fzf
   - gawk
-  - {name: gcc, install_options: "with-jit,with-nls"}
+  - gcc
   - gd
   - gdb
   - gdbm
@@ -115,7 +113,7 @@ homebrew_installed_packages:
   - gettext
   - ghostscript
   - gifsicle
-  - {name: git, install_options: "with-curl,with-openssl"}
+  - git
   - git-branch-status
   - git-ftp
   - git-lfs
@@ -132,7 +130,7 @@ homebrew_installed_packages:
   - gnu-time
   - gnu-utils
   - gnu-which
-  - {name: gnuplot, install_options: "with-qt,with-x11"}
+  - {name: gnuplot, install_options: "with-qt"}
   - gnutls
   - go
   - gobject-introspection
@@ -311,6 +309,7 @@ homebrew_installed_packages:
   - wget
   - wine
   - winetricks
+  - wireguard-tools
   - wireshark
   - x264
   - xvid
@@ -327,6 +326,7 @@ homebrew_cask_apps:
   - osxfuse
   - xquartz
   - 1password
+  - 1password-cli
   - adobe-reader
   - aerial
   - appfresh
@@ -365,6 +365,7 @@ homebrew_cask_apps:
   - gephi
   - gimp
   - git-sizer
+  - gmvault
   - google-chrome
   - go64
   - gpg-suite
@@ -403,6 +404,7 @@ homebrew_cask_apps:
   - oversight
   - p4merge
   - pacifist
+  - plantronics-hub
   - podcastmenu
   # - prey  # FIXME: Install separately with correct API key - move to hostname specific
   - qlcolorcode
@@ -418,6 +420,7 @@ homebrew_cask_apps:
   - skype
   - slack
   - slimbatterymonitor
+  - sourcetrail
   - sourcetree
   - spectacle
   - spotdox

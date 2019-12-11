@@ -7,12 +7,12 @@
     # - name: print facts
     #   debug:
     #     var: ansible_facts
-    - name: Run firefly role.
+    - name: Run ilovemovies role.
       include_role:
-        name: firefly
+        name: ilovemovies
         apply:
-          tags: ['firefly', 'never']
-      tags: ['firefly', 'never']  # This won't run unless you specify the 'firefly' tag.
+          tags: ['ilovemovies', 'never']
+      tags: ['ilovemovies', 'never']  # This won't run unless you specify the 'ilovemovies' tag.
 
     - name: Run ospideal role.
       include_role:
