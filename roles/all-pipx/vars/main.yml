@@ -1,6 +1,5 @@
 ---
 pipx_packages:
-  - argcomplete
   - bandit
   - clf
   - csvkit
@@ -24,7 +23,6 @@ pipx_packages:
   - pytest
   - safety
   - searchcmd
-  - slacker
   - tldr
   - twine
   - uncommitted

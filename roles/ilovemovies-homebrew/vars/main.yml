@@ -12,12 +12,12 @@ homebrew_installed_packages: []
 homebrew_uninstalled_packages: []
 homebrew_cask_apps:
   - backblaze
-  - carmaintenance
   - google-backup-and-sync
-  - google-photos-backup
+  # - google-photos-backup-and-sync
   - growlnotify
-  - growlvoice
   - handbrake
+  - minecraft
+  - plex-media-server
   - pycharm-ce
   - steam
   - subler

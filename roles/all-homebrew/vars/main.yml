@@ -17,7 +17,12 @@ homebrew_taps:
   - homebrew/core
   - homebrew/services
   - iterative/homebrew-dvc
+  - jzaleski/homebrew-jzaleski
 homebrew_installed_packages:
+  - openssl
+  - openssh
+  - curl
+  - {name: emacs, install_options: "with-modules"}
   - svn
   - parallel  # Install before moreutils that also different `parallel` command.
   - ack
@@ -28,7 +33,6 @@ homebrew_installed_packages:
   - ant
   - ant-contrib
   - antiword
-  - apg
   - archey
   - arpack
   - aspell
@@ -40,12 +44,13 @@ homebrew_installed_packages:
   - bash
   - bash-completion
   - bash-snippets
+  - bfg
   - binutils
   - brew-cask-completion
   - bundler-completion
   - c-ares
   - cairo
-  - cask
+  # - cask
   - ccache  # For pyenv-ccache.
   - certbot
   # - cheat  # Get via bash-snippets.
@@ -58,7 +63,6 @@ homebrew_installed_packages:
   - cowsay
   - cscope
   - csvkit
-  - curl
   - d-bus
   - daq
   - diffutils
@@ -67,28 +71,20 @@ homebrew_installed_packages:
   - docker-completion
   - docker-compose-completion
   - docker-machine-completion
-  - docmunch/pdftk/pdftk
+  # - docmunch/pdftk/pdftk
   - dos2unix
-  - dunn/emacs/dash-emacs
   - dunn/emacs/git-messenger
   - dunn/emacs/git-modes
-  - dunn/emacs/homebrew-mode
-  - dunn/emacs/hydra-emacs
   - dunn/emacs/inf-ruby
   - dunn/emacs/json-mode
   - dunn/emacs/json-reformat
   - dunn/emacs/json-snatcher
-  - dunn/emacs/markdown-mode
-  - dunn/emacs/org-mode
-  - dunn/emacs/pandoc-mode
   - dunn/emacs/popup
-  - dunn/emacs/solarized-emacs
   - dunn/emacs/yaml-mode
-  - ecj
+  - dvc
   - ed
   - editorconfig
   - eg-examples
-  - {name: emacs, install_options: "with-modules"}
   - epstool
   - exiftool
   - faac
@@ -117,6 +113,7 @@ homebrew_installed_packages:
   - git-branch-status
   - git-ftp
   - git-lfs
+  - git-sizer
   - git-standup
   - glances
   - gl2ps
@@ -128,7 +125,7 @@ homebrew_installed_packages:
   - gnu-sed
   - gnu-tar
   - gnu-time
-  - gnu-utils
+  - gnu-units
   - gnu-which
   - {name: gnuplot, install_options: "with-qt"}
   - gnutls
@@ -136,33 +133,15 @@ homebrew_installed_packages:
   - gobject-introspection
   - gpatch
   - gpg
-  - gpg-agent
+  # - gpg-agent
   - graphicsmagick
   - graphviz
   - grep
   - gsmartcontrol
-  - gv
   - gwt
   - gzip
   - hadolint
   - hdf5
-  - homebrew/emacs/dash-emacs
-  - homebrew/emacs/git-messenger
-  - homebrew/emacs/git-modes
-  - homebrew/emacs/homebrew-mode
-  - homebrew/emacs/hydra-emacs
-  - homebrew/emacs/inf-ruby
-  - homebrew/emacs/json-mode
-  - homebrew/emacs/json-reformat
-  - homebrew/emacs/json-snatcher
-  - homebrew/emacs/markdown-mode
-  - homebrew/emacs/org-mode
-  - homebrew/emacs/pandoc-mode
-  - homebrew/emacs/popup
-  - homebrew/emacs/solarized-emacs
-  - homebrew/emacs/yaml-mode
-  - homebrew/gui/gsmartcontrol
-  - homebrew/science/suite-sparse421
   - homesick-completion
   - howdoi
   - htop
@@ -182,6 +161,7 @@ homebrew_installed_packages:
   - jpegoptim
   - jq
   - jsonlint
+  - jzaleski/homebrew-jzaleski/apg
   - keychain
   - lame
   - launchctl-completion
@@ -223,8 +203,6 @@ homebrew_installed_packages:
   - node
   - open-completion
   - openjpeg
-  - openssh
-  - openssl
   - optipng
   - packer
   - packer-completion
@@ -276,6 +254,7 @@ homebrew_installed_packages:
   - snort
   - sonar-completion
   - sqlite
+  - sshfs
   - ssh-copy-id
   - stress
   - stormssh-completion
@@ -297,7 +276,6 @@ homebrew_installed_packages:
   - tmuxinator-completion
   - trash
   - tree
-  - units
   - unzip
   - vagrant-completion
   - veclibfort
@@ -307,7 +285,6 @@ homebrew_installed_packages:
   - wdiff
   - webkit2png
   - wget
-  - wine
   - winetricks
   - wireguard-tools
   - wireshark
@@ -327,15 +304,13 @@ homebrew_cask_apps:
   - xquartz
   - 1password
   - 1password-cli
-  - adobe-reader
+  - adobe-acrobat-reader
   - aerial
-  - appfresh
   - apptrap
   - bartender
   - bbedit
   - bettertouchtool
   - betterzip
-  - bfg
   - box-sync
   - cakebrew
   - cheatsheet
@@ -345,20 +320,18 @@ homebrew_cask_apps:
   - controlplane
   - cord
   - dash
+  - daisydisk
   - dbeaver-enterprise
   - dbvisualizer
   - diskmaker-x
-  - diskwave
-  - dnscrypt
+  # - diskwave
   - docker
   - docker-toolbox
   - dropbox
-  - dvc
   - emacs
   - filebot
-  - filezilla
   - firefox
-  - flashlight
+  - flashlighttool
   - flux
   - ganttproject
   - geektool
@@ -375,34 +348,31 @@ homebrew_cask_apps:
   - ibettercharge
   - imageoptim
   - imazing
-  - inklet
   - intellij-idea-ce
   - intel-power-gadget
   - iterm2
   - jing
-  - karabiner
   - keka
   - keybase
-  - kindle
+  # - kindle  # Use mas instead
   - kite
   - lastpass
-  - libdvdcss
   - lingon-x
   - macdown
   - macfusion
   - mactex
   - makemkv
   - mediainfo
+  - menumeters
   - metaz
   - muzzle
   - nightowl
   - no-ip-duc
   - omnidisksweeper
   - omnifocus
-  # - onyx  # FIXME: Mojave version?
+  - onyx  # FIXME: Mojave version?
   - osxfuse
   - oversight
-  - p4merge
   - pacifist
   - plantronics-hub
   - podcastmenu
@@ -423,8 +393,6 @@ homebrew_cask_apps:
   - sourcetrail
   - sourcetree
   - spectacle
-  - spotdox
-  - sshfs
   - stretchly
   - sublime-text
   - suspicious-package
@@ -440,5 +408,4 @@ homebrew_cask_apps:
   - yubico-yubikey-manager
   - yubico-yubikey-personalization-gui
   - yubico-yubikey-piv-manager
-  - yujitach-menumeters
 homebrew_cask_uninstalled_apps: []

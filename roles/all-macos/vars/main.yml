@@ -121,7 +121,7 @@ misc:
 
   save_new_docs_to_icloud: false
 
-  enable_ssh: true
+  enable_ssh: false  # true causes failure on latest macos versions.
 
   enable_crash_reporter: true
 
