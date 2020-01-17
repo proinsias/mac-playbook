@@ -26,6 +26,7 @@ pipx_packages:
   - tldr
   - twine
   - uncommitted
+  - vulture
   - yapf
 
 pipx_flake8_packages:
