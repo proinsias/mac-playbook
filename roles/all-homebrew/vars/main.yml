@@ -230,9 +230,9 @@ homebrew_installed_packages:
   - pyenv-pip-migrate
   - pyenv-virtualenv
   - pyenv-which-ext
+  - pygments  # For mog
   - pyqt
   - python
-  - python@2
   - qhull
   - qpdf
   - qrupdate
@@ -329,6 +329,7 @@ homebrew_cask_apps:
   - docker-toolbox
   - dropbox
   - emacs
+  - fantastical
   - filebot
   - firefox
   - flashlighttool
@@ -363,6 +364,7 @@ homebrew_cask_apps:
   - mediainfo
   - menumeters
   - metaz
+  - microsoft-office
   - muzzle
   - nightowl
   - no-ip-duc

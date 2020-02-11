@@ -2,20 +2,16 @@
 pipx_packages:
   - bandit
   - clf
-  - csvkit
-  - eg
   - em-keyboard
   - flake8
   - future
   - gif-for-cli
-  - glances
   - hashin
   - howdoi
   - mog
   - ntfy[pid,emoji,slack]
   - pip-check
   - pip-tools
-  - proselint
   - pydocstyle
   - pyflakes
   - pyjokes
@@ -23,7 +19,6 @@ pipx_packages:
   - pytest
   - safety
   - searchcmd
-  - tldr
   - twine
   - uncommitted
   - yapf
