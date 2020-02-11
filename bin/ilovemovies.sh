@@ -2,4 +2,4 @@
 
 ansible-playbook main.yml --inventory inventory --ask-become-pass
 
-ansible-playbook main.yml --inventory inventory --ask-become-pass --tags firefly
+ansible-playbook main.yml --inventory inventory --ask-become-pass --tags ilovemovies

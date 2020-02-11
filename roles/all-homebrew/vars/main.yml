@@ -100,7 +100,7 @@ homebrew_installed_packages:
   - freetype
   - fzf
   - gawk
-  - {name: gcc, install_options: "with-jit,with-nls"}
+  - gcc
   - gd
   - gdb
   - gdbm
@@ -127,7 +127,7 @@ homebrew_installed_packages:
   - gnu-time
   - gnu-units
   - gnu-which
-  - gnuplot
+  - {name: gnuplot, install_options: "with-qt"}
   - gnutls
   - go
   - gobject-introspection
@@ -203,8 +203,6 @@ homebrew_installed_packages:
   - node
   - open-completion
   - openjpeg
-  - openssh
-  - openssl
   - optipng
   - packer
   - packer-completion
@@ -288,6 +286,7 @@ homebrew_installed_packages:
   - webkit2png
   - wget
   - winetricks
+  - wireguard-tools
   - wireshark
   - x264
   - xvid
@@ -304,6 +303,7 @@ homebrew_cask_apps:
   - osxfuse
   - xquartz
   - 1password
+  - 1password-cli
   - adobe-acrobat-reader
   - aerial
   - apptrap
@@ -338,6 +338,8 @@ homebrew_cask_apps:
   - geektool
   - gephi
   - gimp
+  - git-sizer
+  - gmvault
   - google-chrome
   - go64
   - gpg-suite
@@ -374,6 +376,7 @@ homebrew_cask_apps:
   - osxfuse
   - oversight
   - pacifist
+  - plantronics-hub
   - podcastmenu
   # - prey  # FIXME: Install separately with correct API key - move to hostname specific
   - qlcolorcode
@@ -389,6 +392,7 @@ homebrew_cask_apps:
   - skype
   - slack
   - slimbatterymonitor
+  - sourcetrail
   - sourcetree
   - spectacle
   - stretchly
