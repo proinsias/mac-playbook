@@ -352,6 +352,7 @@ homebrew_cask_apps:
   - intel-power-gadget
   - iterm2
   - jing
+  - jupyter-notebook-viewer
   - keka
   - keybase
   # - kindle  # Use mas instead
