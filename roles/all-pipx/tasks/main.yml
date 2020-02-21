@@ -11,6 +11,10 @@
   command: pipx inject flake8 {{ item }}
   with_items: "{{ pipx_flake8_packages }}"
 
+- name: Install global pipx ntfy packages.
+  command: pipx inject ntfy {{ item }}
+  with_items: "{{ pipx_ntfy_packges }}"
+
 - name: Install global pipx pytest packages.
   command: pipx inject pytest {{ item }}
   with_items: "{{ pipx_pytest_packages }}"

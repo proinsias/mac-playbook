@@ -9,7 +9,7 @@ pipx_packages:
   - hashin
   - howdoi
   - mog
-  - ntfy[pid,emoji,slack]
+  - ntfy
   - pip-check
   - pip-tools
   - pydocstyle
@@ -19,6 +19,7 @@ pipx_packages:
   - pytest
   - safety
   - searchcmd
+  - tox
   - twine
   - uncommitted
   - vulture
@@ -61,6 +62,11 @@ pipx_flake8_packages:
   - flake8-variables-names
   - flake8_tuple
   - pep8-naming
+
+pipx_ntfy_packges:
+  - emoji  # emoji
+  - psutil  # pid
+  - slacker  # slack
 
 pipx_pytest_packages:
   - pytest-profiling
