@@ -67,6 +67,7 @@ homebrew_installed_packages:
   - daq
   - diffutils
   - direnv
+  - dive  # For docker layer analysis.
   - docker-clean
   - docker-completion
   - docker-compose-completion
@@ -181,6 +182,7 @@ homebrew_installed_packages:
   - libvo-aacenc
   - libyaml
   - little-cms2
+  - lolcat
   - lsof
   - lua
   - luajit
@@ -341,6 +343,7 @@ homebrew_cask_apps:
   - git-sizer
   - gmvault
   - google-chrome
+  - go2shell
   - go64
   - gpg-suite
   - grammarly
