@@ -2,12 +2,14 @@
 pipx_packages:
   - bandit
   - clf
+  - docstr-coverage
   - em-keyboard
   - flake8
   - future
   - gif-for-cli
   - gittyleaks
   - hashin
+  - http-prompt
   - howdoi
   - mog
   - ntfy

@@ -12,6 +12,7 @@ mas_installed_apps:
   - {id: 1464122853, name: "NextDNS (1.4.1)"}
   - {id: 568494494, name: "Pocket (1.7.9)"}
   - {id: 439845554, name: "Reeder"}
+  - {id: 496437906, name: "Shush (1.2.1)"}
   - {id: 407721554, name: "SmartSleep (3.10)"}
   - {id: 509148961, name: "SMARTReporter"}
   - {id: 423123087, name: "UnPlugged"}

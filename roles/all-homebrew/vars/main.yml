@@ -65,6 +65,7 @@ homebrew_installed_packages:
   - csvkit
   - d-bus
   - daq
+  - ddgr
   - diffutils
   - direnv
   - dive  # For docker layer analysis.
@@ -87,6 +88,7 @@ homebrew_installed_packages:
   - editorconfig
   - eg-examples
   - epstool
+  - exa
   - exiftool
   - faac
   - fasd
@@ -143,6 +145,7 @@ homebrew_installed_packages:
   - gzip
   - hadolint
   - hdf5
+  - hexyl
   - homesick-completion
   - howdoi
   - htop
@@ -158,6 +161,7 @@ homebrew_installed_packages:
   - jenv
   - jhead
   - jonof/kenutils/pngout
+  - joplin
   - jpeg
   - jpegoptim
   - jq
@@ -233,6 +237,7 @@ homebrew_installed_packages:
   - pygments  # For mog
   - pyqt
   - python
+  - p7zip
   - qhull
   - qpdf
   - qrupdate
@@ -356,6 +361,7 @@ homebrew_cask_apps:
   - intel-power-gadget
   - iterm2
   - jing
+  - joplin
   - jupyter-notebook-viewer
   - keka
   - keybase
@@ -396,6 +402,7 @@ homebrew_cask_apps:
   - skype
   - slack
   - slimbatterymonitor
+  - soundcloud-downloader
   - sourcetrail
   - sourcetree
   - spectacle
@@ -405,6 +412,7 @@ homebrew_cask_apps:
   - the-unarchiver
   - tigervnc-viewer
   - tripmode
+  - ultimaker-cura
   - virtualbox
   - virtualbox-extension-pack
   - vlc
