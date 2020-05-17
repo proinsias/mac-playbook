@@ -9,6 +9,7 @@ pipx_packages:
   - gif-for-cli
   - gittyleaks
   - hashin
+  - hjson
   - http-prompt
   - howdoi
   - mog
