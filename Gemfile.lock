@@ -168,7 +168,7 @@ DEPENDENCIES
   rubocop
   rubocop-performance
   ruby-lint
-  travis (>= 1.8.8)
+  travis (>= 1.9.0)
 
 BUNDLED WITH
-   2.1.4
+   1.17.3
