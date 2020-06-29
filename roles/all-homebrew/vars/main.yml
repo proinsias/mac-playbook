@@ -263,6 +263,7 @@ homebrew_installed_packages:
   - sqlite
   - sshfs
   - ssh-copy-id
+  - starship
   - stress
   - stormssh-completion
   - subversion

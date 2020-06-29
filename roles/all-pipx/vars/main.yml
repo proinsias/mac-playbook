@@ -2,12 +2,16 @@
 pipx_packages:
   - bandit
   - clf
+  - coverage
+  - csvkit
   - docstr-coverage
+  - eg
   - em-keyboard
   - flake8
   - future
   - gif-for-cli
   - gittyleaks
+  - glances
   - hashin
   - hjson
   - http-prompt
@@ -16,6 +20,7 @@ pipx_packages:
   - ntfy
   - pip-check
   - pip-tools
+  - proselint
   - pydocstyle
   - pyflakes
   - pyjokes
@@ -25,6 +30,7 @@ pipx_packages:
   - safety
   - searchcmd
   - shrynk
+  - tldr
   - tox
   - twine
   - uncommitted
