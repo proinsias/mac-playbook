@@ -264,6 +264,7 @@ homebrew_installed_packages:
   - sshfs
   - ssh-copy-id
   - starship
+  - stormssh
   - stress
   - stormssh-completion
   - subversion
@@ -348,6 +349,7 @@ homebrew_cask_apps:
   - gimp
   - git-sizer
   - gmvault
+  - goodsync
   - google-chrome
   - go2shell
   - go64
