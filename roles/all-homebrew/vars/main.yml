@@ -115,6 +115,7 @@ homebrew_installed_packages:
   - git
   - git-branch-status
   - git-ftp
+  - git-filter-repo
   - git-lfs
   - git-sizer
   - git-standup
@@ -390,6 +391,7 @@ homebrew_cask_apps:
   - oversight
   - pacifist
   - plantronics-hub
+  - pocket-casts
   - podcastmenu
   # - prey  # FIXME: Install separately with correct API key - move to hostname specific
   - qlcolorcode

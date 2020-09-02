@@ -18,6 +18,7 @@ pipx_packages:
   - http-prompt
   - howdoi
   - mog
+  - nbstripout
   - ntfy
   - pip-check
   - pip-tools
