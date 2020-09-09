@@ -400,6 +400,7 @@ homebrew_cask_apps:
   - qlstephen
   - quicklook-csv
   - quicklook-json
+  - roaringapps
   - send-to-kindle
   - signal
   - silverlight

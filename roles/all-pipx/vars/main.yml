@@ -78,7 +78,7 @@ pipx_flake8_packages:
   - flake8_tuple
   - pep8-naming
 
-pipx_ntfy_packges:
+pipx_ntfy_packages:
   - emoji  # emoji
   - psutil  # pid
   - slacker  # slack

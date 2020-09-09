@@ -13,7 +13,7 @@
 
 - name: Install global pipx ntfy packages.
   command: pipx inject ntfy {{ item }}
-  with_items: "{{ pipx_ntfy_packges }}"
+  with_items: "{{ pipx_ntfy_packages }}"
 
 - name: Install global pipx pytest packages.
   command: pipx inject pytest {{ item }}
