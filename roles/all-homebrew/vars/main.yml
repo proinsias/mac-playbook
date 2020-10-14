@@ -18,6 +18,7 @@ homebrew_taps:
   - homebrew/services
   - iterative/homebrew-dvc
   - jzaleski/homebrew-jzaleski
+  - teamookla/speedtest
 homebrew_installed_packages:
   - openssl
   - openssh
@@ -110,6 +111,7 @@ homebrew_installed_packages:
   - gem-completion
   - geoip
   - gettext
+  - gh
   - ghostscript
   - gifsicle
   - git
@@ -261,6 +263,7 @@ homebrew_installed_packages:
   - sip
   - snort
   - sonar-completion
+  - speedtest
   - sqlite
   - sshfs
   - ssh-copy-id
@@ -412,6 +415,7 @@ homebrew_cask_apps:
   - sourcetrail
   - sourcetree
   - spectacle
+  - steamcmd
   - stretchly
   - sublime-text
   - suspicious-package
