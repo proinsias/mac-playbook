@@ -13,6 +13,7 @@ homebrew_uninstalled_packages: []
 homebrew_cask_apps:
   - backblaze
   - backblaze-downloader
+  - fs-uae
   - google-backup-and-sync
   # - google-photos-backup-and-sync
   - growlnotify
