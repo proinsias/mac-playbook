@@ -24,6 +24,7 @@ homebrew_installed_packages:
 homebrew_uninstalled_packages: []
 homebrew_cask_apps:
   - mendeley-desktop
+  - microsoft-teams
   - mysqlworkbench
   - notebook
   - postman

@@ -45,6 +45,7 @@ homebrew_installed_packages:
   - bash
   - bash-completion
   - bash-snippets
+  - bench
   - bfg
   - binutils
   - brew-cask-completion
@@ -158,6 +159,7 @@ homebrew_installed_packages:
   - icdiff
   - icu4c
   - imagemagick
+  - eddieantonio/eddieantonio/imgcat
   - isl
   - ivy
   - jbig2dec
@@ -298,6 +300,7 @@ homebrew_installed_packages:
   - wdiff
   - webkit2png
   - wget
+  - wifi-password
   - winetricks
   - wireguard-tools
   - wireshark
@@ -380,6 +383,7 @@ homebrew_cask_apps:
   - macfusion
   - mactex
   - makemkv
+  - mark-text
   - mediainfo
   - menumeters
   - metaz
@@ -415,6 +419,7 @@ homebrew_cask_apps:
   - sourcetrail
   - sourcetree
   - spectacle
+  - spotify
   - steamcmd
   - stretchly
   - sublime-text
