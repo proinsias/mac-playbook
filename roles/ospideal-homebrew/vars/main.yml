@@ -15,6 +15,7 @@ homebrew_installed_packages:
   - homebrew/science/r
   - homebrew/versions/perl518
   - {name: mongodb, install_options: "with-openssl"}
+  - mysql
   - mysql-connector-c
   - newman
   - {name: octave, install_options: "with-gui"}
