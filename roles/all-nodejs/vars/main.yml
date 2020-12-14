@@ -8,6 +8,7 @@ nodejs_global_packages:
   - dockerfile_lint
   - emoj  # https://github.com/sindresorhus/emoj
   - eslint
+  - fkill-cli
   - git-guilt
   - how2  # https://github.com/santinic/how2
   - htmlhint
