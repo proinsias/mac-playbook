@@ -15,6 +15,7 @@ nodejs_global_packages:
   - jscs
   - jshint
   - jslint
+  - markdown-toc
   - semistandard
   - standard
   - svgo

@@ -377,7 +377,6 @@ homebrew_cask_apps:
   - keka
   - keybase
   # - kindle  # Use mas instead
-  - kite
   - lastpass
   - lingon-x
   - macdown
@@ -429,6 +428,7 @@ homebrew_cask_apps:
   - the-unarchiver
   - tigervnc-viewer
   - tripmode
+  - unclack
   - ultimaker-cura
   - virtualbox
   - virtualbox-extension-pack
