@@ -220,6 +220,7 @@ homebrew_installed_packages:
   - pandoc
   - pandoc-citeproc
   - pcre
+  - pinentry-mac
   - pip-completion
   - pipenv
   - pipx
@@ -358,6 +359,7 @@ homebrew_cask_apps:
   - gmvault
   - goodsync
   - google-chrome
+  - google-drive
   - go2shell
   - go64
   - gpg-suite
