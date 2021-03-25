@@ -17,6 +17,8 @@ nodejs_global_packages:
   - jslint
   - markdownlint-cli
   - markdown-toc
+  - npm-check
+  - npm-check-updates
   - semistandard
   - standard
   - svgo

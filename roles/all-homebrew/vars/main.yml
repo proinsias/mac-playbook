@@ -379,6 +379,7 @@ homebrew_cask_apps:
   - keka
   - keybase
   # - kindle  # Use mas instead
+  - krisp
   - lastpass
   - lingon-x
   - macdown

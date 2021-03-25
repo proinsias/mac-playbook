@@ -17,6 +17,7 @@ pipx_packages:
   - hjson
   - http-prompt
   - howdoi
+  - kaggle
   - mog
   - nbstripout
   - ntfy
