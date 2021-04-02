@@ -13,7 +13,7 @@ osx_user_picture_enable: true
 # Uncomment osx_user_picture_path if the
 # image is already on the machine that
 # this role is being run on.
-#osx_user_picture_path: "/vagrant/osxstrap/download.jpeg"
+# osx_user_picture_path: "/vagrant/osxstrap/download.jpeg"
 
 # Uncomment osx_user_picture_url if you
 # want your picture to be downloaded

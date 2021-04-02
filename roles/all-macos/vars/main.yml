@@ -196,13 +196,13 @@ finder:
 
   # Which panes of the Getinfo window should be expanded by default?
   expand_infopane:
-    - { name: General , value: true }
-    # - { name: MetaData , value: false }
-    - { name: OpenWith , value: false }
-    # - { name: Name , value: false }
-    # - { name: Comments , value: false }
-    # - { name: Preview , value: true }
-    - { name: Privileges , value: false }
+    - {name: General, value: true}
+    # - {name: MetaData, value: false}
+    - {name: OpenWith, value: false}
+    # - {name: Name, value: false}
+    # - {name: Comments, value: false}
+    # - {name: Preview, value: true}
+    - {name: Privileges, value: false}
 
   # Automatic arrangement of icons
   # Values: "none", "grid", "name", "kind", "dateModified",
