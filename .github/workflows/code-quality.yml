@@ -45,7 +45,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: ansible-lint
-        uses: ansible/ansible-lint-action@v4.1.0
+        uses: ansible/ansible-lint-action@master
         with:
           targets: "roles"
 
