@@ -89,13 +89,17 @@ to test changes locally, and this project is
 Status](https://travis-ci.org/proinsias/mac-playbook.svg?branch=master)](https://travis-ci.com/proinsias/mac-playbook)
 -->
 
-<!-- FIXME: Setup local VM to test -->
-<!-- FIXME: Confirm above installation steps. -->
-<!-- FIXME: Update list of tags. -->
+<!--
 
-<!-- FIXME: Try `--check` (with `--diff`?) to just report differences. -->
-<!-- https://github.com/ansible/ansible-modules-core/issues/960 -->
+FIXME:
 
-<!-- ansible-playbook site.yml --forks 10 --ask-become-pass --check -->
+* Setup github actions to install via ubuntu.
+* Setup local VM to test
+* Confirm above installation steps.
+* Update list of tags.
+* Try `--check` (with `--diff`?) to just report differences.
+* https://github.com/ansible/ansible-modules-core/issues/960
+* ansible-playbook site.yml --forks 10 --ask-become-pass --check
+* Executing one role - https://stackoverflow.com/a/38384205
 
-<!-- FIXME: Executing one role - https://stackoverflow.com/a/38384205 -->
+-->
