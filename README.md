@@ -1,6 +1,5 @@
 # Mac Ansible Playbook
 
-[![Build Status](https://travis-ci.org/proinsias/mac-playbook.svg?branch=master)](https://travis-ci.com/proinsias/mac-playbook)
 [![Known Vulnerabilities](https://snyk.io/test/github/proinsias/mac-playbook/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/proinsias/mac-playbook?targetFile=Gemfile.lock)
 
 This playbook installs and configures most of the software I use on my Mac.
@@ -75,11 +74,20 @@ pip_packages:
 Any variable can be overridden in `config.yml`;
 see the supporting roles' documentation for a complete list of available variables.
 
+<!--
+
 ## Testing the Playbook
 
 I use a [Mac OS X VirtualBox VM](https://github.com/AlexanderWillner/runMacOSinVirtualBox)
 to test changes locally, and this project is
 [continuously tested on Travis CI's macOS infrastructure](https://travis-ci.com/proinsias/mac-playbook).
+
+-->
+
+<!--
+[![Build
+Status](https://travis-ci.org/proinsias/mac-playbook.svg?branch=master)](https://travis-ci.com/proinsias/mac-playbook)
+-->
 
 <!-- FIXME: Setup local VM to test -->
 <!-- FIXME: Confirm above installation steps. -->
