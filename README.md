@@ -12,7 +12,7 @@ It is inspired by and based on
 <!-- toc -->
 
 - [Installation](#installation)
-    * [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
+  * [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
 - [Overriding Defaults](#overriding-defaults)
 - [Testing the Playbook](#testing-the-playbook)
 
