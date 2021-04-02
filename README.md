@@ -7,6 +7,11 @@ It is inspired by and based on
 [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook/)
 .
 
+## Table of Contents
+
+<!-- toc -->
+<!-- tocstop -->
+
 ## Installation
 
 1. Ensure Apple's command line tools are installed (`xcode-select --install`
