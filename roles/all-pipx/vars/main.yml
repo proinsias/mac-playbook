@@ -39,6 +39,7 @@ pipx_packages:
   - uncommitted
   - vulture
   - whereami
+  - wifi_qrcode
   - yapf
 
 pipx_flake8_packages:
