@@ -48,3 +48,8 @@ jobs:
         uses: ansible/ansible-lint-action@v4.1.0
         with:
           targets: "roles"
+
+      - name: Run detect-secrets with reviewdog
+        uses: reviewdog/action-detect-secrets@v0.4.1
+        with:
+          github_token: ${{ secrets.github_token }}

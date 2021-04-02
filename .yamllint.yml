@@ -1,0 +1,9 @@
+---
+
+# This extends the default conf by adjusting some options.
+
+extends: default
+
+rules:
+  truthy:
+    allowed-values: ['true', 'false', 'on']
