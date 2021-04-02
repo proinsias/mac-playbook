@@ -10,6 +10,12 @@ It is inspired by and based on
 ## Table of Contents
 
 <!-- toc -->
+
+- [Installation](#installation)
+    * [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
+- [Overriding Defaults](#overriding-defaults)
+- [Testing the Playbook](#testing-the-playbook)
+
 <!-- tocstop -->
 
 ## Installation
