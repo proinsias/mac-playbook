@@ -16,6 +16,7 @@ nodejs_global_packages:
   - jshint
   - jslint
   - markdownlint-cli
+  - markdown-link-check
   - markdown-toc
   - npm-check
   - npm-check-updates
