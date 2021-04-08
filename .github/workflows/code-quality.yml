@@ -50,6 +50,6 @@ jobs:
           targets: "roles"
 
       - name: Run detect-secrets with reviewdog
-        uses: reviewdog/action-detect-secrets@v0.4.1
+        uses: reviewdog/action-detect-secrets@v0.4.2
         with:
           github_token: ${{ secrets.github_token }}
