@@ -12,10 +12,6 @@
 # ignore=title-trailing-punctuation, T3
 ignore=body-is-missing
 
-# You HAVE to add contributed rules here to enable it.
-# Only configuring (such as below) does NOT enable it.
-# contrib=contrib-title-conventional-commits
-
 # verbosity should be a value between 1 and 3, the commandline -v flags take precedence over this
 # verbosity = 2
 
@@ -37,27 +33,25 @@ ignore=body-is-missing
 
 # Enable community contributed rules
 # See http://jorisroovers.github.io/gitlint/contrib_rules for details
+# You HAVE to add contributed rules here to enable it.
+# Only configuring (such as below) does NOT enable it.
 # contrib=contrib-title-conventional-commits,CC1
 
 # Set the extra-path where gitlint will search for user defined rules
 # See http://jorisroovers.github.io/gitlint/user_defined_rules for details
 # extra-path=examples/
 
-# This is an example of how to configure the "title-max-length" rule and
-# set the line-length it enforces to 80
-# [title-max-length]
-# line-length=50
+[title-max-length]
+line-length=50
 
-# Conversely, you can also enforce minimal length of a title with the
-# "title-min-length" rule:
-# [title-min-length]
-# min-length=5
+[title-min-length]
+min-length=10
 
-# [title-must-not-contain-word]
+[title-must-not-contain-word]
 # Comma-separated list of words that should not occur in the title. Matching is case
 # insensitive. It's fine if the keyword occurs as part of a larger word (so "WIPING"
 # will not cause a violation, but "WIP: my title" will.
-# words=wip
+words=wip
 
 # [title-match-regex]
 # python-style regex that the commit-msg title must match
@@ -65,15 +59,14 @@ ignore=body-is-missing
 # (e.g. title-must-not-contain-word).
 # regex=^US[0-9]*
 
-# [body-max-line-length]
-# line-length=72
+[body-max-line-length]
+line-length=72
 
 # [body-min-length]
 # min-length=5
 
 # [body-is-missing]
-# Whether to ignore this rule on merge commits (which typically only have a title)
-# default = true
+# Whether to ignore this rule on merge commits (which typically only have a title). This default is true.
 # ignore-merge-commits=false
 
 # [body-changed-file-mention]
@@ -121,8 +114,4 @@ ignore=body-is-missing
 # under [general] section above.
 # [contrib-title-conventional-commits]
 # Specify allowed commit types. For details see: https://www.conventionalcommits.org/
-# types = bugfix,user-story,epic
-
-# [contrib-title-conventional-commits]
-# # Specify allowed commit types. For details see: https://www.conventionalcommits.org/
 # types = bugfix,user-story,epic

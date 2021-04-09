@@ -18,7 +18,9 @@ pipx_packages:
   - hjson
   - http-prompt
   - howdoi
+  - identify
   - kaggle
+  - linkcheckmd
   - mdformat
   - mog
   - nbstripout
