@@ -12,7 +12,7 @@ It is inspired by and based on
 <!-- toc -->
 
 - [Installation](#installation)
-  * [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
+  - [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
 - [Overriding Defaults](#overriding-defaults)
 - [Testing the Playbook](#testing-the-playbook)
 
@@ -22,11 +22,11 @@ It is inspired by and based on
 
 1. Ensure Apple's command line tools are installed (`xcode-select --install`
    to launch the installer, and `sudo xcodebuild -license accept` to accept license agreement).
-2. Clone this repository to your local drive.
-3. Run `$ ./bin/setup_ansible.sh` inside this directory to install and configure Ansible.
-4. Run `$ ansible-galaxy install --role-file  requirements.yml` inside this directory
+1. Clone this repository to your local drive.
+1. Run `$ ./bin/setup_ansible.sh` inside this directory to install and configure Ansible.
+1. Run `$ ansible-galaxy install --role-file  requirements.yml` inside this directory
    to install required Ansible roles.
-5. Run `ansible-playbook main.yml --inventory inventory --ask-become-pass` inside this directory.
+1. Run `ansible-playbook main.yml --inventory inventory --ask-become-pass` inside this directory.
    Enter your account password when prompted.
 
 > Note: If some Homebrew commands fail,
@@ -39,10 +39,10 @@ You can filter which part of the provisioning process to run
 by specifying a set of tags using `ansible-playbook`'s `--tags` flag.
 The tags available are:
 
-* `extra-packages`
-* `homebrew`
-* `mas`
-* `osx-defaults`
+- `extra-packages`
+- `homebrew`
+- `mas`
+- `osx-defaults`
 
 ```bash
 ansible-playbook main.yml --inventory inventory --ask-become-pass --tags "homebrew,mas"
@@ -56,30 +56,30 @@ For example, you can customize the installed packages and apps with something li
 
 ```bash
 homebrew_installed_packages:
-  - cowsay
-  - git
-  - go
+- cowsay
+- git
+- go
 
 mas_installed_apps:
-  - { id: 443987910, name: "1Password" }
-  - { id: 498486288, name: "Quick Resizer" }
-  - { id: 557168941, name: "Tweetbot" }
-  - { id: 497799835, name: "Xcode" }
+- { id: 443987910, name: "1Password" }
+- { id: 498486288, name: "Quick Resizer" }
+- { id: 557168941, name: "Tweetbot" }
+- { id: 497799835, name: "Xcode" }
 
 composer_packages:
-  - name: hirak/prestissimo
-  - name: drush/drush
-    version: '^8.1'
+- name: hirak/prestissimo
+- name: drush/drush
+version: '^8.1'
 
 gem_packages:
-  - name: bundler
-    state: latest
+- name: bundler
+state: latest
 
 npm_packages:
-  - name: webpack
+- name: webpack
 
 pip_packages:
-  - name: mkdocs
+- name: mkdocs
 ```
 
 Any variable can be overridden in `config.yml`;
