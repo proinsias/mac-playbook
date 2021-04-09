@@ -346,8 +346,10 @@ homebrew_cask_apps:
   # - diskwave
   - docker
   - docker-toolbox
+  - drivedx
   - dropbox
   - emacs
+  - expressvpn
   - fantastical
   - filebot
   - firefox
