@@ -16,4 +16,3 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 echo ""
 echo "Add a context menu item for showing the Web Inspector in web views"
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-

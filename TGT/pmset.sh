@@ -38,6 +38,5 @@ echo "##########################################################################
 #echo ""
 #echo "Create a zero-byte file instead..."
 #touch /Private/var/vm/sleepimage
-#echo "...and make sure it can’t be rewritten"
+#echo "...and make sure it can't be rewritten"
 #chflags uchg /Private/var/vm/sleepimage
-

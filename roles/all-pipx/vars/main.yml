@@ -4,6 +4,7 @@ pipx_packages:
   - clf
   - coverage
   - csvkit
+  - detect-secrets
   - docstr-coverage
   - eg
   - em-keyboard
@@ -18,6 +19,7 @@ pipx_packages:
   - http-prompt
   - howdoi
   - kaggle
+  - mdformat
   - mog
   - nbstripout
   - ntfy
@@ -79,6 +81,16 @@ pipx_flake8_packages:
   - flake8-variables-names
   - flake8_tuple
   - pep8-naming
+
+pipx_mdformat_packages:
+  - mdformat-beautysh
+  - mdformat-black
+  - mdformat-config
+  # - mdformat-frontmatter  # Breaks.
+  - mdformat-gfm
+  - mdformat-shfmt
+  - mdformat-tables
+  - mdformat-toc
 
 pipx_ntfy_packages:
   - emoji  # emoji

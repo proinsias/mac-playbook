@@ -231,6 +231,7 @@ homebrew_installed_packages:
   - pngcrush
   - pngquant
   - poppler
+  - pre-commit
   - proselint
   - pstoedit
   - pv
