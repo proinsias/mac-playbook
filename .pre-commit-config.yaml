@@ -34,11 +34,6 @@ repos:
         args: ['--baseline', '.secrets.baseline']
         exclude: package.lock.json
 
-  - repo: https://github.com/sirosen/fix-smartquotes
-    rev: 0.2.0
-    hooks:
-      - id: fix-smartquotes
-
   # Ansible
 
   #  - repo: https://github.com/ansible-community/ansible-lint.git
@@ -91,7 +86,7 @@ repos:
       - id: require-ascii
       - id: shellcheck
         args: ['--external-sources', '--format=gcc', '--shell=bash']
-      - id: shfmt
+      # - id: shfmt
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks
     rev: v1.1.9

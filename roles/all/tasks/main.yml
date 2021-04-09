@@ -2,7 +2,7 @@
 # - name: Run all homebrew role.
 #   include_role:
 #     name: all-homebrew
-#   tags: ['homebrew', 'skip-travis']  # Enable skipping using skip-travis tag – for testing on travis.
+#   tags: ['homebrew', 'skip-travis']  # Enable skipping using skip-travis tag -  for testing on travis.
 
 # - name: Run all macdock role after homebrew role.
 #   include_role:
