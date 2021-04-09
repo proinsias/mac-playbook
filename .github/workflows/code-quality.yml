@@ -20,6 +20,12 @@ jobs:
           key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: ${{ runner.os }}-gem-
 
+      - name: Pre-commit autoupdate
+        uses: browniebroke/pre-commit-autoupdate-action@v1.0.0
+
+      # - name: pre-commit
+      #   uses: pre-commit/action@v2.0.2
+
       - name: 'Bundler Audit'
         uses: andrewmcodes/bundler-audit-action@main
         env:
