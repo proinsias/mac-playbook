@@ -8,8 +8,6 @@ homebrew_use_brewfile: false
 homebrew_taps:
   - alehouse/homebrew-unofficial
   - alexdavid/homebrew-tap
-  - dunn/emacs
-  - dunn/homebrew-emacs
   - homebrew/bundle
   - homebrew/cask
   - homebrew/cask-drivers
@@ -53,8 +51,10 @@ homebrew_installed_packages:
   - c-ares
   - cairo
   # - cask
+  - catimg
   - ccache  # For pyenv-ccache.
   - certbot
+  - chafa
   # - cheat  # Get via bash-snippets.
   - checkstyle
   - cloog
@@ -77,14 +77,6 @@ homebrew_installed_packages:
   - docker-machine-completion
   # - docmunch/pdftk/pdftk
   - dos2unix
-  - dunn/emacs/git-messenger
-  - dunn/emacs/git-modes
-  - dunn/emacs/inf-ruby
-  - dunn/emacs/json-mode
-  - dunn/emacs/json-reformat
-  - dunn/emacs/json-snatcher
-  - dunn/emacs/popup
-  - dunn/emacs/yaml-mode
   - dvc
   - ed
   - editorconfig
@@ -383,6 +375,7 @@ homebrew_cask_apps:
   - keka
   - keybase
   # - kindle  # Use mas instead
+  - kitty
   - krisp
   - lastpass
   - lingon-x
