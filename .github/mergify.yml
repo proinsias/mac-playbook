@@ -2,20 +2,60 @@
 pull_request_rules:
   - name: automatic merge on CI success and review
     conditions:
-      - base=master
+      - base=main
       - label!=work-in-progress
-      - status-success=continuous-integration/travis-ci/pr
+      - check-success=analyse
+      - check-success=ansible-lint
+      - check-success=github-actions
     actions:
       merge:
         method: merge
         strict: smart
-  - name: automatic merge for ImgBot pull requests
+  - name: automatic merge for Dependabot pull requests
     conditions:
-      - author=imgbot[bot]
-      - status-success=Travis CI - Pull Request
+      - author~=^dependabot(|-preview)\[bot\]$
+      - check-success=analyse
+      - check-success=ansible-lint
+      - check-success=github-actions
     actions:
       merge:
         method: merge
+  - name: automatic merge for Snyk pull requests
+    conditions:
+      - title~=^\[Snyk\]
+      - head~=^snyk-fix
+      - check-success~=^security/snyk
+    actions:
+      merge:
+        method: merge
+  - name: automatic merge for Requires.io pull requests
+    conditions:
+      - title~=^\[requires.io\]
+      - head~=^requires-io
+      - check-success=analyse
+      - check-success=ansible-lint
+      - check-success=github-actions
+    actions:
+      merge:
+        method: merge
+  - name: automatic merge for PyUp pull requests
+    conditions:
+      - author=pyup-bot
+      - check-success=analyse
+      - check-success=ansible-lint
+      - check-success=github-actions
+    actions:
+      merge:
+        method: merge
+  - name: warn on conflicts
+    conditions:
+      - conflict
+    actions:
+      comment:
+        message: "@{{author}} this pull request is now in conflict 😩"
+      label:
+        add:
+          - conflict
   - name: delete head branch after merge
     conditions: []
     actions:
