@@ -1,5 +1,10 @@
 # Mac Ansible Playbook
 
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![Ansible Lint](https://github.com/proinsias/mac-playbook/workflows/Ansible%20Lint/badge.svg)](https://github.com/proinsias/mac-playbook/actions/workflows/ansible-lint.yml)
+[![Cron Jobs](https://github.com/proinsias/mac-playbook/workflows/Cron%20Jobs/badge.svg)](https://github.com/proinsias/mac-playbook/actions/workflows/cronjobs.yml)
+[![Pull Requests & Pushes](https://github.com/proinsias/mac-playbook/workflows/Pull%20Requests%20%26%20Pushes/badge.svg)](https://github.com/proinsias/mac-playbook/actions/workflows/pull-requests-and-pushes.yml)
+[![Mergify Status][mergify-status]][mergify]
 [![Known Vulnerabilities](https://snyk.io/test/github/proinsias/mac-playbook/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/proinsias/mac-playbook?targetFile=Gemfile.lock)
 
 This playbook installs and configures most of the software I use on my Mac.
@@ -12,7 +17,7 @@ It is inspired by and based on
 <!-- toc -->
 
 - [Installation](#installation)
-  * [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
+  - [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
 - [Overriding Defaults](#overriding-defaults)
 - [Testing the Playbook](#testing-the-playbook)
 
@@ -96,11 +101,6 @@ to test changes locally, and this project is
 -->
 
 <!--
-[![Build
-Status](https://travis-ci.org/proinsias/mac-playbook.svg?branch=master)](https://travis-ci.com/proinsias/mac-playbook)
--->
-
-<!--
 
 FIXME:
 
@@ -114,3 +114,6 @@ FIXME:
 * Executing one role - https://stackoverflow.com/a/38384205
 
 -->
+
+[mergify]: https://mergify.io
+[mergify-status]: https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/proinsias/mac-playbook&style=flat

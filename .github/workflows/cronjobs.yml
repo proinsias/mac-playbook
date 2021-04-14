@@ -1,21 +1,24 @@
 ---
 
-name: Cronjobs
+name: Cron Jobs
 
+# yamllint disable-line rule:truthy
 on:
-  # every day at midnight
   schedule:
+    # every day at midnight
     - cron: "0 0 * * *"
-  # on demand
+  # Run workflow manually (without waiting for the cron to be called),
+  # through the Github Actions Workflow page directly.
   workflow_dispatch:
 
 jobs:
-  auto-update:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+  cronjobs:
 
-      - uses: actions/setup-python@v2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - uses: browniebroke/pre-commit-autoupdate-action@v1.0.0
 
@@ -26,3 +29,24 @@ jobs:
           title: Update pre-commit hooks
           commit-message: "Auto-update pre-commit hooks"
           body: Update versions of pre-commit hooks to latest version.
+
+      - name: Mark Stale Issues
+        uses: actions/stale@v3.0.18
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          # yamllint disable-line rule:line-length
+          stale-issue-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days'
+          # yamllint disable-line rule:line-length
+          stale-pr-message: 'This pull request is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days'
+          days-before-stale: 30
+          days-before-close: 5
+          stale-issue-label: 'no-issue-activity'
+          stale-pr-label: 'no-pr-activity'
+          exempt-issue-label: 'awaiting-approval'
+          exempt-pr-label: 'awaiting-approval'
+
+      - name: markdown-link-check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          check-modified-files-only: 'no'
+          max-depth: 1

@@ -1,0 +1,20 @@
+# yamllint disable-line rule:document-start
+name: Ansible Lint
+
+# yamllint disable-line rule:truthy
+on: [push, pull_request]
+
+jobs:
+
+  ansible-lint:
+    name: Ansible Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: ansible-lint
+        uses: ansible/ansible-lint-action@v4.1.0
+        with:
+          targets: "roles"
