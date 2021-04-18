@@ -78,14 +78,10 @@ repos:
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
     rev: 2.1.5
     hooks:
-      # - id: bundler-audit
       - id: forbid-binary
       - id: git-check  # Configure in .gitattributes
-      - id: git-dirty  # Configure in .gitignore
-      # - id: markdownlint # Configure in .mdlrc
       - id: shellcheck
         args: ['--external-sources', '--format=gcc', '--shell=bash']
-      # - id: shfmt
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks
     rev: v1.1.9
