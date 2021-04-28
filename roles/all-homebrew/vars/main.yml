@@ -11,6 +11,7 @@ homebrew_taps:
   - homebrew/bundle
   - homebrew/cask
   - homebrew/cask-drivers
+  - homebrew/cask-fonts
   - homebrew/command-not-found
   - homebrew/core
   - homebrew/services
@@ -347,6 +348,7 @@ homebrew_cask_apps:
   - firefox
   - flashlighttool
   - flux
+  - font-jetbrains-mono-nerd-font
   - ganttproject
   - geektool
   - gephi

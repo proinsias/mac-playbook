@@ -28,6 +28,7 @@ pipx_packages:
   - pip-check
   - pip-tools
   - proselint
+  - pweave
   - pydocstyle
   - pyflakes
   - pyjokes
