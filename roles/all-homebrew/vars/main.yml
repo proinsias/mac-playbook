@@ -368,6 +368,7 @@ homebrew_cask_apps:
   - iina
   - imageoptim
   - imazing
+  - install-disk-creator
   - intellij-idea-ce
   - intel-power-gadget
   - iterm2
