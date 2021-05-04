@@ -398,6 +398,7 @@ homebrew_cask_apps:
   - omnidisksweeper
   - omnifocus
   - onyx  # FIXME: Mojave version?
+  - openaudible
   - osxfuse
   - oversight
   - pacifist
