@@ -20,6 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install shfmt
+        run: |
+          sudo apt update
+          sudo apt install snapd
+          sudo snap install shfmt
+
       - uses: browniebroke/pre-commit-autoupdate-action@v1.0.0
 
       - uses: peter-evans/create-pull-request@v3
