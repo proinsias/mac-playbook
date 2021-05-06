@@ -26,7 +26,11 @@ jobs:
           sudo apt install snapd
           sudo snap install shfmt
 
-      - uses: browniebroke/pre-commit-autoupdate-action@v1.0.0
+      - run: pip install pre-commit
+        shell: bash
+
+      - run: pre-commit autoupdate
+        shell: bash
 
       - uses: peter-evans/create-pull-request@v3
         with:

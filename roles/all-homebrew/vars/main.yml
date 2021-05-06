@@ -432,8 +432,10 @@ homebrew_cask_apps:
   - the-unarchiver
   - tigervnc-viewer
   - tripmode
-  - unclack
+  - typora
   - ultimaker-cura
+  - unclack
+  - upic
   - virtualbox
   - virtualbox-extension-pack
   - vlc

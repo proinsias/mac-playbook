@@ -35,6 +35,7 @@ pipx_packages:
   - pylint
   - pyroma
   - pytest
+  - python-slugify
   - safety
   - searchcmd
   - shrynk
