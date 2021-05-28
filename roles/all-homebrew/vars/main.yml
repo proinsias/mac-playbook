@@ -349,6 +349,8 @@ homebrew_cask_apps:
   - flashlighttool
   - flux
   - font-jetbrains-mono-nerd-font
+  - font-ntr
+  - font-rubik
   - ganttproject
   - geektool
   - gephi
