@@ -4,6 +4,7 @@ mas_installed_apps:
   - {id: 523620159, name: "CleanMyDrive 2 (2.1.12)"}
   - {id: 642220194, name: "DeskConnect"}
   - {id: 672206759, name: "Disk Diag"}
+  - {id: 1435957248, name: "Drafts"}
   - {id: 524373870, name: "Due (1.5.1)"}
   - {id: 963642514, name: "Duplicate Photos Fixer Pro (3.2)"}
   - {id: 671736912, name: "FruitJuice (2.3.4)"}
