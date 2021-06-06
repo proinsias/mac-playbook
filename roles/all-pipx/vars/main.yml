@@ -2,6 +2,7 @@
 pipx_packages:
   - bandit
   - clf
+  - copier
   - coverage
   - csvkit
   - detect-secrets
@@ -27,6 +28,7 @@ pipx_packages:
   - ntfy
   - pip-check
   - pip-tools
+  - poetry
   - proselint
   - pweave
   - pydocstyle
