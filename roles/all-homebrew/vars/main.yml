@@ -261,6 +261,7 @@ homebrew_installed_packages:
   - sip
   - snort
   - sonar-completion
+  - sox
   - speedtest
   - sqlite
   - sshfs
@@ -300,9 +301,10 @@ homebrew_installed_packages:
   - winetricks
   - wireguard-tools
   - wireshark
-  - x264
+  - xsv
   - xvid
   - xz  # For pyenv.
+  - x264
   - yamllint
   - yasm
   - youtube-dl

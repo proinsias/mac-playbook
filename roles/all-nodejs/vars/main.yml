@@ -5,6 +5,7 @@ nodejs_global_packages:
   #   version: 0.9.3
   - csslint
   - dockerlint
+  - dockerfilelint  # https://github.com/replicatedhq/dockerfilelint
   - dockerfile_lint
   - emoj  # https://github.com/sindresorhus/emoj
   - eslint
