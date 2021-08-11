@@ -48,6 +48,7 @@ homebrew_installed_packages:
   - bfg
   - binutils
   - brew-cask-completion
+  - broot
   - bundler-completion
   - c-ares
   - cairo
@@ -320,6 +321,7 @@ homebrew_cask_apps:
   - 1password-cli
   - adobe-acrobat-reader
   - aerial
+  - apppolice
   - apptrap
   - bartender
   - bbedit
