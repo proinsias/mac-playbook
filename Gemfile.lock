@@ -132,7 +132,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 2.0)
     rubocop-ast (1.4.1)
       parser (>= 2.7.1.5)
-    rubocop-performance (1.11.4)
+    rubocop-performance (1.11.5)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     ruby-lint (2.3.1)
