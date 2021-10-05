@@ -24,6 +24,7 @@ pipx_packages:
   - linkcheckmd
   - mdformat
   - mog
+  - nbdime
   - nbstripout
   - ntfy
   - pip-check
