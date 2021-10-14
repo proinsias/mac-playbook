@@ -5,6 +5,7 @@ pipx_packages:
   - copier
   - coverage
   - csvkit
+  - dead
   - detect-secrets
   - docstr-coverage
   - eg
