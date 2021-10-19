@@ -418,6 +418,7 @@ homebrew_cask_apps:
   - qlstephen
   - quicklook-csv
   - quicklook-json
+  - raindropio
   - raycast
   - roaringapps
   - send-to-kindle
