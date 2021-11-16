@@ -50,6 +50,7 @@ pipx_packages:
   - vulture
   - whereami
   - wifi_qrcode
+  - xlsx2csv
   - yapf
 
 pipx_flake8_packages:

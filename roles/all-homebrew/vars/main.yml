@@ -44,6 +44,7 @@ homebrew_installed_packages:
   - bash
   - bash-completion
   - bash-snippets
+  - bat
   - bench
   - bfg
   - binutils
