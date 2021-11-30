@@ -378,6 +378,7 @@ homebrew_cask_apps:
   - install-disk-creator
   - intellij-idea-ce
   - intel-power-gadget
+  - itch
   - iterm2
   - jing
   - joplin
