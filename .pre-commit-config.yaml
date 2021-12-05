@@ -23,7 +23,7 @@ repos:
   # General
 
   - repo: https://github.com/asottile/add-trailing-comma
-    rev: v2.2.0
+    rev: v2.2.1
     hooks:
       - id: add-trailing-comma
 
@@ -46,14 +46,14 @@ repos:
   # Git
 
   - repo: https://github.com/jorisroovers/gitlint
-    rev: v0.16.0
+    rev: v0.17.0
     hooks:
       - id: gitlint
 
   # Markdown
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.10
+    rev: 0.7.11
     hooks:
       - id: mdformat
         additional_dependencies:
