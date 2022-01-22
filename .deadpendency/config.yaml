@@ -1,6 +1,0 @@
----
-
-ignore-failures:
-
-    ruby:
-        - ruby-lint
