@@ -33,7 +33,7 @@ homebrew_installed_packages:
   - ant
   - ant-contrib
   - antiword
-  - archey
+  - archey4
   - arpack
   - aspell
   - autoconf
@@ -76,8 +76,6 @@ homebrew_installed_packages:
   - dive  # For docker layer analysis.
   - docker-clean
   - docker-completion
-  - docker-compose-completion
-  - docker-machine-completion
   # - docmunch/pdftk/pdftk
   - dos2unix
   - dvc
@@ -145,7 +143,6 @@ homebrew_installed_packages:
   - hadolint
   - hdf5
   - hexyl
-  - homesick-completion
   - howdoi
   - htop
   - httpie
@@ -236,7 +233,6 @@ homebrew_installed_packages:
   - pyenv-ccache
   - pyenv-pip-migrate
   - pyenv-virtualenv
-  - pyenv-which-ext
   - pygments  # For mog
   - pyqt
   - python
@@ -370,7 +366,7 @@ homebrew_cask_apps:
   - gpg-suite
   - grammarly
   - grandperspective
-  - handylock
+  # - handylock
   - ibettercharge
   - iina
   - imageoptim
@@ -391,7 +387,7 @@ homebrew_cask_apps:
   - lastpass
   - lingon-x
   - macdown
-  - macfusion
+  # - macfusion
   - mactex
   - makemkv
   - mark-text
@@ -407,7 +403,6 @@ homebrew_cask_apps:
   - omnifocus
   - onyx  # FIXME: Mojave version?
   - openaudible
-  - osxfuse
   - oversight
   - pacifist
   - plantronics-hub

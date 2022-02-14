@@ -2,12 +2,12 @@
 # - name: Run all homebrew role.
 #   include_role:
 #     name: all-homebrew
-#   tags: ['homebrew', 'skip-travis']  # Enable skipping using skip-travis tag -  for testing on travis.
+#   tags: ['homebrew']
 
 # - name: Run all macdock role after homebrew role.
 #   include_role:
 #     name: all-macdock
-#   tags: ['macdock', 'skip-travis']
+#   tags: ['macdock']
 
 - name: Run all macos role.
   include_role:
@@ -23,12 +23,12 @@
 # - name: Run all mas role.
 #   include_role:
 #     name: all-mas
-#   tags: ['mas', 'skip-travis']
+#   tags: ['mas']
 
 # - name: Run all nodejs role.
 #   include_role:
 #     name: all-nodejs
-#   tags: ['nodejs', 'skip-travis']
+#   tags: ['nodejs']
 
 # - name: Run all osx-defaults role.
 #   include_role:
@@ -38,14 +38,14 @@
 - name: Run all osx_defaults role.
   include_role:
     name: all-osx_defaults
-  tags: ['osx-defaults', 'skip-travis']
+  tags: ['osx-defaults']
 
 # - name: Run all pipx role.
 #   include_role:
 #     name: all-pipx
-#   tags: ['pipx', 'skip-travis']
+#   tags: ['pipx']
 
 # - name: Run all ruby role.
 #   include_role:
 #     name: all-ruby
-#   tags: ['ruby', 'skip-travis']
+#   tags: ['ruby']

@@ -1,0 +1,15 @@
+---
+- name: Run intleacht homebrew role.
+  include_role:
+    name: intleacht-homebrew
+  tags: ['homebrew']
+
+- name: Run intleacht mas role.
+  include_role:
+    name: intleacht-mas
+  tags: ['mas']
+
+- name: Run intleacht osx-user-picture role.
+  include_role:
+    name: intleacht-osx-user-picture
+  tags: ['osx-user-picture']

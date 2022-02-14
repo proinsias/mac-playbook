@@ -1,6 +1,0 @@
----
-pipx_packages:
-  - flake8
-
-pipx_flake8_packages:
-  - cohesion
