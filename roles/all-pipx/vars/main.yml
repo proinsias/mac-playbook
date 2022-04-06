@@ -34,12 +34,14 @@ pipx_packages:
     - poetry
     - proselint
     - pweave
+    - pycln
     - pydocstyle
     - pyflakes
     - pyjokes
     - pylint
     - pyroma
     - pytest
+    - pyupgrade
     - python-slugify
     - safety
     - searchcmd
@@ -106,6 +108,9 @@ pipx_ntfy_packages:
     - emoji # emoji
     - psutil # pid
     - slacker # slack
+
+pipx_pydocstyle_packages:
+    - toml
 
 pipx_pytest_packages:
     - pytest-profiling

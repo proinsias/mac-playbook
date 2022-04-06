@@ -48,6 +48,7 @@ homebrew_installed_packages:
     - bench
     - bfg
     - binutils
+    - black
     - brew-cask-completion
     - broot
     - bundler-completion
@@ -153,6 +154,7 @@ homebrew_installed_packages:
     - imagemagick
     - eddieantonio/eddieantonio/imgcat
     - isl
+    - isort
     - ivy
     - jbig2dec
     - jenv
@@ -261,6 +263,7 @@ homebrew_installed_packages:
     - sonar-completion
     - sox
     - speedtest
+    - sponge
     - sqlite
     - sshfs
     - ssh-copy-id
