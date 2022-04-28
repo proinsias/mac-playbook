@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'bundler'
 gem 'bundler-audit'
-gem 'danger', '>= 8.2.2'
+gem 'danger', '>= 8.4.2'
 gem 'fasterer'
 gem 'mdl', '>= 0.11.0'
 gem 'reek'
