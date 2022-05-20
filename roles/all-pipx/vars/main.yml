@@ -1,14 +1,14 @@
 ---
 pipx_packages:
     - bandit
-    - clf
+    # - clf
     - copier
     - coverage
     - csvkit
     - dead
     - detect-secrets
     - docstr-coverage
-    - eg
+    # - eg
     - em-keyboard
     - flake8
     - future
@@ -19,7 +19,7 @@ pipx_packages:
     - hashin
     - hjson
     - http-prompt
-    - howdoi
+    # - howdoi
     - identify
     - kaggle
     - linkcheckmd
@@ -46,7 +46,7 @@ pipx_packages:
     - safety
     - searchcmd
     - shrynk
-    - tldr
+    # - tldr  # Use npm version instead.
     - tox
     - twine
     - uncommitted

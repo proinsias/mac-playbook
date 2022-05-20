@@ -59,7 +59,7 @@ homebrew_installed_packages:
     - ccache # For pyenv-ccache.
     - certbot
     - chafa
-  # - cheat  # Get via bash-snippets.
+    - cheat  # Conflicts with bash-snippets.
     - checkstyle
     - cloog
     - cmake
@@ -87,7 +87,7 @@ homebrew_installed_packages:
     - exa
     - exiftool
     - faac
-    - fasd
+    # - fasd  # Use fzf instead.
     - ffmpeg
     - fftw
     - figlet
@@ -144,7 +144,7 @@ homebrew_installed_packages:
     - hadolint
     - hdf5
     - hexyl
-    - howdoi
+    # - howdoi
     - htop
     - httpie
     - hub
@@ -215,6 +215,7 @@ homebrew_installed_packages:
     - pandoc
     - pandoc-citeproc
     - pcre
+    - pet
     - pinentry-mac
     - pip-completion
     - pipenv
@@ -271,6 +272,7 @@ homebrew_installed_packages:
     - stormssh
     - stress
     - stormssh-completion
+    - stow
     - subversion
     - suite-sparse
     - svn
@@ -388,6 +390,7 @@ homebrew_cask_apps:
     - kitty
     - krisp
     - lastpass
+    - lepton
     - lingon-x
     - macdown
   # - macfusion
