@@ -1,20 +1,15 @@
 ---
-# ansible-galaxy install --role-file requirements.yml
-
-- src: appian.macos-power  # Install a role from the Ansible Galaxy.
-- src: danbohea.rbenv
-- src: https://github.com/feffi/ansible-macos-defaults.git
-  name: feffi.macos-defaults
-- src: https://github.com/feffi/ansible-macos-standby.git
-  name: feffi.macos-standby
-- src: fubarhouse.macdock
-- src: geerlingguy.homebrew
-- src: geerlingguy.mas
-- src: https://github.com/proinsias/ansible-osx-user-picture.git  # My fork.
-  name: jeremyltn.osx-user-picture
-- src: kinglouie.macos
-# - src: lafarer.osx-computername
-- src: lafarer.osx-defaults
+    - src: appian.macos-power  # Install a role from the Ansible Galaxy.
+    - src: danbohea.rbenv
+    - src: https://github.com/feffi/ansible-macos-defaults.git
+      name: feffi.macos-defaults
+    - src: https://github.com/feffi/ansible-macos-standby.git
+      name: feffi.macos-standby
+    - src: fubarhouse.macdock
+    - src: geerlingguy.homebrew
+    - src: geerlingguy.mas
+    - src: kinglouie.macos
+    - src: lafarer.osx-defaults
 
 # # Install a role from GitHub
 # - name: opendaylight

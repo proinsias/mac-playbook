@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-sudo easy_install pip
-sudo pip install ansible
+if ! type ansible > /dev/null 2>&1 ; then
+    sudo easy_install pip
+    sudo pip install ansible
+fi
 
 sudo mkdir -p /etc/ansible
 
@@ -22,4 +24,4 @@ echo '[ssh_connection]'
 echo 'pipelining = True'
 echo 'control_path = /tmp/ansible-ssh-%%h-%%p-%%r'
 
-} | sudo tee -a ~/.ansible.cfg > /dev/null
+} | tee -a ~/.ansible.cfg > /dev/null

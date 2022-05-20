@@ -18,18 +18,18 @@ It is inspired by and based on
 
 ## Installation
 
-1. Ensure Apple's command line tools are installed (`xcode-select --install`
-   to launch the installer, and `sudo xcodebuild -license accept` to accept license agreement).
-1. Clone this repository to your local drive.
-1. Run `$ ./bin/setup_ansible.sh` inside this directory to install and configure Ansible.
-1. Run `$ ansible-galaxy install --role-file  requirements.yml` inside this directory
-   to install required Ansible roles.
-1. Run `ansible-playbook main.yml --inventory inventory --ask-become-pass` inside this directory.
-   Enter your account password when prompted.
+Setup this repo and its dependencies:
 
-> Note: If some Homebrew commands fail,
-> you might need to agree to Xcode's license or fix some other Brew issue.
-> Run `brew doctor` to see if this is the case.
+```bash
+curl --location --remote-name https://raw.githubusercontent.com/proinsias/mac-playbook/master/bin/setup.sh && bash setup.sh
+```
+
+Run `ansible-playbook main.yml --inventory inventory --ask-become-pass` inside this directory.
+Enter your account password when prompted.
+
+Note: If some Homebrew commands fail,
+you might need to agree to Xcode's license or fix some other Brew issue.
+Run `brew doctor` to see if this is the case.
 
 ### Running a specific set of tagged tasks
 
