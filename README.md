@@ -24,7 +24,12 @@ Setup this repo and its dependencies:
 curl --location --remote-name https://raw.githubusercontent.com/proinsias/mac-playbook/master/bin/setup.sh && bash setup.sh
 ```
 
-Run `ansible-playbook main.yml --inventory inventory --ask-become-pass` inside this directory.
+Run the following command inside this directory:
+
+```bash
+ansible-playbook main.yml --inventory inventory --ask-become-pass
+```
+
 Enter your account password when prompted.
 
 Note: If some Homebrew commands fail,

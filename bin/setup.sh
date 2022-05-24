@@ -16,16 +16,17 @@ echo "...done!"
 
 cd mac-playbook
 
-echo "Ensure Apple's command line tools are installed..."
-test "$(uname -s)" == 'Darwin' && (xcode-select --install || true)
-
-# echo "Accept license agreement..."
-# sudo xcodebuild -license accept
-
 echo "Install and configure Ansible..."
 ./bin/setup_ansible.sh
 
 echo "Install required Ansible roles..."
-ansible-galaxy install --role-file requirements.yml
+./bin/install_dependencies.sh
 
 cd -
+
+# FIXME:
+  #readonly PLAYBOOK_REPO="https://gitlab.com/radek-sprta/ansible-personal.git"
+  #readonly PLAYBOOK=setup.yml
+  #
+  # ansible-pull -U "${PLAYBOOK_REPO}" -i localhost, "${PLAYBOOK}" --ask-become-pass
+  # FIXME: Note I can run script directly!
