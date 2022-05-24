@@ -1,36 +1,101 @@
 ---
-- hosts: all
-  connection: local
-  gather_facts: true
+    - hosts: all
+      connection: local
+      gather_facts: true
 
-  tasks:
-    # - name: print facts
-    #   debug:
-    #     var: ansible_facts
-    - name: Run ilovemovies role.
-      include_role:
-        name: ilovemovies
-        apply:
-          tags: ['ilovemovies', 'never']
-      tags: ['ilovemovies', 'never']  # This won't run unless you specify the 'ilovemovies' tag.
+      tasks:
+    #- name: print facts
+    #  ansible.builtin.debug:
+    #    var: ansible_facts
+    #    msg: facts
+    #  tags: ['always']  # Always run, even when tags specified.
 
-    - name: Run ospideal role.
-      include_role:
-        name: ospideal
-        apply:
-          tags: ['ospideal', 'never']
-      tags: ['ospideal', 'never']
+    # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_module.html
+    # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_tap_module.html
+    # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/osx_defaults_module.html
+    # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html
 
-    - name: Run travis role.
-      include_role:
-        name: travis
-        apply:
-          tags: ['travis', 'never']
-      tags: ['travis', 'never']
+          - name: Run all role.
+            include_role:
+                name: all
+            tags: [always] # Always run, even when tags specified.
 
-    - name: Run all role.
-      include_role:
-        name: all
-      tags: ['always']
+# FIXME:
+#    - name: Run macos role.
+#      include_role:
+#        name: macos
+#      when: ansible_os_family == "Darwin"
+#      tags: ['always']  # Always run, even when tags specified.
+#
+#    - name: Run linux role.
+#      include_role:
+#        name: linux
+#      when: ansible_os_family == "Debian"
+#      tags: ['always']  # Always run, even when tags specified.
 
+# FIXME: Test on ilovemovies, linux
 # FIXME: GT TGT folder
+# FIXME: Can I do brew upgrade etc from Lingon script here instead,
+# and then just call relevant command in Lingon script?
+
+# FIXME: install SSH key
+# - name: install SSH key
+#  sudo: yes
+#  authorized_key:
+#    key: "ssh-rsa [...]"
+#    user: "{{ansible_user_id}}"
+#    state: present
+
+# FIXME: For example, the file host_vars/cynar for my laptop looks like this:
+#---
+#install_git_homedir: true
+#install_android_dev: true
+#install_erlang: true
+#install_ocaml: true
+#install_electronics: true
+#...
+#and those variables affect when conditionals in my roles.
+
+# FIXME: conditionals
+# ---
+#- hosts: laptop
+#  roles:
+#    - common
+#    - git_homedir
+#    # roles can also be used conditionally
+#    - { role: x11, when: ansible_distribution != "MacOSX" }
+#    - { role: erlang, when: install_erlang is defined }
+
+# FIXME: vars_prompt
+# vars_prompt:
+#    - name: config_file
+#      prompt: "What computer is this"
+#      private: no
+#
+#    - name: gitlab_password
+#      prompt: "Enter your Gitlab password"
+#      private: yes
+#
+#  vars_files:
+#    - vars/{{ config_file }}.yml
+
+# FIXME: make fish default shell
+# - name: make fish default shell
+#  become: yes
+#  user:
+#    name: "{{ user }}"
+#    shell: /usr/bin/fish
+
+
+
+
+
+
+#  Notes on ansible-playbook options:
+# 1. `--check` determines which tasks would lead to changes, but doesn't actually update anything.
+# 2. `--list-tasks` and `--list-hosts` print details about what the playbook will do.
+# 3. `--start NAME` resumes a playbook from the task named NAME.
+# (This can save time if the playbook stops with an error along the way.)
+# 4. `--tags=all` (or no `--tags` option) runs all tags, except for 'never' tags.
+# 5. `--tags=tag1` runs ONLY tag 'tag1'
+# 6. `--tags=all,tag1` runs all tags and 'tag1' even if the latter is a 'never' tag.
