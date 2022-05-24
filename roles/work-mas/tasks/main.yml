@@ -1,0 +1,11 @@
+---
+
+    - name: Install specific apps and also upgrade all others
+      community.general.mas:
+          id:
+              - 409183694 # Keynote
+              - 409203825 # Numbers
+              - 409201541 # Pages
+              - 497799835 # Xcode
+          state: present
+          upgrade_all: yes

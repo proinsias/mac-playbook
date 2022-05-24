@@ -1,5 +1,5 @@
 ---
-# geerlingguy.homebrew
+# geerlingguy.mac.homebrew
 homebrew_cask_appdir: /Applications
 homebrew_clear_cache: false
 homebrew_upgrade_all_packages: true
@@ -24,7 +24,6 @@ homebrew_installed_packages:
     - curl
     - {name: emacs, install_options: with-modules}
     - svn
-    - parallel # Install before moreutils that also different `parallel` command.
     - ack
     - advancecomp
     - ag
@@ -45,7 +44,6 @@ homebrew_installed_packages:
     - bash-completion
     - bash-snippets
     - bat
-    - bench
     - bfg
     - binutils
     - black
@@ -54,7 +52,7 @@ homebrew_installed_packages:
     - bundler-completion
     - c-ares
     - cairo
-  # - cask
+    # - cask
     - catimg
     - ccache # For pyenv-ccache.
     - certbot
@@ -77,7 +75,6 @@ homebrew_installed_packages:
     - dive # For docker layer analysis.
     - docker-clean
     - docker-completion
-  # - docmunch/pdftk/pdftk
     - dos2unix
     - dvc
     - ed
@@ -87,13 +84,11 @@ homebrew_installed_packages:
     - exa
     - exiftool
     - faac
-    # - fasd  # Use fzf instead.
     - ffmpeg
     - fftw
     - figlet
     - file-formula
     - findutils
-  # - flake8  # Via pipx instead.
     - fontconfig
     - fortune
     - freetype
@@ -101,7 +96,7 @@ homebrew_installed_packages:
     - gawk
     - gcc
     - gd
-    - gdb
+    # - gdb  # Not M1 compatible yet.
     - gdbm
     - gem-completion
     - geoip
@@ -134,7 +129,6 @@ homebrew_installed_packages:
     - gobject-introspection
     - gpatch
     - gpg
-  # - gpg-agent
     - graphicsmagick
     - graphviz
     - grep
@@ -144,7 +138,6 @@ homebrew_installed_packages:
     - hadolint
     - hdf5
     - hexyl
-    # - howdoi
     - htop
     - httpie
     - hub
@@ -160,7 +153,6 @@ homebrew_installed_packages:
     - jenv
     - jhead
     - jonof/kenutils/pngout
-    - joplin
     - jpeg
     - jpegoptim
     - jq
@@ -189,12 +181,10 @@ homebrew_installed_packages:
     - lolcat
     - lsof
     - lua
-    - luajit
     - lynx
     - lzip
     - m4
     - mackup
-    - macvim
     - make
     - makedepend
     - mas
@@ -213,7 +203,6 @@ homebrew_installed_packages:
     - packer
     - packer-completion
     - pandoc
-    - pandoc-citeproc
     - pcre
     - pet
     - pinentry-mac
@@ -236,7 +225,7 @@ homebrew_installed_packages:
     - pyenv-ccache
     - pyenv-pip-migrate
     - pyenv-virtualenv
-    - pygments # For mog
+    - pygments  # For mog
     - pyqt
     - python
     - p7zip
@@ -246,7 +235,7 @@ homebrew_installed_packages:
     - qscintilla2
     - qt
     - rbenv
-    - readline # For pyenv.
+    - readline  # For pyenv.
     - rename
     - restview
     - rst-lint
@@ -264,9 +253,7 @@ homebrew_installed_packages:
     - sonar-completion
     - sox
     - speedtest
-    - sponge
     - sqlite
-    - sshfs
     - ssh-copy-id
     - starship
     - stormssh
@@ -294,7 +281,6 @@ homebrew_installed_packages:
     - unzip
     - vagrant-completion
     - veclibfort
-    - vim
     - vitorgalvao/tiny-scripts/cask-repair
     - watch
     - wdiff
@@ -306,156 +292,28 @@ homebrew_installed_packages:
     - wireshark
     - xsv
     - xvid
-    - xz # For pyenv.
+    - xz  # For pyenv.
     - x264
     - yamllint
     - yasm
     - youtube-dl
-    - zlib # For pyenv.
+    - zlib  # For pyenv.
     - zopfli
     - zsh
-homebrew_uninstalled_packages: []
-homebrew_cask_apps:
-    - java
-    - osxfuse
-    - xquartz
-    - 1password
-    - 1password-cli
-    - adobe-acrobat-reader
-    - aerial
-    - apppolice
-    - apptrap
-    - bartender
-    - bbedit
-    - bettertouchtool
-    - betterzip
-    - box-sync
-    - cakebrew
-    - cheatsheet
-    - choosy
-    - chrome-remote-desktop-host
-    - coconutBattery
-    - controlplane
-    - cord
-    - dash
-    - daisydisk
-    - dbeaver-community
-    - dbvisualizer
-    - diskmaker-x
-  # - diskwave
-    - docker
-    - docker-toolbox
-    - drivedx
-    - dropbox
-    - emacs
-    - expressvpn
-    - fantastical
-    - filebot
-    - firefox
-    - flashlighttool
-    - flux
-    - font-jetbrains-mono-nerd-font
-    - font-ntr
-    - font-rubik
-    - ganttproject
-    - geektool
-    - gephi
-    - gimp
-    - git-sizer
-    - gmvault
-    - goodsync
-    - google-chrome
-    - google-drive
-    - go2shell
-    - go64
-    - gpg-suite
-    - grammarly
-    - grandperspective
-  # - handylock
-    - ibettercharge
-    - iina
-    - imageoptim
-    - imazing
-    - install-disk-creator
-    - intellij-idea-ce
-    - intel-power-gadget
-    - itch
-    - iterm2
-    - jing
-    - joplin
-    - jupyter-notebook-viewer
-    - keka
-    - keybase
-  # - kindle  # Use mas instead
-    - kitty
-    - krisp
-    - lastpass
-    - lepton
-    - lingon-x
-    - macdown
-  # - macfusion
-    - mactex
-    - makemkv
-    - mark-text
-    - mediainfo
-    - meetingbar
-    - menumeters
-    - metaz
-    - microsoft-office
-    - monitorcontrol
-    - muzzle
-    - netnewswire
-    - nightowl
-    - no-ip-duc
-    - omnidisksweeper
-    - omnifocus
-    - onyx # FIXME: Mojave version?
-    - openaudible
-    - oversight
-    - pacifist
-    - plantronics-hub
-    - pocket-casts
-    - podcastmenu
-  # - prey  # FIXME: Install separately with correct API key - move to hostname specific
-    - qlcolorcode
-    - qlmarkdown
-    - qlprettypatch
-    - qlstephen
-    - quicklook-csv
-    - quicklook-json
-    - raindropio
-    - raycast
-    - roaringapps
-    - send-to-kindle
-    - signal
-    - silverlight
-    - skyfonts
-    - skype
-    - slack
-    - slimbatterymonitor
-    - soundcloud-downloader
-    - sourcetrail
-    - sourcetree
-    - spectacle
-    - spotify
-    - steamcmd
-    - stretchly
-    - sublime-text
-    - suspicious-package
-    - the-unarchiver
-    - tigervnc-viewer
-    - tripmode
-    - typora
-    - ultimaker-cura
-    - unclack
-    - upic
-    - virtualbox
-    - virtualbox-extension-pack
-    - vlc
-    - webpquicklook
-    - xquartz
-    - yubico-authenticator
-    - yubico-yubikey-manager
-    - yubico-yubikey-personalization-gui
-    - yubico-yubikey-piv-manager
+homebrew_uninstalled_packages:
+    - bench
+    - fasd  # Use fzf instead.
+    - flake8  # Via pipx instead.
+    - gpg-agent
+    - howdoi
+    - luajit
+    - macvim
+    - pandoc-citeproc
+    - parallel  # Conflicts with moreuilts.
+    - docmunch/pdftk/pdftk
+    - sponge  # Installed by moreutils.
+    - sshfs
+    - vim
+# Don't use these.
+homebrew_cask_apps: []
 homebrew_cask_uninstalled_apps: []

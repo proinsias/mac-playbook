@@ -4,9 +4,3 @@
       become: false
   # args:
   #   warn: false  # set warn=false to prevent warning
-
-
-# FIXME: Brew upgrade? Here and every homebrew module.
-#- name: Update pipx packages
-#  community.general.pipx:
-#    state: upgrade_all

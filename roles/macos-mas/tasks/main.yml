@@ -1,0 +1,26 @@
+---
+
+    - name: Install specific apps and also upgrade all others
+      community.general.mas:
+          id:
+              - 937984704 # Amphetamine
+              - 523620159 # CleanMyDrive 2 (2.1.12)
+              - 642220194 # DeskConnect
+              - 672206759 # Disk Diag
+              - 1435957248 # "Drafts
+              - 524373870 # Due (1.5.1)
+              - 963642514 # Duplicate Photos Fixer Pro (3.2)
+              - 671736912 # FruitJuice (2.3.4)
+              - 405399194 # Kindle (1.26.1)
+              - 1532419400 # "MeetingBar (3.10.1)
+              - 784801555 # Microsoft OneNote
+              - 1295203466 # "Microsoft Remote Desktop (10.2.1)
+              - 1464122853 # "NextDNS (1.4.1)
+              - 568494494 # Pocket (1.7.9)
+              - 439845554 # Reeder
+              - 496437906 # Shush (1.2.1)
+              - 407721554 # SmartSleep (3.10)
+              - 509148961 # SMARTReporter
+              - 423123087 # UnPlugged
+          state: present
+          upgrade_all: yes

@@ -1,0 +1,12 @@
+---
+
+    - name: Install specific apps and also upgrade all others
+      community.general.mas:
+          id:
+              - 1055511498 # Day One
+              - 586862299 # Duplicate Cleaner For iPhoto
+              - 467939042 # Growl
+              - 415139197 # WhiteNoise
+              - 494803304 # WiFi Explorer
+          state: present
+          upgrade_all: yes

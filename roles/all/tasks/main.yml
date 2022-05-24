@@ -1,51 +1,33 @@
 ---
-# - name: Run all homebrew role.
-#   include_role:
-#     name: all-homebrew
-#   tags: ['homebrew']
 
-# - name: Run all macdock role after homebrew role.
-#   include_role:
-#     name: all-macdock
-#   tags: ['macdock']
+# FIXME:
+#- name: Run all homebrew role.
+#  include_role:
+#    name: all-homebrew
+#  tags: ['always']  # Always run, even when tags specified.
+#
+#- name: Run all nodejs role.
+#  include_role:
+#    name: all-nodejs
+#  tags: ['always']  # Always run, even when tags specified.
+#
+    - name: Run all pipx role.
+      include_role:
+          name: all-pipx
+      tags: [always] # Always run, even when tags specified.
 
-- name: Run all macos role.
-  include_role:
-    name: all-macos
-  tags: ['macos']
-
-- name: Run all macos-standby role.
-  include_role:
-    name: all-macos-standby
-  tags: ['macos-standby']
-  # An alternative is appian.macos-power.
-
-# - name: Run all mas role.
-#   include_role:
-#     name: all-mas
-#   tags: ['mas']
-
-# - name: Run all nodejs role.
-#   include_role:
-#     name: all-nodejs
-#   tags: ['nodejs']
-
-# - name: Run all osx-defaults role.
-#   include_role:
-#     name: all-osx-defaults
-#   tags: ['osx-defaults']
-
-- name: Run all osx_defaults role.
-  include_role:
-    name: all-osx_defaults
-  tags: ['osx-defaults']
-
-# - name: Run all pipx role.
-#   include_role:
-#     name: all-pipx
-#   tags: ['pipx']
-
-# - name: Run all ruby role.
-#   include_role:
-#     name: all-ruby
-#   tags: ['ruby']
+# FIXME:
+#- name: Run all ruby role.
+#  include_role:
+#    name: all-ruby
+#  tags: ['always']  # Always run, even when tags specified.
+#
+#- name: Run personal homebrew role.
+#  include_role:
+#    name: personal-homebrew
+#  tags: ['never', 'personal']  # This won't run unless you specify the 'personal' tag.
+#
+#- name: Run work homebrew role.
+#  include_role:
+#    name: work-homebrew
+#  tags: ['never', 'work']  # This won't run unless you specify the 'work' tag.

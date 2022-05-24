@@ -1,4 +1,7 @@
 ---
+
+prefix: "{{ '/opt/homebrew' if ansible_machine == 'arm64' else '/usr/local' }}"
+
 pipx_packages:
     - bandit
     # - clf

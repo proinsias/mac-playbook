@@ -1,10 +1,14 @@
 ---
-- homebrew:
-    name: ["{{ item }}"]
-    state: present
-  with_items:
-    - node
+    - homebrew:
+          name: ['{{ item }}']
+          state: present
+      with_items:
+          - node
 
-- name: Install global nodejs packages.
-  command: npm install --global {{ item }}
-  with_items: "{{ nodejs_global_packages }}"
+    - name: Install latest version of global nodejs packages.
+      community.general.npm:
+          name: coffee-script
+          global: yes
+          state: latest
+  # command: npm install --global {{ item }}
+      with_items: '{{ nodejs_global_packages }}'

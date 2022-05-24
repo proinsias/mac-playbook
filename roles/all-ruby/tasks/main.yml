@@ -1,8 +1,11 @@
 ---
-- homebrew:
-    name: ['ruby']
-    state: present
+    - homebrew:
+          name: [ruby]
+          state: present
 
-- name: Install global ruby packages.
-  command: gem install {{ item }}
-  with_items: "{{ ruby_install_gems }}"
+    - name: Install latest available version of global ruby packages.
+      community.general.gem:
+          name: {{item: null}: null}
+          state: latest
+  # command: gem install {{ item }}
+      with_items: '{{ ruby_install_gems }}'

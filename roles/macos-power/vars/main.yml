@@ -1,0 +1,8 @@
+---
+macos_power_settings:
+    - {cmd: computersleep, desired_value: Never}
+    - {cmd: displaysleep, desired_value: after 15 minutes}
+    - {cmd: harddisksleep, desired_value: Never}
+    - {cmd: restartfreeze, desired_value: On}
+    - {cmd: restartpowerfailure, desired_value: On}
+    - {cmd: wakeonnetworkaccess, desired_value: On}
