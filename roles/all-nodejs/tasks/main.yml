@@ -1,5 +1,6 @@
 ---
-    - homebrew:
+    - name: Check node is installed.
+      homebrew:
           name: ['{{ item }}']
           state: present
       with_items:

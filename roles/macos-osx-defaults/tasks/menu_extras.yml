@@ -1,0 +1,17 @@
+---
+
+    - name: Use 24-hour format.
+      community.general.osx_defaults:
+          domain: com.apple.menuextra.clock
+          key: DateFormat
+          type: string
+          value: EEE HH:mm  # Other values, e.g., "EEE MMM d  h:mm a".
+          state: present
+
+    - name: Show battery percentage.
+      community.general.osx_defaults:
+          domain: com.apple.menuextra.battery
+          key: ShowPercent
+          type: string
+          value: YES
+          state: present

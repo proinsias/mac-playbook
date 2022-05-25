@@ -1,0 +1,8 @@
+---
+
+    - name: Security - Enable application quarantine ({{ system.security.enable_quarantine }}).
+      community.general.osx_defaults:
+          domain: com.apple.LaunchServices
+          key: NSDocumentSaveNewDocumentsToCloud
+          type: bool
+          value: yes

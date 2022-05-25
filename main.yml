@@ -12,7 +12,6 @@
 
     # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_module.html
     # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_tap_module.html
-    # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/osx_defaults_module.html
     # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html
 
           - name: Run all role.
@@ -20,18 +19,17 @@
                 name: all
             tags: [always] # Always run, even when tags specified.
 
-# FIXME:
-#    - name: Run macos role.
-#      include_role:
-#        name: macos
-#      when: ansible_os_family == "Darwin"
-#      tags: ['always']  # Always run, even when tags specified.
-#
-#    - name: Run linux role.
-#      include_role:
-#        name: linux
-#      when: ansible_os_family == "Debian"
-#      tags: ['always']  # Always run, even when tags specified.
+          - name: Run macos role.
+            include_role:
+                name: macos
+            when: ansible_os_family == "Darwin"
+            tags: [always]    # Always run, even when tags specified.
+
+          - name: Run linux role.
+            include_role:
+                name: linux
+            when: ansible_os_family == "Debian"
+            tags: [always]    # Always run, even when tags specified.
 
 # FIXME: Test on ilovemovies, linux
 # FIXME: GT TGT folder

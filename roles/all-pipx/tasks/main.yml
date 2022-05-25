@@ -1,5 +1,6 @@
 ---
-    - homebrew:
+    - name: Check python3 and pipx are installed.
+      homebrew:
           name: [python3, pipx]
           state: present
 
@@ -47,7 +48,7 @@
       # command: pipx inject pytest {{ item }}
       with_items: '{{ pipx_pytest_packages }}'
 
-    - name: Update pipx packages
+    - name: Update pipx packages.
       community.general.pipx:
           executable: '{{ prefix }}/bin/pipx'
           state: upgrade_all

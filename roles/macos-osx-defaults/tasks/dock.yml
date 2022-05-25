@@ -1,0 +1,244 @@
+---
+
+    - name: Turn off bouncing icons in dock.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: no-bouncing
+          type: bool
+          value: true
+          state: present
+      notify: Restart Dock
+
+    - name: Change minimize/maximize window effect.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: mineffect
+          type: string
+          value: scale
+          state: present
+      notify: Restart Dock
+
+    - name: Move dock to bottom middle of the screen.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: pinning
+          type: string
+          value: middle  # Other options: "start", "end".
+          state: present
+      notify: Restart Dock
+
+    - name: Move dock to bottom middle of the screen.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: orientation
+          type: string
+          value: bottom  # Other options: "left", "right".
+          state: present
+      notify: Restart Dock
+
+    - name: Enable spring loading for all Dock items.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: enable-spring-load-actions-on-all-items
+          type: bool
+          value: true
+          state: present
+      notify: Restart Dock
+
+    - name: Speeding up Mission Control animations and grouping windows by application.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: expose-animation-duration
+          type: float
+          value: 0.1
+          state: present
+      notify: Restart Dock
+
+    - name: Misson Control group by application.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: expose-group-by-app
+          type: bool
+          value: true
+          state: present
+      notify: Restart Dock
+
+    - name: Setting Dock to auto-hide and removing the auto-hiding delay.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: autohide
+          type: bool
+          value: true
+          state: present
+      notify: Restart Dock
+
+    - name: Setting Dock to auto-hide and removing the auto-hiding delay.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: autohide-delay
+          type: float
+          value: 0
+          state: present
+      notify: Restart Dock
+
+    - name: Setting Dock to auto-hide and removing the auto-hiding delay.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: autohide-time-modifier
+          type: float
+          value: 0
+          state: present
+      notify: Restart Dock
+
+    - name: Enabling iTunes track notifications in the Dock.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: itunes-notifications
+          type: bool
+          value: true
+          state: present
+      notify: Restart Dock
+
+    - name: Don't animate opening applications from the Dock.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: launchanim
+          type: bool
+          value: false
+          state: present
+      notify: Restart Dock
+
+    - name: Don't show Dashboard as a Space.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: dashboard-in-overlay
+          type: bool
+          value: true
+          state: present
+      notify: Restart Dock
+
+    - name: Set springboard rows.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: springboard-rows
+          type: int
+          value: 8
+          state: present
+      notify: Restart Dock
+
+    - name: Set springboard columns.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: springboard-columns
+          type: int
+          value: 8
+          state: present
+      notify: Restart Dock
+
+    - name: Making launchpad better.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: ResetLaunchPad
+          type: bool
+          value: true
+          state: present
+      notify: Restart Dock
+
+    - name: Add a Stack with Recent Applications.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: persistent-others
+          type: array-add
+          value: '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
+          state: present
+      notify: Restart Dock
+
+# Hot corners
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+
+    - name: Top left screen corner → Disable screen saver.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: wvous-tl-corner
+          type: int
+          value: 6
+          state: present
+      notify: Restart Dock
+
+    - name: Top left screen corner → Disable screen saver.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: wvous-tl-modifier
+          type: int
+          value: 0
+          state: present
+      notify: Restart Dock
+
+    - name: Bottom right screen corner → Start screen saver.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: wvous-br-corner
+          type: int
+          value: 5
+          state: present
+      notify: Restart Dock
+
+    - name: Bottom right screen corner → Start screen saver.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: wvous-br-modifier
+          type: int
+          value: 0
+          state: present
+      notify: Restart Dock
+
+    - name: Make animation snappier.
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: workspaces-edge-delay
+          type: float
+          value: 0.1
+          state: present
+      notify: Restart Dock
+
+- name: Dock - Set dock tilesize.
+  osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    type: float
+    value: 50
+  notify: Restart Dock
+
+- name: Dock - Show indicator lights for open applications in the dock.
+  osx_defaults:
+    domain: com.apple.dock
+    key: show-process-indicators
+    type: bool
+    value: yes
+  notify: Restart Dock
+
+- name: Dock - Make dock icons of hidden applications translucent.
+  osx_defaults:
+    domain: com.apple.dock
+    key: showhidden
+    type: bool
+    value: yes
+  notify: Restart Dock
+
+- name: Dock - Rearrange spaces by last use.
+  osx_defaults:
+    domain: com.apple.dock
+    key: mru-spaces
+    type: bool
+    value: yes
+  notify: Restart Dock

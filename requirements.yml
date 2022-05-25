@@ -4,10 +4,8 @@ collections:
     - name: community.general
 
 roles:
-    - name: appian.macos-power  # Install a role from the Ansible Galaxy.
-    - name: danbohea.rbenv
+    - name: appian.macos-power
     - name: elliotweiser.osx-command-line-tools  # Requirement for geerlingguy.mac.
-    - name: fubarhouse.macdock
     - name: kinglouie.macos
 
 # Notes:

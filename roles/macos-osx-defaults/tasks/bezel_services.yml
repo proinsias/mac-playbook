@@ -1,0 +1,17 @@
+---
+
+    - name: Automatically illuminate built-in MacBook keyboard in low light.
+      community.general.osx_defaults:
+          domain: com.apple.BezelServices
+          key: kDim
+          type: bool
+          value: true
+          state: present
+
+    - name: Turn off keyboard illumination when computer is not used for 5 minutes.
+      community.general.osx_defaults:
+          domain: com.apple.BezelServices
+          key: kDimTime
+          type: int
+          value: 300
+          state: present

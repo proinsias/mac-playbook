@@ -1,5 +1,6 @@
 ---
-    - homebrew:
+    - name: Check ruby is installed.
+      homebrew:
           name: [ruby]
           state: present
 

@@ -1,0 +1,9 @@
+---
+
+    - name: Enable the debug menu in Photo Booth.
+      community.general.osx_defaults:
+          domain: com.apple.PhotoBooth
+          key: EnableDebugMenu
+          type: bool
+          value: true
+          state: present

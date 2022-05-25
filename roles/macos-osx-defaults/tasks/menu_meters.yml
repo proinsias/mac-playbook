@@ -1,0 +1,9 @@
+---
+
+    - name: Update MenuMeters disk information only every 1s.
+      community.general.osx_defaults:
+          domain: com.ragingmenace.MenuMeters
+          key: DiskInterval
+          type: int
+          value: 1.0
+          state: present

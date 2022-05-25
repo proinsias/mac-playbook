@@ -1,0 +1,25 @@
+---
+
+    - name: Turn on Firewall.
+      community.general.osx_defaults:
+          domain: com.apple.alf
+          key: globalstate
+          type: bool
+          value: true
+          state: present
+
+    - name: Enable stealth mode.
+      community.general.osx_defaults:
+          domain: com.apple.alf
+          key: stealthenabled
+          type: bool
+          value: true
+          state: present
+
+    - name: Allow signed applications to receive incoming connections.
+      community.general.osx_defaults:
+          domain: com.apple.alf
+          key: allowsignedenabled
+          type: bool
+          value: true
+          state: present

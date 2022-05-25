@@ -1,37 +1,37 @@
 ---
 
-- name: Run macos homebrew role.
-  include_role:
-    name: macos-homebrew
-  tags: ['always']  # Always run, even when tags specified.
+    - name: Run macos homebrew role.
+      include_role:
+          name: macos-homebrew
+      tags: [always] # Always run, even when tags specified.
 
-- name: Run macos settings role.
-  include_role:
-    name: macos-settings
-  tags: ['never']  # Disable until dockutil support updated - kcrawford/dockutil#127.
+    - name: Run macos settings role.
+      include_role:
+          name: macos-settings
+      tags: [never] # Disable until dockutil support updated - kcrawford/dockutil#127.
   # tags: ['always']  # Always run, even when tags specified.
 
-- name: Run macos-mas role.
-  include_role:
-   name: macos-mas
-  tags: ['always']  # Always run, even when tags specified.
+    - name: Run macos-mas role.
+      include_role:
+          name: macos-mas
+      tags: [always] # Always run, even when tags specified.
 
-- name: Run macos osx_defaults role.
-  include_role:
-    name: macos-osx_defaults
-  tags: ['always']  # Always run, even when tags specified.
+    - name: Run macos osx-defaults role.
+      include_role:
+          name: macos-osx-defaults
+      tags: [always] # Always run, even when tags specified.
 
-- name: Run macos power role.
-  include_role:
-    name: macos-power
-  tags: ['always']  # Always run, even when tags specified.
+    - name: Run macos power role.
+      include_role:
+          name: macos-power
+      tags: [always] # Always run, even when tags specified.
 
-- name: Run personal mas role.
-  include_role:
-    name: personal-mas
-  tags: ['never', 'personal']  # This won't run unless you specify the 'personal' tag.
+    - name: Run personal mas role.
+      include_role:
+          name: personal-mas
+      tags: [never, personal]  # This won't run unless you specify the 'personal' tag.
 
-- name: Run work mas role.
-  include_role:
-    name: work-mas
-  tags: ['never', 'work']  # This won't run unless you specify the 'work' tag.
+    - name: Run work mas role.
+      include_role:
+          name: work-mas
+      tags: [never, work]  # This won't run unless you specify the 'work' tag.

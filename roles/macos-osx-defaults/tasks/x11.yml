@@ -1,0 +1,9 @@
+---
+
+    - name: Auto-quit on close last window (XQuartz).
+      community.general.osx_defaults:
+          domain: org.macosforge.xquartz.X11
+          key: wm_auto_quit
+          type: bool
+          value: true
+          state: present

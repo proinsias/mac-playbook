@@ -1,0 +1,285 @@
+---
+
+    - name: Trackpad – enable click and drag.
+      community.general.osx_defaults:
+          domain: com.apple.AppleMultitouchTrackpad
+          key: Dragging
+          type: bool
+          value: true
+          state: present
+
+    - name: Bluetooth Trackpad - enable click and drag.
+      community.general.osx_defaults:
+          domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+          key: Dragging
+          type: bool
+          value: true
+          state: present
+
+    - name: Organize System Preferences Alphabetically.
+      community.general.osx_defaults:
+          domain: com.apple.systempreferences
+          key: ShowAllMode
+          type: bool
+          value: true
+          state: present
+
+    - name: Disable UI sounds.
+      community.general.osx_defaults:
+          domain: com.apple.systemsound
+          key: com.apple.sound.uiaudio.enabled
+          type: int
+          value: 0
+          state: present
+
+    - name: Increase sound quality for Bluetooth headphones/headsets.
+      community.general.osx_defaults:
+          domain: com.apple.BluetoothAudioAgent
+          key: Apple Bitpool Min (editable)
+          type: int
+          value: 40
+          state: present
+
+    - name: Enable display from automatically adjusting brightness.
+      community.general.osx_defaults:
+          domain: com.apple.iokit.AmbientLightSensor
+          key: Automatic Display Enabled
+          type: bool
+          value: true
+          state: present
+
+    - name: Disable keyboard from automatically adjusting backlight brightness in low light.
+      community.general.osx_defaults:
+          domain: com.apple.iokit.AmbientLightSensor
+          key: Automatic Keyboard Enabled
+          type: bool
+          value: false
+          state: present
+
+    - name: Enable AirDrop over Ethernet and on Unsupported Macs.
+      community.general.osx_defaults:
+          domain: com.apple.NetworkBrowser
+          key: BrowseAllInterfaces
+          type: bool
+          value: true
+          state: present
+
+    - name: VPN status - Show Time Connected.
+      community.general.osx_defaults:
+          domain: com.apple.networkConnect
+          key: VPNShowTime
+          type: int
+          value: 1
+          state: present
+
+    - name: Disable the built-in captive portal (use your browser instead).
+      community.general.osx_defaults:
+          domain: com.apple.captive.control
+          key: Active
+          type: bool
+          value: false
+          state: present
+
+
+- name: UI - Expand save panel by default.
+  - community.general.osx_defaults:
+    key: NSNavPanelExpandedStateForSaveMode
+    type: bool
+    value: yes
+  notify: Restart Finder
+
+- name: UI - Expand print panel by default.
+  - community.general.osx_defaults:
+    key: PMPrintingExpandedStateForPrint
+    type: bool
+    value: yes
+  notify: Restart Finder
+
+- name: UI - Enable spring loading for directories.
+  - community.general.osx_defaults:
+    key: com.apple.springing.enabled
+    type: bool
+    value: yes
+
+- name: UI - Set delay for spring loading directories.
+  - community.general.osx_defaults:
+    key: com.apple.springing.delay
+    type: float
+    value: 2
+
+- name: UI - Set action for double click on titlebar.
+  - community.general.osx_defaults:
+    key: AppleActionOnDoubleClick
+    type: string
+    value: Maximize  # "Maximize", "Minimize".
+
+- name: UI - Set interface style.
+  - community.general.osx_defaults:
+    key: AppleInterfaceStyle
+    type: string
+    value: Dark  # "Light", "Dark".
+
+- name: UI - Enable subpixel font rendering on non-Apple LCDs.
+  - community.general.osx_defaults:
+    state: present
+    key: AppleFontSmoothing
+    type: int
+    value: 1
+
+- name: UI - Disable Dashboard.
+  - community.general.osx_defaults:
+    domain: com.apple.dashboard
+    key: mcx-disabled
+    type: bool
+    value: yes
+
+- name: UI - Show all file extensions.
+  - community.general.osx_defaults:
+    key: AppleShowAllExtensions
+    type: bool
+    value: yes
+
+- name: UI - Enable focus ring.
+  - community.general.osx_defaults:
+    key: NSUseAnimatedFocusRing
+    type: bool
+    value: yes
+
+- name: UI - Enable menubar transparency.
+  - community.general.osx_defaults:
+    key: AppleEnableMenuBarTransparency
+    type: bool
+    value: yes
+
+- name: UI - Show scrollbars.
+  - community.general.osx_defaults:
+    key: AppleShowScrollBars
+    type: string
+    value: "WhenScrolling"  # # Values: "WhenScrolling", "Always".
+
+- name: UI - Enable opening and closing window animations.
+  - community.general.osx_defaults:
+    key: NSAutomaticWindowAnimationsEnabled
+    type: bool
+    value: yes
+
+- name: UI - Set window resize speed for Cocoa applications.
+  - community.general.osx_defaults:
+    key: NSWindowResizeTime
+    type: float
+    value: 0.2
+
+- name: Input - Enable auto correct.
+  - community.general.osx_defaults:
+    key: NSAutomaticSpellingCorrectionEnabled
+    type: bool
+    value: yes
+
+- name: Input - Disable smart quotes.
+  - community.general.osx_defaults:
+    key: NSAutomaticQuoteSubstitutionEnabled
+    type: bool
+    value: no
+
+- name: Input - Disable smart dashes.
+  - community.general.osx_defaults:
+    key: NSAutomaticDashSubstitutionEnabled
+    type: bool
+    value: no
+
+- name: Input - Enable automatic capitalization.
+  - community.general.osx_defaults:
+    key: NSAutomaticCapitalizationEnabled
+    type: bool
+    value: yes
+
+- name: Input - Enable automatic period substitution.
+  - community.general.osx_defaults:
+    key: NSAutomaticPeriodSubstitutionEnabled
+    type: bool
+    value: yes
+
+- name: Input - Enable continuous spell checking.
+  - community.general.osx_defaults:
+    key: NSAllowContinuousSpellChecking
+    type: bool
+    value: yes
+
+# 1 : Text boxes and lists only
+# 3 : All controls
+- name: Input - Enable full keyboard access for all controls.
+  - community.general.osx_defaults:
+    key: AppleKeyboardUIMode
+    type: int
+    value: 3
+
+- name: Input - Set key repeat rate.
+  - community.general.osx_defaults:
+    key: KeyRepeat
+    type: int
+    value: 2
+
+- name: Input - Set initial key repeat delay.
+  - community.general.osx_defaults:
+    key: InitialKeyRepeat
+    type: int
+    value: 22
+
+- name: Input - Enable press-and-hold for special characters.
+  - community.general.osx_defaults:
+    key: ApplePressAndHoldEnabled
+    type: bool
+    value: yes
+
+- name: Misc - Save application state on quit.
+  osx_defaults:
+    key: NSQuitAlwaysKeepsWindows
+    type: bool
+    value: yes
+
+- name: Misc - Disable creating .DS_Store files on network shares.
+  osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: yes
+
+- name: Misc - Disable creating .DS_Store files on usb drives.
+  osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteUSBStores
+    type: bool
+    value: yes
+
+- name: Misc - Disable disk image verification.
+  osx_defaults:
+    domain: com.apple.frameworks.diskimages
+    key: "{{ item }}"
+    type: bool
+    value: yes
+  with_items:
+    - skip-verify
+    - skip-verify-locked
+    - skip-verify-remote
+
+- name: Misc - Enable crash reporter.
+  osx_defaults:
+    domain: com.apple.CrashReporter
+    state: absent
+    key: DialogType
+    type: string
+    value: "none"
+
+- name: Misc - Save new docs to icloud by default.
+  osx_defaults:
+    key: NSDocumentSaveNewDocumentsToCloud
+    type: bool
+    value: yes
+
+- name: Misc - Disable spotlight indexing network volumes.
+  become: true
+  osx_defaults:
+    domain: /Library/Preferences/com.apple.SpotlightServer.plist
+    key: ExternalVolumesIgnore
+    type: bool
+    value: yes

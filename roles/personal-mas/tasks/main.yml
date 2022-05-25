@@ -1,6 +1,6 @@
 ---
 
-    - name: Install specific apps and also upgrade all others
+    - name: Install specific apps and also upgrade all others.
       community.general.mas:
           id:
               - 1055511498 # Day One
