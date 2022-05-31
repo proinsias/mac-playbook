@@ -1,10 +1,14 @@
 ---
 
+    - import_tasks: 1password.yml
+
     - import_tasks: activity_monitor.yml
 
     - import_tasks: address_book.yml
 
     - import_tasks: alf.yml
+
+    - import_tasks: app_store.yml
 
     - import_tasks: bartender.yml
 
@@ -22,13 +26,15 @@
 
     - import_tasks: finder.yml
 
+    - import_tasks: flux.yml
+
     - import_tasks: gpg_mail.yml
+
+    - import_tasks: help_viewer.yml
 
     - import_tasks: ical.yml
 
     - import_tasks: image_capture.yml
-
-    - import_tasks: help_viewer.yml
 
     - import_tasks: launch_services.yml
 

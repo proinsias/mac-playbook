@@ -1,6 +1,6 @@
 ---
 
-    - name: Show debug menu.
+    - name: Show debug menu
       community.general.osx_defaults:
           domain: com.apple.reminders
           key: RemindersDebugMenu

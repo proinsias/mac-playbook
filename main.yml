@@ -3,6 +3,29 @@
       connection: local
       gather_facts: true
 
+      handlers:
+          - name: Restart Finder
+            shell: killall Finder
+
+          - name: Restart Dock
+            shell: killall Dock
+
+          - name: Restart Safari
+            shell: killall Safari
+            failed_when: false
+
+          - name: Restart Mail
+            shell: killall Mail
+            failed_when: false
+
+          - name: Restart Terminal
+            shell: killall Terminal
+            failed_when: false
+
+          - name: Restart TextEdit
+            shell: killall TextEdit
+            failed_when: false
+
       tasks:
     #- name: print facts
     #  ansible.builtin.debug:
@@ -14,18 +37,18 @@
     # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_tap_module.html
     # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html
 
-          - name: Run all role.
+          - name: Run all role
             include_role:
                 name: all
             tags: [always] # Always run, even when tags specified.
 
-          - name: Run macos role.
+          - name: Run macos role
             include_role:
                 name: macos
             when: ansible_os_family == "Darwin"
             tags: [always]    # Always run, even when tags specified.
 
-          - name: Run linux role.
+          - name: Run linux role
             include_role:
                 name: linux
             when: ansible_os_family == "Debian"
@@ -84,10 +107,18 @@
 #    name: "{{ user }}"
 #    shell: /usr/bin/fish
 
+# FIXME: Github action on mac to test!
+# https://github.com/geerlingguy/mac-dev-playbook/blob/master/.github/workflows/ci.yml
+# https://github.blog/changelog/2021-08-16-github-actions-macos-11-big-sur-is-generally-available-on-github-hosted-runners/
 
-
-
-
+# FIXME: replace most of lingon script with call to this!
+#    - I need a way to skip 'become' tasks like gcloud and also run only those tasks.
+#    - brew update upgrade cleanup - switch to community.general.homebrew
+#    - pyenv rehash add?
+#    - docker cleanup add?
+#    - build docker maybe?
+#    - install and update gcloud (keep list of outdated)
+#    - install dotfiles via stow
 
 #  Notes on ansible-playbook options:
 # 1. `--check` determines which tasks would lead to changes, but doesn't actually update anything.

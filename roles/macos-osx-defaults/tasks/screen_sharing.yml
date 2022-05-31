@@ -1,6 +1,6 @@
 ---
 
-    - name: Turn on Bonjour browser.
+    - name: Turn on Bonjour browser
       community.general.osx_defaults:
           domain: com.apple.ScreenSharing
           key: ShowBonjourBrowser_Debug

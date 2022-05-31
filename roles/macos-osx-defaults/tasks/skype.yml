@@ -1,6 +1,6 @@
 ---
 
-    - name: Include debug menu.
+    - name: Include debug menu
       community.general.osx_defaults:
           domain: com.skype.skype
           key: IncludeDebugMenu
@@ -8,7 +8,7 @@
           value: true
           state: present
 
-    - name: Don't show welcome tour.
+    - name: Don't show welcome tour
       community.general.osx_defaults:
           domain: com.skype.skype
           key: SKShowWelcomeTour
@@ -16,7 +16,7 @@
           value: true
           state: present
 
-    - name: Disable welcome tour.
+    - name: Disable welcome tour
       community.general.osx_defaults:
           domain: com.skype.skype
           key: SKDisableWelcomeTour
@@ -24,7 +24,7 @@
           value: true
           state: present
 
-    - name: Enable developer extras.
+    - name: Enable developer extras
       community.general.osx_defaults:
           domain: com.skype.skype
           key: WebKitDeveloperExtras
@@ -32,7 +32,7 @@
           value: true
           state: present
 
-    - name: Don't disable developer extras.
+    - name: Don't disable developer extras
       community.general.osx_defaults:
           domain: com.skype.skype
           key: DisableWebKitDeveloperExtras

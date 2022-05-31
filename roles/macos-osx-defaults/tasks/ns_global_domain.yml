@@ -1,6 +1,6 @@
 ---
 
-    - name: Setting trackpad speed to a reasonable number.
+    - name: Setting trackpad speed to a reasonable number
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: com.apple.trackpad.scaling
@@ -8,7 +8,7 @@
           value: 2
           state: present
 
-    - name: Setting mouse speed to a reasonable number.
+    - name: Setting mouse speed to a reasonable number
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: com.apple.mouse.scaling
@@ -16,7 +16,7 @@
           value: 2.5
           state: present
 
-    - name: Trackpad - enable tap to click for this user and for the login screen.
+    - name: Trackpad - enable tap to click for this user and for the login screen
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: com.apple.mouse.tapBehavior
@@ -24,7 +24,7 @@
           value: true
           state: present
 
-    - name: Disable beeps on sound level change.
+    - name: Disable beeps on sound level change
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: com.apple.sound.beep.feedback
@@ -32,7 +32,7 @@
           value: 0
           state: present
 
-    - name: Disable the over-the-top focus ring animation.
+    - name: Disable the over-the-top focus ring animation
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: NSUseAnimatedFocusRing
@@ -40,15 +40,16 @@
           value: false
           state: present
 
-    - name: Set language and text formats.
-      community.general.osx_defaults:
-          domain: NSGlobalDomain
-          key: AppleLanguages
-          type: array
-          value: en
-          state: present
+# FIXME:
+#    - name: Set language and text formats
+#      community.general.osx_defaults:
+#          domain: NSGlobalDomain
+#          key: AppleLanguages
+#          type: array
+#          value: en
+#          state: present
 
-    - name: Set currency formats.
+    - name: Set currency formats
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: AppleLocale
@@ -56,7 +57,7 @@
           value: en_US@currency=USD
           state: present
 
-    - name: Set measurement formats.
+    - name: Set measurement formats
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: AppleMeasurementUnits
@@ -64,7 +65,7 @@
           value: Inches
           state: present
 
-    - name: Set unit formats.
+    - name: Set unit formats
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: AppleMetricUnits
@@ -72,7 +73,7 @@
           value: false
           state: present
 
-    - name: Use 24-hour format.
+    - name: Use 24-hour format
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: AppleICUForce24HourTime
@@ -80,7 +81,7 @@
           value: true
           state: present
 
-    - name: Use Monday as the first day of the week.
+    - name: Use Monday as the first day of the week
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: AppleFirstWeekday
@@ -88,10 +89,34 @@
           value: '{gregorian = 2;}'
           state: present
 
-    - name: Show fast user switching menu as [Icon].
+    - name: Show fast user switching menu as [Icon]
       community.general.osx_defaults:
           domain: NSGlobalDomain
           key: userMenuExtraStyle
           type: int
           value: 2
+          state: present
+
+    - name: Displaying ASCII control characters using caret notation in standard text views
+      community.general.osx_defaults:
+          domain: NSGlobalDomain
+          key: NSTextShowsControlCharacters
+          type: bool
+          value: true
+          state: present
+
+    - name: Set sidebar icon size to 'medium'
+      community.general.osx_defaults:
+          domain: NSGlobalDomain
+          key: NSTableViewDefaultSizeMode
+          type: int
+          value: 2
+          state: present
+
+    - name: Add a context menu item for showing the Web Inspector in web views
+      community.general.osx_defaults:
+          domain: NSGlobalDomain
+          key: WebKitDeveloperExtras
+          type: bool
+          value: true
           state: present

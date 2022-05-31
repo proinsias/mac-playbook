@@ -133,6 +133,7 @@ homebrew_installed_packages: # Only include homebrew cask items here.
     - skype
     - slack
     - slimbatterymonitor
+    - smartreporter-free
     - soundcloud-downloader
     - sourcetrail
     - sourcetree

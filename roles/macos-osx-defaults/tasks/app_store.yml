@@ -1,6 +1,6 @@
 ---
 
-    - name: Enable the WebKit Developer Tools in the Mac App Store.
+    - name: Enable the WebKit Developer Tools in the Mac App Store
       community.general.osx_defaults:
           domain: com.apple.appstore
           key: WebKitDeveloperExtras
@@ -8,7 +8,7 @@
           value: true
           state: present
 
-    - name: Enable Debug Menu in the Mac App Store.
+    - name: Enable Debug Menu in the Mac App Store
       community.general.osx_defaults:
           domain: com.apple.appstore
           key: ShowDebugMenu

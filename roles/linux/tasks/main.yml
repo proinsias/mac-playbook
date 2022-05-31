@@ -1,6 +1,6 @@
 ---
 
- - name: Install system packages.
+ - name: Install system packages
     sudo: yes
     when: ansible_os_family == "Debian"
     apt:
@@ -47,7 +47,7 @@
       - xz-utils
       - wget
 
-    - name: Upgrade system packages.
+    - name: Upgrade system packages
       become: true
       ansible.builtin.apt:
         autoremove: true

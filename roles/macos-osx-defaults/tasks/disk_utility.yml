@@ -1,6 +1,6 @@
 ---
 
-    - name: Enable the debug menu in Disk Utility.
+    - name: Enable the debug menu in Disk Utility
       community.general.osx_defaults:
           domain: com.apple.DiskUtility
           key: DUDebugMenuEnabled
@@ -8,7 +8,7 @@
           value: true
           state: present
 
-    - name: Enable advanced image options.
+    - name: Enable advanced image options
       community.general.osx_defaults:
           domain: com.apple.DiskUtility
           key: advanced-image-options
@@ -16,7 +16,7 @@
           value: true
           state: present
 
-    - name: Hide hidden Partitions.
+    - name: Hide hidden Partitions
       community.general.osx_defaults:
           domain: com.apple.DiskUtility
           key: DUShowEveryPartition

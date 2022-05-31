@@ -1,6 +1,6 @@
 ---
 
-    - name: Enable the debug menu in iCal (pre-10.8).
+    - name: Enable the debug menu in iCal (pre-10.8)
       community.general.osx_defaults:
           domain: com.apple.iCal
           key: IncludeDebugMenu
@@ -8,7 +8,7 @@
           value: true
           state: present
 
-    - name: Default duration for new event.
+    - name: Default duration for new event
       community.general.osx_defaults:
           domain: com.apple.iCal
           key: Default duration in minutes for new event

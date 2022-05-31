@@ -1,6 +1,6 @@
 ---
 
-    - name: Activate Caffeine on launch.
+    - name: Activate Caffeine on launch
       community.general.osx_defaults:
           domain: com.lightheadsw.caffeine
           key: ActivateOnLaunch
@@ -8,7 +8,7 @@
           value: false
           state: present
 
-    - name: Suppress Caffeine launch message.
+    - name: Suppress Caffeine launch message
       community.general.osx_defaults:
           domain: com.lightheadsw.caffeine
           key: SuppressLaunchMessage
@@ -16,7 +16,7 @@
           value: true
           state: present
 
-    - name: Set Caffeine duration to infinity.
+    - name: Set Caffeine duration to infinity
       community.general.osx_defaults:
           domain: com.lightheadsw.caffeine
           key: DefaultDuration

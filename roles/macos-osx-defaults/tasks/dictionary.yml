@@ -1,6 +1,6 @@
 ---
 
-    - name: Reuse dictionary definition window.
+    - name: Reuse dictionary definition window
       community.general.osx_defaults:
           domain: com.apple.Dictionary
           key: ProhibitNewWindowForRequest

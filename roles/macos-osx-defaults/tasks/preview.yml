@@ -1,6 +1,6 @@
 ---
 
-    - name: Scale images by default when printing.
+    - name: Scale images by default when printing
       community.general.osx_defaults:
           domain: com.apple.Preview
           key: PVImagePrintingScaleMode
@@ -8,7 +8,7 @@
           value: true
           state: present
 
-    - name: Preview Auto-rotate by default when printing.
+    - name: Preview Auto-rotate by default when printing
       community.general.osx_defaults:
           domain: com.apple.Preview
           key: PVImagePrintingAutoRotate
@@ -16,7 +16,7 @@
           value: true
           state: present
 
-    - name: Quit Always Keeps Windows.
+    - name: Quit Always Keeps Windows
       community.general.osx_defaults:
           domain: com.apple.Preview
           key: NSQuitAlwaysKeepsWindows

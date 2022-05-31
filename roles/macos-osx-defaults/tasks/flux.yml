@@ -1,0 +1,17 @@
+---
+
+    - name: Set flag that Flux has launched before
+      community.general.osx_defaults:
+          domain: org.herf.Flux.plist
+          key: SUHasLaunchedBefore
+          type: bool
+          value: true
+          state: present
+
+    - name: Enable automatic update checks
+      community.general.osx_defaults:
+          domain: org.herf.Flux.plist
+          key: SUEnableAutomaticChecks
+          type: bool
+          value: true
+          state: present

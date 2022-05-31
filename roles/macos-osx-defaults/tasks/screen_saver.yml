@@ -1,14 +1,14 @@
 ---
 
-    - name: Show screensaver with clock.
+    - name: Show screensaver with clock
       community.general.osx_defaults:
           domain: com.apple.screensaver
           key: showClock
           type: bool
           value: true
           state: present
----
-    - name: Screensaver - Set activation delay for screensaver.
+
+    - name: Screensaver - Set activation delay for screensaver
       community.general.osx_defaults:
           domain: com.apple.screensaver
           host: currentHost
@@ -16,14 +16,14 @@
           type: int
           value: 0
 
-    - name: Screensaver - Ask for a password when leaving the screensaver.
+    - name: Screensaver - Ask for a password when leaving the screensaver
       community.general.osx_defaults:
           domain: com.apple.screensaver
           key: askForPassword
           type: int
-          value: yes
+          value: 1
 
-    - name: Screensaver - Set ask password delay.
+    - name: Screensaver - Set ask password delay
       community.general.osx_defaults:
           domain: com.apple.screensaver
           key: askForPasswordDelay

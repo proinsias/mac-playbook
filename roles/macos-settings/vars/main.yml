@@ -303,6 +303,7 @@ dock:
 
     autohide: true
 
+  # FIXME: https://github.com/fubarhouse/ansible-role-macdock
   # Use fubarhouse.macdock instead of below items.
 
   # if enabled configured apps will be added

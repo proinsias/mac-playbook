@@ -1,6 +1,6 @@
 ---
 
-    - name: Show Bartender menu bar icon.
+    - name: Show Bartender menu bar icon
       community.general.osx_defaults:
           domain: com.surteesstudios.Bartender
           key: showMenuBarIcon
@@ -8,7 +8,7 @@
           value: true
           state: present
 
-    - name: Show Bartender menu bar at startup.
+    - name: Show Bartender menu bar at startup
       community.general.osx_defaults:
           domain: com.surteesstudios.Bartender
           key: showBarAtStartup

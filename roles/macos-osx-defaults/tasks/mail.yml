@@ -1,6 +1,6 @@
 ---
 
-    - name: Disable reply animations in Mail.app.
+    - name: Disable reply animations in Mail.app
       community.general.osx_defaults:
           domain: com.apple.mail
           key: DisableReplyAnimations
@@ -9,7 +9,7 @@
           state: present
       notify: Restart Mail
 
-    - name: Disable send animations in Mail.app.
+    - name: Disable send animations in Mail.app
       community.general.osx_defaults:
           domain: com.apple.mail
           key: DisableSendAnimations
@@ -17,8 +17,8 @@
           value: true
           state: present
       notify: Restart Mail
----
-    - name: Mail - Addresses include name on pasteboard.
+
+    - name: Mail - Addresses include name on pasteboard
       community.general.osx_defaults:
           domain: com.apple.mail
           key: AddressesIncludeNameOnPasteboard
@@ -26,7 +26,7 @@
           value: yes
       notify: Restart Mail
 
-    - name: Mail - Order mails by thread.
+    - name: Mail - Order mails by thread
       community.general.osx_defaults:
           domain: com.apple.mail
           key: ThreadingDefault

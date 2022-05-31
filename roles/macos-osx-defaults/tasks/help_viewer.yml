@@ -1,6 +1,6 @@
 ---
 
-    - name: Set Help Viewer windows to non-floating mode.
+    - name: Set Help Viewer windows to non-floating mode
       community.general.osx_defaults:
           domain: com.apple.helpviewer
           key: DevMode

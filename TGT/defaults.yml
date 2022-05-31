@@ -1,0 +1,57 @@
+---
+system_defaults:
+    hostname:
+    # computername is the so-called "user-friendly" name for the Mac,
+    # it's what will show up on the Mac itself and what will be
+    # visible to others when connecting to it over a local network.
+    # This is also what's visible under the Sharing preference panel.
+        computername:
+
+    # hostname is the name assigned to the computer as visible
+    # from the command line, and it's also used by local and
+    # remote networks when connecting through SSH and Remote Login.
+        hostname:
+
+    # localhostname is the name identifier used by Bonjour and
+    # visible through file sharing services like AirDrop
+        localhostname:
+
+    misc:
+
+        enable_ssh: no
+
+        enable_sudden_motion_sensor: yes
+
+        enable_hibernation: yes
+
+  # Default filetype <-> app associations
+  # Values:
+  #   extension: file extension
+  #   handler: application bundle identifier
+  # Example:
+  #   default_applications:
+  #     - { extension: avi, handler: com.colliderli.iina }
+    default_applications: []
+
+
+  ### Dock
+
+
+  # if enabled configured apps will be added
+  # even if they're not installed
+    apps_force_install: no
+
+  # removes apps from the dock that are
+  # not defined in the apps list
+    apps_remove_undefined: no
+
+  # Apps to add to dock
+  # example item:
+  # - name: Safari
+  #   path: /Applications/Safari.app
+    apps: []
+
+  # Spacers to add to dock
+  # example item:
+  # - after: Safari
+    spacers: []
