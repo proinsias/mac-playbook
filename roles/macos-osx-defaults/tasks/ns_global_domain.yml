@@ -40,14 +40,14 @@
           value: false
           state: present
 
-# FIXME:
-#    - name: Set language and text formats
-#      community.general.osx_defaults:
-#          domain: NSGlobalDomain
-#          key: AppleLanguages
-#          type: array
-#          value: en
-#          state: present
+    - name: Set language and text formats
+      community.general.osx_defaults:
+          domain: NSGlobalDomain
+          key: AppleLanguages
+          type: array
+          value:
+              - en
+          state: present
 
     - name: Set currency formats
       community.general.osx_defaults:

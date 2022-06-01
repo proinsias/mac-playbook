@@ -55,3 +55,793 @@ system_defaults:
   # example item:
   # - after: Safari
     spacers: []
+
+
+
+---
+
+system:
+    ui:
+    # Overall system interface color
+    # This influences Menubar, Dock, Spotlight and a few others.
+    # VALUES: "Light", "Dark"
+        interface_style: Dark
+
+    # By default the macOS save/print dialog opens in a simplified version.
+    # Enable to show the full dialog by default.
+        expand_save_panel: true
+        expand_print_panel: true
+
+    # Window action when double clicking on the titlebar of a window.
+    # VALUES: "Maximize", "Minimize"
+    # titlebar_doubleclick_action: "Maximize"
+
+    # Font smoothing on non apple displays
+        enable_subpixel_font_rendering: true
+
+    # Focus ring is drawn around focused dialog
+    # elements like buttons and textfields
+    # enable_focus_ring: true
+
+    # macOS ommits common file extensions by default.
+        show_all_file_extensions: true
+
+    # Antique osx dashboard, this was more or less replaced by the sidebar.
+        disable_dashboard: true
+
+    # Open directory if you drag a file/folder onto it.
+        enable_springloading_directories: true
+        springloading_directories_delay: 0
+
+        window_resize_speed: 0.001
+        enable_opening_closing_window_animations: false
+
+    # Show scrollbars
+    # Values: "WhenScrolling", "Always"
+        show_scrollbars: Always
+
+        enable_menubar_transparency: false
+
+screensaver:
+  # Screensaver activation delay in seconds
+  # 0 disables the screensaver
+    activation_delay: 300
+
+  # Ask for user password when screensaver is active
+    ask_password: true
+
+  # Delay in seconds after which password is asked
+    ask_password_delay: 0
+
+    screensaver:
+        name: Aerial
+        path: ~/Library/Screen Savers/Aerial.saver
+
+input:
+
+  # Various spell correction settings
+    enable_auto_correct: true
+    enable_smart_quotes: false
+    enable_smart_dashes: false
+  # enable_automatic_capitalization: yes
+  # enable_automatic_periods: yes
+    enable_continuous_spell_checking: true
+
+  # If enabled, you get a special char menu on certain letters instead of key repeat
+  # enable_press_and_hold: yes
+
+  # Key repeat speed
+  # Min value is 1
+  # key_repeat_rate: 2
+
+  # Delay time until key repeat kicks in
+  # initial_key_repeat_delay: 22
+
+  # Enables selections of dialog buttons with tab key
+    enable_full_keyboard_access: true
+
+  # Space switching hotkeys (ctrl + 1-9)
+  # enable_space_hotkeys: no
+
+# hostname:
+# computername is the so-called "user-friendly" name for the Mac,
+# it's what will show up on the Mac itself and what will be
+# visible to others when connecting to it over a local network.
+# This is also what's visible under the Sharing preference panel.
+# computername: null
+
+# hostname is the name assigned to the computer as visible
+# from the command line, and it's also used by local and
+# remote networks when connecting through SSH and Remote Login.
+# hostname: null
+
+# localhostname is the name identifier used by Bonjour and
+# visible through file sharing services like AirDrop
+# localhostname: null
+
+security:
+  # Gatekeeper won't allow you to easily install
+  # unsigned apps not downloaded from the Mac App Store
+    enable_gatekeeper: true
+
+  # Quarantine asks you if you really want
+  # to open a downloaded executable
+    enable_quarantine: true
+
+misc:
+
+    save_application_state_on_quit: true
+
+    disable_dsstore_on_network_shares: true
+
+    disable_dsstore_on_usb_drives: true
+
+    disable_disk_image_verification: true
+
+    disable_spotlight_network_indexing: true
+
+    save_new_docs_to_icloud: false
+
+    enable_ssh: false # true causes failure on latest macos versions.
+
+    enable_crash_reporter: true
+
+    enable_startup_sound: false
+
+    enable_sudden_motion_sensor: false # Not useful for SSDs
+
+    enable_hibernation: false
+
+  # Default filetype <-> app associations
+  # Values:
+  #   extension: file extension
+  #   handler: application bundle identifier
+  # Example:
+  #   default_applications:
+  #     - { extension: avi, handler: com.colliderli.iina }
+  # default_applications: []
+
+
+######################################
+#               Finder               #
+######################################
+
+finder:
+
+  # Should dotfiles be shown?
+  # "cmd + shift - ." toggles this
+    show_all_files: true
+
+  # Keep folders on top when you sort by name?
+    keep_folders_on_top: false
+
+  # Show posix path in finder titlebar?
+    show_full_path_in_titlebar: true
+
+  # Show interactive pathbar at the bottom?
+    show_pathbar: true
+
+  # Show statusbar with selection and filesize info at the bottom?
+    show_statusbar: true
+
+  # Should finder be quitable? (It instantly restarts anyway)
+    enable_quit_menu_item: true
+
+  # VALUES: "icnv" for icon view, "clmv" for column view, "Flwv" for cover flow view
+  # 'Nlsv' for ?.
+    default_view_style: clmv
+
+
+  # Which items should be shown on desktop?
+    show_external_harddrives_on_desktop: true
+    show_harddrives_on_desktop: true
+    show_mounted_servers_on_desktop: true
+    show_removable_media_on_desktop: true
+
+  # Hide ~/Library ?
+    hide_user_library: false
+
+  # Hide /Volumes ?
+    hide_system_volumes: false
+
+  # Which panes of the Getinfo window should be expanded by default?
+    expand_infopane:
+        - {name: General, value: true}
+    # - {name: MetaData, value: false}
+        - {name: OpenWith, value: false}
+    # - {name: Name, value: false}
+    # - {name: Comments, value: false}
+    # - {name: Preview, value: true}
+        - {name: Privileges, value: false}
+
+  # Automatic arrangement of icons
+  # Values: "none", "grid", "name", "kind", "dateModified",
+  #         "dateCreated", "dateLastOpened", "dateAdded", "size", "label"
+    iconview_arrange_by: grid
+
+  # controls the gap between icons
+  # when using arrange by grid
+  # iconview_grid_spacing: 54
+
+  # Size of the icons
+  # iconview_icon_size: 64
+
+  # Show item info below item name?
+    iconview_show_item_info: true
+
+  # Font size
+  # iconview_text_size: 12
+
+  # Show item preview as icon? (mostly useful for images)
+  # iconview_show_icon_preview: true
+
+  # When disabled label is shown to the right of icons
+  # iconview_show_label_on_bottom: true
+
+  # Doesn't work on newer macOS versions
+  # enable_quicklook_text_selection: false
+
+    disable_all_animations: true
+
+
+######################################
+#               Safari               #
+######################################
+
+safari:
+
+    show_full_url_in_address_bar: true
+
+    open_safe_files_automatically: false
+
+    enable_status_bar: true
+
+    enable_developer_menu: true
+
+    autofill_passwords: false
+
+    show_favorites_bar: true
+
+    disable_thumbnail_cache: false
+
+  # search_with_word_start_only: true
+
+
+######################################
+#              TextEdit              #
+######################################
+
+textedit:
+
+    default_doc_plaintext: true
+
+
+######################################
+#              Terminal              #
+######################################
+
+terminal:
+
+    enable_secure_keyboard_entry: true
+
+######################################
+#                Dock                #
+######################################
+
+dock:
+
+  # icon size
+    tile_size: 36
+
+    show_idicator_lights: true
+
+    hidden_items_translucent: true
+
+    rearrange_spaces_by_last_use: false
+
+  # FIXME: https://github.com/fubarhouse/ansible-role-macdock
+  # Use fubarhouse.macdock instead of below items.
+
+  # if enabled configured apps will be added
+  # even if they're not installed
+  # apps_force_install: false
+
+  # removes apps from the dock that are
+  # not defined in the apps list
+  # apps_remove_undefined: true
+
+  # Apps to add to dock
+  # example item:
+  # - name: Safari
+  #   path: /Applications/Safari.app
+  # apps: []
+
+  # Spacers to add to dock
+  # example item:
+  # - after: Safari
+  #  spacers: []
+
+
+
+
+
+
+---
+
+######################################
+#                macOS               #
+######################################
+
+system: {}
+system_defaults:
+    ui:
+
+    # Overall system interface color
+    # This influences Menubar, Dock, Spotlight
+    # and a few others.
+    # VALUES: "Light", "Dark"
+        interface_style: Light
+
+    # By default the macOS save/print dialog opens in a
+    # simplified version, enable to show the full dialog
+    # by default.
+        expand_save_panel: no
+        expand_print_panel: no
+
+    # Window action when double clicking on
+    # the titlebar of a window.
+    # VALUES: "Maximize", "Minimize"
+        titlebar_doubleclick_action: Maximize
+
+    # Font smoothing on non apple displays
+        enable_subpixel_font_rendering: no
+
+    # Focus ring is drawn around focused dialog
+    # elements like buttons and textfields
+        enable_focus_ring: yes
+
+    # macOS ommits common file extensions
+    # by default
+        show_all_file_extensions: no
+
+    # Antique osx dashboard, this was
+    # more or less replaced by the sidebar
+        disable_dashboard: yes
+
+    # Open directory if you drag
+    # a file/folder onto it
+        enable_springloading_directories: yes
+        springloading_directories_delay: 2
+
+    #
+        window_resize_speed: 0.2
+        enable_opening_closing_window_animations: yes
+
+    # Show scrollbars
+    # Values: "WhenScrolling", "Always"
+        show_scrollbars: WhenScrolling
+
+        enable_menubar_transparency: yes
+
+    screensaver:
+
+    # Screensaver activation delay in seconds
+    # 0 disables the screensaver
+        activation_delay: 0
+
+    # Ask for user password when screensaver is active
+        ask_password: no
+
+    # Delay in seconds after which password is asked
+        ask_password_delay: 0
+
+        screensaver:
+            name: Flurry
+            path: /System/Library/Screen Savers/Flurry.saver
+
+    input:
+
+    # Various spell correction settings
+        enable_auto_correct: yes
+        enable_smart_quotes: yes
+        enable_smart_dashes: yes
+        enable_automatic_capitalization: yes
+        enable_automatic_periods: yes
+        enable_continuous_spell_checking: yes
+
+    # If enabled, you get a special char menu on
+    # certain letters instead of key repeat
+        enable_press_and_hold: yes
+
+    # Key repeat speed
+    # Min value is 1
+        key_repeat_rate: 2
+
+    # Delay time until key repeat kicks in
+        initial_key_repeat_delay: 22
+
+    # Enables selections of dialog buttons with tab key
+        enable_full_keyboard_access: no
+
+    # Space switching hotkeys (ctrl + 1-9)
+        enable_space_hotkeys: no
+
+    hostname:
+    # computername is the so-called "user-friendly" name for the Mac,
+    # it's what will show up on the Mac itself and what will be
+    # visible to others when connecting to it over a local network.
+    # This is also what's visible under the Sharing preference panel.
+        computername:
+
+    # hostname is the name assigned to the computer as visible
+    # from the command line, and it's also used by local and
+    # remote networks when connecting through SSH and Remote Login.
+        hostname:
+
+    # localhostname is the name identifier used by Bonjour and
+    # visible through file sharing services like AirDrop
+        localhostname:
+
+    security:
+    # Gatekeeper won't allow you to easily install
+    # unsigned apps not downloaded from the Mac App Store
+        enable_gatekeeper: yes
+
+    # Quarantine asks you if you really want
+    # to open a downloaded executable
+        enable_quarantine: yes
+
+    misc:
+
+        save_application_state_on_quit: yes
+
+        disable_dsstore_on_network_shares: no
+
+        disable_dsstore_on_usb_drives: no
+
+        disable_disk_image_verification: no
+
+        disable_spotlight_network_indexing: no
+
+        save_new_docs_to_icloud: yes
+
+        enable_ssh: no
+
+        enable_crash_reporter: yes
+
+        enable_sudden_motion_sensor: yes
+
+        enable_hibernation: yes
+
+  # Default filetype <-> app associations
+  # Values:
+  #   extension: file extension
+  #   handler: application bundle identifier
+  # Example:
+  #   default_applications:
+  #     - { extension: avi, handler: com.colliderli.iina }
+    default_applications: []
+
+
+######################################
+#               Finder               #
+######################################
+
+finder: {}
+finder_defaults:
+
+  # Keep folders on top when you sort by name?
+    keep_folders_on_top: no
+
+  # Show posix path in finder titlebar?
+    show_full_path_in_titlebar: no
+
+  # Show interactive pathbar at the bottom?
+    show_pathbar: no
+
+  # Show statusbar with selection and filesize info at the bottom?
+    show_statusbar: no
+
+  # Should finder be quitable? (It instantly restarts anyway)
+    enable_quit_menu_item: no
+
+  # VALUES: "icnv" for icon view, "clmv" for column view, "Flwv" for cover flow view
+    default_view_style: icnv
+
+  # Which items should be shown on desktop?
+    show_external_harddrives_on_desktop: yes
+    show_harddrives_on_desktop: yes
+    show_mounted_servers_on_desktop: yes
+    show_removable_media_on_desktop: yes
+
+  # Hide ~/Library ?
+    hide_user_library: yes
+
+  # Hide /Volumes ?
+    hide_system_volumes: yes
+
+  # Which panes of the Getinfo window should be expanded by default?
+    expand_infopane:
+        - {name: General, value: yes}
+        - {name: MetaData, value: no}
+        - {name: OpenWith, value: no}
+        - {name: Name, value: no}
+        - {name: Comments, value: no}
+        - {name: Preview, value: yes}
+        - {name: Privileges, value: no}
+
+  # Automatic arrangement of icons
+  # Values: "none", "grid", "name", "kind", "dateModified",
+  #         "dateCreated", "dateLastOpened", "dateAdded", "size", "label"
+    iconview_arrange_by: none
+
+  # controls the gap between icons
+  # when using arrange by grid
+    iconview_grid_spacing: 54
+
+  # Size of the icons
+    iconview_icon_size: 64
+
+  # Show item info below item name?
+    iconview_show_item_info: no
+
+  # Font size
+    iconview_text_size: 12
+
+  # Show item preview as icon? (mostly useful for images)
+    iconview_show_icon_preview: yes
+
+  # When disabled label is shown to the right of icons
+    iconview_show_label_on_bottom: yes
+
+  # Doesn't work on newer macOS versions
+    enable_quicklook_text_selection: no
+
+  #
+    disable_all_animations: no
+
+
+######################################
+#                Dock                #
+######################################
+
+dock: {}
+dock_defaults:
+
+  # icon size
+    tile_size: 50
+
+    show_idicator_lights: yes
+
+    hidden_items_translucent: no
+
+    rearrange_spaces_by_last_use: yes
+
+  # if enabled configured apps will be added
+  # even if they're not installed
+    apps_force_install: no
+
+  # removes apps from the dock that are
+  # not defined in the apps list
+    apps_remove_undefined: no
+
+  # Apps to add to dock
+  # example item:
+  # - name: Safari
+  #   path: /Applications/Safari.app
+    apps: []
+
+  # Spacers to add to dock
+  # example item:
+  # - after: Safari
+    spacers: []
+
+
+######################################
+#               Safari               #
+######################################
+
+safari: {}
+safari_defaults:
+
+    show_full_url_in_address_bar: no
+
+    open_safe_files_automatically: no
+
+    enable_status_bar: no
+
+    enable_developer_menu: no
+
+    autofill_passwords: yes
+
+    show_favorites_bar: no
+
+    disable_thumbnail_cache: no
+
+    search_with_word_start_only: yes
+
+
+######################################
+#              TextEdit              #
+######################################
+
+textedit: {}
+textedit_defaults:
+
+    default_doc_plaintext: no
+
+
+######################################
+#              Terminal              #
+######################################
+
+terminal: {}
+terminal_defaults:
+
+    enable_secure_keyboard_entry: yes
+---
+
+system:
+    hostname:
+        computername: mh-mbp
+        hostname: mh-mbp
+        localhostname: mh-mbp
+    ui:
+        interface_style: Dark
+        expand_save_panel: yes
+        expand_print_panel: yes
+        titlebar_doubleclick_action: Minimize
+        enable_subpixel_font_rendering: yes
+        enable_focus_ring: no
+        show_all_file_extensions: yes
+        disable_dashboard: yes
+        enable_springloading_directories: yes
+        springloading_directories_delay: 2
+        window_resize_speed: 0.001
+        enable_opening_closing_window_animations: no
+    screensaver:
+        activation_delay: 300
+        ask_password: yes
+        ask_password_delay: 0
+        screensaver:
+            name: Fliqlo
+            path: /Users/{{ ansible_user }}/Library/Screen Savers/Fliqlo.saver
+    input:
+        enable_auto_correct: no
+        enable_smart_quotes: no
+        enable_smart_dashes: no
+        enable_automatic_capitalization: no
+        enable_automatic_periods: no
+        enable_continuous_spell_checking: no
+        key_repeat_rate: 2
+        initial_key_repeat_delay: 22
+        enable_full_keyboard_access: yes
+        enable_press_and_hold: no
+        enable_space_hotkeys: yes
+    security:
+        enable_gatekeeper: no
+        enable_quarantine: no
+    misc:
+        save_application_state_on_quit: yes
+        disable_dsstore_on_network_shares: yes
+        disable_dsstore_on_usb_drives: yes
+        disable_disk_image_verification: yes
+        disable_spotlight_network_indexing: yes
+        save_new_docs_to_icloud: no
+        enable_ssh: yes
+        enable_crash_reporter: no
+        enable_startup_sound: no
+        enable_sudden_motion_sensor: yes
+        enable_hibernation: no
+    default_applications:
+    # Iina
+        - {extension: avi, handler: com.colliderli.iina}
+        - {extension: flv, handler: com.colliderli.iina}
+        - {extension: mkv, handler: com.colliderli.iina}
+        - {extension: mov, handler: com.colliderli.iina}
+        - {extension: mp4, handler: com.colliderli.iina}
+        - {extension: mpg, handler: com.colliderli.iina}
+    # MacDown
+        - {extension: md, handler: com.uranusjr.macdown}
+    # Sublime Text
+        - {extension: cfg, handler: com.microsoft.VSCode}
+        - {extension: css, handler: com.microsoft.VSCode}
+        - {extension: inc, handler: com.microsoft.VSCode}
+        - {extension: js, handler: com.microsoft.VSCode}
+        - {extension: json, handler: com.microsoft.VSCode}
+        - {extension: php, handler: com.microsoft.VSCode}
+        - {extension: scss, handler: com.microsoft.VSCode}
+        - {extension: txt, handler: com.microsoft.VSCode}
+        - {extension: yml, handler: com.microsoft.VSCode}
+
+finder:
+    keep_folders_on_top: yes
+    show_full_path_in_titlebar: yes
+    show_pathbar: yes
+    show_statusbar: yes
+    enable_quit_menu_item: yes
+    default_view_style: clmv
+    show_external_harddrives_on_desktop: yes
+    show_harddrives_on_desktop: yes
+    show_mounted_servers_on_desktop: yes
+    show_removable_media_on_desktop: yes
+    hide_user_library: no
+    hide_system_volumes: no
+    expand_infopane:
+        - {name: General, value: yes}
+        - {name: MetaData, value: yes}
+        - {name: OpenWith, value: yes}
+        - {name: Name, value: yes}
+        - {name: Comments, value: yes}
+        - {name: Preview, value: yes}
+        - {name: Privileges, value: yes}
+    iconview_arrange_by: grid
+    iconview_grid_spacing: 60
+    iconview_icon_size: 50
+    iconview_show_item_info: yes
+    iconview_show_label_on_bottom: no
+    iconview_text_size: 12
+    iconview_show_icon_preview: yes
+    enable_quicklook_text_selection: yes
+    disable_all_animations: yes
+
+
+dock:
+    apps_remove_undefined: true
+    tile_size: 50
+    show_idicator_lights: yes
+    hidden_items_translucent: yes
+    rearrange_spaces_by_last_use: no
+    apps:
+        - name: Reeder
+          path: /Applications/Reeder.app
+        - name: Safari
+          path: /Applications/Safari.app
+        - name: Musik
+          path: /System/Applications/Music.app
+        - name: Mail
+          path: /System/Applications/Mail.app
+        - name: Erinnerungen
+          path: /System/Applications/Reminders.app
+        - name: Fantastical 2
+          path: /Applications/Fantastical 2.app
+        - name: Evernote
+          path: /Applications/Evernote.app
+        - name: Franz
+          path: /Applications/Franz.app
+        - name: Nachrichten
+          path: /System/Applications/Messages.app
+        - name: iTerm
+          path: /Applications/iTerm.app
+        - name: Tower
+          path: /Applications/Tower.app
+        - name: Visual Studio Code
+          path: /Applications/Visual Studio Code.app
+        - name: Transmit
+          path: /Applications/Transmit.app
+        - name: Parallels Desktop
+          path: /Applications/Parallels Desktop.app
+        - name: Remote Desktop
+          path: /Applications/Microsoft Remote Desktop.app
+    spacers:
+        - after: Musik
+        - after: Nachrichten
+
+
+safari:
+    show_full_url_in_address_bar: yes
+    open_safe_files_automatically: no
+    enable_status_bar: yes
+    enable_developer_menu: yes
+    autofill_passwords: no
+    show_favorites_bar: yes
+    disable_thumbnail_cache: yes
+    search_with_word_start_only: no
+
+
+textedit:
+    default_doc_plaintext: yes
+
+
+terminal:
+    enable_secure_keyboard_entry: no

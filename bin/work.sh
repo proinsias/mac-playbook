@@ -2,5 +2,5 @@
 
 ansible-playbook main.yml \
     --inventory inventory \
-    --ask-become-pass \
+    --skip-tags "become" \
     --tags "all,work"

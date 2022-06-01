@@ -14,4 +14,3 @@
 
     - name: Cleanup gems
       shell: gem cleanup  # Do I need `yes n | gem cleanup` here?
-      become: false

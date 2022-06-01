@@ -14,7 +14,7 @@
           domain: com.apple.finder
           key: NewWindowTarget
           type: string
-          value: PfHm  # Home directory.
+          value: PfDe  # "PfHm" for Home directory, "PfDe" for Desktop.
       notify: Restart Finder
 
     - name: Finder - Show extension warning
@@ -22,7 +22,7 @@
           domain: com.apple.finder
           key: FXEnableExtensionChangeWarning
           type: bool
-          value: yes
+          value: no
       notify: Restart Finder
 
     - name: Finder - Warn before emptying the trash

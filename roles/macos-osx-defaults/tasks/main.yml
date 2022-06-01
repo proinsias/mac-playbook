@@ -36,6 +36,8 @@
 
     - import_tasks: image_capture.yml
 
+    - import_tasks: iterm2.yml
+
     - import_tasks: launch_services.yml
 
     - import_tasks: login_window.yml

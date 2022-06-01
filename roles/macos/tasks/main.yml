@@ -8,7 +8,7 @@
     - name: Run macos dockutil role
       include_role:
           name: macos-dockutil
-      tags: [never] # Disable until dockutil support for M1 updated - kcrawford/dockutil#127.
+      tags: [never] # Disable until dockutil support for M1 updated - kcrawford/dockutil#127.  # FIXME:
 
     - name: Run macos mas role
       include_role:
@@ -28,7 +28,7 @@
     - name: Run macos settings role
       include_role:
           name: macos-settings
-      tags: [never] # Disable until dockutil support for M1 updated - kcrawford/dockutil#127.
+      tags: [never] # Disable until dockutil support for M1 updated - kcrawford/dockutil#127.  # FIXME:
 
     - name: Run personal mas role
       include_role:
@@ -53,19 +53,9 @@
       when: idletime_type.stdout.find('string') != -1
       no_log: true
 
-    - name: Screensaver - Get active screensaver.
-      shell: defaults -currentHost read com.apple.screensaver
-      register: active_screensaver_result
-      check_mode: no
-      changed_when: false
-
     - name: Screensaver - Set screensaver to Aerial
-      shell: defaults -currentHost write com.apple.screensaver moduleDict -dict \
-              moduleName -string Aerial \
-              displayName -string Aerial \
-              path -string ~/Library/Screen\ Savers/Aerial.saver \
-              type -int 0
-      when: active_screensaver_result.stdout.find(Aerial) == -1
+      shell: defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string Aerial displayName -string Aerial path -string ~/Library/Screen\
+          Savers/Aerial.saver type -int 0
 
     - name: Security - Get gatekeeper status
       command: spctl --status
@@ -77,6 +67,7 @@
       command: spctl --master-enable
       become: true
       when: gatekeeper_status.stdout.find('disabled') != -1
+      tags: [become]
 
     - name: Sound – Mute Audio Output
       command: osascript -e 'set volume output muted true'

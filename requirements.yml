@@ -4,9 +4,7 @@ collections:
     - name: community.general
 
 roles:
-    - name: appian.macos-power
     - name: elliotweiser.osx-command-line-tools  # Requirement for geerlingguy.mac.
-    - name: kinglouie.macos
 
 # Notes:
 # # Install a role from GitHub

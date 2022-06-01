@@ -1,30 +1,68 @@
-use osx_defaults module - for any remaining defaults.
-use sysctl module - for any remaining sysctls?
-flux configuration - https://github.com/danbohea/ansible-role-flux/blob/master/tasks/main.yml
+# To Dos
 
+- GT FIXMEs in code.
 
-Add: sudo echo /usr/local/bin/bash >> /etc/shells
-https://github.com/hnakamur/ansible-role-osx-login-shell
+- GT TGT files.
 
-Add installation of bashhub.
+- Replace most of lingon script with call to this!
 
-ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
+  - I need a way to skip 'become' tasks like gcloud and also run only those tasks.
+  - `brew update upgrade cleanup` - switch to community.general.homebrew
+  - `pyenv rehash` add?
+  - `docker cleanup` add?
+  - `build docker` maybe?
+  - install and update `gcloud` (keep list of outdated)
+  - install `dotfiles` via `stow`
 
-bbedit - defaults?
+- Make sure osx defaults actually do what I hope they do. They may be out of date.
 
+- Make sure macos-\* roles actually do what I hoep they do.
 
-https://github.com/mego22/ansible-role-osx-settings
-https://github.com/osxstrap/ansible-osx-software-update
-https://github.com/drew-kun/ansible-dnscrypt
-https://github.com/drew-kun/ansible-sshd
-https://github.com/drew-kun/ansible-macos_terminal
-https://github.com/feffi/ansible-macos-git-repos
-https://github.com/fubarhouse/ansible-role-macdock
-https://github.com/danbohea/ansible-role-macos-dock
-https://github.com/juju4/ansible-harden-darwin
+- https://github.com/elliotweiser/ansible-osx-command-line-tools/blob/master/.travis.yml
 
-GT .bashrc .profile.
+- Test all of this on:
 
+  - intleacht
+    - work.sh
+    - become.sh - make sure all become tasks get executed
+  - ilovemovies
+    - personal.sh
+  - GCE VM
+    - work.sh
+
+- Use community general homebrew:
+
+  - <https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_module.html>
+  - <https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_tap_module.html>
+  - Mark become tasks with become tags so I can avoid them during lingon.
+
+- Github action on mac to test!
+
+  - <https://github.com/geerlingguy/mac-dev-playbook/blob/master/.github/workflows/ci.yml>
+  - <https://github.blog/changelog/2021-08-16-github-actions-macos-11-big-sur-is-generally-available-on-github-hosted-runners/>
+
+- To go through:
+
+  - <https://github.com/danbohea/ansible-role-macos-dock>
+  - <https://github.com/danbohea/ansible-role-macos-spelling>
+  - <https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html>
+  - <https://github.com/geerlingguy/ansible-role-dotfiles>
+  - <https://github.com/hnakamur/macbook_setup>
+  - <https://github.com/hnakamur/ansible-playbooks>
+  - <https://github.com/hnakamur/ansible-role-osx-login-shell>
+    - Add `/usr/local/bin/bash` and `/opt/homebrew/bin/bash`
+  - ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
+  - <https://github.com/mego22/ansible-role-osx-settings>
+  - <https://github.com/osxstrap/ansible-osx-software-update>
+  - <https://github.com/drew-kun/ansible-dnscrypt>
+  - <https://github.com/drew-kun/ansible-sshd>
+  - <https://github.com/drew-kun/ansible-macos_terminal>
+  - <https://github.com/feffi/ansible-macos-git-repos>
+  - <https://github.com/fubarhouse/ansible-role-macdock>
+  - <https://github.com/danbohea/ansible-role-macos-dock>
+  - <https://github.com/juju4/ansible-harden-darwin>
+
+```shell
 # https://docs.ansible.com/ansible/2.5/modules/npm_module.html
 npm config set cache-min 9999999  # Setup caching
 
@@ -93,6 +131,19 @@ select yn in "Yes" "No"; do
     No )  exit;;
   esac
 done
+```
 
+```ansible
+- name: install SSH key
+ sudo: yes
+ authorized_key:
+   key: "ssh-rsa [...]"
+   user: "{{ansible_user_id}}"
+   state: present
 
-ansible-role-dotfiles
+- name: make fish default shell
+ become: yes
+ user:
+   name: "{{ user }}"
+   shell: /usr/bin/fish
+```

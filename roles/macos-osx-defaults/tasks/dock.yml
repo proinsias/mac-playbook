@@ -144,7 +144,7 @@
           state: present
       notify: Restart Dock
 
-# FIXME:
+# FIXME: Add a Stack with Recent Applications
 #    - name: Add a Stack with Recent Applications
 #      community.general.osx_defaults:
 #          domain: com.apple.dock
@@ -213,7 +213,7 @@
       notify: Restart Dock
 
     - name: Dock - Set dock tilesize
-      osx_defaults:
+      community.general.osx_defaults:
           domain: com.apple.dock
           key: tilesize
           type: float
@@ -221,7 +221,7 @@
       notify: Restart Dock
 
     - name: Dock - Show indicator lights for open applications in the dock
-      osx_defaults:
+      community.general.osx_defaults:
           domain: com.apple.dock
           key: show-process-indicators
           type: bool
@@ -229,7 +229,7 @@
       notify: Restart Dock
 
     - name: Dock - Make dock icons of hidden applications translucent
-      osx_defaults:
+      community.general.osx_defaults:
           domain: com.apple.dock
           key: showhidden
           type: bool
@@ -237,9 +237,25 @@
       notify: Restart Dock
 
     - name: Dock - Rearrange spaces by last use
-      osx_defaults:
+      community.general.osx_defaults:
           domain: com.apple.dock
           key: mru-spaces
+          type: bool
+          value: yes
+      notify: Restart Dock
+
+    - name: Dock - Set dock fade-in time
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: autohide-delay
+          type: float
+          value: 0
+      notify: Restart Dock
+
+    - name: Dock - Automatically hide dock
+      community.general.osx_defaults:
+          domain: com.apple.dock
+          key: autohide
           type: bool
           value: yes
       notify: Restart Dock

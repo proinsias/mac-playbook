@@ -1,14 +1,14 @@
 ---
 
-# FIXME:
-#    - name: Enable UTF-8 only
-#      community.general.osx_defaults:
-#          domain: com.apple.Terminal
-#          key: StringEncodings
-#          type: array
-#          value: 4
-#          state: present
-#      notify: Restart Terminal
+    - name: Enable UTF-8 only
+      community.general.osx_defaults:
+          domain: com.apple.Terminal
+          key: StringEncodings
+          type: array
+          value:
+              - '4'
+          state: present
+      notify: Restart Terminal
 
     - name: Set Pro theme as default
       community.general.osx_defaults:

@@ -51,7 +51,7 @@ homebrew_installed_packages: # Only include homebrew cask items here.
     - drivedx
     - dropbox
     - emacs
-    - expressvpn
+    # - expressvpn
     - fantastical
     - filebot
     - firefox
@@ -161,6 +161,7 @@ homebrew_installed_packages: # Only include homebrew cask items here.
     - yubico-yubikey-piv-manager
 homebrew_uninstalled_packages:
     - diskwave
+    - expressvpn
     - handylock
     - joplin
     - macfusion

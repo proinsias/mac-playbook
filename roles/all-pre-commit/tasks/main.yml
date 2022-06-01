@@ -4,8 +4,5 @@
           name: [pre-commit]
           state: latest
 
-    - name: Auto update all pre-commit hooks.
-      shell: pre-commit-autoupdate  # In ~/.local/bin/.
-      become: false
-
-# FIXME: Only run if script is present. Alert if not!
+    - name: Auto update all pre-commit hooks
+      shell: ~/.local/bin/pre-commit-autoupdate

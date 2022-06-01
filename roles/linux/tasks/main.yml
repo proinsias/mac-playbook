@@ -54,6 +54,7 @@
         upgrade: dist
         update_cache: true
       when: ansible_os_family == "Debian"
+      tags: [become]
 
 # FIXME: Run /usr/sbin/update-ccache-symlinks
 # FIXME: LANG="en_US.UTF-8" \

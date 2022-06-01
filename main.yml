@@ -3,82 +3,48 @@
       connection: local
       gather_facts: true
 
-      handlers:
-          - name: Restart Finder
-            shell: killall Finder
-
-          - name: Restart Dock
-            shell: killall Dock
-
-          - name: Restart Safari
-            shell: killall Safari
-            failed_when: false
-
-          - name: Restart Mail
-            shell: killall Mail
-            failed_when: false
-
-          - name: Restart Terminal
-            shell: killall Terminal
-            failed_when: false
-
-          - name: Restart TextEdit
-            shell: killall TextEdit
-            failed_when: false
-
       tasks:
-    #- name: print facts
-    #  ansible.builtin.debug:
-    #    var: ansible_facts
-    #    msg: facts
-    #  tags: ['always']  # Always run, even when tags specified.
-
-    # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_module.html
-    # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_tap_module.html
-    # FIXME: https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html
 
           - name: Run all role
             include_role:
                 name: all
-            tags: [always] # Always run, even when tags specified.
+            tags: [always]  # Always run, even when tags specified.
 
           - name: Run macos role
             include_role:
                 name: macos
             when: ansible_os_family == "Darwin"
-            tags: [always]    # Always run, even when tags specified.
+            tags: [always]  # Always run, even when tags specified.
 
           - name: Run linux role
             include_role:
                 name: linux
             when: ansible_os_family == "Debian"
-            tags: [always]    # Always run, even when tags specified.
+            tags: [always]  # Always run, even when tags specified.
 
-# FIXME: Test on ilovemovies, linux
-# FIXME: GT TGT folder
-# FIXME: Can I do brew upgrade etc from Lingon script here instead,
-# and then just call relevant command in Lingon script?
+#  Notes on ansible-playbook options:
+# 1. `--check` determines which tasks would lead to changes, but doesn't actually update anything.
+# 2. `--list-tasks` and `--list-hosts` print details about what the playbook will do.
+# 3. `--start NAME` resumes a playbook from the task named NAME.
+# (This can save time if the playbook stops with an error along the way.)
+# 4. `--tags=all` (or no `--tags` option) runs all tags, except for 'never' tags.
+# 5. `--tags=tag1` runs ONLY tag 'tag1'
+# 6. `--tags=all,tag1` runs all tags and 'tag1' even if the latter is a 'never' tag.
 
-# FIXME: install SSH key
-# - name: install SSH key
-#  sudo: yes
-#  authorized_key:
-#    key: "ssh-rsa [...]"
-#    user: "{{ansible_user_id}}"
-#    state: present
+#- name: print facts
+#  ansible.builtin.debug:
+#    var: ansible_facts
+#    msg: facts
+#  tags: ['always']  # Always run, even when tags specified.
 
-# FIXME: For example, the file host_vars/cynar for my laptop looks like this:
-#---
+# # conditionals
 #install_git_homedir: true
 #install_android_dev: true
 #install_erlang: true
 #install_ocaml: true
 #install_electronics: true
 #...
-#and those variables affect when conditionals in my roles.
-
-# FIXME: conditionals
-# ---
+# # and those variables affect when conditionals in my roles.
 #- hosts: laptop
 #  roles:
 #    - common
@@ -87,7 +53,6 @@
 #    - { role: x11, when: ansible_distribution != "MacOSX" }
 #    - { role: erlang, when: install_erlang is defined }
 
-# FIXME: vars_prompt
 # vars_prompt:
 #    - name: config_file
 #      prompt: "What computer is this"
@@ -99,32 +64,3 @@
 #
 #  vars_files:
 #    - vars/{{ config_file }}.yml
-
-# FIXME: make fish default shell
-# - name: make fish default shell
-#  become: yes
-#  user:
-#    name: "{{ user }}"
-#    shell: /usr/bin/fish
-
-# FIXME: Github action on mac to test!
-# https://github.com/geerlingguy/mac-dev-playbook/blob/master/.github/workflows/ci.yml
-# https://github.blog/changelog/2021-08-16-github-actions-macos-11-big-sur-is-generally-available-on-github-hosted-runners/
-
-# FIXME: replace most of lingon script with call to this!
-#    - I need a way to skip 'become' tasks like gcloud and also run only those tasks.
-#    - brew update upgrade cleanup - switch to community.general.homebrew
-#    - pyenv rehash add?
-#    - docker cleanup add?
-#    - build docker maybe?
-#    - install and update gcloud (keep list of outdated)
-#    - install dotfiles via stow
-
-#  Notes on ansible-playbook options:
-# 1. `--check` determines which tasks would lead to changes, but doesn't actually update anything.
-# 2. `--list-tasks` and `--list-hosts` print details about what the playbook will do.
-# 3. `--start NAME` resumes a playbook from the task named NAME.
-# (This can save time if the playbook stops with an error along the way.)
-# 4. `--tags=all` (or no `--tags` option) runs all tags, except for 'never' tags.
-# 5. `--tags=tag1` runs ONLY tag 'tag1'
-# 6. `--tags=all,tag1` runs all tags and 'tag1' even if the latter is a 'never' tag.
