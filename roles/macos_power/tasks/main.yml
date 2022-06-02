@@ -1,0 +1,31 @@
+---
+- name: Set computersleep power settings
+  ansible.builtin.command: systemsetup -setcomputersleep Never
+  become: true
+  tags: [become]
+
+- name: Set displaysleep power settings
+  ansible.builtin.command: systemsetup -setdisplaysleep 15 # 15 minutes.
+  become: true
+  tags: [become]
+
+- name: Set harddisksleep power settings
+  ansible.builtin.command: systemsetup -setharddisksleep Never
+  become: true
+  tags: [become]
+
+- name: Set restartfreeze power settings
+  ansible.builtin.command: systemsetup -setrestartfreeze On
+  become: true
+  tags: [become]
+
+- name: Set restartpowerfailure power settings
+  ansible.builtin.command: systemsetup -setrestartpowerfailure On
+  become: true
+  tags: [become]
+  when: ansible_machine != 'arm64'
+
+- name: Set wakeonnetworkaccess power settings
+  ansible.builtin.command: systemsetup -setwakeonnetworkaccess On
+  become: true
+  tags: [become]

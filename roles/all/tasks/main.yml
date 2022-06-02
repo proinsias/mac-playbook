@@ -1,35 +1,35 @@
 ---
 - name: Run all homebrew role
-  include_role:
-    name: all-homebrew
+  ansible.builtin.include_role:
+    name: all_homebrew
   tags: [always] # Always run, even when tags specified.
 
 - name: Run all nodejs role
-  include_role:
-    name: all-nodejs
+  ansible.builtin.include_role:
+    name: all_nodejs
   tags: [always] # Always run, even when tags specified.
 
 - name: Run all pipx role
-  include_role:
-    name: all-pipx
+  ansible.builtin.include_role:
+    name: all_pipx
   tags: [always] # Always run, even when tags specified.
 
 - name: Run all pre-commit role
-  include_role:
-    name: all-pre-commit
+  ansible.builtin.include_role:
+    name: all_pre_commit
   tags: [always] # Always run, even when tags specified.
 
 - name: Run all ruby role
-  include_role:
-    name: all-ruby
+  ansible.builtin.include_role:
+    name: all_ruby
   tags: [always] # Always run, even when tags specified.
 
 - name: Run personal homebrew role
-  include_role:
-    name: personal-homebrew
+  ansible.builtin.include_role:
+    name: personal_homebrew
   tags: [never, personal] # This won't run unless you specify the 'personal' tag.
 
 - name: Run work homebrew role
-  include_role:
-    name: work-homebrew
+  ansible.builtin.include_role:
+    name: work_homebrew
   tags: [never, work] # This won't run unless you specify the 'work' tag.

@@ -4,7 +4,7 @@
 
 - name: Input - Set space changing hotkeys (Read settings).
   # yamllint disable-line rule:line-length
-  command: /usr/libexec/PlistBuddy -c "Print :AppleSymbolicHotKeys:{{ item + 117 }}:enabled" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+  ansible.builtin.command: /usr/libexec/PlistBuddy -c "Print :AppleSymbolicHotKeys:{{ item + 117 }}:enabled" ~/Library/Preferences/com.apple.symbolichotkeys.plist
   with_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
   register: space_changing_hotkey_status
   failed_when: false
@@ -24,7 +24,7 @@
 
 - name: Input - Set space changing hotkeys (Create dict).
   # yamllint disable
-  command: >
+  ansible.builtin.command: >
     /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist
     -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }} dict"
     -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:enabled bool {{ system.input.enable_space_hotkeys | bool }}"
@@ -41,7 +41,7 @@
 
 - name: Input - Set space changing hotkeys (Update dict).
   # yamllint disable-line rule:line-length
-  command: /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:{{ item.1 + 117 }}:enabled {{ system.input.enable_space_hotkeys | bool }}" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+  ansible.builtin.command: /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:{{ item.1 + 117 }}:enabled {{ system.input.enable_space_hotkeys | bool }}" ~/Library/Preferences/com.apple.symbolichotkeys.plist
   with_indexed_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
   when:
     # yamllint disable-line rule:line-length

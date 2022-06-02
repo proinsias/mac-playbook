@@ -1,0 +1,72 @@
+---
+- name: Dock - Ensure dockutil is installed.
+  community.general.homebrew:
+    name: dockutil
+    state: latest
+
+- name: Dock - Test existence of configured dock apps.
+  ansible.builtin.stat:
+    path: "{{ item.path }}"
+  with_items: "{{ dock.apps }}"
+  register: dock_apps_stat
+  when: not dock.apps_force_install
+  changed_when: false
+  failed_when: false
+
+- name: Dock - Set dock items to install to all configured items.
+  ansible.builtin.set_fact:
+    dock_apps_to_install: "{{ dock.apps }}"
+  when: dock.apps_force_install
+
+- name: Dock - Set dock items to install only to existing items.
+  ansible.builtin.set_fact:
+    # yamllint disable-line rule:line-length
+    dock_apps_to_install: "{{ dock_apps_stat.results | selectattr('stat.exists', 'equalto', True) | map(attribute='item') | list }}"
+  when: not dock.apps_force_install
+
+- name: Dock - Get apps currently in dock.
+  ansible.builtin.command: "dockutil --list | grep 'persistent-apps' | cut -d$'\t' -f1" # noqa no-tabs
+  register: dock_current_apps
+  changed_when: false
+  check_mode: false
+
+- name: Dock - Get undefined items in dock.
+  ansible.builtin.set_fact:
+    # yamllint disable-line rule:line-length
+    dock_undefined_items: "{{ dock_current_apps.stdout_lines | difference(dock_apps_to_install | map(attribute='name') | list) }}"
+
+- name: Dock - Remove dock spacer tiles.
+  ansible.builtin.command: dockutil --remove spacer-tiles --no-restart
+  notify: Restart Dock
+  changed_when: false
+
+- name: Dock - Remove undefined dock items.
+  ansible.builtin.command: dockutil --remove '{{ item }}' --no-restart
+  with_items: "{{ dock_undefined_items }}"
+  when: dock.apps_remove_undefined
+  notify: Restart Dock
+
+- name: Dock - Add configured dock items.
+  # yamllint disable-line rule:line-length
+  ansible.builtin.command: dockutil --add '{{ item.1.path }}' --label '{{ item.1.name }}' --no-restart {{ item.1.args | default('') }}
+  with_indexed_items: "{{ dock_apps_to_install }}"
+  when: dock_current_apps.stdout.find(item.1.name) == -1
+  notify: Restart Dock
+
+- name: Dock - Get current dock items.
+  ansible.builtin.command: "dockutil --list | grep 'persistent-apps' | cut -d$'\t' -f1" # noqa no-tabs
+  register: dock_current_apps
+  changed_when: false
+  check_mode: false
+
+- name: Dock - Ensure dock item order.
+  ansible.builtin.command: dockutil --move '{{ item.1.name }}' --position {{ item.0 | int + 1 }} --no-restart
+  with_indexed_items: "{{ dock_apps_to_install }}"
+  when: dock_current_apps.stdout_lines[item.0].find(item.1.name) == -1
+  notify: Restart Dock
+
+- name: Dock - Add configured spacer tiles to dock.
+  ansible.builtin.command: dockutil --add '' --type spacer --section apps --after {{ item.1.after }} --no-restart
+  with_indexed_items: "{{ dock.spacers }}"
+  notify: Restart Dock
+  changed_when: false

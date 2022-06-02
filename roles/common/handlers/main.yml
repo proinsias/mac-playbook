@@ -1,26 +1,26 @@
 ---
 - name: Restart Dock
-  shell: killall Dock
+  ansible.builtin.command: killall Dock
 
 - name: Restart Finder
-  shell: killall Finder
+  ansible.builtin.command: killall Finder
 
 - name: Restart Flux
-  command: killall Flux
-  ignore_errors: true
+  ansible.builtin.command: killall Flux
+  failed_when: false
 
 - name: Restart Mail
-  shell: killall Mail
+  ansible.builtin.command: killall Mail
   failed_when: false
 
 - name: Restart Safari
-  shell: killall Safari
+  ansible.builtin.command: killall Safari
   failed_when: false
 
 - name: Restart Terminal
-  shell: killall Terminal
+  ansible.builtin.command: killall Terminal
   failed_when: false
 
 - name: Restart TextEdit
-  shell: killall TextEdit
+  ansible.builtin.command: killall TextEdit
   failed_when: false
