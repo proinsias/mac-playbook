@@ -3,25 +3,26 @@ nodejs_global_packages:
   # Example of specifying pinned version.
   # - name: jslint
   #   version: 0.9.3
-    - csslint
-    - dockerlint
-    - dockerfilelint # https://github.com/replicatedhq/dockerfilelint
-    - dockerfile_lint
-    - emoj # https://github.com/sindresorhus/emoj
-    - eslint
-    - fkill-cli
-    - git-guilt
+  - csslint
+  - dockerlint
+  - dockerfilelint # https://github.com/replicatedhq/dockerfilelint
+  - dockerfile_lint
+  - emoj # https://github.com/sindresorhus/emoj
+  - eslint
+  - fkill-cli
+  - git-guilt
   # - how2  # https://github.com/santinic/how2
-    - htmlhint
-    - jscs
-    - jshint
-    - jslint
-    - markdownlint-cli
-    - markdown-link-check
-    - markdown-toc
-    - npm-check
-    - npm-check-updates
-    - semistandard
-    - standard
-    - svgo
-    - tldr # http://tldr.sh/
+  - htmlhint
+  - jscs
+  - jshint
+  - jslint
+  - markdownlint-cli
+  - markdown-link-check
+  - markdown-toc
+  - npm-check
+  - npm-check-updates
+  - prettier
+  - semistandard
+  - standard
+  - svgo
+  - tldr # http://tldr.sh/

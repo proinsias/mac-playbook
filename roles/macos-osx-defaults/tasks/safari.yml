@@ -1,69 +1,68 @@
 ---
-
 - name: Safari - Show full URL in the address bar
   community.general.osx_defaults:
-      domain: com.apple.Safari
-      key: ShowFullURLInSmartSearchField
-      type: bool
-      value: true
+    domain: com.apple.Safari
+    key: ShowFullURLInSmartSearchField
+    type: bool
+    value: true
   notify: Restart Safari
 
 - name: Safari - Don't open 'safe' files automatically
   community.general.osx_defaults:
-      domain: com.apple.Safari
-      key: AutoOpenSafeDownloads
-      type: bool
-      value: false
+    domain: com.apple.Safari
+    key: AutoOpenSafeDownloads
+    type: bool
+    value: false
   notify: Restart Safari
 
 - name: Safari - Enable status bar
   community.general.osx_defaults:
-      domain: com.apple.Safari
-      key: ShowOverlayStatusBar
-      type: bool
-      value: true
+    domain: com.apple.Safari
+    key: ShowOverlayStatusBar
+    type: bool
+    value: true
   notify: Restart Safari
 
 - name: Safari - Enable developer menu
   community.general.osx_defaults:
-      domain: com.apple.Safari
-      key: IncludeDevelopMenu
-      type: bool
-      value: true
+    domain: com.apple.Safari
+    key: IncludeDevelopMenu
+    type: bool
+    value: true
   notify: Restart Safari
 
 - name: Safari - Don't autofill passwords
   community.general.osx_defaults:
-      domain: com.apple.Safari
-      key: AutoFillPasswords
-      type: bool
-      value: false
+    domain: com.apple.Safari
+    key: AutoFillPasswords
+    type: bool
+    value: false
   notify: Restart Safari
 
 - name: Safari - Show favorites bar
   community.general.osx_defaults:
-      domain: com.apple.Safari
-      key: '{{ item }}'
-      type: bool
-      value: true
+    domain: com.apple.Safari
+    key: "{{ item }}"
+    type: bool
+    value: true
   with_items:
-      - ShowFavoritesBar
-      - ShowFavoritesBar-v2
+    - ShowFavoritesBar
+    - ShowFavoritesBar-v2
   notify: Restart Safari
 
 - name: Safari - Enable thumbnail cache for history and top sites
   community.general.osx_defaults:
-      domain: com.apple.Safari
-      state: absent
-      key: DebugSnapshotsUpdatePolicy
-      type: int
-      value: 2
+    domain: com.apple.Safari
+    state: absent
+    key: DebugSnapshotsUpdatePolicy
+    type: int
+    value: 2
   notify: Restart Safari
 
 - name: Safari - Disable search only with word start
   community.general.osx_defaults:
-      domain: com.apple.Safari
-      key: FindOnPageMatchesWordStartsOnly
-      type: bool
-      value: false
+    domain: com.apple.Safari
+    key: FindOnPageMatchesWordStartsOnly
+    type: bool
+    value: false
   notify: Restart Safari

@@ -1,25 +1,24 @@
 ---
-
 - name: Enable the debug menu in Address Book
   community.general.osx_defaults:
-      domain: com.apple.addressbook
-      key: ABShowDebugMenu
-      type: bool
-      value: true
-      state: present
+    domain: com.apple.addressbook
+    key: ABShowDebugMenu
+    type: bool
+    value: true
+    state: present
 
 - name: Show first name before last name
   community.general.osx_defaults:
-      domain: com.apple.addressbook
-      key: ABNameDisplay
-      type: int
-      value: 0
-      state: present
+    domain: com.apple.addressbook
+    key: ABNameDisplay
+    type: int
+    value: 0
+    state: present
 
 - name: Sort by last name
   community.general.osx_defaults:
-      domain: com.apple.addressbook
-      key: ABNameSortingFormat
-      type: string
-      value: sortingFirstName sortingLastName
-      state: present
+    domain: com.apple.addressbook
+    key: ABNameSortingFormat
+    type: string
+    value: sortingFirstName sortingLastName
+    state: present

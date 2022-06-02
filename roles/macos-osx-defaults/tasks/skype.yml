@@ -1,41 +1,40 @@
 ---
-
 - name: Include debug menu
   community.general.osx_defaults:
-      domain: com.skype.skype
-      key: IncludeDebugMenu
-      type: bool
-      value: true
-      state: present
+    domain: com.skype.skype
+    key: IncludeDebugMenu
+    type: bool
+    value: true
+    state: present
 
 - name: Don't show welcome tour
   community.general.osx_defaults:
-      domain: com.skype.skype
-      key: SKShowWelcomeTour
-      type: bool
-      value: true
-      state: present
+    domain: com.skype.skype
+    key: SKShowWelcomeTour
+    type: bool
+    value: true
+    state: present
 
 - name: Disable welcome tour
   community.general.osx_defaults:
-      domain: com.skype.skype
-      key: SKDisableWelcomeTour
-      type: bool
-      value: true
-      state: present
+    domain: com.skype.skype
+    key: SKDisableWelcomeTour
+    type: bool
+    value: true
+    state: present
 
 - name: Enable developer extras
   community.general.osx_defaults:
-      domain: com.skype.skype
-      key: WebKitDeveloperExtras
-      type: bool
-      value: true
-      state: present
+    domain: com.skype.skype
+    key: WebKitDeveloperExtras
+    type: bool
+    value: true
+    state: present
 
 - name: Don't disable developer extras
   community.general.osx_defaults:
-      domain: com.skype.skype
-      key: DisableWebKitDeveloperExtras
-      type: bool
-      value: true
-      state: present
+    domain: com.skype.skype
+    key: DisableWebKitDeveloperExtras
+    type: bool
+    value: true
+    state: present

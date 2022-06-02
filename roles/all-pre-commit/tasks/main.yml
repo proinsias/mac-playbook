@@ -1,8 +1,8 @@
 ---
-    - name: Check pre-commit is installed and updated
-      community.general.homebrew:
-          name: [pre-commit]
-          state: latest
+- name: Check pre-commit is installed and updated
+  community.general.homebrew:
+    name: [pre-commit]
+    state: latest
 
-    - name: Auto update all pre-commit hooks
-      shell: ~/.local/bin/pre-commit-autoupdate
+- name: Auto update all pre-commit hooks
+  shell: ~/.local/bin/pre-commit-autoupdate

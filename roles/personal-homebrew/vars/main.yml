@@ -6,23 +6,23 @@ homebrew_upgrade_all_packages: true
 homebrew_use_brewfile: false
 
 homebrew_taps:
-    - homebrew/cask
-    - homebrew/core
+  - homebrew/cask
+  - homebrew/core
 homebrew_installed_packages:
-    - backblaze
-    - backblaze-downloader
-    - fs-uae
-    - google-backup-and-sync
-    - handbrake
+  - backblaze
+  - backblaze-downloader
+  - fs-uae
+  - google-backup-and-sync
+  - handbrake
   # - minecraft
-    - plex-media-server
-    - pycharm-ce
-    - steam
-    - subler
-    - wireshark
+  - plex-media-server
+  - pycharm-ce
+  - steam
+  - subler
+  - wireshark
 homebrew_uninstalled_packages:
-    - google-photos-backup-and-sync
-    - growlnotify
+  - google-photos-backup-and-sync
+  - growlnotify
 # Don't use these.
 homebrew_cask_apps: []
 homebrew_cask_uninstalled_apps: []

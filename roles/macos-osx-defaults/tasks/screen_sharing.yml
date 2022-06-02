@@ -1,9 +1,8 @@
 ---
-
 - name: Turn on Bonjour browser
   community.general.osx_defaults:
-      domain: com.apple.ScreenSharing
-      key: ShowBonjourBrowser_Debug
-      type: bool
-      value: true
-      state: present
+    domain: com.apple.ScreenSharing
+    key: ShowBonjourBrowser_Debug
+    type: bool
+    value: true
+    state: present

@@ -1,15 +1,15 @@
 ---
-    - name: Check node is installed and upgraded
-      community.general.homebrew:
-          name: ['{{ item }}']
-          state: latest
-      with_items:
-          - node
+- name: Check node is installed and upgraded
+  community.general.homebrew:
+    name: ["{{ item }}"]
+    state: latest
+  with_items:
+    - node
 
-    - name: Install latest version of global nodejs packages
-      community.general.npm:
-          name: coffee-script
-          global: yes
-          state: latest
+- name: Install latest version of global nodejs packages
+  community.general.npm:
+    name: coffee-script
+    global: true
+    state: latest
   # command: npm install --global {{ item }}
-      with_items: '{{ nodejs_global_packages }}'
+  with_items: "{{ nodejs_global_packages }}"

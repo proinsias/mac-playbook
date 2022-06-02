@@ -1,54 +1,54 @@
 ---
-    - name: Check python3 and pipx are installed and upgraded
-      community.general.homebrew:
-          name: [python3, pipx]
-          state: latest
+- name: Check python3 and pipx are installed and upgraded
+  community.general.homebrew:
+    name: [python3, pipx]
+    state: latest
 
-    - name: Install global pipx packages
-      community.general.pipx:
-          executable: '{{ prefix }}/bin/pipx'
-          name: '{{ item }}'
-          python: '{{ prefix }}/bin/python3'
-      # command: pipx install {{ item }} --python {{ prefix }}/bin/python3
-      with_items: '{{ pipx_packages }}'
+- name: Install global pipx packages
+  community.general.pipx:
+    executable: "{{ prefix }}/bin/pipx"
+    name: "{{ item }}"
+    python: "{{ prefix }}/bin/python3"
+  # command: pipx install {{ item }} --python {{ prefix }}/bin/python3
+  with_items: "{{ pipx_packages }}"
 
-    - name: Install global pipx mdformat packages
-      community.general.pipx:
-          executable: '{{ prefix }}/bin/pipx'
-          inject_packages: '{{ item }}'
-          name: mdformat
-          state: inject
-      # command: pipx inject mdformat {{ item }}
-      with_items: '{{ pipx_mdformat_packages }}'
+- name: Install global pipx mdformat packages
+  community.general.pipx:
+    executable: "{{ prefix }}/bin/pipx"
+    inject_packages: "{{ item }}"
+    name: mdformat
+    state: inject
+  # command: pipx inject mdformat {{ item }}
+  with_items: "{{ pipx_mdformat_packages }}"
 
-    - name: Install global pipx ntfy packages
-      community.general.pipx:
-          executable: '{{ prefix }}/bin/pipx'
-          inject_packages: '{{ item }}'
-          name: ntfy
-          state: inject
-      # command: pipx inject ntfy {{ item }}
-      with_items: '{{ pipx_ntfy_packages }}'
+- name: Install global pipx ntfy packages
+  community.general.pipx:
+    executable: "{{ prefix }}/bin/pipx"
+    inject_packages: "{{ item }}"
+    name: ntfy
+    state: inject
+  # command: pipx inject ntfy {{ item }}
+  with_items: "{{ pipx_ntfy_packages }}"
 
-    - name: Install global pipx pydocstyle packages
-      community.general.pipx:
-          executable: '{{ prefix }}/bin/pipx'
-          inject_packages: '{{ item }}'
-          name: pydocstyle
-          state: inject
-      # command: pipx inject pydocstyle {{ item }}
-      with_items: '{{ pipx_pydocstyle_packages }}'
+- name: Install global pipx pydocstyle packages
+  community.general.pipx:
+    executable: "{{ prefix }}/bin/pipx"
+    inject_packages: "{{ item }}"
+    name: pydocstyle
+    state: inject
+  # command: pipx inject pydocstyle {{ item }}
+  with_items: "{{ pipx_pydocstyle_packages }}"
 
-    - name: Install global pipx pytest packages
-      community.general.pipx:
-          executable: '{{ prefix }}/bin/pipx'
-          inject_packages: '{{ item }}'
-          name: pytest
-          state: inject
-      # command: pipx inject pytest {{ item }}
-      with_items: '{{ pipx_pytest_packages }}'
+- name: Install global pipx pytest packages
+  community.general.pipx:
+    executable: "{{ prefix }}/bin/pipx"
+    inject_packages: "{{ item }}"
+    name: pytest
+    state: inject
+  # command: pipx inject pytest {{ item }}
+  with_items: "{{ pipx_pytest_packages }}"
 
-    - name: Update pipx packages
-      community.general.pipx:
-          executable: '{{ prefix }}/bin/pipx'
-          state: upgrade_all
+- name: Update pipx packages
+  community.general.pipx:
+    executable: "{{ prefix }}/bin/pipx"
+    state: upgrade_all

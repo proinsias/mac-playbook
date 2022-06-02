@@ -6,31 +6,31 @@ homebrew_upgrade_all_packages: true
 homebrew_use_brewfile: false
 
 homebrew_taps:
-    - homebrew/cask
-    - homebrew/core
+  - homebrew/cask
+  - homebrew/core
 homebrew_installed_packages:
   # - mendeley-desktop
   # - microsoft-teams
-    - mysql
-    - mysql-connector-c
-    - mysqlworkbench
+  - mysql
+  - mysql-connector-c
+  - mysqlworkbench
   # - notebook
-    - pycharm
+  - pycharm
   # - zotero
 homebrew_uninstalled_packages:
-    - apache-spark
-    - gbeine/homebrew-java/postgresql-jdbc
-    - hadoop
-    - homebrew/science/r
-    - homebrew/versions/perl518
-    - mongodb
-    - newman # Command-line collection runner for Postman.
-    - octave
-    - postgresql
-    - postman
-    - scala
-    - sequel-pro
-    - tomcat
+  - apache-spark
+  - gbeine/homebrew-java/postgresql-jdbc
+  - hadoop
+  - homebrew/science/r
+  - homebrew/versions/perl518
+  - mongodb
+  - newman # Command-line collection runner for Postman.
+  - octave
+  - postgresql
+  - postman
+  - scala
+  - sequel-pro
+  - tomcat
 # Don't use these.
 homebrew_cask_apps: []
 homebrew_cask_uninstalled_apps: []

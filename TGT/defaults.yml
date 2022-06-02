@@ -1,28 +1,27 @@
 ---
 system_defaults:
-    hostname:
+  hostname:
     # computername is the so-called "user-friendly" name for the Mac,
     # it's what will show up on the Mac itself and what will be
     # visible to others when connecting to it over a local network.
     # This is also what's visible under the Sharing preference panel.
-        computername:
+    computername:
 
     # hostname is the name assigned to the computer as visible
     # from the command line, and it's also used by local and
     # remote networks when connecting through SSH and Remote Login.
-        hostname:
+    hostname:
 
     # localhostname is the name identifier used by Bonjour and
     # visible through file sharing services like AirDrop
-        localhostname:
+    localhostname:
 
-    misc:
+  misc:
+    enable_ssh: false
 
-        enable_ssh: false
+    enable_sudden_motion_sensor: true
 
-        enable_sudden_motion_sensor: true
-
-        enable_hibernation: true
+    enable_hibernation: true
 
   # Default filetype <-> app associations
   # Values:
@@ -31,77 +30,73 @@ system_defaults:
   # Example:
   #   default_applications:
   #     - { extension: avi, handler: com.colliderli.iina }
-    default_applications: []
-
-
----
+  default_applications: []
 
 system:
-    ui:
+  ui:
     # Overall system interface color
     # This influences Menubar, Dock, Spotlight and a few others.
     # VALUES: "Light", "Dark"
-        interface_style: Dark
+    interface_style: Dark
 
     # By default the macOS save/print dialog opens in a simplified version.
     # Enable to show the full dialog by default.
-        expand_save_panel: true
-        expand_print_panel: true
+    expand_save_panel: true
+    expand_print_panel: true
 
     # Window action when double clicking on the titlebar of a window.
     # VALUES: "Maximize", "Minimize"
     # titlebar_doubleclick_action: "Maximize"
 
     # Font smoothing on non apple displays
-        enable_subpixel_font_rendering: true
+    enable_subpixel_font_rendering: true
 
     # Focus ring is drawn around focused dialog
     # elements like buttons and textfields
     # enable_focus_ring: true
 
     # macOS ommits common file extensions by default.
-        show_all_file_extensions: true
+    show_all_file_extensions: true
 
     # Antique osx dashboard, this was more or less replaced by the sidebar.
-        disable_dashboard: true
+    disable_dashboard: true
 
     # Open directory if you drag a file/folder onto it.
-        enable_springloading_directories: true
-        springloading_directories_delay: 0
+    enable_springloading_directories: true
+    springloading_directories_delay: 0
 
-        window_resize_speed: 0.001
-        enable_opening_closing_window_animations: false
+    window_resize_speed: 0.001
+    enable_opening_closing_window_animations: false
 
     # Show scrollbars
     # Values: "WhenScrolling", "Always"
-        show_scrollbars: Always
+    show_scrollbars: Always
 
-        enable_menubar_transparency: false
+    enable_menubar_transparency: false
 
 screensaver:
   # Screensaver activation delay in seconds
   # 0 disables the screensaver
-    activation_delay: 300
+  activation_delay: 300
 
   # Ask for user password when screensaver is active
-    ask_password: true
+  ask_password: true
 
   # Delay in seconds after which password is asked
-    ask_password_delay: 0
+  ask_password_delay: 0
 
-    screensaver:
-        name: Aerial
-        path: ~/Library/Screen Savers/Aerial.saver
+  screensaver:
+    name: Aerial
+    path: ~/Library/Screen Savers/Aerial.saver
 
 input:
-
   # Various spell correction settings
-    enable_auto_correct: true
-    enable_smart_quotes: false
-    enable_smart_dashes: false
+  enable_auto_correct: true
+  enable_smart_quotes: false
+  enable_smart_dashes: false
   # enable_automatic_capitalization: true
   # enable_automatic_periods: true
-    enable_continuous_spell_checking: true
+  enable_continuous_spell_checking: true
 
   # If enabled, you get a special char menu on certain letters instead of key repeat
   # enable_press_and_hold: true
@@ -114,7 +109,7 @@ input:
   # initial_key_repeat_delay: 22
 
   # Enables selections of dialog buttons with tab key
-    enable_full_keyboard_access: true
+  enable_full_keyboard_access: true
 
   # Space switching hotkeys (ctrl + 1-9)
   # enable_space_hotkeys: false
@@ -138,35 +133,34 @@ input:
 security:
   # Gatekeeper won't allow you to easily install
   # unsigned apps not downloaded from the Mac App Store
-    enable_gatekeeper: true
+  enable_gatekeeper: true
 
   # Quarantine asks you if you really want
   # to open a downloaded executable
-    enable_quarantine: true
+  enable_quarantine: true
 
 misc:
+  save_application_state_on_quit: true
 
-    save_application_state_on_quit: true
+  disable_dsstore_on_network_shares: true
 
-    disable_dsstore_on_network_shares: true
+  disable_dsstore_on_usb_drives: true
 
-    disable_dsstore_on_usb_drives: true
+  disable_disk_image_verification: true
 
-    disable_disk_image_verification: true
+  disable_spotlight_network_indexing: true
 
-    disable_spotlight_network_indexing: true
+  save_new_docs_to_icloud: false
 
-    save_new_docs_to_icloud: false
+  enable_ssh: false # true causes failure on latest macos versions.
 
-    enable_ssh: false # true causes failure on latest macos versions.
+  enable_crash_reporter: true
 
-    enable_crash_reporter: true
+  enable_startup_sound: false
 
-    enable_startup_sound: false
+  enable_sudden_motion_sensor: false # Not useful for SSDs
 
-    enable_sudden_motion_sensor: false # Not useful for SSDs
-
-    enable_hibernation: false
+  enable_hibernation: false
 
   # Default filetype <-> app associations
   # Values:
@@ -177,63 +171,60 @@ misc:
   #     - { extension: avi, handler: com.colliderli.iina }
   # default_applications: []
 
-
 ######################################
 #               Finder               #
 ######################################
 
 finder:
-
   # Should dotfiles be shown?
   # "cmd + shift - ." toggles this
-    show_all_files: true
+  show_all_files: true
 
   # Keep folders on top when you sort by name?
-    keep_folders_on_top: false
+  keep_folders_on_top: false
 
   # Show posix path in finder titlebar?
-    show_full_path_in_titlebar: true
+  show_full_path_in_titlebar: true
 
   # Show interactive pathbar at the bottom?
-    show_pathbar: true
+  show_pathbar: true
 
   # Show statusbar with selection and filesize info at the bottom?
-    show_statusbar: true
+  show_statusbar: true
 
   # Should finder be quitable? (It instantly restarts anyway)
-    enable_quit_menu_item: true
+  enable_quit_menu_item: true
 
   # VALUES: "icnv" for icon view, "clmv" for column view, "Flwv" for cover flow view
   # 'Nlsv' for ?.
-    default_view_style: clmv
-
+  default_view_style: clmv
 
   # Which items should be shown on desktop?
-    show_external_harddrives_on_desktop: true
-    show_harddrives_on_desktop: true
-    show_mounted_servers_on_desktop: true
-    show_removable_media_on_desktop: true
+  show_external_harddrives_on_desktop: true
+  show_harddrives_on_desktop: true
+  show_mounted_servers_on_desktop: true
+  show_removable_media_on_desktop: true
 
   # Hide ~/Library ?
-    hide_user_library: false
+  hide_user_library: false
 
   # Hide /Volumes ?
-    hide_system_volumes: false
+  hide_system_volumes: false
 
   # Which panes of the Getinfo window should be expanded by default?
-    expand_infopane:
-        - {name: General, value: true}
+  expand_infopane:
+    - { name: General, value: true }
     # - {name: MetaData, value: false}
-        - {name: OpenWith, value: false}
+    - { name: OpenWith, value: false }
     # - {name: Name, value: false}
     # - {name: Comments, value: false}
     # - {name: Preview, value: true}
-        - {name: Privileges, value: false}
+    - { name: Privileges, value: false }
 
   # Automatic arrangement of icons
   # Values: "none", "grid", "name", "kind", "dateModified",
   #         "dateCreated", "dateLastOpened", "dateAdded", "size", "label"
-    iconview_arrange_by: grid
+  iconview_arrange_by: grid
 
   # controls the gap between icons
   # when using arrange by grid
@@ -243,7 +234,7 @@ finder:
   # iconview_icon_size: 64
 
   # Show item info below item name?
-    iconview_show_item_info: true
+  iconview_show_item_info: true
 
   # Font size
   # iconview_text_size: 12
@@ -257,194 +248,182 @@ finder:
   # Doesn't work on newer macOS versions
   # enable_quicklook_text_selection: false
 
-    disable_all_animations: true
-
+  disable_all_animations: true
 
 ######################################
 #               Safari               #
 ######################################
 
 safari:
+  show_full_url_in_address_bar: true
 
-    show_full_url_in_address_bar: true
+  open_safe_files_automatically: false
 
-    open_safe_files_automatically: false
+  enable_status_bar: true
 
-    enable_status_bar: true
+  enable_developer_menu: true
 
-    enable_developer_menu: true
+  autofill_passwords: false
 
-    autofill_passwords: false
+  show_favorites_bar: true
 
-    show_favorites_bar: true
-
-    disable_thumbnail_cache: false
+  disable_thumbnail_cache: false
 
   # search_with_word_start_only: true
-
 
 ######################################
 #              TextEdit              #
 ######################################
 
-textedit:
-
-    default_doc_plaintext: true
-
+textedit2:
+  default_doc_plaintext: true
 
 ######################################
 #              Terminal              #
 ######################################
 
-terminal:
-
-    enable_secure_keyboard_entry: true
----
+terminal2:
+  enable_secure_keyboard_entry: true
 
 ######################################
 #                macOS               #
 ######################################
 
-system: {}
-system_defaults:
-    ui:
-
+system_defaults2:
+  ui:
     # Overall system interface color
     # This influences Menubar, Dock, Spotlight
     # and a few others.
     # VALUES: "Light", "Dark"
-        interface_style: Light
+    interface_style: Light
 
     # By default the macOS save/print dialog opens in a
     # simplified version, enable to show the full dialog
     # by default.
-        expand_save_panel: false
-        expand_print_panel: false
+    expand_save_panel: false
+    expand_print_panel: false
 
     # Window action when double clicking on
     # the titlebar of a window.
     # VALUES: "Maximize", "Minimize"
-        titlebar_doubleclick_action: Maximize
+    titlebar_doubleclick_action: Maximize
 
     # Font smoothing on non apple displays
-        enable_subpixel_font_rendering: false
+    enable_subpixel_font_rendering: false
 
     # Focus ring is drawn around focused dialog
     # elements like buttons and textfields
-        enable_focus_ring: true
+    enable_focus_ring: true
 
     # macOS ommits common file extensions
     # by default
-        show_all_file_extensions: false
+    show_all_file_extensions: false
 
     # Antique osx dashboard, this was
     # more or less replaced by the sidebar
-        disable_dashboard: true
+    disable_dashboard: true
 
     # Open directory if you drag
     # a file/folder onto it
-        enable_springloading_directories: true
-        springloading_directories_delay: 2
+    enable_springloading_directories: true
+    springloading_directories_delay: 2
 
     #
-        window_resize_speed: 0.2
-        enable_opening_closing_window_animations: true
+    window_resize_speed: 0.2
+    enable_opening_closing_window_animations: true
 
     # Show scrollbars
     # Values: "WhenScrolling", "Always"
-        show_scrollbars: WhenScrolling
+    show_scrollbars: WhenScrolling
 
-        enable_menubar_transparency: true
+    enable_menubar_transparency: true
 
-    screensaver:
-
+  screensaver:
     # Screensaver activation delay in seconds
     # 0 disables the screensaver
-        activation_delay: 0
+    activation_delay: 0
 
     # Ask for user password when screensaver is active
-        ask_password: false
+    ask_password: false
 
     # Delay in seconds after which password is asked
-        ask_password_delay: 0
+    ask_password_delay: 0
 
-        screensaver:
-            name: Flurry
-            path: /System/Library/Screen Savers/Flurry.saver
+    screensaver:
+      name: Flurry
+      path: /System/Library/Screen Savers/Flurry.saver
 
-    input:
-
+  input:
     # Various spell correction settings
-        enable_auto_correct: true
-        enable_smart_quotes: true
-        enable_smart_dashes: true
-        enable_automatic_capitalization: true
-        enable_automatic_periods: true
-        enable_continuous_spell_checking: true
+    enable_auto_correct: true
+    enable_smart_quotes: true
+    enable_smart_dashes: true
+    enable_automatic_capitalization: true
+    enable_automatic_periods: true
+    enable_continuous_spell_checking: true
 
     # If enabled, you get a special char menu on
     # certain letters instead of key repeat
-        enable_press_and_hold: true
+    enable_press_and_hold: true
 
     # Key repeat speed
     # Min value is 1
-        key_repeat_rate: 2
+    key_repeat_rate: 2
 
     # Delay time until key repeat kicks in
-        initial_key_repeat_delay: 22
+    initial_key_repeat_delay: 22
 
     # Enables selections of dialog buttons with tab key
-        enable_full_keyboard_access: false
+    enable_full_keyboard_access: false
 
     # Space switching hotkeys (ctrl + 1-9)
-        enable_space_hotkeys: false
+    enable_space_hotkeys: false
 
-    hostname:
+  hostname:
     # computername is the so-called "user-friendly" name for the Mac,
     # it's what will show up on the Mac itself and what will be
     # visible to others when connecting to it over a local network.
     # This is also what's visible under the Sharing preference panel.
-        computername:
+    computername:
 
     # hostname is the name assigned to the computer as visible
     # from the command line, and it's also used by local and
     # remote networks when connecting through SSH and Remote Login.
-        hostname:
+    hostname:
 
     # localhostname is the name identifier used by Bonjour and
     # visible through file sharing services like AirDrop
-        localhostname:
+    localhostname:
 
-    security:
+  security:
     # Gatekeeper won't allow you to easily install
     # unsigned apps not downloaded from the Mac App Store
-        enable_gatekeeper: true
+    enable_gatekeeper: true
 
     # Quarantine asks you if you really want
     # to open a downloaded executable
-        enable_quarantine: true
+    enable_quarantine: true
 
-    misc:
+  misc:
+    save_application_state_on_quit: true
 
-        save_application_state_on_quit: true
+    disable_dsstore_on_network_shares: false
 
-        disable_dsstore_on_network_shares: false
+    disable_dsstore_on_usb_drives: false
 
-        disable_dsstore_on_usb_drives: false
+    disable_disk_image_verification: false
 
-        disable_disk_image_verification: false
+    disable_spotlight_network_indexing: false
 
-        disable_spotlight_network_indexing: false
+    save_new_docs_to_icloud: true
 
-        save_new_docs_to_icloud: true
+    enable_ssh: false
 
-        enable_ssh: false
+    enable_crash_reporter: true
 
-        enable_crash_reporter: true
+    enable_sudden_motion_sensor: true
 
-        enable_sudden_motion_sensor: true
-
-        enable_hibernation: true
+    enable_hibernation: true
 
   # Default filetype <-> app associations
   # Values:
@@ -453,111 +432,103 @@ system_defaults:
   # Example:
   #   default_applications:
   #     - { extension: avi, handler: com.colliderli.iina }
-    default_applications: []
-
+  default_applications: []
 
 ######################################
 #               Finder               #
 ######################################
 
-finder: {}
 finder_defaults:
-
   # Keep folders on top when you sort by name?
-    keep_folders_on_top: false
+  keep_folders_on_top: false
 
   # Show posix path in finder titlebar?
-    show_full_path_in_titlebar: false
+  show_full_path_in_titlebar: false
 
   # Show interactive pathbar at the bottom?
-    show_pathbar: false
+  show_pathbar: false
 
   # Show statusbar with selection and filesize info at the bottom?
-    show_statusbar: false
+  show_statusbar: false
 
   # Should finder be quitable? (It instantly restarts anyway)
-    enable_quit_menu_item: false
+  enable_quit_menu_item: false
 
   # VALUES: "icnv" for icon view, "clmv" for column view, "Flwv" for cover flow view
-    default_view_style: icnv
+  default_view_style: icnv
 
   # Which items should be shown on desktop?
-    show_external_harddrives_on_desktop: true
-    show_harddrives_on_desktop: true
-    show_mounted_servers_on_desktop: true
-    show_removable_media_on_desktop: true
+  show_external_harddrives_on_desktop: true
+  show_harddrives_on_desktop: true
+  show_mounted_servers_on_desktop: true
+  show_removable_media_on_desktop: true
 
   # Hide ~/Library ?
-    hide_user_library: true
+  hide_user_library: true
 
   # Hide /Volumes ?
-    hide_system_volumes: true
+  hide_system_volumes: true
 
   # Which panes of the Getinfo window should be expanded by default?
-    expand_infopane:
-        - {name: General, value: true}
-        - {name: MetaData, value: false}
-        - {name: OpenWith, value: false}
-        - {name: Name, value: false}
-        - {name: Comments, value: false}
-        - {name: Preview, value: true}
-        - {name: Privileges, value: false}
+  expand_infopane:
+    - { name: General, value: true }
+    - { name: MetaData, value: false }
+    - { name: OpenWith, value: false }
+    - { name: Name, value: false }
+    - { name: Comments, value: false }
+    - { name: Preview, value: true }
+    - { name: Privileges, value: false }
 
   # Automatic arrangement of icons
   # Values: "none", "grid", "name", "kind", "dateModified",
   #         "dateCreated", "dateLastOpened", "dateAdded", "size", "label"
-    iconview_arrange_by: falsene
+  iconview_arrange_by: falsene
 
   # controls the gap between icons
   # when using arrange by grid
-    iconview_grid_spacing: 54
+  iconview_grid_spacing: 54
 
   # Size of the icons
-    iconview_icon_size: 64
+  iconview_icon_size: 64
 
   # Show item info below item name?
-    iconview_show_item_info: false
+  iconview_show_item_info: false
 
   # Font size
-    iconview_text_size: 12
+  iconview_text_size: 12
 
   # Show item preview as icon? (mostly useful for images)
-    iconview_show_icon_preview: true
+  iconview_show_icon_preview: true
 
   # When disabled label is shown to the right of icons
-    iconview_show_label_on_bottom: true
+  iconview_show_label_on_bottom: true
 
   # Doesn't work on newer macOS versions
-    enable_quicklook_text_selection: false
+  enable_quicklook_text_selection: false
 
   #
-    disable_all_animations: false
-
-
+  disable_all_animations: false
 
 ######################################
 #               Safari               #
 ######################################
 
-safari: {}
 safari_defaults:
+  show_full_url_in_address_bar: false
 
-    show_full_url_in_address_bar: false
+  open_safe_files_automatically: false
 
-    open_safe_files_automatically: false
+  enable_status_bar: false
 
-    enable_status_bar: false
+  enable_developer_menu: false
 
-    enable_developer_menu: false
+  autofill_passwords: true
 
-    autofill_passwords: true
+  show_favorites_bar: false
 
-    show_favorites_bar: false
+  disable_thumbnail_cache: false
 
-    disable_thumbnail_cache: false
-
-    search_with_word_start_only: true
-
+  search_with_word_start_only: true
 
 ######################################
 #              TextEdit              #
@@ -565,139 +536,131 @@ safari_defaults:
 
 textedit: {}
 textedit_defaults:
-
-    default_doc_plaintext: false
-
+  default_doc_plaintext: false
 
 ######################################
 #              Terminal              #
 ######################################
 
-terminal: {}
 terminal_defaults:
+  enable_secure_keyboard_entry: true
 
-    enable_secure_keyboard_entry: true
----
-
-system:
-    hostname:
-        computername: mh-mbp
-        hostname: mh-mbp
-        localhostname: mh-mbp
-    ui:
-        interface_style: Dark
-        expand_save_panel: true
-        expand_print_panel: true
-        titlebar_doubleclick_action: Minimize
-        enable_subpixel_font_rendering: true
-        enable_focus_ring: false
-        show_all_file_extensions: true
-        disable_dashboard: true
-        enable_springloading_directories: true
-        springloading_directories_delay: 2
-        window_resize_speed: 0.001
-        enable_opening_closing_window_animations: false
+system2:
+  hostname:
+    computername: mh-mbp
+    hostname: mh-mbp
+    localhostname: mh-mbp
+  ui:
+    interface_style: Dark
+    expand_save_panel: true
+    expand_print_panel: true
+    titlebar_doubleclick_action: Minimize
+    enable_subpixel_font_rendering: true
+    enable_focus_ring: false
+    show_all_file_extensions: true
+    disable_dashboard: true
+    enable_springloading_directories: true
+    springloading_directories_delay: 2
+    window_resize_speed: 0.001
+    enable_opening_closing_window_animations: false
+  screensaver:
+    activation_delay: 300
+    ask_password: true
+    ask_password_delay: 0
     screensaver:
-        activation_delay: 300
-        ask_password: true
-        ask_password_delay: 0
-        screensaver:
-            name: Fliqlo
-            path: /Users/{{ ansible_user }}/Library/Screen Savers/Fliqlo.saver
-    input:
-        enable_auto_correct: false
-        enable_smart_quotes: false
-        enable_smart_dashes: false
-        enable_automatic_capitalization: false
-        enable_automatic_periods: false
-        enable_continuous_spell_checking: false
-        key_repeat_rate: 2
-        initial_key_repeat_delay: 22
-        enable_full_keyboard_access: true
-        enable_press_and_hold: false
-        enable_space_hotkeys: true
-    security:
-        enable_gatekeeper: false
-        enable_quarantine: false
-    misc:
-        save_application_state_on_quit: true
-        disable_dsstore_on_network_shares: true
-        disable_dsstore_on_usb_drives: true
-        disable_disk_image_verification: true
-        disable_spotlight_network_indexing: true
-        save_new_docs_to_icloud: false
-        enable_ssh: true
-        enable_crash_reporter: false
-        enable_startup_sound: false
-        enable_sudden_motion_sensor: true
-        enable_hibernation: false
-    default_applications:
+      name: Fliqlo
+      path: /Users/{{ ansible_user }}/Library/Screen Savers/Fliqlo.saver
+  input:
+    enable_auto_correct: false
+    enable_smart_quotes: false
+    enable_smart_dashes: false
+    enable_automatic_capitalization: false
+    enable_automatic_periods: false
+    enable_continuous_spell_checking: false
+    key_repeat_rate: 2
+    initial_key_repeat_delay: 22
+    enable_full_keyboard_access: true
+    enable_press_and_hold: false
+    enable_space_hotkeys: true
+  security:
+    enable_gatekeeper: false
+    enable_quarantine: false
+  misc:
+    save_application_state_on_quit: true
+    disable_dsstore_on_network_shares: true
+    disable_dsstore_on_usb_drives: true
+    disable_disk_image_verification: true
+    disable_spotlight_network_indexing: true
+    save_new_docs_to_icloud: false
+    enable_ssh: true
+    enable_crash_reporter: false
+    enable_startup_sound: false
+    enable_sudden_motion_sensor: true
+    enable_hibernation: false
+  default_applications:
     # Iina
-        - {extension: avi, handler: com.colliderli.iina}
-        - {extension: flv, handler: com.colliderli.iina}
-        - {extension: mkv, handler: com.colliderli.iina}
-        - {extension: mov, handler: com.colliderli.iina}
-        - {extension: mp4, handler: com.colliderli.iina}
-        - {extension: mpg, handler: com.colliderli.iina}
+    - { extension: avi, handler: com.colliderli.iina }
+    - { extension: flv, handler: com.colliderli.iina }
+    - { extension: mkv, handler: com.colliderli.iina }
+    - { extension: mov, handler: com.colliderli.iina }
+    - { extension: mp4, handler: com.colliderli.iina }
+    - { extension: mpg, handler: com.colliderli.iina }
     # MacDown
-        - {extension: md, handler: com.uranusjr.macdown}
+    - { extension: md, handler: com.uranusjr.macdown }
     # Sublime Text
-        - {extension: cfg, handler: com.microsoft.VSCode}
-        - {extension: css, handler: com.microsoft.VSCode}
-        - {extension: inc, handler: com.microsoft.VSCode}
-        - {extension: js, handler: com.microsoft.VSCode}
-        - {extension: json, handler: com.microsoft.VSCode}
-        - {extension: php, handler: com.microsoft.VSCode}
-        - {extension: scss, handler: com.microsoft.VSCode}
-        - {extension: txt, handler: com.microsoft.VSCode}
-        - {extension: yml, handler: com.microsoft.VSCode}
+    - { extension: cfg, handler: com.microsoft.VSCode }
+    - { extension: css, handler: com.microsoft.VSCode }
+    - { extension: inc, handler: com.microsoft.VSCode }
+    - { extension: js, handler: com.microsoft.VSCode }
+    - { extension: json, handler: com.microsoft.VSCode }
+    - { extension: php, handler: com.microsoft.VSCode }
+    - { extension: scss, handler: com.microsoft.VSCode }
+    - { extension: txt, handler: com.microsoft.VSCode }
+    - { extension: yml, handler: com.microsoft.VSCode }
 
-finder:
-    keep_folders_on_top: true
-    show_full_path_in_titlebar: true
-    show_pathbar: true
-    show_statusbar: true
-    enable_quit_menu_item: true
-    default_view_style: clmv
-    show_external_harddrives_on_desktop: true
-    show_harddrives_on_desktop: true
-    show_mounted_servers_on_desktop: true
-    show_removable_media_on_desktop: true
-    hide_user_library: false
-    hide_system_volumes: false
-    expand_infopane:
-        - {name: General, value: true}
-        - {name: MetaData, value: true}
-        - {name: OpenWith, value: true}
-        - {name: Name, value: true}
-        - {name: Comments, value: true}
-        - {name: Preview, value: true}
-        - {name: Privileges, value: true}
-    iconview_arrange_by: grid
-    iconview_grid_spacing: 60
-    iconview_icon_size: 50
-    iconview_show_item_info: true
-    iconview_show_label_on_bottom: false
-    iconview_text_size: 12
-    iconview_show_icon_preview: true
-    enable_quicklook_text_selection: true
-    disable_all_animations: true
+finder2:
+  keep_folders_on_top: true
+  show_full_path_in_titlebar: true
+  show_pathbar: true
+  show_statusbar: true
+  enable_quit_menu_item: true
+  default_view_style: clmv
+  show_external_harddrives_on_desktop: true
+  show_harddrives_on_desktop: true
+  show_mounted_servers_on_desktop: true
+  show_removable_media_on_desktop: true
+  hide_user_library: false
+  hide_system_volumes: false
+  expand_infopane:
+    - { name: General, value: true }
+    - { name: MetaData, value: true }
+    - { name: OpenWith, value: true }
+    - { name: Name, value: true }
+    - { name: Comments, value: true }
+    - { name: Preview, value: true }
+    - { name: Privileges, value: true }
+  iconview_arrange_by: grid
+  iconview_grid_spacing: 60
+  iconview_icon_size: 50
+  iconview_show_item_info: true
+  iconview_show_label_on_bottom: false
+  iconview_text_size: 12
+  iconview_show_icon_preview: true
+  enable_quicklook_text_selection: true
+  disable_all_animations: true
 
+safari2:
+  show_full_url_in_address_bar: true
+  open_safe_files_automatically: false
+  enable_status_bar: true
+  enable_developer_menu: true
+  autofill_passwords: false
+  show_favorites_bar: true
+  disable_thumbnail_cache: true
+  search_with_word_start_only: false
 
-safari:
-    show_full_url_in_address_bar: true
-    open_safe_files_automatically: false
-    enable_status_bar: true
-    enable_developer_menu: true
-    autofill_passwords: false
-    show_favorites_bar: true
-    disable_thumbnail_cache: true
-    search_with_word_start_only: false
-
-
-textedit:
-    default_doc_plaintext: true
-
+textedit3:
+  default_doc_plaintext: true
 
 terminal:
-    enable_secure_keyboard_entry: false
+  enable_secure_keyboard_entry: false

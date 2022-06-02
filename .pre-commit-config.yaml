@@ -1,38 +1,43 @@
 ---
-
 repos:
-    - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v4.2.0
-      hooks:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
       # General
-          - id: check-added-large-files
-          - id: check-case-conflict
-          - id: check-docstring-first
-          - id: check-executables-have-shebangs
-          - id: check-merge-conflict
-          - id: check-symlinks
-          - id: check-toml
-          - id: check-xml
-          - id: check-yaml
-          - id: detect-private-key
-          - id: double-quote-string-fixer
-          - id: end-of-file-fixer
-          - id: mixed-line-ending # Replaces or checks mixed line ending.
-          - id: trailing-whitespace
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-xml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: double-quote-string-fixer
+      - id: end-of-file-fixer
+      - id: mixed-line-ending # Replaces or checks mixed line ending.
+      - id: trailing-whitespace
 
   # General
 
-    - repo: https://github.com/asottile/add-trailing-comma
-      rev: v2.2.3
-      hooks:
-          - id: add-trailing-comma
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v2.2.3
+    hooks:
+      - id: add-trailing-comma
 
-    - repo: https://github.com/Yelp/detect-secrets
-      rev: v1.2.0
-      hooks:
-          - id: detect-secrets
-            args: [--baseline, .secrets.baseline]
-            exclude: package.lock.json
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.2.0
+    hooks:
+      - id: detect-secrets
+        args: [--baseline, .secrets.baseline]
+        exclude: package.lock.json
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.6.2
+    hooks:
+      - id: prettier
+        stages: [commit]
 
   # Ansible
 
@@ -45,65 +50,65 @@ repos:
 
   # Git
 
-    - repo: https://github.com/jorisroovers/gitlint
-      rev: v0.17.0
-      hooks:
-          - id: gitlint
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.17.0
+    hooks:
+      - id: gitlint
 
   # Markdown
 
-    - repo: https://github.com/executablebooks/mdformat
-      rev: 0.7.14
-      hooks:
-          - id: mdformat
-            additional_dependencies:
-                - mdformat-beautysh
-                - mdformat-black
-                - mdformat-config
-                - mdformat-gfm
-                - mdformat-shfmt
-                - mdformat-tables
-                - mdformat-toc
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.14
+    hooks:
+      - id: mdformat
+        additional_dependencies:
+          - mdformat-beautysh
+          - mdformat-black
+          - mdformat-config
+          - mdformat-gfm
+          - mdformat-shfmt
+          - mdformat-tables
+          - mdformat-toc
 
   # YAML
 
-    - repo: https://github.com/adrienverge/yamllint
-      rev: v1.26.3
-      hooks:
-          - id: yamllint
-            args: [-c=.yamllint.yml]
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.26.3
+    hooks:
+      - id: yamllint
+        args: [-c=.yamllint.yml]
 
-    # - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
-    #   rev: 0.2.1
-    #   hooks:
-    #      - id: yamlfmt
+  # - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+  #   rev: 0.2.1
+  #   hooks:
+  #      - id: yamlfmt
 
   # Mixed
 
-    - repo: https://github.com/sirosen/texthooks
-      rev: 0.3.1
-      hooks:
-          - id: fix-smartquotes
-          - id: fix-ligatures
+  - repo: https://github.com/sirosen/texthooks
+    rev: 0.3.1
+    hooks:
+      - id: fix-smartquotes
+      - id: fix-ligatures
 
-    - repo: https://github.com/jumanjihouse/pre-commit-hooks
-      rev: 2.1.6
-      hooks:
-          - id: forbid-binary
-          - id: git-check # Configure in .gitattributes
-          - id: shellcheck
-            args: [--external-sources, --format=gcc, --shell=bash]
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 2.1.6
+    hooks:
+      - id: forbid-binary
+      - id: git-check # Configure in .gitattributes
+      - id: shellcheck
+        args: [--external-sources, --format=gcc, --shell=bash]
 
-    - repo: https://github.com/Lucas-C/pre-commit-hooks
-      rev: v1.2.0
-      hooks:
-          - id: remove-crlf
-          - id: remove-tabs
-            exclude: .git/COMMIT_EDITMSG
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.2.0
+    hooks:
+      - id: remove-crlf
+      - id: remove-tabs
+        exclude: .git/COMMIT_EDITMSG
 
-    - repo: https://github.com/sirosen/check-jsonschema
-      rev: 0.15.1
-      hooks:
-          - id: check-github-actions
-          - id: check-github-workflows
-          - id: check-readthedocs
+  - repo: https://github.com/sirosen/check-jsonschema
+    rev: 0.15.1
+    hooks:
+      - id: check-github-actions
+      - id: check-github-workflows
+      - id: check-readthedocs

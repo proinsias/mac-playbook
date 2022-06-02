@@ -1,26 +1,25 @@
 ---
-    - hosts: all
-      connection: local
-      gather_facts: true
+- hosts: all
+  connection: local
+  gather_facts: true
 
-      tasks:
+  tasks:
+    - name: Run all role
+      include_role:
+        name: all
+      tags: [always] # Always run, even when tags specified.
 
-          - name: Run all role
-            include_role:
-                name: all
-            tags: [always]  # Always run, even when tags specified.
+    - name: Run macos role
+      include_role:
+        name: macos
+      when: ansible_os_family == "Darwin"
+      tags: [always] # Always run, even when tags specified.
 
-          - name: Run macos role
-            include_role:
-                name: macos
-            when: ansible_os_family == "Darwin"
-            tags: [always]  # Always run, even when tags specified.
-
-          - name: Run linux role
-            include_role:
-                name: linux
-            when: ansible_os_family == "Debian"
-            tags: [always]  # Always run, even when tags specified.
+    - name: Run linux role
+      include_role:
+        name: linux
+      when: ansible_os_family == "Debian"
+      tags: [always] # Always run, even when tags specified.
 
 #  Notes on ansible-playbook options:
 # 1. `--check` determines which tasks would lead to changes, but doesn't actually update anything.
@@ -31,27 +30,27 @@
 # 5. `--tags=tag1` runs ONLY tag 'tag1'
 # 6. `--tags=all,tag1` runs all tags and 'tag1' even if the latter is a 'never' tag.
 
-#- name: print facts
-#  ansible.builtin.debug:
-#    var: ansible_facts
-#    msg: facts
-#  tags: ['always']  # Always run, even when tags specified.
+# - name: print facts
+#   ansible.builtin.debug:
+#     var: ansible_facts
+#     msg: facts
+#   tags: ['always']  # Always run, even when tags specified.
 
 # # conditionals
-#install_git_homedir: true
-#install_android_dev: true
-#install_erlang: true
-#install_ocaml: true
-#install_electronics: true
-#...
+# install_git_homedir: true
+# install_android_dev: true
+# install_erlang: true
+# install_ocaml: true
+# install_electronics: true
+# ...
 # # and those variables affect when conditionals in my roles.
-#- hosts: laptop
-#  roles:
-#    - common
-#    - git_homedir
-#    # roles can also be used conditionally
-#    - { role: x11, when: ansible_distribution != "MacOSX" }
-#    - { role: erlang, when: install_erlang is defined }
+# - hosts: laptop
+#   roles:
+#     - common
+#     - git_homedir
+#     # roles can also be used conditionally
+#     - { role: x11, when: ansible_distribution != "MacOSX" }
+#     - { role: erlang, when: install_erlang is defined }
 
 # vars_prompt:
 #    - name: config_file

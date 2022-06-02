@@ -1,33 +1,32 @@
 ---
-
 - name: Enable iTerm2 automatic updates
   community.general.osx_defaults:
-      domain: com.googlecode.iterm2
-      key: SUEnableAutomaticChecks
-      type: bool
-      value: true
+    domain: com.googlecode.iterm2
+    key: SUEnableAutomaticChecks
+    type: bool
+    value: true
 
 - name: Set custom preferences folder
   community.general.osx_defaults:
-      domain: com.googlecode.iterm2
-      key: PrefsCustomFolder
-      type: string
-      value: $HOME/.config/iterm2
+    domain: com.googlecode.iterm2
+    key: PrefsCustomFolder
+    type: string
+    value: $HOME/.config/iterm2
   when: iterm2_preference_folder is defined
 
 - name: Enable custom preferences folder
   community.general.osx_defaults:
-      domain: com.googlecode.iterm2
-      key: LoadPrefsFromCustomFolder
-      type: bool
-      value: true
+    domain: com.googlecode.iterm2
+    key: LoadPrefsFromCustomFolder
+    type: bool
+    value: true
   when: iterm2_preference_folder is defined
 
 # Disable Secure Keyboard Entry
 # See: https://security.stackexchange.com/a/47786/8918
 - name: Enable custom preferences folder.
   community.general.osx_defaults:
-      domain: com.googlecode.iterm2
-      key: Secure Input
-      type: bool
-      value: false
+    domain: com.googlecode.iterm2
+    key: Secure Input
+    type: bool
+    value: false

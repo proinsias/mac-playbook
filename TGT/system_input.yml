@@ -1,43 +1,49 @@
 ---
-
 # @TODO
 # Replace this shit as soon as ansible supports - community.general.osx_defaults with dicts
 
-    - name: Input - Set space changing hotkeys (Read settings).
-      command: /usr/libexec/PlistBuddy -c "Print :AppleSymbolicHotKeys:{{ item + 117 }}:enabled" ~/Library/Preferences/com.apple.symbolichotkeys.plist
-      with_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-      register: space_changing_hotkey_status
-      failed_when: false
-      changed_when: false
+- name: Input - Set space changing hotkeys (Read settings).
+  # yamllint disable-line rule:line-length
+  command: /usr/libexec/PlistBuddy -c "Print :AppleSymbolicHotKeys:{{ item + 117 }}:enabled" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+  with_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  register: space_changing_hotkey_status
+  failed_when: false
+  changed_when: false
 
-    - name: Input - Set space changing hotkeys (Create vars).
-      set_fact:
-          hk_tmp_item: '{{ item.stdout | bool }}'
-      with_items: '{{ space_changing_hotkey_status.results }}'
-      register: hk_tmp_items
-      no_log: true
+- name: Input - Set space changing hotkeys (Create vars).
+  set_fact:
+    hk_tmp_item: "{{ item.stdout | bool }}"
+  with_items: "{{ space_changing_hotkey_status.results }}"
+  register: hk_tmp_items
+  no_log: true
 
-    - name: Input - Set space changing hotkeys (Create vars).
-      set_fact:
-          space_changing_hotkey_status_parsed: "{{ hk_tmp_items.results | map(attribute='ansible_facts.hk_tmp_item') | list }}"
+- name: Input - Set space changing hotkeys (Create vars).
+  set_fact:
+    # yamllint disable-line rule:line-length
+    space_changing_hotkey_status_parsed: "{{ hk_tmp_items.results | map(attribute='ansible_facts.hk_tmp_item') | list }}"
 
-    - name: Input - Set space changing hotkeys (Create dict).
-      command: >
-          /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist
-          -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }} dict"
-          -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:enabled bool {{ system.input.enable_space_hotkeys | bool }}"
-          -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value dict"
-          -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:parameters array"
-          -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:type string \"standard\""
-          -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:parameters: integer 65535"
-          -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:parameters: integer {{ {1: 18, 2: 19, 3: 20, 4: 21, 5: 23, 6: 22, 7: 26, 8: 28, 9: 25}[item.1]
-          }}"
-          -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:parameters: integer 262144"
-      with_indexed_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-      when: space_changing_hotkey_status.results[item.0].stderr != ""
+- name: Input - Set space changing hotkeys (Create dict).
+  # yamllint disable
+  command: >
+    /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist
+    -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }} dict"
+    -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:enabled bool {{ system.input.enable_space_hotkeys | bool }}"
+    -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value dict"
+    -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:parameters array"
+    -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:type string \"standard\""
+    -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:parameters: integer 65535"
+    -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:parameters: integer {{ {1: 18, 2: 19, 3: 20, 4: 21, 5: 23, 6: 22, 7: 26, 8: 28, 9: 25}[item.1]
+    }}"
+    -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:parameters: integer 262144"
+  # yamllint enable
+  with_indexed_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  when: space_changing_hotkey_status.results[item.0].stderr != ""
 
-    - name: Input - Set space changing hotkeys (Update dict).
-      command: /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:{{ item.1 + 117 }}:enabled {{ system.input.enable_space_hotkeys | bool }}" ~/Library/Preferences/com.apple.symbolichotkeys.plist
-      with_indexed_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-      when: space_changing_hotkey_status_parsed[item.0] != system.input.enable_space_hotkeys and space_changing_hotkey_status.results[item.0].stderr ==
-          ""
+- name: Input - Set space changing hotkeys (Update dict).
+  # yamllint disable-line rule:line-length
+  command: /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:{{ item.1 + 117 }}:enabled {{ system.input.enable_space_hotkeys | bool }}" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+  with_indexed_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  when:
+    # yamllint disable-line rule:line-length
+    space_changing_hotkey_status_parsed[item.0] != system.input.enable_space_hotkeys and space_changing_hotkey_status.results[item.0].stderr ==
+    ""

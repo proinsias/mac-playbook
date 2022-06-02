@@ -1,9 +1,8 @@
 ---
-
 - name: Disable Photos.app from starting everytime a device is plugged in
   community.general.osx_defaults:
-      domain: com.apple.ImageCapture
-      key: disableHotPlug
-      type: bool
-      value: true
-      state: present
+    domain: com.apple.ImageCapture
+    key: disableHotPlug
+    type: bool
+    value: true
+    state: present

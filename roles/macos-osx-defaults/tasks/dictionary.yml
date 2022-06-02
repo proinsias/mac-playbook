@@ -1,9 +1,8 @@
 ---
-
 - name: Reuse dictionary definition window
   community.general.osx_defaults:
-      domain: com.apple.Dictionary
-      key: ProhibitNewWindowForRequest
-      type: bool
-      value: true
-      state: present
+    domain: com.apple.Dictionary
+    key: ProhibitNewWindowForRequest
+    type: bool
+    value: true
+    state: present

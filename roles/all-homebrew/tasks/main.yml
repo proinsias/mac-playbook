@@ -1,5 +1,5 @@
 ---
-    - name: Cleanup homebrew
-      shell: brew cleanup
-  # args:
-  #   warn: false  # set warn=false to prevent warning
+- name: Cleanup homebrew
+  shell: brew cleanup
+# args:
+#   warn: false  # set warn=false to prevent warning

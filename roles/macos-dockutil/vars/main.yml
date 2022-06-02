@@ -1,33 +1,31 @@
 ---
-
 dock:
-
-    apps:
-        - name: Activity Monitor
-          path: /System/Applications/Utilities/Activity\ Monitor.app
-        - name: Pocket Casts
-          path: /Applications/Pocket\ Casts.app
-        - name: Microsoft Outlook
-          path: /Applications/Microsoft\ Outlook.app
-        - name: Safari
-          path: /Applications/Safari.app
-        - name: Terminal
-          path: /System/Applications/Utilities/Terminal.app
-        - name: 1Password
-          path: /Applications/1Password.app
-        - name: Slack
-          path: /Applications/Slack.app
-        - name: Due
-          path: /Applications/Due.app
-        - name: OmniFocus
-          path: /Applications/OmniFocus.app
-        - name: PyCharm
-          path: /Applications/PyCharm.app
-        - name: Typora
-          path: /Applications/Typora.app
-        - name: Zoom
-          path: /Applications/zoom.us.app
-        - name: Playgrounds
-          path: /Applications/Playgrounds.app
-    spacers: []
+  apps:
+    - name: Activity Monitor
+      path: /System/Applications/Utilities/Activity\ Monitor.app
+    - name: Pocket Casts
+      path: /Applications/Pocket\ Casts.app
+    - name: Microsoft Outlook
+      path: /Applications/Microsoft\ Outlook.app
+    - name: Safari
+      path: /Applications/Safari.app
+    - name: Terminal
+      path: /System/Applications/Utilities/Terminal.app
+    - name: 1Password
+      path: /Applications/1Password.app
+    - name: Slack
+      path: /Applications/Slack.app
+    - name: Due
+      path: /Applications/Due.app
+    - name: OmniFocus
+      path: /Applications/OmniFocus.app
+    - name: PyCharm
+      path: /Applications/PyCharm.app
+    - name: Typora
+      path: /Applications/Typora.app
+    - name: Zoom
+      path: /Applications/zoom.us.app
+    - name: Playgrounds
+      path: /Applications/Playgrounds.app
+  spacers: []
 #      - after: Pocket Casts

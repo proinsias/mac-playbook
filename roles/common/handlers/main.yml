@@ -1,27 +1,26 @@
 ---
+- name: Restart Dock
+  shell: killall Dock
 
-    - name: Restart Dock
-      shell: killall Dock
+- name: Restart Finder
+  shell: killall Finder
 
-    - name: Restart Finder
-      shell: killall Finder
+- name: Restart Flux
+  command: killall Flux
+  ignore_errors: true
 
-    - name: Restart Flux
-      command: killall Flux
-      ignore_errors: yes
+- name: Restart Mail
+  shell: killall Mail
+  failed_when: false
 
-    - name: Restart Mail
-      shell: killall Mail
-      failed_when: false
+- name: Restart Safari
+  shell: killall Safari
+  failed_when: false
 
-    - name: Restart Safari
-      shell: killall Safari
-      failed_when: false
+- name: Restart Terminal
+  shell: killall Terminal
+  failed_when: false
 
-    - name: Restart Terminal
-      shell: killall Terminal
-      failed_when: false
-
-    - name: Restart TextEdit
-      shell: killall TextEdit
-      failed_when: false
+- name: Restart TextEdit
+  shell: killall TextEdit
+  failed_when: false

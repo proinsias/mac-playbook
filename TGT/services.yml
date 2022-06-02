@@ -1,6 +1,6 @@
 ---
-    - name: Ensure configured homebrew services are started at login.
-      command: brew services start {{ item }}
-      register: brew_service_result
-      changed_when: "'Successfully started' in brew_service_result.stdout"
-      with_items: '{{ homebrew_services }}'
+- name: Ensure configured homebrew services are started at login.
+  command: brew services start {{ item }}
+  register: brew_service_result
+  changed_when: "'Successfully started' in brew_service_result.stdout"
+  with_items: "{{ homebrew_services }}"

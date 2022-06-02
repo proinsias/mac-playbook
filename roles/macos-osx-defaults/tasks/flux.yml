@@ -1,36 +1,35 @@
 ---
-
 - name: Set flag that Flux has launched before
   community.general.osx_defaults:
-      domain: org.herf.Flux.plist
-      key: SUHasLaunchedBefore
-      type: bool
-      value: true
-      state: present
+    domain: org.herf.Flux.plist
+    key: SUHasLaunchedBefore
+    type: bool
+    value: true
+    state: present
 
 - name: Enable automatic update checks
   community.general.osx_defaults:
-      domain: org.herf.Flux.plist
-      key: SUEnableAutomaticChecks
-      type: bool
-      value: true
-      state: present
+    domain: org.herf.Flux.plist
+    key: SUEnableAutomaticChecks
+    type: bool
+    value: true
+    state: present
 
 - name: Set location
   command: defaults write org.herf.Flux {{ item }}
   with_items:
-      - location -string "42.5,-71.2"
-      - locationTextField -string "02474"
+    - location -string "42.5,-71.2"
+    - locationTextField -string "02474"
   changed_when: false
   notify: Restart Flux
 
 - name: Set colour temperatures
   community.general.osx_defaults:
-      domain: org.herf.Flux
-      key: '{{ item.key }}'
-      type: int
-      value: '{{ item.value }}'
+    domain: org.herf.Flux
+    key: "{{ item.key }}"
+    type: int
+    value: "{{ item.value }}"
   with_items:
-      - {key: lateColorTemp, value: 3400}
-      - {key: nightColorTemp, value: 1900}
+    - { key: lateColorTemp, value: 3400 }
+    - { key: nightColorTemp, value: 1900 }
   notify: Restart Flux

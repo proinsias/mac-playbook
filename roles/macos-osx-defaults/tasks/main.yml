@@ -1,5 +1,4 @@
 ---
-
 - import_tasks: 1password.yml
 
 - import_tasks: activity_monitor.yml
