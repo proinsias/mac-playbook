@@ -1,9 +1,9 @@
 ---
 
-    - name: Turn off welcome windows
-      community.general.osx_defaults:
-          domain: com.apple.dt.Xcode
-          key: XCShowWelcomeWindow
-          type: bool
-          value: false
-          state: present
+- name: Turn off welcome windows
+  community.general.osx_defaults:
+      domain: com.apple.dt.Xcode
+      key: XCShowWelcomeWindow
+      type: bool
+      value: false
+      state: present

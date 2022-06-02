@@ -1,47 +1,47 @@
 ---
 
-    - name: Enable UTF-8 only
-      community.general.osx_defaults:
-          domain: com.apple.Terminal
-          key: StringEncodings
-          type: array
-          value:
-              - '4'
-          state: present
-      notify: Restart Terminal
+- name: Enable UTF-8 only
+  community.general.osx_defaults:
+      domain: com.apple.Terminal
+      key: StringEncodings
+      type: array
+      value:
+          - '4'
+      state: present
+  notify: Restart Terminal
 
-    - name: Set Pro theme as default
-      community.general.osx_defaults:
-          domain: com.apple.Terminal
-          key: Default Window Settings
-          type: string
-          value: Pro
-          state: present
-      notify: Restart Terminal
+- name: Set Pro theme as default
+  community.general.osx_defaults:
+      domain: com.apple.Terminal
+      key: Default Window Settings
+      type: string
+      value: Pro
+      state: present
+  notify: Restart Terminal
 
-    - name: Set Pro theme as startup
-      community.general.osx_defaults:
-          domain: com.apple.Terminal
-          key: Startup Window Settings
-          type: string
-          value: Pro
-          state: present
-      notify: Restart Terminal
+- name: Set Pro theme as startup
+  community.general.osx_defaults:
+      domain: com.apple.Terminal
+      key: Startup Window Settings
+      type: string
+      value: Pro
+      state: present
+  notify: Restart Terminal
 
-    - name: Set the size 18 by default
-      community.general.osx_defaults:
-          domain: com.apple.Terminal
-          key: NSWindow Frame NSFontPanel
-          type: string
-          value: 929 42 445 105 0 0 1440 900
-          state: present
-      notify: Restart Terminal
+- name: Set the size 18 by default
+  community.general.osx_defaults:
+      domain: com.apple.Terminal
+      key: NSWindow Frame NSFontPanel
+      type: string
+      value: 929 42 445 105 0 0 1440 900
+      state: present
+  notify: Restart Terminal
 
-    # See: https://security.stackexchange.com/a/47786/8918
-    - name: Terminal - Enable secure keyboard entry
-      community.general.osx_defaults:
-          domain: com.apple.terminal
-          key: SecureKeyboardEntry
-          type: bool
-          value: yes
-      notify: Restart Terminal
+# See: https://security.stackexchange.com/a/47786/8918
+- name: Terminal - Enable secure keyboard entry
+  community.general.osx_defaults:
+      domain: com.apple.terminal
+      key: SecureKeyboardEntry
+      type: bool
+      value: true
+  notify: Restart Terminal

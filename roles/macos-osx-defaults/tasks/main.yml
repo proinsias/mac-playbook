@@ -1,83 +1,83 @@
 ---
 
-    - import_tasks: 1password.yml
+- import_tasks: 1password.yml
 
-    - import_tasks: activity_monitor.yml
+- import_tasks: activity_monitor.yml
 
-    - import_tasks: address_book.yml
+- import_tasks: address_book.yml
 
-    - import_tasks: alf.yml
+- import_tasks: alf.yml
 
-    - import_tasks: app_store.yml
+- import_tasks: app_store.yml
 
-    - import_tasks: bartender.yml
+- import_tasks: bartender.yml
 
-    - import_tasks: bezel_services.yml
+- import_tasks: bezel_services.yml
 
-    - import_tasks: caffeine.yml
+- import_tasks: caffeine.yml
 
-    - import_tasks: dayone.yml
+- import_tasks: dayone.yml
 
-    - import_tasks: dictionary.yml
+- import_tasks: dictionary.yml
 
-    - import_tasks: disk_utility.yml
+- import_tasks: disk_utility.yml
 
-    - import_tasks: dock.yml
+- import_tasks: dock.yml
 
-    - import_tasks: finder.yml
+- import_tasks: finder.yml
 
-    - import_tasks: flux.yml
+- import_tasks: flux.yml
 
-    - import_tasks: gpg_mail.yml
+- import_tasks: gpg_mail.yml
 
-    - import_tasks: help_viewer.yml
+- import_tasks: help_viewer.yml
 
-    - import_tasks: ical.yml
+- import_tasks: ical.yml
 
-    - import_tasks: image_capture.yml
+- import_tasks: image_capture.yml
 
-    - import_tasks: iterm2.yml
+- import_tasks: iterm2.yml
 
-    - import_tasks: launch_services.yml
+- import_tasks: launch_services.yml
 
-    - import_tasks: login_window.yml
+- import_tasks: login_window.yml
 
-    - import_tasks: mail.yml
+- import_tasks: mail.yml
 
-    - import_tasks: menu_extras.yml
+- import_tasks: menu_extras.yml
 
-    - import_tasks: menu_meters.yml
+- import_tasks: menu_meters.yml
 
-    - import_tasks: misc.yml
+- import_tasks: misc.yml
 
-    - import_tasks: ns_global_domain.yml
+- import_tasks: ns_global_domain.yml
 
-    - import_tasks: photo_booth.yml
+- import_tasks: photo_booth.yml
 
-    - import_tasks: preview.yml
+- import_tasks: preview.yml
 
-    - import_tasks: printingprefs.yml
+- import_tasks: printingprefs.yml
 
-    - import_tasks: quicktime_player.yml
+- import_tasks: quicktime_player.yml
 
-    - import_tasks: reminders.yml
+- import_tasks: reminders.yml
 
-    - import_tasks: safari.yml
+- import_tasks: safari.yml
 
-    - import_tasks: screen_capture.yml
+- import_tasks: screen_capture.yml
 
-    - import_tasks: screen_saver.yml
+- import_tasks: screen_saver.yml
 
-    - import_tasks: screen_sharing.yml
+- import_tasks: screen_sharing.yml
 
-    - import_tasks: skype.yml
+- import_tasks: skype.yml
 
-    - import_tasks: terminal.yml
+- import_tasks: terminal.yml
 
-    - import_tasks: text_edit.yml
+- import_tasks: text_edit.yml
 
-    - import_tasks: time_machine.yml
+- import_tasks: time_machine.yml
 
-    - import_tasks: xcode.yml
+- import_tasks: xcode.yml
 
-    - import_tasks: x11.yml
+- import_tasks: x11.yml

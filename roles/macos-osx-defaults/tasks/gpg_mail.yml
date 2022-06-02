@@ -1,9 +1,9 @@
 ---
 
-    - name: Disable signing emails by default
-      community.general.osx_defaults:
-          domain: org.gpgtools.gpgmail
-          key: SignNewEmailsByDefault
-          type: bool
-          value: false
-          state: present
+- name: Disable signing emails by default
+  community.general.osx_defaults:
+      domain: org.gpgtools.gpgmail
+      key: SignNewEmailsByDefault
+      type: bool
+      value: false
+      state: present

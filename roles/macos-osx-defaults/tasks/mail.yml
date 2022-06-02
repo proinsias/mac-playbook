@@ -1,35 +1,35 @@
 ---
 
-    - name: Disable reply animations in Mail.app
-      community.general.osx_defaults:
-          domain: com.apple.mail
-          key: DisableReplyAnimations
-          type: bool
-          value: true
-          state: present
-      notify: Restart Mail
+- name: Disable reply animations in Mail.app
+  community.general.osx_defaults:
+      domain: com.apple.mail
+      key: DisableReplyAnimations
+      type: bool
+      value: true
+      state: present
+  notify: Restart Mail
 
-    - name: Disable send animations in Mail.app
-      community.general.osx_defaults:
-          domain: com.apple.mail
-          key: DisableSendAnimations
-          type: bool
-          value: true
-          state: present
-      notify: Restart Mail
+- name: Disable send animations in Mail.app
+  community.general.osx_defaults:
+      domain: com.apple.mail
+      key: DisableSendAnimations
+      type: bool
+      value: true
+      state: present
+  notify: Restart Mail
 
-    - name: Mail - Addresses include name on pasteboard
-      community.general.osx_defaults:
-          domain: com.apple.mail
-          key: AddressesIncludeNameOnPasteboard
-          type: bool
-          value: yes
-      notify: Restart Mail
+- name: Mail - Addresses include name on pasteboard
+  community.general.osx_defaults:
+      domain: com.apple.mail
+      key: AddressesIncludeNameOnPasteboard
+      type: bool
+      value: true
+  notify: Restart Mail
 
-    - name: Mail - Order mails by thread
-      community.general.osx_defaults:
-          domain: com.apple.mail
-          key: ThreadingDefault
-          type: bool
-          value: yes
-      notify: Restart Mail
+- name: Mail - Order mails by thread
+  community.general.osx_defaults:
+      domain: com.apple.mail
+      key: ThreadingDefault
+      type: bool
+      value: true
+  notify: Restart Mail
