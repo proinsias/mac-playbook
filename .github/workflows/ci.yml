@@ -15,6 +15,9 @@ on:
   push:
   schedule:
     - cron: 1 2 * * 3
+  # Run workflow manually (without waiting for the cron to be called),
+  # through the Github Actions Workflow page directly.
+  workflow_dispatch:
 
 jobs:
   ci:

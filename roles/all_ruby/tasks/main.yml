@@ -14,3 +14,4 @@
 
 - name: Cleanup gems
   ansible.builtin.command: gem cleanup # Do I need `yes n | gem cleanup` here?
+  changed_when: false

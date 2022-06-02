@@ -16,6 +16,8 @@
 
 - What are the relevant osx defaults for 1password 8? Are there any?
 
+- Add more `changed_when`s if necessary - review log output.
+
 - Test all of this on:
 
   - intleacht

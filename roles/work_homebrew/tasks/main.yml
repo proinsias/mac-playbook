@@ -1,5 +1,6 @@
 ---
 - name: Cleanup homebrew
   ansible.builtin.command: brew cleanup
+  changed_when: false
 # args:
 #   warn: false  # set warn=false to prevent warning

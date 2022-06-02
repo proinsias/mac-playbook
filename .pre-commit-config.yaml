@@ -41,12 +41,10 @@ repos:
 
   # Ansible
 
-  #  - repo: https://github.com/ansible-community/ansible-lint.git
-  #    rev: v5.0.7
-  #    hooks:
-  #      - id: ansible-lint
-  #        args: ['--offline']  # FIXME: Take out once I figure out how to authenticate.
-  #        files: \.(yaml|yml)$
+  - repo: https://github.com/ansible-community/ansible-lint.git
+    rev: v5.0.7
+    hooks:
+      - id: ansible-lint
 
   # Git
 

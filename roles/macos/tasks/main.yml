@@ -53,6 +53,7 @@
     # yamllint disable-line rule:line-length
     defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string Aerial displayName -string Aerial path -string ~/Library/Screen\
     Savers/Aerial.saver type -int 0
+  changed_when: false
 
 - name: Security - Get gatekeeper status
   ansible.builtin.command: spctl --status
@@ -68,3 +69,4 @@
 
 - name: Sound – Mute Audio Output
   ansible.builtin.command: osascript -e 'set volume output muted true'
+  changed_when: false

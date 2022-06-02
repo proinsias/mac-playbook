@@ -1,31 +1,86 @@
 ---
+- name: Get computersleep power settings
+  ansible.builtin.command: systemsetup -getcomputersleep
+  register: computersleep_power_settings_results
+  become: true
+  changed_when: false
+  check_mode: false
+  tags: [become]
+
 - name: Set computersleep power settings
   ansible.builtin.command: systemsetup -setcomputersleep Never
   become: true
+  tags: [become]
+  when: "computersleep_power_settings_results.stdout != Computer Sleep: Never"
+
+- name: Get displaysleep power settings
+  ansible.builtin.command: systemsetup -getdisplaysleep
+  register: displaysleep_power_settings_results
+  become: true
+  changed_when: false
+  check_mode: false
   tags: [become]
 
 - name: Set displaysleep power settings
   ansible.builtin.command: systemsetup -setdisplaysleep 15 # 15 minutes.
   become: true
   tags: [become]
+  when: "displaysleep_power_settings_results.stdout != Display Sleep: after 15 minutes"
+
+- name: Get harddisksleep power settings
+  ansible.builtin.command: systemsetup -getharddisksleep
+  register: harddisksleep_power_settings_results
+  become: true
+  changed_when: false
+  check_mode: false
+  tags: [become]
 
 - name: Set harddisksleep power settings
   ansible.builtin.command: systemsetup -setharddisksleep Never
   become: true
+  tags: [become]
+  when: "harddisksleep_power_settings_results.stdout != Hard Disk Sleep: Never"
+
+- name: Get restartfreeze power settings
+  ansible.builtin.command: systemsetup -getrestartfreeze
+  register: restartfreeze_power_settings_results
+  become: true
+  changed_when: false
+  check_mode: false
   tags: [become]
 
 - name: Set restartfreeze power settings
   ansible.builtin.command: systemsetup -setrestartfreeze On
   become: true
   tags: [become]
+  when: "restartfreeze_power_settings_results.stdout != Restart After Freeze: On"
+
+- name: Get restartpowerfailure power settings
+  ansible.builtin.command: systemsetup -getrestartpowerfailure
+  register: restartpowerfailure_power_settings_results
+  become: true
+  changed_when: false
+  check_mode: false
+  tags: [become]
+  when: ansible_machine != 'arm64'
 
 - name: Set restartpowerfailure power settings
   ansible.builtin.command: systemsetup -setrestartpowerfailure On
   become: true
   tags: [become]
-  when: ansible_machine != 'arm64'
+  # yamllint disable-line rule:line-length
+  when: "(ansible_machine != 'arm64') and (restartpowerfailure_power_settings_results.stdout != Restart After Power Failure: On)"
+
+- name: Get wakeonnetworkaccess power settings
+  ansible.builtin.command: systemsetup -getwakeonnetworkaccess
+  register: wakeonnetworkaccess_power_settings_results
+  become: true
+  changed_when: false
+  check_mode: false
+  tags: [become]
 
 - name: Set wakeonnetworkaccess power settings
   ansible.builtin.command: systemsetup -setwakeonnetworkaccess On
   become: true
   tags: [become]
+  when: "wakeonnetworkaccess_power_settings_results.stdout != Wake On Network Access: On"

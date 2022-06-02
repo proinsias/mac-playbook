@@ -6,3 +6,4 @@
 
 - name: Auto update all pre-commit hooks
   ansible.builtin.command: ~/.local/bin/pre-commit-autoupdate
+  changed_when: false
