@@ -14,11 +14,7 @@
   - install and update `gcloud` (keep list of outdated)
   - install `dotfiles` via `stow`
 
-- Make sure osx defaults actually do what I hope they do. They may be out of date.
-
-- Make sure macos-\* roles actually do what I hoep they do.
-
-- https://github.com/elliotweiser/ansible-osx-command-line-tools/blob/master/.travis.yml
+- What are the relevant osx defaults for 1password 8? Are there any?
 
 - Test all of this on:
 
@@ -30,20 +26,18 @@
   - GCE VM
     - work.sh
 
-- Use community general homebrew:
+- Mark become tasks with become tags so I can avoid them during lingon.
 
-  - <https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_module.html>
-  - <https://docs.ansible.com/ansible/latest/collections/community/general/homebrew_tap_module.html>
-  - Mark become tasks with become tags so I can avoid them during lingon.
+  - Use community package for non-become installs and upgrades, and non-community package for setup?
 
 - Github action on mac to test!
 
-  - <https://github.com/geerlingguy/mac-dev-playbook/blob/master/.github/workflows/ci.yml>
-  - <https://github.blog/changelog/2021-08-16-github-actions-macos-11-big-sur-is-generally-available-on-github-hosted-runners/>
+  - Finish ci.yml - GT FIXMEs
 
 - To go through:
 
   - <https://github.com/danbohea/ansible-role-macos-dock>
+  - <https://github.com/fubarhouse/ansible-role-macdock>
   - <https://github.com/danbohea/ansible-role-macos-spelling>
   - <https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html>
   - <https://github.com/geerlingguy/ansible-role-dotfiles>

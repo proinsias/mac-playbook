@@ -8,7 +8,8 @@
     - name: Run macos dockutil role
       include_role:
           name: macos-dockutil
-      tags: [never] # Disable until dockutil support for M1 updated - kcrawford/dockutil#127.  # FIXME:
+      when: ansible_machine != 'arm64'  # dockutil does not support M1 yet - kcrawford/dockutil#127.
+      tags: [always]
 
     - name: Run macos mas role
       include_role:
@@ -24,11 +25,6 @@
       include_role:
           name: macos-power
       tags: [always] # Always run, even when tags specified.
-
-    - name: Run macos settings role
-      include_role:
-          name: macos-settings
-      tags: [never] # Disable until dockutil support for M1 updated - kcrawford/dockutil#127.  # FIXME:
 
     - name: Run personal mas role
       include_role:

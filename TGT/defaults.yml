@@ -34,30 +34,6 @@ system_defaults:
     default_applications: []
 
 
-  ### Dock
-
-
-  # if enabled configured apps will be added
-  # even if they're not installed
-    apps_force_install: no
-
-  # removes apps from the dock that are
-  # not defined in the apps list
-    apps_remove_undefined: no
-
-  # Apps to add to dock
-  # example item:
-  # - name: Safari
-  #   path: /Applications/Safari.app
-    apps: []
-
-  # Spacers to add to dock
-  # example item:
-  # - after: Safari
-    spacers: []
-
-
-
 ---
 
 system:
@@ -323,49 +299,6 @@ textedit:
 terminal:
 
     enable_secure_keyboard_entry: true
-
-######################################
-#                Dock                #
-######################################
-
-dock:
-
-  # icon size
-    tile_size: 36
-
-    show_idicator_lights: true
-
-    hidden_items_translucent: true
-
-    rearrange_spaces_by_last_use: false
-
-  # FIXME: https://github.com/fubarhouse/ansible-role-macdock
-  # Use fubarhouse.macdock instead of below items.
-
-  # if enabled configured apps will be added
-  # even if they're not installed
-  # apps_force_install: false
-
-  # removes apps from the dock that are
-  # not defined in the apps list
-  # apps_remove_undefined: true
-
-  # Apps to add to dock
-  # example item:
-  # - name: Safari
-  #   path: /Applications/Safari.app
-  # apps: []
-
-  # Spacers to add to dock
-  # example item:
-  # - after: Safari
-  #  spacers: []
-
-
-
-
-
-
 ---
 
 ######################################
@@ -601,41 +534,6 @@ finder_defaults:
     disable_all_animations: no
 
 
-######################################
-#                Dock                #
-######################################
-
-dock: {}
-dock_defaults:
-
-  # icon size
-    tile_size: 50
-
-    show_idicator_lights: yes
-
-    hidden_items_translucent: no
-
-    rearrange_spaces_by_last_use: yes
-
-  # if enabled configured apps will be added
-  # even if they're not installed
-    apps_force_install: no
-
-  # removes apps from the dock that are
-  # not defined in the apps list
-    apps_remove_undefined: no
-
-  # Apps to add to dock
-  # example item:
-  # - name: Safari
-  #   path: /Applications/Safari.app
-    apps: []
-
-  # Spacers to add to dock
-  # example item:
-  # - after: Safari
-    spacers: []
-
 
 ######################################
 #               Safari               #
@@ -784,48 +682,6 @@ finder:
     iconview_show_icon_preview: yes
     enable_quicklook_text_selection: yes
     disable_all_animations: yes
-
-
-dock:
-    apps_remove_undefined: true
-    tile_size: 50
-    show_idicator_lights: yes
-    hidden_items_translucent: yes
-    rearrange_spaces_by_last_use: no
-    apps:
-        - name: Reeder
-          path: /Applications/Reeder.app
-        - name: Safari
-          path: /Applications/Safari.app
-        - name: Musik
-          path: /System/Applications/Music.app
-        - name: Mail
-          path: /System/Applications/Mail.app
-        - name: Erinnerungen
-          path: /System/Applications/Reminders.app
-        - name: Fantastical 2
-          path: /Applications/Fantastical 2.app
-        - name: Evernote
-          path: /Applications/Evernote.app
-        - name: Franz
-          path: /Applications/Franz.app
-        - name: Nachrichten
-          path: /System/Applications/Messages.app
-        - name: iTerm
-          path: /Applications/iTerm.app
-        - name: Tower
-          path: /Applications/Tower.app
-        - name: Visual Studio Code
-          path: /Applications/Visual Studio Code.app
-        - name: Transmit
-          path: /Applications/Transmit.app
-        - name: Parallels Desktop
-          path: /Applications/Parallels Desktop.app
-        - name: Remote Desktop
-          path: /Applications/Microsoft Remote Desktop.app
-    spacers:
-        - after: Musik
-        - after: Nachrichten
 
 
 safari:
