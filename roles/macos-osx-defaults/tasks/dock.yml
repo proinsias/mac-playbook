@@ -23,7 +23,7 @@
       domain: com.apple.dock
       key: pinning
       type: string
-      value: middle # Other options: "start", "end".
+      value: middle  # Other options: "start", "end".
       state: present
   notify: Restart Dock
 
@@ -32,7 +32,7 @@
       domain: com.apple.dock
       key: orientation
       type: string
-      value: bottom # Other options: "left", "right".
+      value: bottom  # Other options: "left", "right".
       state: present
   notify: Restart Dock
 

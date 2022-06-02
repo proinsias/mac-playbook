@@ -13,5 +13,5 @@
       domain: com.apple.screencapture
       key: type
       type: string
-      value: png # other options: BMP, GIF, JPG, PDF, TIFF.
+      value: png  # other options: BMP, GIF, JPG, PDF, TIFF.
       state: present

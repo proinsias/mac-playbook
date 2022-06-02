@@ -110,13 +110,13 @@
   community.general.osx_defaults:
       key: AppleActionOnDoubleClick
       type: string
-      value: Maximize # "Maximize", "Minimize".
+      value: Maximize  # "Maximize", "Minimize".
 
 - name: UI - Set interface style
   community.general.osx_defaults:
       key: AppleInterfaceStyle
       type: string
-      value: Dark # "Light", "Dark".
+      value: Dark  # "Light", "Dark".
 
 - name: UI - Enable subpixel font rendering on non-Apple LCDs
   community.general.osx_defaults:
@@ -154,7 +154,7 @@
   community.general.osx_defaults:
       key: AppleShowScrollBars
       type: string
-      value: WhenScrolling # # Values: "WhenScrolling", "Always".
+      value: WhenScrolling   # Values: "WhenScrolling", "Always".
 
 - name: UI - Enable opening and closing window animations
   community.general.osx_defaults:

@@ -14,7 +14,7 @@
       domain: com.apple.finder
       key: NewWindowTarget
       type: string
-      value: PfDe # "PfHm" for Home directory, "PfDe" for Desktop.
+      value: PfDe  # "PfHm" for Home directory, "PfDe" for Desktop.
   notify: Restart Finder
 
 - name: Finder - Show extension warning
@@ -86,7 +86,7 @@
       domain: com.apple.finder
       key: FXPreferredViewStyle
       type: string
-      value: clmv # "icnv" for icon view, "clmv" for column view, "Flwv" for cover flow view.
+      value: clmv  # "icnv" for icon view, "clmv" for column view, "Flwv" for cover flow view.
   notify: Restart Finder
 
 - name: Finder - Show external harddrives on desktop
