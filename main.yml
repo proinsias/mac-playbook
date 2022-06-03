@@ -1,26 +1,32 @@
 ---
 - hosts: all
+  roles:
+    - common
   connection: local
   gather_facts: true
 
   tasks:
     - name: Run all role
-      include_role:
+      ansible.builtin.include_role:
         name: all
-      # tags: [always] # Always run, even when tags specified.
-      tags: [all]
+      tags: [always] # Always run, even when tags specified.
 
     - name: Run macos role
-      include_role:
+      ansible.builtin.include_role:
         name: macos
       when: ansible_os_family == "Darwin"
-      tags: [macos]
+      tags: [always] # Always run, even when tags specified.
 
     - name: Run linux role
-      include_role:
+      ansible.builtin.include_role:
         name: linux
       when: ansible_os_family == "Debian"
-      tags: [linux] # Always run, even when tags specified.
+      tags: [always] # Always run, even when tags specified.
+
+    - name: Run all_homebrew_cleanup role
+      ansible.builtin.include_role:
+        name: all_homebrew_cleanup
+      tags: [always] # Always run, even when tags specified.
 
 #  Notes on ansible-playbook options:
 # 1. `--check` determines which tasks would lead to changes, but doesn't actually update anything.

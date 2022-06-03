@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: Francis O'Donovan
+  description: Personal homebrew role.
+  license: MIT
+  min_ansible_version: "2.12"
+  galaxy_tags: []
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: macOS
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+dependencies:
+  - role: geerlingguy.mac.homebrew

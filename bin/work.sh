@@ -3,4 +3,4 @@
 ansible-playbook main.yml \
     --inventory inventory \
     --skip-tags "become" \
-    --tags "all,macos,linux,work"
+    --tags "work"

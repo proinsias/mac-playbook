@@ -1,5 +1,5 @@
 ---
-- name: Show screensaver with clock
+- name: Screensaver - Show with clock
   community.general.osx_defaults:
     domain: com.apple.screensaver
     key: showClock

@@ -1,5 +1,5 @@
 ---
-- name: Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
+- name: Login Window - Reveal IP address, hostname, OS version, etc. when clicking the clock
   community.general.osx_defaults:
     domain: com.apple.loginwindow
     key: AdminHostInfo

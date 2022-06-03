@@ -1,8 +1,9 @@
 ---
-- name: Run macos homebrew role
-  ansible.builtin.include_role:
-    name: macos_homebrew
-  tags: [always] # Always run, even when tags specified.
+# FIXME: Need to be able to skip become tasks here.
+#- name: Run macos homebrew role
+#  ansible.builtin.include_role:
+#    name: macos_homebrew
+#  tags: [always] # Always run, even when tags specified.
 
 - name: Run macos dockutil role
   ansible.builtin.include_role:
@@ -10,63 +11,67 @@
   when: ansible_machine != 'arm64' # dockutil does not support M1 yet - kcrawford/dockutil#127.
   tags: [always]
 
-- name: Run macos mas role
-  ansible.builtin.include_role:
-    name: macos_mas
-  tags: [always] # Always run, even when tags specified.
-
-- name: Run macos osx defaults role
-  ansible.builtin.include_role:
-    name: macos_osx_defaults
-  tags: [always] # Always run, even when tags specified.
-
-- name: Run macos power role
-  ansible.builtin.include_role:
-    name: macos_power
-  tags: [always] # Always run, even when tags specified.
-
+# FIXME:
+#- name: Run macos mas role
+#  ansible.builtin.include_role:
+#    name: macos_mas
+#  tags: [always] # Always run, even when tags specified.
+#
+#- name: Run macos osx defaults role
+#  ansible.builtin.include_role:
+#    name: macos_osx_defaults
+#  tags: [always] # Always run, even when tags specified.
+#
+#- name: Run macos power role
+#  ansible.builtin.include_role:
+#    name: macos_power
+#  tags: [always] # Always run, even when tags specified.
+#
 - name: Run personal mas role
   ansible.builtin.include_role:
     name: personal_mas
-  tags: [never, personal] # This won't run unless you specify the 'personal' tag.
+  tags: # This won't run unless you specify the 'personal' tag.
+    - never
+    - personal
 
 - name: Run work mas role
   ansible.builtin.include_role:
     name: work_mas
-  tags: [never, work] # This won't run unless you specify the 'work' tag.
-
-# On a fresh osx install the type of idletime is string, if activated it gets changed to int
-
-- name: Screensaver - Read idleTime type.
-  ansible.builtin.command: defaults -currentHost read-type com.apple.screensaver idleTime
-  register: idletime_type
-  changed_when: false
-  failed_when: false
-
-- name: Screensaver - Change idleTime type to int.
-  ansible.builtin.command: defaults -currentHost write com.apple.screensaver idleTime -int 60
-  when: idletime_type.stdout.find('string') != -1
-  no_log: true
-
-- name: Screensaver - Set screensaver to Aerial
-  ansible.builtin.command:
-    # yamllint disable-line rule:line-length
-    defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string Aerial displayName -string Aerial path -string ~/Library/Screen\
-    Savers/Aerial.saver type -int 0
-  changed_when: false
-
-- name: Security - Get gatekeeper status
-  ansible.builtin.command: spctl --status
-  register: gatekeeper_status
-  changed_when: false
-  failed_when: false
-
-- name: Security - Enable Gatekeeper
-  ansible.builtin.command: spctl --master-enable
-  become: true
-  when: gatekeeper_status.stdout.find('disabled') != -1
-  tags: [become]
-
-- name: Sound – Mute Audio Output
-  ansible.builtin.command: osascript -e 'set volume output muted true'
-  changed_when: false
+  tags: # This won't run unless you specify the 'work' tag.
+    - never
+    - work
+## On a fresh osx install the type of idletime is string, if activated it gets changed to int
+#
+#- name: Screensaver - Read idleTime type.
+#  ansible.builtin.command: defaults -currentHost read-type com.apple.screensaver idleTime
+#  register: idletime_type
+#  changed_when: false
+#  failed_when: false
+#
+#- name: Screensaver - Change idleTime type to int.
+#  ansible.builtin.command: defaults -currentHost write com.apple.screensaver idleTime -int 60
+#  when: idletime_type.stdout.find('string') != -1
+#  no_log: true
+#
+#- name: Screensaver - Set screensaver to Aerial
+#  ansible.builtin.command:
+#    # yamllint disable-line rule:line-length
+#    defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string Aerial displayName -string Aerial path -string ~/Library/Screen\
+#    Savers/Aerial.saver type -int 0
+#  changed_when: false
+#
+#- name: Security - Get gatekeeper status
+#  ansible.builtin.command: spctl --status
+#  register: gatekeeper_status
+#  changed_when: false
+#  failed_when: false
+#
+#- name: Security - Enable Gatekeeper
+#  ansible.builtin.command: spctl --master-enable
+#  become: true
+#  when: gatekeeper_status.stdout.find('disabled') != -1
+#  tags: [become]
+#
+#- name: Sound – Mute Audio Output
+#  ansible.builtin.command: osascript -e 'set volume output muted true'
+#  changed_when: false

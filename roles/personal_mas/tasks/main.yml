@@ -8,3 +8,6 @@
       - 494803304 # WiFi Explorer
     state: present
     upgrade_all: true
+  tags: # This won't run unless you specify the 'personal' tag.
+    - never
+    - personal

@@ -1,8 +1,9 @@
 ---
-- name: Show debug menu
+- name: Reminders - Show debug menu
   community.general.osx_defaults:
     domain: com.apple.reminders
     key: RemindersDebugMenu
     type: bool
     value: true
     state: present
+  notify: Restart Reminders

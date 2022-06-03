@@ -1,5 +1,5 @@
 ---
-- name: Turn off bouncing icons in dock
+- name: Dock - Turn off bouncing icons
   community.general.osx_defaults:
     domain: com.apple.dock
     key: no-bouncing
@@ -8,7 +8,7 @@
     state: present
   notify: Restart Dock
 
-- name: Change minimize/maximize window effect
+- name: Dock - Change minimize/maximize window effect
   community.general.osx_defaults:
     domain: com.apple.dock
     key: mineffect
@@ -17,7 +17,7 @@
     state: present
   notify: Restart Dock
 
-- name: Move dock to bottom middle of the screen
+- name: Dock - Move to bottom middle of the screen
   community.general.osx_defaults:
     domain: com.apple.dock
     key: pinning
@@ -26,7 +26,7 @@
     state: present
   notify: Restart Dock
 
-- name: Move dock to bottom middle of the screen
+- name: Dock - Move to bottom middle of the screen
   community.general.osx_defaults:
     domain: com.apple.dock
     key: orientation
@@ -35,7 +35,7 @@
     state: present
   notify: Restart Dock
 
-- name: Enable spring loading for all Dock items
+- name: Dock - Enable spring loading for all items
   community.general.osx_defaults:
     domain: com.apple.dock
     key: enable-spring-load-actions-on-all-items
@@ -44,7 +44,7 @@
     state: present
   notify: Restart Dock
 
-- name: Speeding up Mission Control animations and grouping windows by application
+- name: Dock - Speeding up Mission Control animations and grouping windows by application
   community.general.osx_defaults:
     domain: com.apple.dock
     key: expose-animation-duration
@@ -53,7 +53,7 @@
     state: present
   notify: Restart Dock
 
-- name: Misson Control group by application
+- name: Dock - Misson Control group by application
   community.general.osx_defaults:
     domain: com.apple.dock
     key: expose-group-by-app
@@ -62,34 +62,7 @@
     state: present
   notify: Restart Dock
 
-- name: Setting Dock to auto-hide and removing the auto-hiding delay
-  community.general.osx_defaults:
-    domain: com.apple.dock
-    key: autohide
-    type: bool
-    value: true
-    state: present
-  notify: Restart Dock
-
-- name: Setting Dock to auto-hide and removing the auto-hiding delay
-  community.general.osx_defaults:
-    domain: com.apple.dock
-    key: autohide-delay
-    type: float
-    value: 0
-    state: present
-  notify: Restart Dock
-
-- name: Setting Dock to auto-hide and removing the auto-hiding delay
-  community.general.osx_defaults:
-    domain: com.apple.dock
-    key: autohide-time-modifier
-    type: float
-    value: 0
-    state: present
-  notify: Restart Dock
-
-- name: Enabling iTunes track notifications in the Dock
+- name: Dock - Enabling iTunes track notifications
   community.general.osx_defaults:
     domain: com.apple.dock
     key: itunes-notifications
@@ -98,7 +71,7 @@
     state: present
   notify: Restart Dock
 
-- name: Don't animate opening applications from the Dock
+- name: Dock - Don't animate opening applications
   community.general.osx_defaults:
     domain: com.apple.dock
     key: launchanim
@@ -107,7 +80,7 @@
     state: present
   notify: Restart Dock
 
-- name: Don't show Dashboard as a Space
+- name: Dock - Don't show Dashboard as a Space
   community.general.osx_defaults:
     domain: com.apple.dock
     key: dashboard-in-overlay
@@ -116,7 +89,7 @@
     state: present
   notify: Restart Dock
 
-- name: Set springboard rows
+- name: Dock - Set springboard rows
   community.general.osx_defaults:
     domain: com.apple.dock
     key: springboard-rows
@@ -125,7 +98,7 @@
     state: present
   notify: Restart Dock
 
-- name: Set springboard columns
+- name: Dock - Set springboard columns
   community.general.osx_defaults:
     domain: com.apple.dock
     key: springboard-columns
@@ -134,7 +107,7 @@
     state: present
   notify: Restart Dock
 
-- name: Making launchpad better
+- name: Dock - Making launchpad better
   community.general.osx_defaults:
     domain: com.apple.dock
     key: ResetLaunchPad
@@ -143,14 +116,15 @@
     state: present
   notify: Restart Dock
 
-- name: Add a Stack with Recent Applications
-  community.general.osx_defaults:
-    domain: com.apple.dock
-    key: persistent-others
-    type: array-add
-    value: '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
-    state: present
-  notify: Restart Dock
+# FIXME: array-add
+#- name: Dock - Add a Stack with Recent Applications
+#  community.general.osx_defaults:
+#    domain: com.apple.dock
+#    key: persistent-others
+#    type: array-add
+#    value: '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
+#    state: present
+#  notify: Restart Dock
 
 # Hot corners
 # Possible values:
@@ -165,7 +139,7 @@
 # 11: Launchpad
 # 12: Notification Center
 
-- name: Top left screen corner → Disable screen saver
+- name: Dock - Top left screen corner → Disable screen saver
   community.general.osx_defaults:
     domain: com.apple.dock
     key: wvous-tl-corner
@@ -174,7 +148,7 @@
     state: present
   notify: Restart Dock
 
-- name: Top left screen corner → Disable screen saver
+- name: Dock - Top left screen corner → Disable screen saver
   community.general.osx_defaults:
     domain: com.apple.dock
     key: wvous-tl-modifier
@@ -183,7 +157,7 @@
     state: present
   notify: Restart Dock
 
-- name: Bottom right screen corner → Start screen saver
+- name: Dock - Bottom right screen corner → Start screen saver
   community.general.osx_defaults:
     domain: com.apple.dock
     key: wvous-br-corner
@@ -192,7 +166,7 @@
     state: present
   notify: Restart Dock
 
-- name: Bottom right screen corner → Start screen saver
+- name: Dock - Bottom right screen corner → Start screen saver
   community.general.osx_defaults:
     domain: com.apple.dock
     key: wvous-br-modifier
@@ -201,7 +175,7 @@
     state: present
   notify: Restart Dock
 
-- name: Make animation snappier
+- name: Dock - Make animation snappier
   community.general.osx_defaults:
     domain: com.apple.dock
     key: workspaces-edge-delay
@@ -250,10 +224,19 @@
     value: 0
   notify: Restart Dock
 
-- name: Dock - Automatically hide dock
+- name: Dock - Automatically hide
   community.general.osx_defaults:
     domain: com.apple.dock
     key: autohide
     type: bool
     value: true
+  notify: Restart Dock
+
+- name: Dock - Removing the auto-hiding time modifier
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: autohide-time-modifier
+    type: float
+    value: 0
+    state: present
   notify: Restart Dock

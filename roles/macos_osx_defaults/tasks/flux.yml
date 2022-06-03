@@ -1,35 +1,54 @@
 ---
-- name: Set flag that Flux has launched before
+- name: Flux - Set flag that app has launched before
   community.general.osx_defaults:
     domain: org.herf.Flux.plist
     key: SUHasLaunchedBefore
     type: bool
     value: true
     state: present
+  notify: Restart Flux
 
-- name: Enable automatic update checks
+- name: Flux - Enable automatic update checks
   community.general.osx_defaults:
     domain: org.herf.Flux.plist
     key: SUEnableAutomaticChecks
     type: bool
     value: true
     state: present
-
-- name: Set location
-  ansible.builtin.command: defaults write org.herf.Flux {{ item }}
-  with_items:
-    - location -string "42.5,-71.2"
-    - locationTextField -string "02474"
-  changed_when: false
   notify: Restart Flux
 
-- name: Set colour temperatures
+- name: Flux - Set location
   community.general.osx_defaults:
-    domain: org.herf.Flux
-    key: "{{ item.key }}"
+    domain: org.herf.Flux.plist
+    key: location
+    type: string
+    value: "42.5,-71.2"
+    state: present
+  notify: Restart Flux
+
+- name: Flux - Set locationTextField
+  community.general.osx_defaults:
+    domain: org.herf.Flux.plist
+    key: location
+    type: string
+    value: "02474"
+    state: present
+  notify: Restart Flux
+
+- name: Flux - Set late night colour temperature
+  community.general.osx_defaults:
+    domain: org.herf.Flux.plist
+    key: lateColorTemp
     type: int
-    value: "{{ item.value }}"
-  with_items:
-    - { key: lateColorTemp, value: 3400 }
-    - { key: nightColorTemp, value: 1900 }
+    value: 3400
+    state: present
+  notify: Restart Flux
+
+- name: Flux - Set night colour temperature
+  community.general.osx_defaults:
+    domain: org.herf.Flux.plist
+    key: nightColorTemp
+    type: int
+    value: 1900
+    state: present
   notify: Restart Flux

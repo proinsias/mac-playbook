@@ -6,4 +6,5 @@
 
 - name: Auto update all pre-commit hooks
   ansible.builtin.command: ~/.local/bin/pre-commit-autoupdate
-  changed_when: false
+  register: pre_commit_autoupdate
+  changed_when: pre_commit_autoupdate.stdout.find('Updating') != -1

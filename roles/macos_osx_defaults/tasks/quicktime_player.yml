@@ -1,8 +1,9 @@
 ---
-- name: Don't auto-play videos when opened with QuickTime Player
+- name: QuickTime Player - Don't auto-play videos when opened
   community.general.osx_defaults:
     domain: com.apple.QuickTimePlayerX
     key: MGPlayMovieOnOpen
     type: bool
     value: false
     state: present
+  notify: Restart QuickTime Player

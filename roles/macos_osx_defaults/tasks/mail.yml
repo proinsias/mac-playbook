@@ -1,5 +1,5 @@
 ---
-- name: Disable reply animations in Mail.app
+- name: Mail – Disable reply animations
   community.general.osx_defaults:
     domain: com.apple.mail
     key: DisableReplyAnimations
@@ -8,7 +8,7 @@
     state: present
   notify: Restart Mail
 
-- name: Disable send animations in Mail.app
+- name: Mail – Disable send animations
   community.general.osx_defaults:
     domain: com.apple.mail
     key: DisableSendAnimations

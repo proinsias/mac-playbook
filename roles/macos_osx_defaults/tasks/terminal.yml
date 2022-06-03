@@ -1,5 +1,5 @@
 ---
-- name: Enable UTF-8 only
+- name: Terminal – Enable UTF-8 only
   community.general.osx_defaults:
     domain: com.apple.Terminal
     key: StringEncodings
@@ -9,7 +9,7 @@
     state: present
   notify: Restart Terminal
 
-- name: Set Pro theme as default
+- name: Terminal – Set Pro theme as default
   community.general.osx_defaults:
     domain: com.apple.Terminal
     key: Default Window Settings
@@ -18,7 +18,7 @@
     state: present
   notify: Restart Terminal
 
-- name: Set Pro theme as startup
+- name: Terminal – Set Pro theme as startup
   community.general.osx_defaults:
     domain: com.apple.Terminal
     key: Startup Window Settings
@@ -27,7 +27,7 @@
     state: present
   notify: Restart Terminal
 
-- name: Set the size 18 by default
+- name: Terminal – Set the size 18 by default
   community.general.osx_defaults:
     domain: com.apple.Terminal
     key: NSWindow Frame NSFontPanel

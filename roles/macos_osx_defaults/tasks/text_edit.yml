@@ -1,5 +1,5 @@
 ---
-- name: Open files as UTF-8 in TextEdit
+- name: TextEdit –Open files as UTF-8
   community.general.osx_defaults:
     domain: com.apple.TextEdit
     key: PlainTextEncoding
@@ -8,7 +8,7 @@
     state: present
   notify: Restart TextEdit
 
-- name: Save files as UTF-8 in TextEdit
+- name: TextEdit – Save files as UTF-8
   community.general.osx_defaults:
     domain: com.apple.TextEdit
     key: PlainTextEncodingForWrite
@@ -17,7 +17,7 @@
     state: present
   notify: Restart TextEdit
 
-- name: Save TextEdit as plaintext
+- name: TextEdit - Save as plaintext
   community.general.osx_defaults:
     domain: com.apple.TextEdit
     key: RichText

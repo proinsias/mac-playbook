@@ -1,5 +1,5 @@
 ---
-- name: Save screenshots to the desktop
+- name: Screen Capture - Save screenshots to the desktop
   community.general.osx_defaults:
     domain: com.apple.screencapture
     key: location
@@ -7,7 +7,7 @@
     value: ${HOME}/Desktop
     state: present
 
-- name: Save screenshots in PNG formats
+- name: Screen Capture - Save screenshots in PNG formats
   community.general.osx_defaults:
     domain: com.apple.screencapture
     key: type

@@ -1,8 +1,9 @@
 ---
-- name: Update MenuMeters disk information only every 1s
+- name: MenuMeters - Update disk information only every 1s
   community.general.osx_defaults:
     domain: com.ragingmenace.MenuMeters
     key: DiskInterval
     type: float
     value: 1.0
     state: present
+  notify: Restart MenuMeters

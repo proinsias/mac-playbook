@@ -56,7 +56,7 @@ jobs:
 #        run: tests/uninstall-homebrew.sh
 #
 #      - name: Test the playbook.
-#        run: ansible-playbook main.yml
+#        run: ansible-playbook main.yml --inventory inventory --skip-tags "become" --tags "personal,work"
 #        env:
 #          ANSIBLE_FORCE_COLOR: '1'
 #

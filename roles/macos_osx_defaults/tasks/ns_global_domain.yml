@@ -1,5 +1,5 @@
 ---
-- name: Setting trackpad speed to a reasonable number
+- name: Trackpad –Set speed to a reasonable number
   community.general.osx_defaults:
     domain: NSGlobalDomain
     key: com.apple.trackpad.scaling
@@ -7,7 +7,7 @@
     value: 2
     state: present
 
-- name: Setting mouse speed to a reasonable number
+- name: Mouse - Setting speed to a reasonable number
   community.general.osx_defaults:
     domain: NSGlobalDomain
     key: com.apple.mouse.scaling
@@ -23,20 +23,12 @@
     value: true
     state: present
 
-- name: Disable beeps on sound level change
+- name: Sound - Disable beeps on level change
   community.general.osx_defaults:
     domain: NSGlobalDomain
     key: com.apple.sound.beep.feedback
     type: int
     value: 0
-    state: present
-
-- name: Disable the over-the-top focus ring animation
-  community.general.osx_defaults:
-    domain: NSGlobalDomain
-    key: NSUseAnimatedFocusRing
-    type: bool
-    value: false
     state: present
 
 - name: Set language and text formats
@@ -119,3 +111,183 @@
     type: bool
     value: true
     state: present
+
+- name: UI - Expand save panel by default
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSNavPanelExpandedStateForSaveMode
+    type: bool
+    value: true
+  notify: Restart Finder
+
+- name: UI - Expand print panel by default
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: PMPrintingExpandedStateForPrint
+    type: bool
+    value: true
+  notify: Restart Finder
+
+- name: Springing - Enable spring loading for directories
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.springing.enabled
+    type: bool
+    value: true
+
+- name: Springing - Set delay for spring loading directories
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.springing.delay
+    type: float
+    value: 2
+
+- name: UI - Set action for double click on titlebar
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleActionOnDoubleClick
+    type: string
+    value: Maximize # "Maximize", "Minimize".
+
+- name: UI - Set interface style
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleInterfaceStyle
+    type: string
+    value: Dark # "Light", "Dark".
+
+- name: UI - Enable subpixel font rendering on non-Apple LCDs
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    state: present
+    key: AppleFontSmoothing
+    type: int
+    value: 1
+
+- name: UI - Show all file extensions
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+
+- name: UI - Enable focus ring
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSUseAnimatedFocusRing
+    type: bool
+    value: false
+
+- name: UI - Enable menubar transparency
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleEnableMenuBarTransparency
+    type: bool
+    value: true
+
+- name: UI - Show scrollbars
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleShowScrollBars
+    type: string
+    value: WhenScrolling # Values: "WhenScrolling", "Always".
+
+- name: UI - Enable opening and closing window animations
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticWindowAnimationsEnabled
+    type: bool
+    value: true
+
+- name: UI - Set window resize speed for Cocoa applications
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSWindowResizeTime
+    type: float
+    value: 0.2
+
+- name: Input - Enable auto correct
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticSpellingCorrectionEnabled
+    type: bool
+    value: true
+
+- name: Input - Disable smart quotes
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticQuoteSubstitutionEnabled
+    type: bool
+    value: false
+
+- name: Input - Disable smart dashes
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticDashSubstitutionEnabled
+    type: bool
+    value: false
+
+- name: Input - Enable automatic capitalization
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticCapitalizationEnabled
+    type: bool
+    value: true
+
+- name: Input - Enable automatic period substitution
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticPeriodSubstitutionEnabled
+    type: bool
+    value: true
+
+- name: Input - Enable continuous spell checking
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAllowContinuousSpellChecking
+    type: bool
+    value: true
+
+# 1 : Text boxes and lists only
+# 3 : All controls
+- name: Input - Enable full keyboard access for all controls
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleKeyboardUIMode
+    type: int
+    value: 3
+
+- name: Input - Set key repeat rate
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 2
+
+- name: Input - Set initial key repeat delay
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: InitialKeyRepeat
+    type: int
+    value: 22
+
+- name: Input - Enable press-and-hold for special characters
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: ApplePressAndHoldEnabled
+    type: bool
+    value: true
+
+- name: Misc - Save application state on quit
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSQuitAlwaysKeepsWindows
+    type: bool
+    value: true
+
+- name: Misc - Save new docs to icloud by default
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: NSDocumentSaveNewDocumentsToCloud
+    type: bool
+    value: true

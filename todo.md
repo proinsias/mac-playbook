@@ -1,7 +1,5 @@
 # To Dos
 
-- GT FIXMEs in code.
-
 - GT TGT files.
 
 - Replace most of lingon script with call to this!

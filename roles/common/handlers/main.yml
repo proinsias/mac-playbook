@@ -1,4 +1,20 @@
 ---
+- name: Restart Caffeine
+  ansible.builtin.command: killall Caffeine
+  failed_when: false
+
+- name: Restart Day One
+  ansible.builtin.command: killall 'Day One'
+  failed_when: false
+
+- name: Restart Dictionary
+  ansible.builtin.command: killall Dictionary
+  failed_when: false
+
+- name: Restart Disk Utility
+  ansible.builtin.command: killall 'Disk Utility'
+  failed_when: false
+
 - name: Restart Dock
   ansible.builtin.command: killall Dock
 
@@ -9,11 +25,47 @@
   ansible.builtin.command: killall Flux
   failed_when: false
 
+- name: Restart Image Capture
+  ansible.builtin.command: killall 'Image Capture'
+  failed_when: false
+
+- name: Restart iTerm2
+  ansible.builtin.command: killall iTerm2
+  failed_when: false
+
 - name: Restart Mail
   ansible.builtin.command: killall Mail
   failed_when: false
 
+- name: Restart MenuMeters
+  ansible.builtin.command: killall MenuMeters
+  failed_when: false
+
+- name: Restart Photo Booth
+  ansible.builtin.command: killall 'Photo Booth'
+  failed_when: false
+
+- name: Restart Preview
+  ansible.builtin.command: killall Preview
+  failed_when: false
+
+- name: Restart QuickTime Player
+  ansible.builtin.command: killall 'QuickTime Player'
+  failed_when: false
+
+- name: Restart Reminders
+  ansible.builtin.command: killall Reminders
+  failed_when: false
+
 - name: Restart Safari
+  ansible.builtin.command: killall Safari
+  failed_when: false
+
+- name: Restart Screen Sharing
+  ansible.builtin.command: killall 'Screen Sharing'
+  failed_when: false
+
+- name: Restart Skype
   ansible.builtin.command: killall Safari
   failed_when: false
 
@@ -23,4 +75,12 @@
 
 - name: Restart TextEdit
   ansible.builtin.command: killall TextEdit
+  failed_when: false
+
+- name: Restart Xcode
+  ansible.builtin.command: killall Xcode
+  failed_when: false
+
+- name: Restart XQuartz
+  ansible.builtin.command: killall XQuartz
   failed_when: false

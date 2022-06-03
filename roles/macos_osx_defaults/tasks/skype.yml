@@ -1,40 +1,45 @@
 ---
-- name: Include debug menu
+- name: Skype - Include debug menu
   community.general.osx_defaults:
     domain: com.skype.skype
     key: IncludeDebugMenu
     type: bool
     value: true
     state: present
+  notify: Restart Skype
 
-- name: Don't show welcome tour
+- name: Skype - Don't show welcome tour
   community.general.osx_defaults:
     domain: com.skype.skype
     key: SKShowWelcomeTour
     type: bool
     value: true
     state: present
+  notify: Restart Skype
 
-- name: Disable welcome tour
+- name: Skype - Disable welcome tour
   community.general.osx_defaults:
     domain: com.skype.skype
     key: SKDisableWelcomeTour
     type: bool
     value: true
     state: present
+  notify: Restart Skype
 
-- name: Enable developer extras
+- name: Skype - Enable developer extras
   community.general.osx_defaults:
     domain: com.skype.skype
     key: WebKitDeveloperExtras
     type: bool
     value: true
     state: present
+  notify: Restart Skype
 
-- name: Don't disable developer extras
+- name: Skype - Don't disable developer extras
   community.general.osx_defaults:
     domain: com.skype.skype
     key: DisableWebKitDeveloperExtras
     type: bool
     value: true
     state: present
+  notify: Restart Skype
