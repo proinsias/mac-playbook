@@ -55,50 +55,15 @@
   become: true
   when: ansible_os_family == "Debian"
   tags: [become]
-# FIXME: Run /usr/sbin/update-ccache-symlinks
-# FIXME: LANG="en_US.UTF-8" \
-#    LANGUAGE="en_US:en" \
-#    PATH="/usr/lib/ccache${PATH:+:${PATH}}"
-# FIXME: locale-gen "${LANG}" && \
-#    update-locale LANG="${LANG}"
-# FIXME: LC_ALL="en_US.UTF-8"
 
-# FIXME:     if [ "${TARGETARCH:-$(arch)}" = "arm64" ] ; then \
-#        curl --fail --location --show-error --silent \
-#            "https://github.com/koalaman/shellcheck/releases/download/stable/shellcheck-stable.linux.aarch64.tar.xz" \
-#        | tar --directory /tmp --extract --verbose --xz ; \
-#     else \
-#          curl --fail --location --show-error --silent \
-#              "https://github.com/koalaman/shellcheck/releases/download/stable/shellcheck-stable.linux.x86_64.tar.xz" \
-#          | tar --directory /tmp --extract --verbose --xz ; \
-#    fi && \
-#    mv --verbose /tmp/shellcheck-stable/shellcheck /usr/local/bin/shellcheck && \
-#    if [ "${TARGETARCH:-$(arch)}" = "${BUILDARCH:-$(arch)}" ] ; then \
-#        shellcheck --version ; \
-#    fi
+- name: Update ccache symlinks
+  ansible.builtin.command: /usr/sbin/update-ccache-symlinks
+  become: true
+  changed_when: false
+  tags: [become]
 
-# FIXME:     if [ "${TARGETARCH:-$(arch)}" = "arm64" ] ; then \
-#        curl --fail --location --show-error --silent \
-#            "https://github.com/hadolint/hadolint/releases/download/v2.10.0/hadolint-Linux-arm64" \
-#            --output /usr/local/bin/hadolint ; \
-#    else \
-#        curl --fail --location --show-error --silent \
-#            "https://github.com/hadolint/hadolint/releases/download/v2.10.0/hadolint-Linux-x86_64" \
-#            --output /usr/local/bin/hadolint ; \
-#    fi && \
-#    chmod +x /usr/local/bin/hadolint ; \
-#    if [ "${TARGETARCH:-$(arch)}" = "${BUILDARCH:-$(arch)}" ] ; then \
-#        hadolint --version ; \
-#    fi
-
-# FIXME: Need? npm install --global yarn
-
-# FIXME: Need? ln --symbolic /usr/bin/pip3 /usr/bin/pip && \
-
-# FIXME: Need python3.8 -m pip install --no-cache-dir --upgrade \
-#        pip && \
-#    python3.8 -m pip install --no-cache-dir \
-#        ipython \
-#        safety \
-#        setuptools==45.1.0 \
-#        wheel==0.33.6
+- name: Update locale
+  ansible.builtin.command: locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
+  become: true
+  changed_when: false
+  tags: [become]

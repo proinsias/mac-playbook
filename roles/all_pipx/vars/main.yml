@@ -23,6 +23,7 @@ pipx_packages:
   - http-prompt
   # - howdoi
   - identify
+  - ipython
   - kaggle
   - linkcheckmd
   - mdformat

@@ -16,6 +16,13 @@
 
 - What are the relevant osx defaults for 1password 8? Are there any?
 
+* Confirm README.md installation steps.
+* Update list of tags.
+* Try `--check` (with `--diff`?) to just report differences.
+* <https://github.com/ansible/ansible-modules-core/issues/960>
+* ansible-playbook site.yml --forks 10 --ask-become-pass --check
+* Executing one role - <https://stackoverflow.com/a/38384205>
+
 - Add more `changed_when`s if necessary - review log output.
 
 - Test all of this on:
@@ -142,4 +149,11 @@ done
  user:
    name: "{{ user }}"
    shell: /usr/bin/fish
+```
+
+```bash
+readonly PLAYBOOK_REPO="https://gitlab.com/radek-sprta/ansible-personal.git"
+readonly PLAYBOOK=setup.yml
+
+ansible-pull -U "${PLAYBOOK_REPO}" -i localhost, "${PLAYBOOK}" --ask-become-pass  # FIXME: Note I can run script directly!
 ```

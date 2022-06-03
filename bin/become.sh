@@ -2,5 +2,5 @@
 
 ansible-playbook main.yml \
     --inventory inventory \
-    --skip-tags "become" \
-    --tags "all,macos,linux,personal"
+    --ask-become-pass \
+    --tags "become"

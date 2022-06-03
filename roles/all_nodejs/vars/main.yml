@@ -26,3 +26,4 @@ nodejs_global_packages:
   - standard
   - svgo
   - tldr # http://tldr.sh/
+  - yarn
