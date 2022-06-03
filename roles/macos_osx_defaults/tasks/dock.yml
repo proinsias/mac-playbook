@@ -116,16 +116,6 @@
     state: present
   notify: Restart Dock
 
-# FIXME: array-add
-#- name: Dock - Add a Stack with Recent Applications
-#  community.general.osx_defaults:
-#    domain: com.apple.dock
-#    key: persistent-others
-#    type: array-add
-#    value: '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'
-#    state: present
-#  notify: Restart Dock
-
 # Hot corners
 # Possible values:
 #  0: no-op

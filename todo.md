@@ -2,7 +2,7 @@
 
 - GT TGT files.
 
-- Replace most of lingon script with call to this!
+- Replace most of lingon script with call to bin/lingon.sh!
 
   - I need a way to skip 'become' tasks like gcloud and also run only those tasks.
   - `brew update upgrade cleanup` - switch to community.general.homebrew
