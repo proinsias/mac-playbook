@@ -8,6 +8,7 @@ homebrew_use_brewfile: false
 homebrew_taps:
   - alehouse/homebrew-unofficial
   - alexdavid/homebrew-tap
+  - heroku/brew
   - homebrew/bundle
   - homebrew/cask
   - homebrew/cask-drivers
@@ -137,6 +138,7 @@ homebrew_installed_packages:
   - gzip
   - hadolint
   - hdf5
+  - heroku/brew/heroku
   - hexyl
   - htop
   - httpie
