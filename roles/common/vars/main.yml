@@ -1,0 +1,5 @@
+---
+# https://github.com/geerlingguy/ansible-collection-mac/blob/master/roles/homebrew/defaults/main.yml
+homebrew_prefix: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}"
+homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
+homebrew_upgrade_all_packages: true

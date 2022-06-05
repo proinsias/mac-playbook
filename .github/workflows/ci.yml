@@ -51,10 +51,17 @@ jobs:
           ansible-lint
           ansible-playbook main.yml --syntax-check
 
+      - name: Uninstall GitHub Actions' built-in Homebrew.
+        run: |
+          # Download and run the uninstall script.
+          curl -sLO https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh
+          chmod +x ./uninstall.sh
+          sudo ./uninstall.sh --force
+
+          # Clean up Homebrew directories.
+          sudo rm -rf /usr/local/Homebrew /usr/local/Caskroom /usr/local/bin/brew /opt/homebrew/
+
 # FIXME:
-#      - name: Uninstall GitHub Actions' built-in Homebrew.
-#        run: tests/uninstall-homebrew.sh
-#
 #      - name: Test the playbook.
 #        run: ansible-playbook main.yml --inventory inventory --skip-tags "become" --tags "personal,work"
 #        env:

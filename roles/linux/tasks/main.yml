@@ -53,17 +53,19 @@
     upgrade: dist
     update_cache: true
   become: true
-  when: ansible_os_family == "Debian"
+  when: "ansible_os_family == Debian"
   tags: [become]
 
 - name: Update ccache symlinks
   ansible.builtin.command: /usr/sbin/update-ccache-symlinks
   become: true
+  when: "ansible_os_family == Debian"
   changed_when: false # FIXME: Check on linux if I can update this.
   tags: [become]
 
 - name: Update locale
   ansible.builtin.command: locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
   become: true
+  when: "ansible_os_family == Debian"
   changed_when: false # FIXME: Check on linux if I can update this.
   tags: [become]

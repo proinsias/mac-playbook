@@ -1,13 +1,8 @@
 ---
-# geerlingguy.mac.homebrew
-homebrew_cask_appdir: /Applications
-homebrew_clear_cache: false
-homebrew_upgrade_all_packages: true
-homebrew_use_brewfile: false
-
 homebrew_taps:
-  - alehouse/homebrew-unofficial
-  - alexdavid/homebrew-tap
+  - alehouse/unofficial
+  - alexdavid/tap
+  - eddieantonio/eddieantonio
   - heroku/brew
   - homebrew/bundle
   - homebrew/cask
@@ -16,14 +11,31 @@ homebrew_taps:
   - homebrew/command-not-found
   - homebrew/core
   - homebrew/services
-  - iterative/homebrew-dvc
-  - jzaleski/homebrew-jzaleski
+  - iterative/dvc
+  - jzaleski/jzaleski
   - teamookla/speedtest
+  - vitorgalvao/tiny-scripts
+
+homebrew_uninstalled_packages:
+  - bench
+  - fasd # Use fzf instead.
+  - flake8 # Via pipx instead.
+  - gpg-agent
+  - howdoi
+  - luajit
+  - pandoc-citeproc
+  - parallel # Conflicts with moreuilts.
+  - docmunch/pdftk/pdftk
+  - sponge # Installed by moreutils.
+  - sshfs
+  - vim
+
 homebrew_installed_packages:
+  - java
   - openssl
   - openssh
   - curl
-  - { name: emacs, install_options: with-modules }
+  - { name: emacs, restart_service: true }
   - svn
   - ack
   - advancecomp
@@ -53,7 +65,6 @@ homebrew_installed_packages:
   - bundler-completion
   - c-ares
   - cairo
-  # - cask
   - catimg
   - ccache # For pyenv-ccache.
   - certbot
@@ -70,10 +81,12 @@ homebrew_installed_packages:
   - csvkit
   - d-bus
   - daq
+  - dash
   - ddgr
   - diffutils
   - direnv
   - dive # For docker layer analysis.
+  - docker
   - docker-clean
   - docker-completion
   - dos2unix
@@ -97,7 +110,6 @@ homebrew_installed_packages:
   - gawk
   - gcc
   - gd
-  # - gdb  # Not M1 compatible yet.
   - gdbm
   - gem-completion
   - geoip
@@ -124,7 +136,7 @@ homebrew_installed_packages:
   - gnu-time
   - gnu-units
   - gnu-which
-  - { name: gnuplot, install_options: with-qt }
+  - gnuplot
   - gnutls
   - go
   - gobject-introspection
@@ -190,6 +202,7 @@ homebrew_installed_packages:
   - make
   - makedepend
   - mas
+  - mediainfo
   - mkdocs
   - moreutils
   - mosh
@@ -207,7 +220,6 @@ homebrew_installed_packages:
   - pandoc
   - pcre
   - pet
-  - pinentry-mac
   - pip-completion
   - pipenv
   - pipx
@@ -227,7 +239,7 @@ homebrew_installed_packages:
   - pyenv-ccache
   - pyenv-pip-migrate
   - pyenv-virtualenv
-  - pygments # For mog
+  - pygments
   - pyqt
   - python
   - p7zip
@@ -302,20 +314,10 @@ homebrew_installed_packages:
   - zlib # For pyenv.
   - zopfli
   - zsh
-homebrew_uninstalled_packages:
-  - bench
-  - fasd # Use fzf instead.
-  - flake8 # Via pipx instead.
-  - gpg-agent
-  - howdoi
-  - luajit
-  - macvim
-  - pandoc-citeproc
-  - parallel # Conflicts with moreuilts.
-  - docmunch/pdftk/pdftk
-  - sponge # Installed by moreutils.
-  - sshfs
-  - vim
-# Don't use these.
-homebrew_cask_apps: []
+
+work_homebrew_installed_packages:
+  - { name: mysql, restart_service: true }
+
+# Don't use below - not necessarily on a Mac!
 homebrew_cask_uninstalled_apps: []
+homebrew_cask_installed_apps: []

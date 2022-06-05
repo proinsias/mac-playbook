@@ -1,4 +1,14 @@
 ---
+- name: Upgrade all homebrew packages
+  community.general.homebrew:
+    update_homebrew: true
+    upgrade_all: true
+
+- name: Upgrade all casks
+  community.general.homebrew_cask:
+    greedy: true
+    upgrade_all: true
+
 - name: Cleanup homebrew
   ansible.builtin.command: brew cleanup
   changed_when: false

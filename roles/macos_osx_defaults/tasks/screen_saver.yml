@@ -28,3 +28,31 @@
     key: askForPasswordDelay
     type: float
     value: 0
+
+- name: Screensaver - Set module name
+  community.general.osx_defaults:
+    domain: com.apple.screensaver
+    key: moduleName
+    type: string
+    value: Aerial
+
+- name: Screensaver - Set display name
+  community.general.osx_defaults:
+    domain: com.apple.screensaver
+    key: displayName
+    type: string
+    value: Aerial
+
+- name: Screensaver - Set path
+  community.general.osx_defaults:
+    domain: com.apple.screensaver
+    key: path
+    type: string
+    value: ~/Library/Screen\ Savers/Aerial.saver
+
+- name: Screensaver - Set path
+  community.general.osx_defaults:
+    domain: com.apple.screensaver
+    key: type
+    type: int
+    value: 0

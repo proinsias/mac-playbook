@@ -1,31 +1,56 @@
 ---
-# geerlingguy.mac.homebrew
-homebrew_cask_appdir: /Applications
-homebrew_clear_cache: false
-homebrew_upgrade_all_packages: true
-homebrew_use_brewfile: false
-
 homebrew_taps:
-  - alehouse/homebrew-unofficial
-  - alexdavid/homebrew-tap
+  - alehouse/unofficial
+  - alexdavid/tap
+  - hpedrorodrigues/tools
   - homebrew/bundle
   - homebrew/cask
   - homebrew/cask-drivers
   - homebrew/cask-fonts
-  - homebrew/ansible.builtin.command-not-found
+  - homebrew/command-not-found
   - homebrew/core
   - homebrew/services
-  - iterative/homebrew-dvc
-  - jzaleski/homebrew-jzaleski
+  - iterative/dvc
+  - jzaleski/jzaleski
   - teamookla/speedtest
-homebrew_installed_packages: # Only include homebrew cask items here.
-  - java
-  - osxfuse
-  - xquartz
+
+homebrew_uninstalled_packages:
+  - apache-spark
+  - gbeine/homebrew-java/postgresql-jdbc
+  - google-photos-backup-and-sync
+  - growlnotify
+  - hadoop
+  - homebrew/science/r
+  - homebrew/versions/perl518
+  - macvim
+  - mongodb
+  - newman # Command-line collection runner for Postman.
+  - octave
+  - postgresql
+  - postman
+  - scala
+  - sequel-pro
+  - tomcat
+
+homebrew_installed_packages:
+  - pinentry-mac
+
+homebrew_cask_uninstalled_apps:
+  - choosy
+  - chrome-remote-desktop-host
+  - diskwave
+  - expressvpn
+  - firefox
+  - goodsync
+  - handylock
+  - intel-power-gadget
+  - joplin
+  - macfusion
+
+homebrew_cask_installed_apps:
   - 1password
   - 1password-cli
   - adobe-acrobat-reader
-  - aerial
   - apppolice
   - apptrap
   - bartender
@@ -35,28 +60,18 @@ homebrew_installed_packages: # Only include homebrew cask items here.
   - box-sync
   - cakebrew
   - cheatsheet
-  - choosy
-  - chrome-remote-desktop-host
-  - coconutBattery
+  - coconutbattery
   - controlplane
   - cord
-  - dash
   - daisydisk
   - dbeaver-community
   - dbvisualizer
   - diskmaker-x
-  - docker
-  - docker-toolbox
   - hpedrorodrigues/tools/dockutil
   - drivedx
   - dropbox
-  - emacs
-  # - expressvpn
   - fantastical
   - filebot
-  - firefox
-  - flashlighttool
-  - flux
   - font-jetbrains-mono-nerd-font
   - font-ntr
   - font-rubik
@@ -64,9 +79,7 @@ homebrew_installed_packages: # Only include homebrew cask items here.
   - geektool
   - gephi
   - gimp
-  - git-sizer
   - gmvault
-  - goodsync
   - google-chrome
   - google-drive
   - go2shell
@@ -80,14 +93,11 @@ homebrew_installed_packages: # Only include homebrew cask items here.
   - imazing
   - install-disk-creator
   - intellij-idea-ce
-  - intel-power-gadget
   - itch
   - iterm2
-  - jing
   - jupyter-notebook-viewer
   - keka
   - keybase
-  # - kindle  # Use mas instead
   - kitty
   - krisp
   - lastpass
@@ -97,11 +107,12 @@ homebrew_installed_packages: # Only include homebrew cask items here.
   - mactex
   - makemkv
   - mark-text
-  - mediainfo
   - meetingbar
   - menumeters
   - metaz
+  - microsoft-auto-update
   - microsoft-office
+  - microsoft-teams
   - monitorcontrol
   - muzzle
   - netnewswire
@@ -110,13 +121,10 @@ homebrew_installed_packages: # Only include homebrew cask items here.
   - omnidisksweeper
   - omnifocus
   - onyx
-  - openaudible
   - oversight
   - pacifist
-  - plantronics-hub
-  - pocket-casts
   - podcastmenu
-  # - prey  # Need to nstall separately with correct API key.
+  - postman
   - qlcolorcode
   - qlmarkdown
   - qlprettypatch
@@ -127,8 +135,8 @@ homebrew_installed_packages: # Only include homebrew cask items here.
   - raycast
   - roaringapps
   - send-to-kindle
+  - sequel-pro
   - signal
-  - silverlight
   - skyfonts
   - skype
   - slack
@@ -149,9 +157,6 @@ homebrew_installed_packages: # Only include homebrew cask items here.
   - typora
   - ultimaker-cura
   - unclack
-  - upic
-  - virtualbox
-  - virtualbox-extension-pack
   - vlc
   - webpquicklook
   - xquartz
@@ -159,12 +164,23 @@ homebrew_installed_packages: # Only include homebrew cask items here.
   - yubico-yubikey-manager
   - yubico-yubikey-personalization-gui
   - yubico-yubikey-piv-manager
-homebrew_uninstalled_packages:
-  - diskwave
-  - expressvpn
-  - handylock
-  - joplin
-  - macfusion
-# Don't use these.
-homebrew_cask_apps: []
-homebrew_cask_uninstalled_apps: []
+
+personal_homebrew_cask_installed_apps:
+  - backblaze
+  - backblaze-downloader
+  - docker-toolbox
+  - fs-uae
+  - google-backup-and-sync
+  - handbrake
+  - openaudible
+  - plex-media-server
+  - pycharm-ce
+  - steam
+  - subler
+  - virtualbox
+  - virtualbox-extension-pack
+  - wireshark
+
+work_homebrew_cask_installed_apps:
+  - mysqlworkbench
+  - pycharm

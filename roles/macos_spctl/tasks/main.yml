@@ -1,0 +1,12 @@
+---
+- name: Security - Get gatekeeper status
+  ansible.builtin.command: spctl --status
+  register: gatekeeper_status
+  changed_when: false
+  failed_when: false
+
+- name: Security - Enable Gatekeeper
+  ansible.builtin.command: spctl --master-enable
+  become: true
+  when: gatekeeper_status.stdout.find('disabled') != -1
+  tags: [become]

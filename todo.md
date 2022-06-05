@@ -12,6 +12,8 @@
   - install and update `gcloud` (keep list of outdated)
   - install `dotfiles` via `stow`
 
+- Add more debug: msg: stdout to say installation of Brewfile to show what changed!
+
 - What are the relevant osx defaults for 1password 8? Are there any?
 
 * Confirm README.md installation steps.

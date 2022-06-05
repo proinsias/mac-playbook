@@ -23,7 +23,7 @@
       when: ansible_os_family == "Debian"
       tags: [always] # Always run, even when tags specified.
 
-    - name: Run all_homebrew_cleanup role
+    - name: Run all homebrew cleanup role
       ansible.builtin.include_role:
         name: all_homebrew_cleanup
       tags: [always] # Always run, even when tags specified.
