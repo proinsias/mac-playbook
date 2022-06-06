@@ -6,6 +6,7 @@
     type: bool
     value: true
   notify: Restart iTerm2
+  tags: [always]
 
 - name: iTerm2 - Set custom preferences folder
   community.general.osx_defaults:
@@ -15,6 +16,7 @@
     value: $HOME/.config/iterm2
   when: iterm2_preference_folder is defined
   notify: Restart iTerm2
+  tags: [always]
 
 - name: iTerm2 - Enable custom preferences folder
   community.general.osx_defaults:
@@ -24,6 +26,7 @@
     value: true
   when: iterm2_preference_folder is defined
   notify: Restart iTerm2
+  tags: [always]
 
 # See: https://security.stackexchange.com/a/47786/8918
 - name: iTerm2 - Disable Secure Keyboard Entry
@@ -33,3 +36,4 @@
     type: bool
     value: false
   notify: Restart iTerm2
+  tags: [always]

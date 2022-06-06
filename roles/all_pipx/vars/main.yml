@@ -55,7 +55,7 @@ pipx_packages:
   - uncommitted
   - vulture
   - whereami
-  - wifi_qrcode
+  # - wifi_qrcode
   - xlsx2csv
   - yapf
 

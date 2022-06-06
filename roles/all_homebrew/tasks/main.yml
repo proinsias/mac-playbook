@@ -6,10 +6,12 @@
     url: "{{ item.url | default(omit) }}"
     state: present
   loop: "{{ homebrew_taps }}"
+  tags: [always]
 
 - name: Ensure blacklisted homebrew packages are not installed
   community.general.homebrew: "name={{ item }} state=absent"
   loop: "{{ homebrew_uninstalled_packages }}"
+  tags: [always]
 
 - name: Ensure configured homebrew packages are installed
   community.general.homebrew:
@@ -17,6 +19,7 @@
     install_options: "{{ item.install_options | default(omit) }}"
     state: "{{ item.state | default('latest') }}"
   loop: "{{ homebrew_installed_packages }}"
+  tags: [always]
 
 - name: Ensure work configured homebrew packages are installed
   community.general.homebrew:

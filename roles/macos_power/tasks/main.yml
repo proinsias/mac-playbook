@@ -11,7 +11,7 @@
   ansible.builtin.command: systemsetup -setcomputersleep Never
   become: true
   tags: [become]
-  when: "computersleep_power_settings_results.stdout != Computer Sleep: Never"
+  when: "computersleep_power_settings_results.stdout != 'Computer Sleep: Never'"
 
 - name: Get displaysleep power settings
   ansible.builtin.command: systemsetup -getdisplaysleep
@@ -25,7 +25,7 @@
   ansible.builtin.command: systemsetup -setdisplaysleep 15 # 15 minutes.
   become: true
   tags: [become]
-  when: "displaysleep_power_settings_results.stdout != Display Sleep: after 15 minutes"
+  when: "displaysleep_power_settings_results.stdout != 'Display Sleep: after 15 minutes'"
 
 - name: Get harddisksleep power settings
   ansible.builtin.command: systemsetup -getharddisksleep
@@ -39,7 +39,7 @@
   ansible.builtin.command: systemsetup -setharddisksleep Never
   become: true
   tags: [become]
-  when: "harddisksleep_power_settings_results.stdout != Hard Disk Sleep: Never"
+  when: "harddisksleep_power_settings_results.stdout != 'Hard Disk Sleep: Never'"
 
 - name: Get restartfreeze power settings
   ansible.builtin.command: systemsetup -getrestartfreeze
@@ -53,7 +53,7 @@
   ansible.builtin.command: systemsetup -setrestartfreeze On
   become: true
   tags: [become]
-  when: "restartfreeze_power_settings_results.stdout != Restart After Freeze: On"
+  when: "restartfreeze_power_settings_results.stdout != 'Restart After Freeze: On'"
 
 - name: Get restartpowerfailure power settings
   ansible.builtin.command: systemsetup -getrestartpowerfailure
@@ -69,7 +69,7 @@
   become: true
   tags: [become]
   # yamllint disable-line rule:line-length
-  when: "(ansible_machine != 'arm64') and (restartpowerfailure_power_settings_results.stdout != Restart After Power Failure: On)"
+  when: "(ansible_machine != 'arm64') and (restartpowerfailure_power_settings_results.stdout != 'Restart After Power Failure: On')"
 
 - name: Get wakeonnetworkaccess power settings
   ansible.builtin.command: systemsetup -getwakeonnetworkaccess
@@ -83,4 +83,4 @@
   ansible.builtin.command: systemsetup -setwakeonnetworkaccess On
   become: true
   tags: [become]
-  when: "wakeonnetworkaccess_power_settings_results.stdout != Wake On Network Access: On"
+  when: "wakeonnetworkaccess_power_settings_results.stdout != 'Wake On Network Access: On'"

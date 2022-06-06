@@ -6,6 +6,7 @@
     type: int
     value: 1
     state: present
+  tags: [always]
 
 - name: Trackpad - enable click and drag for bluetooth trackpads
   community.general.osx_defaults:
@@ -14,6 +15,7 @@
     type: int
     value: 1
     state: present
+  tags: [always]
 
 - name: System Preferences – Organize Alphabetically
   community.general.osx_defaults:
@@ -22,6 +24,7 @@
     type: bool
     value: true
     state: present
+  tags: [always]
 
 - name: System Sound –Disable UI sounds
   community.general.osx_defaults:
@@ -30,6 +33,7 @@
     type: int
     value: 0
     state: present
+  tags: [always]
 
 - name: Bluetooth – Increase sound quality for headphones/headsets
   community.general.osx_defaults:
@@ -38,6 +42,7 @@
     type: int
     value: 40
     state: present
+  tags: [always]
 
 - name: IOKit - Enable display from automatically adjusting brightness
   community.general.osx_defaults:
@@ -46,6 +51,7 @@
     type: bool
     value: true
     state: present
+  tags: [always]
 
 - name: IOKit - Disable keyboard from automatically adjusting backlight brightness in low light
   community.general.osx_defaults:
@@ -54,6 +60,7 @@
     type: bool
     value: false
     state: present
+  tags: [always]
 
 - name: Network Browser - Enable AirDrop over Ethernet and on Unsupported Macs
   community.general.osx_defaults:
@@ -62,6 +69,7 @@
     type: bool
     value: true
     state: present
+  tags: [always]
 
 - name: Network Connect –Show Time Connected to VPN
   community.general.osx_defaults:
@@ -70,6 +78,7 @@
     type: int
     value: 1
     state: present
+  tags: [always]
 
 - name: Captive - Disable the built-in portal (use your browser instead)
   community.general.osx_defaults:
@@ -78,6 +87,7 @@
     type: bool
     value: false
     state: present
+  tags: [always]
 
 - name: Dashboard - Disable
   community.general.osx_defaults:
@@ -85,6 +95,7 @@
     key: mcx-disabled
     type: bool
     value: true
+  tags: [always]
 
 - name: Desktop Services - Disable creating .DS_Store files on network shares
   community.general.osx_defaults:
@@ -92,6 +103,7 @@
     key: DSDontWriteNetworkStores
     type: bool
     value: true
+  tags: [always]
 
 - name: Desktop Services - Disable creating .DS_Store files on usb drives
   community.general.osx_defaults:
@@ -99,6 +111,7 @@
     key: DSDontWriteUSBStores
     type: bool
     value: true
+  tags: [always]
 
 - name: Disk Images - Disable verification
   community.general.osx_defaults:
@@ -110,6 +123,7 @@
     - skip-verify
     - skip-verify-locked
     - skip-verify-remote
+  tags: [always]
 
 - name: CrashReporter - Enable
   community.general.osx_defaults:
@@ -118,6 +132,7 @@
     key: DialogType
     type: string
     value: falsene
+  tags: [always]
 
 - name: Spotlight - Disable indexing network volumes
   become: true

@@ -6,3 +6,4 @@
     type: bool
     value: false
     state: present
+  tags: [always]

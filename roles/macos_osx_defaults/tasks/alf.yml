@@ -6,6 +6,7 @@
     type: bool
     value: true
     state: present
+  tags: [always]
 
 - name: Enable stealth mode
   community.general.osx_defaults:
@@ -14,6 +15,7 @@
     type: bool
     value: true
     state: present
+  tags: [always]
 
 - name: Allow signed applications to receive incoming connections
   community.general.osx_defaults:
@@ -22,3 +24,4 @@
     type: bool
     value: true
     state: present
+  tags: [always]

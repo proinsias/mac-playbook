@@ -1,80 +1,120 @@
 ---
 - import_tasks: activity_monitor.yml
+  tags: [always]
 
 - import_tasks: address_book.yml
+  tags: [always]
 
 - import_tasks: alf.yml
+  tags: [always]
 
 - import_tasks: app_store.yml
+  tags: [always]
 
 - import_tasks: bartender.yml
+  tags: [always]
 
 - import_tasks: bezel_services.yml
+  tags: [always]
 
 - import_tasks: caffeine.yml
+  tags: [always]
 
 - import_tasks: dayone.yml
+  tags: [always]
 
 - import_tasks: dictionary.yml
+  tags: [always]
 
 - import_tasks: disk_utility.yml
+  tags: [always]
 
 - import_tasks: dock.yml
+  tags: [always]
 
 - import_tasks: finder.yml
+  tags: [always]
 
 - import_tasks: flux.yml
+  tags: [always]
 
 - import_tasks: gpg_mail.yml
+  tags: [always]
 
 - import_tasks: help_viewer.yml
+  tags: [always]
 
 - import_tasks: ical.yml
+  tags: [always]
 
 - import_tasks: image_capture.yml
+  tags: [always]
 
 - import_tasks: iterm2.yml
+  tags: [always]
 
 - import_tasks: launch_services.yml
+  tags: [always]
 
 - import_tasks: login_window.yml
+  tags: [always]
 
 - import_tasks: mail.yml
+  tags: [always]
 
 - import_tasks: menu_extras.yml
+  tags: [always]
 
 - import_tasks: menu_meters.yml
+  tags: [always]
 
 - import_tasks: misc.yml
+  tags: [always]
 
 - import_tasks: ns_global_domain.yml
+  tags: [always]
 
 - import_tasks: photo_booth.yml
+  tags: [always]
 
 - import_tasks: preview.yml
+  tags: [always]
 
 - import_tasks: printingprefs.yml
+  tags: [always]
 
 - import_tasks: quicktime_player.yml
+  tags: [always]
 
 - import_tasks: reminders.yml
+  tags: [always]
 
 - import_tasks: safari.yml
+  tags: [always]
 
 - import_tasks: screen_capture.yml
+  tags: [always]
 
 - import_tasks: screen_saver.yml
+  tags: [always]
 
 - import_tasks: screen_sharing.yml
+  tags: [always]
 
 - import_tasks: skype.yml
+  tags: [always]
 
 - import_tasks: terminal.yml
+  tags: [always]
 
 - import_tasks: text_edit.yml
+  tags: [always]
 
 - import_tasks: time_machine.yml
+  tags: [always]
 
 - import_tasks: xcode.yml
+  tags: [always]
 
 - import_tasks: x11.yml
+  tags: [always]

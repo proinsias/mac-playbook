@@ -7,6 +7,7 @@
     value: true
     state: present
   notify: Restart Mail
+  tags: [always]
 
 - name: Mail – Disable send animations
   community.general.osx_defaults:
@@ -16,6 +17,7 @@
     value: true
     state: present
   notify: Restart Mail
+  tags: [always]
 
 - name: Mail - Addresses include name on pasteboard
   community.general.osx_defaults:
@@ -24,6 +26,7 @@
     type: bool
     value: true
   notify: Restart Mail
+  tags: [always]
 
 - name: Mail - Order mails by thread
   community.general.osx_defaults:
@@ -32,3 +35,4 @@
     type: bool
     value: true
   notify: Restart Mail
+  tags: [always]

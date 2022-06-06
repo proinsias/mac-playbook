@@ -300,6 +300,7 @@ homebrew_installed_packages:
   - wdiff
   - webkit2png
   - wget
+  - whalebrew
   - wifi-password
   - winetricks
   - wireguard-tools

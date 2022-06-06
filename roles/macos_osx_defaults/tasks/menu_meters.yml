@@ -7,3 +7,4 @@
     value: 1.0
     state: present
   notify: Restart MenuMeters
+  tags: [always]

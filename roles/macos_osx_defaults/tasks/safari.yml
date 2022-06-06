@@ -6,6 +6,7 @@
     type: bool
     value: true
   notify: Restart Safari
+  tags: [always]
 
 - name: Safari - Don't open 'safe' files automatically
   community.general.osx_defaults:
@@ -14,6 +15,7 @@
     type: bool
     value: false
   notify: Restart Safari
+  tags: [always]
 
 - name: Safari - Enable status bar
   community.general.osx_defaults:
@@ -22,6 +24,7 @@
     type: bool
     value: true
   notify: Restart Safari
+  tags: [always]
 
 - name: Safari - Enable developer menu
   community.general.osx_defaults:
@@ -30,6 +33,7 @@
     type: bool
     value: true
   notify: Restart Safari
+  tags: [always]
 
 - name: Safari - Don't autofill passwords
   community.general.osx_defaults:
@@ -38,6 +42,7 @@
     type: bool
     value: false
   notify: Restart Safari
+  tags: [always]
 
 - name: Safari - Show favorites bar
   community.general.osx_defaults:
@@ -49,6 +54,7 @@
     - ShowFavoritesBar
     - ShowFavoritesBar-v2
   notify: Restart Safari
+  tags: [always]
 
 - name: Safari - Enable thumbnail cache for history and top sites
   community.general.osx_defaults:
@@ -58,6 +64,7 @@
     type: int
     value: 2
   notify: Restart Safari
+  tags: [always]
 
 - name: Safari - Disable search only with word start
   community.general.osx_defaults:
@@ -66,3 +73,4 @@
     type: bool
     value: false
   notify: Restart Safari
+  tags: [always]

@@ -45,6 +45,8 @@ homebrew_cask_uninstalled_apps:
   - handylock
   - intel-power-gadget
   - joplin
+  - krisp
+  - lastpass
   - macfusion
 
 homebrew_cask_installed_apps:
@@ -99,8 +101,6 @@ homebrew_cask_installed_apps:
   - keka
   - keybase
   - kitty
-  - krisp
-  - lastpass
   - lepton
   - lingon-x
   - macdown
@@ -124,7 +124,6 @@ homebrew_cask_installed_apps:
   - oversight
   - pacifist
   - podcastmenu
-  - postman
   - qlcolorcode
   - qlmarkdown
   - qlprettypatch

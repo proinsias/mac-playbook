@@ -4,6 +4,7 @@
   register: gatekeeper_status
   changed_when: false
   failed_when: false
+  tags: [become]
 
 - name: Security - Enable Gatekeeper
   ansible.builtin.command: spctl --master-enable

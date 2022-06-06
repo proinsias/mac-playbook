@@ -7,3 +7,4 @@
     value: false
     state: present
   notify: Restart QuickTime Player
+  tags: [always]

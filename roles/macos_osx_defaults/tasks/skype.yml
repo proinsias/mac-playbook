@@ -7,6 +7,7 @@
     value: true
     state: present
   notify: Restart Skype
+  tags: [always]
 
 - name: Skype - Don't show welcome tour
   community.general.osx_defaults:
@@ -16,6 +17,7 @@
     value: true
     state: present
   notify: Restart Skype
+  tags: [always]
 
 - name: Skype - Disable welcome tour
   community.general.osx_defaults:
@@ -25,6 +27,7 @@
     value: true
     state: present
   notify: Restart Skype
+  tags: [always]
 
 - name: Skype - Enable developer extras
   community.general.osx_defaults:
@@ -34,6 +37,7 @@
     value: true
     state: present
   notify: Restart Skype
+  tags: [always]
 
 - name: Skype - Don't disable developer extras
   community.general.osx_defaults:
@@ -43,3 +47,4 @@
     value: true
     state: present
   notify: Restart Skype
+  tags: [always]

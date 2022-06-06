@@ -8,6 +8,7 @@
       - "4"
     state: present
   notify: Restart Terminal
+  tags: [always]
 
 - name: Terminal – Set Pro theme as default
   community.general.osx_defaults:
@@ -17,6 +18,7 @@
     value: Pro
     state: present
   notify: Restart Terminal
+  tags: [always]
 
 - name: Terminal – Set Pro theme as startup
   community.general.osx_defaults:
@@ -26,6 +28,7 @@
     value: Pro
     state: present
   notify: Restart Terminal
+  tags: [always]
 
 - name: Terminal – Set the size 18 by default
   community.general.osx_defaults:
@@ -35,6 +38,7 @@
     value: 929 42 445 105 0 0 1440 900
     state: present
   notify: Restart Terminal
+  tags: [always]
 
 # See: https://security.stackexchange.com/a/47786/8918
 - name: Terminal - Enable secure keyboard entry
@@ -44,3 +48,4 @@
     type: bool
     value: true
   notify: Restart Terminal
+  tags: [always]

@@ -6,6 +6,7 @@
     type: bool
     value: true
     state: present
+  tags: [always]
 
 - name: BezelServices - Turn off keyboard illumination when computer is not used for 5 minutes
   community.general.osx_defaults:
@@ -14,3 +15,4 @@
     type: int
     value: 300
     state: present
+  tags: [always]

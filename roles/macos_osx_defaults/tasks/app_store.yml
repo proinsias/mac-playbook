@@ -6,6 +6,7 @@
     type: bool
     value: true
     state: present
+  tags: [always]
 
 - name: Enable Debug Menu in the Mac App Store
   community.general.osx_defaults:
@@ -14,3 +15,4 @@
     type: bool
     value: true
     state: present
+  tags: [always]

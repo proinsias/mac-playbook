@@ -7,6 +7,7 @@
     value: true
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Change minimize/maximize window effect
   community.general.osx_defaults:
@@ -16,6 +17,7 @@
     value: scale
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Move to bottom middle of the screen
   community.general.osx_defaults:
@@ -25,6 +27,7 @@
     value: middle # Other options: "start", "end".
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Move to bottom middle of the screen
   community.general.osx_defaults:
@@ -34,6 +37,7 @@
     value: bottom # Other options: "left", "right".
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Enable spring loading for all items
   community.general.osx_defaults:
@@ -43,6 +47,7 @@
     value: true
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Speeding up Mission Control animations and grouping windows by application
   community.general.osx_defaults:
@@ -52,6 +57,7 @@
     value: 0.1
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Misson Control group by application
   community.general.osx_defaults:
@@ -61,6 +67,7 @@
     value: true
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Enabling iTunes track notifications
   community.general.osx_defaults:
@@ -70,6 +77,7 @@
     value: true
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Don't animate opening applications
   community.general.osx_defaults:
@@ -79,6 +87,7 @@
     value: false
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Don't show Dashboard as a Space
   community.general.osx_defaults:
@@ -88,6 +97,7 @@
     value: true
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Set springboard rows
   community.general.osx_defaults:
@@ -97,6 +107,7 @@
     value: 8
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Set springboard columns
   community.general.osx_defaults:
@@ -106,6 +117,7 @@
     value: 8
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Making launchpad better
   community.general.osx_defaults:
@@ -115,6 +127,7 @@
     value: true
     state: present
   notify: Restart Dock
+  tags: [always]
 
 # Hot corners
 # Possible values:
@@ -137,6 +150,7 @@
     value: 6
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Top left screen corner → Disable screen saver
   community.general.osx_defaults:
@@ -146,6 +160,7 @@
     value: 0
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Bottom right screen corner → Start screen saver
   community.general.osx_defaults:
@@ -155,6 +170,7 @@
     value: 5
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Bottom right screen corner → Start screen saver
   community.general.osx_defaults:
@@ -164,6 +180,7 @@
     value: 0
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Make animation snappier
   community.general.osx_defaults:
@@ -173,6 +190,7 @@
     value: 0.1
     state: present
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Set dock tilesize
   community.general.osx_defaults:
@@ -181,6 +199,7 @@
     type: float
     value: 50
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Show indicator lights for open applications in the dock
   community.general.osx_defaults:
@@ -189,6 +208,7 @@
     type: bool
     value: true
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Make dock icons of hidden applications translucent
   community.general.osx_defaults:
@@ -197,6 +217,7 @@
     type: bool
     value: true
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Rearrange spaces by last use
   community.general.osx_defaults:
@@ -205,6 +226,7 @@
     type: bool
     value: true
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Set dock fade-in time
   community.general.osx_defaults:
@@ -213,6 +235,7 @@
     type: float
     value: 0
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Automatically hide
   community.general.osx_defaults:
@@ -221,6 +244,7 @@
     type: bool
     value: true
   notify: Restart Dock
+  tags: [always]
 
 - name: Dock - Removing the auto-hiding time modifier
   community.general.osx_defaults:
@@ -230,3 +254,4 @@
     value: 0
     state: present
   notify: Restart Dock
+  tags: [always]

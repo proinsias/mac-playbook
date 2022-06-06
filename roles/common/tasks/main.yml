@@ -4,3 +4,4 @@
   register: homebrew_cache_path
   changed_when: false
   check_mode: false
+  tags: [always]

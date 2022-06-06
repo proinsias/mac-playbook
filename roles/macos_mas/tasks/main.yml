@@ -17,6 +17,7 @@
       - 496437906 # Shush (1.2.1)
       - 423123087 # UnPlugged
     state: present
+  tags: [always]
 
 - name: Install work specific apps
   community.general.mas:
@@ -45,3 +46,4 @@
 - name: Upgrade all apps
   community.general.mas:
     upgrade_all: true
+  tags: [always]

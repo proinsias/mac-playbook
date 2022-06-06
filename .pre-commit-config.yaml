@@ -53,21 +53,6 @@ repos:
     hooks:
       - id: gitlint
 
-  # Markdown
-
-  - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.14
-    hooks:
-      - id: mdformat
-        additional_dependencies:
-          - mdformat-beautysh
-          - mdformat-black
-          - mdformat-config
-          - mdformat-gfm
-          - mdformat-shfmt
-          - mdformat-tables
-          - mdformat-toc
-
   # YAML
 
   - repo: https://github.com/adrienverge/yamllint
@@ -75,11 +60,6 @@ repos:
     hooks:
       - id: yamllint
         args: [-c=.yamllint.yml]
-
-  # - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
-  #   rev: 0.2.1
-  #   hooks:
-  #      - id: yamlfmt
 
   # Mixed
 
@@ -105,7 +85,7 @@ repos:
         exclude: .git/COMMIT_EDITMSG
 
   - repo: https://github.com/sirosen/check-jsonschema
-    rev: 0.15.1
+    rev: 0.16.0
     hooks:
       - id: check-github-actions
       - id: check-github-workflows

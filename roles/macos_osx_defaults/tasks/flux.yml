@@ -7,6 +7,7 @@
     value: true
     state: present
   notify: Restart Flux
+  tags: [always]
 
 - name: Flux - Enable automatic update checks
   community.general.osx_defaults:
@@ -16,6 +17,7 @@
     value: true
     state: present
   notify: Restart Flux
+  tags: [always]
 
 - name: Flux - Set location
   community.general.osx_defaults:
@@ -25,15 +27,17 @@
     value: "42.5,-71.2"
     state: present
   notify: Restart Flux
+  tags: [always]
 
 - name: Flux - Set locationTextField
   community.general.osx_defaults:
     domain: org.herf.Flux.plist
-    key: location
+    key: locationTextField
     type: string
     value: "02474"
     state: present
   notify: Restart Flux
+  tags: [always]
 
 - name: Flux - Set late night colour temperature
   community.general.osx_defaults:
@@ -43,6 +47,7 @@
     value: 3400
     state: present
   notify: Restart Flux
+  tags: [always]
 
 - name: Flux - Set night colour temperature
   community.general.osx_defaults:
@@ -52,3 +57,4 @@
     value: 1900
     state: present
   notify: Restart Flux
+  tags: [always]

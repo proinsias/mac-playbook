@@ -5,6 +5,7 @@
     state: latest
   with_items:
     - node
+  tags: [always]
 
 - name: Install latest version of global nodejs packages
   community.general.npm:
@@ -13,3 +14,4 @@
     state: latest
   # ansible.builtin.command: npm install --global {{ item }}
   with_items: "{{ nodejs_global_packages }}"
+  tags: [always]

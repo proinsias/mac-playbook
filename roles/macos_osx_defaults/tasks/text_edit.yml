@@ -7,6 +7,7 @@
     value: 4
     state: present
   notify: Restart TextEdit
+  tags: [always]
 
 - name: TextEdit – Save files as UTF-8
   community.general.osx_defaults:
@@ -16,6 +17,7 @@
     value: 4
     state: present
   notify: Restart TextEdit
+  tags: [always]
 
 - name: TextEdit - Save as plaintext
   community.general.osx_defaults:
@@ -25,3 +27,4 @@
     type: int
     value: 0
   notify: Restart TextEdit
+  tags: [always]

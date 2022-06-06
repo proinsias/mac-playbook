@@ -5,3 +5,4 @@
     key: NSDocumentSaveNewDocumentsToCloud
     type: bool
     value: true
+  tags: [always]

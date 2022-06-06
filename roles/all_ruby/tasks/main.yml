@@ -3,6 +3,7 @@
   community.general.homebrew:
     name: [ruby]
     state: latest
+  tags: [always]
 
 - name: Install latest available version of global ruby packages
   community.general.gem:
@@ -11,7 +12,9 @@
     state: latest
   # ansible.builtin.command: gem install {{ item }}
   with_items: "{{ ruby_install_gems }}"
+  tags: [always]
 
 - name: Cleanup gems
   ansible.builtin.command: gem cleanup # Do I need `yes n | gem cleanup` here?
   changed_when: false
+  tags: [always]

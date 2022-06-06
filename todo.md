@@ -2,22 +2,20 @@
 
 - GT TGT files.
 
+- Document use of --skip-tags always --tags become --ask-become-pass
+
 - Replace most of lingon script with call to bin/lingon.sh!
 
   - I need a way to skip 'become' tasks like gcloud and also run only those tasks.
-  - `brew update upgrade cleanup` - switch to community.general.homebrew
+  - `brew update upgrade cleanup`
   - `pyenv rehash` add?
   - `docker cleanup` add?
   - `build docker` maybe?
   - install and update `gcloud` (keep list of outdated)
   - install `dotfiles` via `stow`
 
-- Add more debug: msg: stdout to say installation of Brewfile to show what changed!
-
-- What are the relevant osx defaults for 1password 8? Are there any?
-
 * Confirm README.md installation steps.
-* Update list of tags.
+* Update list of tags in README.md
 * Try `--check` (with `--diff`?) to just report differences.
 * <https://github.com/ansible/ansible-modules-core/issues/960>
 * ansible-playbook site.yml --forks 10 --ask-become-pass --check
@@ -35,13 +33,7 @@
   - GCE VM
     - work.sh
 
-- Mark become tasks with become tags so I can avoid them during lingon.
-
-  - Use community package for non-become installs and upgrades, and non-community package for setup?
-
-- Github action on mac to test!
-
-  - Finish ci.yml - GT FIXMEs
+- Finish ci.yml - GT FIXMEs
 
 - To go through:
 
@@ -52,11 +44,8 @@
   - <https://github.com/geerlingguy/ansible-role-dotfiles>
   - <https://github.com/hnakamur/macbook_setup>
   - <https://github.com/hnakamur/ansible-playbooks>
-  - <https://github.com/hnakamur/ansible-role-osx-login-shell>
-    - Add `/usr/local/bin/bash` and `/opt/homebrew/bin/bash`
   - ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
   - <https://github.com/mego22/ansible-role-osx-settings>
-  - <https://github.com/osxstrap/ansible-osx-software-update>
   - <https://github.com/drew-kun/ansible-dnscrypt>
   - <https://github.com/drew-kun/ansible-sshd>
   - <https://github.com/drew-kun/ansible-macos_terminal>
@@ -64,6 +53,8 @@
   - <https://github.com/fubarhouse/ansible-role-macdock>
   - <https://github.com/danbohea/ansible-role-macos-dock>
   - <https://github.com/juju4/ansible-harden-darwin>
+
+- What are the relevant osx defaults for 1password 8? Are there any?
 
 ```shell
 # https://docs.ansible.com/ansible/2.5/modules/npm_module.html
@@ -134,21 +125,6 @@ select yn in "Yes" "No"; do
     No )  exit;;
   esac
 done
-```
-
-```ansible
-- name: install SSH key
- sudo: yes
- authorized_key:
-   key: "ssh-rsa [...]"
-   user: "{{ansible_user_id}}"
-   state: present
-
-- name: make fish default shell
- become: yes
- user:
-   name: "{{ user }}"
-   shell: /usr/bin/fish
 ```
 
 ```bash

@@ -7,6 +7,7 @@
     value: false
     state: present
   notify: Restart Caffeine
+  tags: [always]
 
 - name: Caffeine - Suppress launch message
   community.general.osx_defaults:
@@ -16,6 +17,7 @@
     value: true
     state: present
   notify: Restart Caffeine
+  tags: [always]
 
 - name: Caffeine - Set duration to infinity
   community.general.osx_defaults:
@@ -25,3 +27,4 @@
     value: "0"
     state: present
   notify: Restart Caffeine
+  tags: [always]

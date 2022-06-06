@@ -6,6 +6,7 @@
     type: bool
     value: true
     state: present
+  tags: [always]
 
 - name: Show first name before last name
   community.general.osx_defaults:
@@ -14,6 +15,7 @@
     type: int
     value: 0
     state: present
+  tags: [always]
 
 - name: Sort by last name
   community.general.osx_defaults:
@@ -22,3 +24,4 @@
     type: string
     value: sortingFirstName sortingLastName
     state: present
+  tags: [always]

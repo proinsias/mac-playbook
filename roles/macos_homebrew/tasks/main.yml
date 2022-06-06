@@ -6,10 +6,12 @@
     url: "{{ item.url | default(omit) }}"
     state: present
   loop: "{{ homebrew_taps }}"
+  tags: [always]
 
 - name: Ensure blacklisted homebrew packages are not installed
   community.general.homebrew: "name={{ item }} state=absent"
   loop: "{{ homebrew_uninstalled_packages }}"
+  tags: [always]
 
 - name: Ensure configured homebrew packages are installed
   community.general.homebrew:
@@ -17,10 +19,12 @@
     install_options: "{{ item.install_options | default(omit) }}"
     state: "{{ item.state | default('latest') }}"
   loop: "{{ homebrew_installed_packages }}"
+  tags: [always]
 
 - name: Ensure blacklisted cask applications are not installed
   homebrew_cask: "name={{ item }} state=absent"
   loop: "{{ homebrew_cask_uninstalled_apps }}"
+  tags: [always]
 
 - name: Install configured cask applications
   homebrew_cask:
@@ -29,6 +33,7 @@
     install_options: "{{ item.install_options | default(omit) }}"
   loop: "{{ homebrew_cask_installed_apps }}"
   # FIXME: Need to handle become applications on github actions!
+  tags: [always]
 
 - name: Install personal configured cask applications
   homebrew_cask:

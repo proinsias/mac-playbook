@@ -3,6 +3,7 @@
   community.general.homebrew:
     name: [python3, pipx]
     state: latest
+  tags: [always]
 
 - name: Install global pipx packages
   community.general.pipx:
@@ -11,6 +12,7 @@
     python: "{{ prefix }}/bin/python3"
   # ansible.builtin.command: pipx install {{ item }} --python {{ prefix }}/bin/python3
   with_items: "{{ pipx_packages }}"
+  tags: [always]
 
 - name: Install global pipx mdformat packages
   community.general.pipx:
@@ -20,6 +22,7 @@
     state: inject
   # ansible.builtin.command: pipx inject mdformat {{ item }}
   with_items: "{{ pipx_mdformat_packages }}"
+  tags: [always]
 
 - name: Install global pipx ntfy packages
   community.general.pipx:
@@ -29,6 +32,7 @@
     state: inject
   # ansible.builtin.command: pipx inject ntfy {{ item }}
   with_items: "{{ pipx_ntfy_packages }}"
+  tags: [always]
 
 - name: Install global pipx pydocstyle packages
   community.general.pipx:
@@ -38,6 +42,7 @@
     state: inject
   # ansible.builtin.command: pipx inject pydocstyle {{ item }}
   with_items: "{{ pipx_pydocstyle_packages }}"
+  tags: [always]
 
 - name: Install global pipx pytest packages
   community.general.pipx:
@@ -47,8 +52,10 @@
     state: inject
   # ansible.builtin.command: pipx inject pytest {{ item }}
   with_items: "{{ pipx_pytest_packages }}"
+  tags: [always]
 
 - name: Update pipx packages
   community.general.pipx:
     executable: "{{ prefix }}/bin/pipx"
     state: upgrade_all
+  tags: [always]

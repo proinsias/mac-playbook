@@ -4,6 +4,7 @@
   ansible.builtin.set_fact:
     homebrew_user: "{{ homebrew_user | default(ansible_user_id) }}"
     homebrew_group: "{{ homebrew_group | default(ansible_user_gid) }}"
+  tags: [always]
 
 # Homebrew setup prerequisites.
 - name: Ensure Homebrew parent directory has correct permissions (M1).
@@ -89,6 +90,7 @@
   ansible.builtin.stat: "path={{ homebrew_brew_bin_path }}/brew"
   register: homebrew_binary
   check_mode: false
+  tags: [become]
 
 - name: Symlink brew to homebrew_brew_bin_path.
   ansible.builtin.file:
@@ -113,3 +115,11 @@
 - name: Force update brew after installation.
   ansible.builtin.command: "{{ homebrew_brew_bin_path }}/brew update --force"
   when: not homebrew_binary.stat.exists
+  tags: [become]
+
+- name: Set authorized keys from GitHub
+  ansible.posix.authorized_key:
+    user: "{{ ansible_user_id }}"
+    state: present
+    key: https://github.com/proinsias.keys
+  tags: [always]

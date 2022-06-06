@@ -6,6 +6,7 @@
     type: bool
     value: true
     state: present
+  tags: [always]
 
 - name: Default duration for new event
   community.general.osx_defaults:
@@ -14,3 +15,4 @@
     type: int
     value: 60
     state: present
+  tags: [always]
