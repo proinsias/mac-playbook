@@ -5,20 +5,11 @@
   tags: [always] # Always run, even when tags specified.
   when: ansible_os_family == "Darwin"
 
-# FIXME: Why does work tag turn always tags off?
-
 - name: Run macos mas role
   ansible.builtin.include_role:
     name: macos_mas
   tags: [always] # Always run, even when tags specified.
   when: ansible_os_family == "Darwin"
-
-- name: Run macos dockutil role
-  ansible.builtin.include_role:
-    name: macos_dockutil
-  # dockutil does not support M1 yet - kcrawford/dockutil#127.
-  when: ansible_os_family == "Darwin" and ansible_machine != 'arm64'
-  tags: [always]
 
 - name: Run macos osx defaults role
   ansible.builtin.include_role:

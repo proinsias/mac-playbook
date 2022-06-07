@@ -58,4 +58,5 @@
   community.general.pipx:
     executable: "{{ prefix }}/bin/pipx"
     state: upgrade_all
+    python: "{{ prefix }}/bin/python3"
   tags: [always]

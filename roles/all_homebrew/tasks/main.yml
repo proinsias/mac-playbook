@@ -30,3 +30,13 @@
   tags: # This won't run unless you specify the 'work' tag.
     - never
     - work
+
+- name: Ensure linux configured homebrew packages are installed
+  community.general.homebrew:
+    name: "{{ item.name | default(item) }}"
+    install_options: "{{ item.install_options | default(omit) }}"
+    state: "{{ item.state | default('latest') }}"
+  loop: "{{ linux_homebrew_installed_packages }}"
+  when: ansible_os_family == "Debian"
+  tags:
+    - always # Always run, even when tags specified.

@@ -21,6 +21,8 @@
 * ansible-playbook site.yml --forks 10 --ask-become-pass --check
 * Executing one role - <https://stackoverflow.com/a/38384205>
 
+- softwareupdate --all --install --force
+
 - Add more `changed_when`s if necessary - review log output.
 
 - Test all of this on:
