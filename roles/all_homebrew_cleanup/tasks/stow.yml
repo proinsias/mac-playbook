@@ -1,0 +1,33 @@
+---
+# https://github.com/proinsias/dotfiles/blob/master/bin/setup.sh
+# https://github.com/geerlingguy/ansible-role-dotfiles/blob/master/tasks/main.yml
+
+- name: Ensure Git and Stow installed
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - stow
+    - git
+  tags: [always]
+
+- name: Ensure GitHub directory is present
+  ansible.builtin.file:
+    path: "~/GitHub"
+    state: directory
+    mode: 0775
+
+- name: Ensure dotfiles repository is cloned locally and get updates
+  ansible.builtin.git:
+    repo: "https://github.com/proinsias/dotfiles.git"
+    dest: "~/GitHub/dotfiles"
+    version: master
+    update: yes
+  become: false
+# FIXME:
+# - name: Deploy dotfiles
+#   shell: |
+#     stow ...
+#   args:
+#   register: output
+#   changed_when: '"LINK" in output.stderr'

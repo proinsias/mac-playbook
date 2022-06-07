@@ -11,3 +11,13 @@
   become: true
   when: gatekeeper_status.stdout.find('disabled') != -1
   tags: [become]
+
+- name: disable sound on boot
+  become: true
+  ansible.builtin.command: nvram SystemAudioVolume=" "
+  tags: [become]
+  changed_when: false
+
+- name: show the ~/Library folder
+  ansible.builtin.command: chflags nohidden ~/Library
+  changed_when: false

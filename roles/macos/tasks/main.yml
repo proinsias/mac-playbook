@@ -23,8 +23,8 @@
   when: ansible_os_family == "Darwin"
   tags: [always] # Always run, even when tags specified.
 
-- name: Run macos spctl role
+- name: Run macos misc role
   ansible.builtin.include_role:
-    name: macos_spctl
+    name: macos_misc
   when: ansible_os_family == "Darwin"
   tags: [always] # Always run, even when tags specified.

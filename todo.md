@@ -1,8 +1,15 @@
 # To Dos
 
+- Use import instead of include tasks - issue with variable files - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#defining-variables-in-included-files-and-roles
+
+  - better for task and tags!
+
 - GT TGT files.
 
 - Document use of --skip-tags always --tags become --ask-become-pass
+
+- https://github.com/macsible/macsible
+- https://github.com/geerlingguy/dotfiles/blob/master/.osx
 
 - Replace most of lingon script with call to bin/lingon.sh!
 
@@ -49,8 +56,6 @@
   - ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
   - <https://github.com/mego22/ansible-role-osx-settings>
   - <https://github.com/drew-kun/ansible-dnscrypt>
-  - <https://github.com/drew-kun/ansible-sshd>
-  - <https://github.com/drew-kun/ansible-macos_terminal>
   - <https://github.com/feffi/ansible-macos-git-repos>
   - <https://github.com/fubarhouse/ansible-role-macdock>
   - <https://github.com/danbohea/ansible-role-macos-dock>
@@ -134,4 +139,12 @@ readonly PLAYBOOK_REPO="https://gitlab.com/radek-sprta/ansible-personal.git"
 readonly PLAYBOOK=setup.yml
 
 ansible-pull -U "${PLAYBOOK_REPO}" -i localhost, "${PLAYBOOK}" --ask-become-pass  # FIXME: Note I can run script directly!
+```
+
+```
+# at least on jan6 2019, the osx_defaults module does not allow to READ values (shame).
+# alternatively run 'killall cfprefsd' command
+- name: Read new iTerm profile after copying
+  command: defaults read com.googlecode.iterm2
+...
 ```

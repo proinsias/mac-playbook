@@ -40,38 +40,20 @@ jobs:
           python-version: 3.x
 
       - name: Install test dependencies.
-        run: |
-          sudo python3 -m pip install --upgrade pip
-          sudo python3 -m pip install ansible-core ansible-lint yamllint
-          ansible-galaxy install --role-file requirements.yml
+        run: ./bin/install_ci_dependencies.sh
 
       - name: Lint code.
-        run: |
-          yamllint .
-          ansible-lint
-          ansible-playbook main.yml --syntax-check
+        run: ./bin/lint.sh
 
       - name: Uninstall GitHub Actions' built-in Homebrew.
-        run: |
-          # Download and run the uninstall script.
-          curl -sLO https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh
-          chmod +x ./uninstall.sh
-          sudo ./uninstall.sh --force
+        run: ./bin/remove_homebrew.sh
 
-          # Clean up Homebrew directories.
-          sudo rm -rf /usr/local/Homebrew /usr/local/Caskroom /usr/local/bin/brew /opt/homebrew/
+      - name: Test the playbook.
+        run: ./bin/ci.sh
+        env:
+          ANSIBLE_FORCE_COLOR: "1"
 
-# FIXME:
-#      - name: Test the playbook.
-#        run: ansible-playbook main.yml --inventory inventory --skip-tags "become" --tags "personal,work"
-#        env:
-#          ANSIBLE_FORCE_COLOR: '1'
-#
-#      - name: Idempotence check.
-#        run: |
-#          idempotence=$(mktemp)
-#          ansible-playbook main.yml | tee -a ${idempotence}
-# yamllint disable-line rule:line-length
-#          tail ${idempotence} | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)
-#        env:
-#          ANSIBLE_FORCE_COLOR: '1'
+      - name: Idempotence check.
+        run: ./bin/ci_idempotence.sh
+        env:
+          ANSIBLE_FORCE_COLOR: "1"
