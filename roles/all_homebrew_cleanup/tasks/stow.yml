@@ -24,10 +24,8 @@
     version: master
     update: yes
   become: false
-# FIXME:
-# - name: Deploy dotfiles
-#   shell: |
-#     stow ...
-#   args:
-#   register: output
-#   changed_when: '"LINK" in output.stderr'
+
+- name: Deploy dotfiles
+  ansible.builtin.command: ~/GitHub/dotfiles/bin/stow.sh
+  register: output
+  changed_when: '"LINK" in output.stderr'

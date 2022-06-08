@@ -32,7 +32,6 @@
     state: present
     install_options: "{{ item.install_options | default(omit) }}"
   loop: "{{ homebrew_cask_installed_apps }}"
-  # FIXME: Need to handle become applications on github actions!
   tags: [always]
 
 - name: Install personal configured cask applications
@@ -41,7 +40,6 @@
     state: present
     install_options: "{{ item.install_options | default(omit) }}"
   loop: "{{ personal_homebrew_cask_installed_apps }}"
-  # FIXME: Need to handle become applications on github actions!
   tags: # This won't run unless you specify the 'personal' tag.
     - never
     - personal
@@ -52,7 +50,6 @@
     state: present
     install_options: "{{ item.install_options | default(omit) }}"
   loop: "{{ work_homebrew_cask_installed_apps }}"
-  # FIXME: Need to handle become applications on github actions!
   tags: # This won't run unless you specify the 'work' tag.
     - never
     - work
