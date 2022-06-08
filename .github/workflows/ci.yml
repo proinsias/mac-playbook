@@ -24,6 +24,7 @@ jobs:
     name: CI
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false # Default is true.
       matrix:
         os:
           - macos-12 # curently in beta
