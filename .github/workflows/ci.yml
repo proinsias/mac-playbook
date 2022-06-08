@@ -11,8 +11,6 @@
 
 name: CI
 on:
-  pull_request:
-  push:
   schedule:
     - cron: 1 2 * * 3
   # Run workflow manually (without waiting for the cron to be called),
