@@ -10,4 +10,4 @@ shopt -s failglob             # Cause globs that don't get expanded to cause err
 # Barfs on GitHub Actions.
 #shopt -s globstar 2>/dev/null # Match all files and zero or more sub-directories.
 
-ansible-playbook main.yml --inventory inventory --tags "personal,work"
+ansible-playbook main.yml --inventory inventory
