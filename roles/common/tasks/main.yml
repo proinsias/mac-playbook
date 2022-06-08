@@ -1,7 +1,0 @@
----
-- name: Where is the cache?
-  ansible.builtin.command: "{{ homebrew_brew_bin_path }}/brew --cache"
-  register: homebrew_cache_path
-  changed_when: false
-  check_mode: false
-  tags: [always]

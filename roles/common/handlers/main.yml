@@ -84,9 +84,3 @@
 - name: Restart XQuartz
   ansible.builtin.command: killall XQuartz
   failed_when: false
-
-# https://github.com/geerlingguy/ansible-collection-mac/blob/master/roles/homebrew/handlers/main.yml
-- name: Clear homebrew cache
-  ansible.builtin.file:
-    path: "{{ homebrew_cache_path.stdout | trim }}"
-    state: absent
