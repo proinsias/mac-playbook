@@ -7,7 +7,7 @@ set -o nounset                # Don't allow use of undefined vars. Use ${VAR:-} 
 set -o pipefail               # Produce a failure return code if any pipeline command errors.
 set -o xtrace                 # Copy command to output.
 shopt -s failglob             # Cause globs that don't get expanded to cause errors.
-# FIXME:
+# Barfs on GitHub Actions.
 #shopt -s globstar 2>/dev/null # Match all files and zero or more sub-directories.
 
-ansible-playbook main.yml --inventory inventory --skip-tags "become" --tags "personal,work"
+ansible-playbook main.yml --inventory inventory --tags "personal,work"
