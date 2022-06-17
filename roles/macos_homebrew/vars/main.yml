@@ -94,7 +94,7 @@ homebrew_cask_installed_apps:
   - imageoptim
   - imazing
   - install-disk-creator
-  - intellij-idea-ce
+  # - intellij-idea-ce
   - itch
   - iterm2
   - jupyter-notebook-viewer

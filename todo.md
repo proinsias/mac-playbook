@@ -4,7 +4,12 @@
 
   - better for task and tags!
 
+- add change to /etc/pam.d/sudo to include touchid
+
 - GT TGT files.
+
+- <https://michaelheap.com/cowsay-and-ansible/>
+- <https://github.com/bluxmit/alnoda-workspaces/tree/main/workspaces/ansible-terraform-workspace>
 
 - Document use of --skip-tags always --tags become --ask-become-pass
 

@@ -25,7 +25,7 @@
       - 409183694 # Keynote
       - 409203825 # Numbers
       - 409201541 # Pages
-      - 497799835 # Xcode
+      # - 497799835 # Xcode
     state: present
   tags: # This won't run unless you specify the 'work' tag.
     - never
