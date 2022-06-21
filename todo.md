@@ -6,6 +6,8 @@
 
 - add change to /etc/pam.d/sudo to include touchid
 
+  - <https://docs.ansible.com/ansible/latest/collections/community/general/pamd_module.html>
+
 - GT TGT files.
 
 - <https://michaelheap.com/cowsay-and-ansible/>
@@ -13,8 +15,8 @@
 
 - Document use of --skip-tags always --tags become --ask-become-pass
 
-- https://github.com/macsible/macsible
-- https://github.com/geerlingguy/dotfiles/blob/master/.osx
+- <https://github.com/macsible/macsible>
+- <https://github.com/geerlingguy/dotfiles/blob/master/.osx>
 
 - Replace most of lingon script with call to bin/lingon.sh!
 
