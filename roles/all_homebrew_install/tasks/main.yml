@@ -7,7 +7,7 @@
   tags: [always]
 
 # Homebrew setup prerequisites.
-- name: Ensure Homebrew parent directory has correct permissions (M1).
+- name: Ensure Homebrew parent directory has correct permissions.
   ansible.builtin.file:
     path: "{{ homebrew_prefix }}"
     owner: "{{ homebrew_user }}"
@@ -15,31 +15,6 @@
     mode: 0775
   become: true
   when: ansible_machine == 'arm64'
-  tags: [become]
-
-- name: Ensure Homebrew parent directory has correct permissions (Intel).
-  block:
-    - name: Ensure Homebrew parent directory has correct permissions (MacOS >= 10.13).
-      ansible.builtin.file:
-        path: "{{ homebrew_prefix }}"
-        owner: root
-        state: directory
-        mode: 0775
-      become: true
-      when: "ansible_distribution_version is version('10.13', '>=')"
-      tags: [become]
-
-    - name: Ensure Homebrew parent directory has correct permissions (MacOS < 10.13).
-      ansible.builtin.file:
-        path: "{{ homebrew_prefix }}"
-        owner: root
-        group: admin
-        state: directory
-        mode: 0775
-      become: true
-      when: "ansible_distribution_version is version('10.13', '<')"
-      tags: [become]
-  when: ansible_machine == 'x86_64'
   tags: [become]
 
 - name: Ensure Homebrew directory exists.
