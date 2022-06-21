@@ -10,6 +10,7 @@ shopt -s failglob             # Cause globs that don't get expanded to cause err
 # Barfs on GitHub Actions.
 #shopt -s globstar 2>/dev/null # Match all files and zero or more sub-directories.
 
+
 sudo --set-home python3 -m pip install --upgrade pip
-sudo --set-home python3 -m pip install ansible-core ansible-lint yamllint
+sudo --set-home python3 -m pip install ansible ansible-lint yamllint
 ./bin/install_dependencies.sh
