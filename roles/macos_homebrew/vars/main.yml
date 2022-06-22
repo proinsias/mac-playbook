@@ -33,7 +33,14 @@ homebrew_uninstalled_packages:
   - tomcat
 
 homebrew_installed_packages:
+  - bash-completion # Conflicts with util-linux.
+  - mas
   - pinentry-mac
+  - rename # Conflicts with util-linux.
+  - trash
+  - veclibfort
+  - webkit2png
+  - wifi-password
 
 homebrew_cask_uninstalled_apps:
   - choosy

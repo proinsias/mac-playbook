@@ -57,7 +57,6 @@ homebrew_installed_packages:
   - aws-shell
   - awscli
   - bash
-  - bash-completion
   # - bash-snippets
   - bat
   - bfg
@@ -174,7 +173,7 @@ homebrew_installed_packages:
   - jpegoptim
   - jq
   - jsonlint
-  - jzaleski/homebrew-jzaleski/apg
+  # - jzaleski/homebrew-jzaleski/apg
   - keychain
   - lame
   - languagetool
@@ -204,7 +203,6 @@ homebrew_installed_packages:
   - mackup
   - make
   - makedepend
-  - mas
   - mediainfo
   - mkdocs
   - moreutils
@@ -253,7 +251,6 @@ homebrew_installed_packages:
   - qt
   - rbenv
   - readline # For pyenv.
-  - rename
   - restview
   - rst-lint
   - rsync
@@ -292,18 +289,14 @@ homebrew_installed_packages:
   - tivodecode
   - tmux
   - tmuxinator-completion
-  - trash
   - tree
   - unzip
   - vagrant-completion
-  - veclibfort
   - vitorgalvao/tiny-scripts/cask-repair
   - watch
   - wdiff
-  - webkit2png
   - wget
   - whalebrew
-  - wifi-password
   - winetricks
   - wireguard-tools
   - xsv
