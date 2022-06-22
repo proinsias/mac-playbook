@@ -4,9 +4,9 @@
     name: [pre-commit]
     state: latest
   tags: [always]
-
-- name: Auto update all pre-commit hooks
-  ansible.builtin.command: ~/.local/bin/pre-commit-autoupdate
-  register: pre_commit_autoupdate
-  changed_when: false
-  tags: [always]
+# FIXME: Move this to after dotfiles installation!
+# - name: Auto update all pre-commit hooks
+#   ansible.builtin.command: ~/.local/bin/pre-commit-autoupdate
+#   register: pre_commit_autoupdate
+#   changed_when: false
+#   tags: [always]
