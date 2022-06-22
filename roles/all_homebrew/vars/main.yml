@@ -280,7 +280,6 @@ homebrew_installed_packages:
   - subversion
   - suite-sparse
   - svn
-  - szip
   - tbb
   - tcpdump
   - tesseract
