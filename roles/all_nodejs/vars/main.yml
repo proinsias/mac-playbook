@@ -25,5 +25,6 @@ nodejs_global_packages:
   - semistandard
   - standard
   - svgo
+  # - terminalizer  # Not maintained.
   - tldr # http://tldr.sh/
   - yarn

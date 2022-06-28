@@ -50,6 +50,7 @@ homebrew_installed_packages:
   - antiword
   - archey4
   - arpack
+  - asciinema
   - aspell
   - autoconf
   - automake
@@ -267,6 +268,7 @@ homebrew_installed_packages:
   - sonar-completion
   - sox
   - speedtest
+  - sqlfluff
   - sqlite
   - ssh-copy-id
   - starship
@@ -290,6 +292,8 @@ homebrew_installed_packages:
   - tmux
   - tmuxinator-completion
   - tree
+  - ttygif
+  - tty
   - unzip
   - vagrant-completion
   - vitorgalvao/tiny-scripts/cask-repair
