@@ -293,7 +293,7 @@ homebrew_installed_packages:
   - tmuxinator-completion
   - tree
   - ttygif
-  - tty
+  - ttyrec
   - unzip
   - vagrant-completion
   - vitorgalvao/tiny-scripts/cask-repair
