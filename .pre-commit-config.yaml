@@ -27,7 +27,7 @@ repos:
       - id: add-trailing-comma
 
   - repo: https://github.com/Yelp/detect-secrets
-    rev: v1.2.0
+    rev: v1.3.0
     hooks:
       - id: detect-secrets
         args: [--baseline, .secrets.baseline]
@@ -59,7 +59,7 @@ repos:
   # YAML
 
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.26.3
+    rev: v1.27.1
     hooks:
       - id: yamllint
         args: [-c=.yamllint.yml]
@@ -81,14 +81,14 @@ repos:
         args: [--external-sources, --format=gcc, --shell=bash]
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.2.0
+    rev: v1.3.0
     hooks:
       - id: remove-crlf
       - id: remove-tabs
         exclude: .git/COMMIT_EDITMSG
 
   - repo: https://github.com/sirosen/check-jsonschema
-    rev: 0.16.2
+    rev: 0.17.1
     hooks:
       - id: check-github-actions
       - id: check-github-workflows
