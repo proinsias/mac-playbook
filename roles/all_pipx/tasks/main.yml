@@ -14,6 +14,26 @@
   with_items: "{{ pipx_packages }}"
   tags: [always]
 
+- name: Install global pipx bandit packages
+  community.general.pipx:
+    executable: "{{ prefix }}/bin/pipx"
+    inject_packages: "{{ item }}"
+    name: bandit
+    state: inject
+  # ansible.builtin.command: pipx inject bandit {{ item }}
+  with_items: "{{ pipx_bandit_packages }}"
+  tags: [always]
+
+- name: Install global pipx flake8 packages
+  community.general.pipx:
+    executable: "{{ prefix }}/bin/pipx"
+    inject_packages: "{{ item }}"
+    name: flake8
+    state: inject
+  # ansible.builtin.command: pipx inject flake8 {{ item }}
+  with_items: "{{ pipx_flake8_packages }}"
+  tags: [always]
+
 - name: Install global pipx mdformat packages
   community.general.pipx:
     executable: "{{ prefix }}/bin/pipx"
@@ -22,6 +42,16 @@
     state: inject
   # ansible.builtin.command: pipx inject mdformat {{ item }}
   with_items: "{{ pipx_mdformat_packages }}"
+  tags: [always]
+
+- name: Install global pipx nbdime packages
+  community.general.pipx:
+    executable: "{{ prefix }}/bin/pipx"
+    inject_packages: "{{ item }}"
+    name: nbdime
+    state: inject
+  # ansible.builtin.command: pipx inject ntfy {{ item }}
+  with_items: "{{ pipx_nbdime_packages }}"
   tags: [always]
 
 - name: Install global pipx ntfy packages

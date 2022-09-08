@@ -35,7 +35,7 @@ pipx_packages:
   - ntfy
   - pip-check
   - pip-tools
-  - poetry
+  # - poetry  # Install manually as per webpage.
   - proselint
   - pweave
   - pycln
@@ -60,7 +60,10 @@ pipx_packages:
   - xlsx2csv
   - yapf
 
-pipx_flake8_packages:
+pipx_bandit_packages:
+  - toml
+
+pipx_flake8_packages: # FIXME: Make flake518?
   - cohesion
   - flake8-annotations-complexity
   - flake8-annotations-coverage
@@ -108,6 +111,9 @@ pipx_mdformat_packages:
   - mdformat-tables
   - mdformat-toc
 
+pipx_nbdime_packages:
+  - ipython_genutils
+
 pipx_ntfy_packages:
   - emoji # emoji
   - psutil # pid
@@ -117,6 +123,7 @@ pipx_pydocstyle_packages:
   - toml
 
 pipx_pytest_packages:
+  - pytest-mock
   - pytest-profiling
   - pytest-sugar
   - pytest-xdist

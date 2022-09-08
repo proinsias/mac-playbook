@@ -110,7 +110,7 @@ homebrew_cask_installed_apps:
   - keybase
   - kitty
   - lepton
-  - lingon-x
+  - lingon-x # FIXME: Issue?
   - macdown
   - mactex
   - makemkv
@@ -128,7 +128,7 @@ homebrew_cask_installed_apps:
   - no-ip-duc
   - omnidisksweeper
   - omnifocus
-  - onyx
+  - onyx # FIXME: Issue?
   - oversight
   - pacifist
   - podcastmenu
