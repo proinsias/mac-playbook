@@ -42,7 +42,7 @@ repos:
   # Ansible
 
   - repo: https://github.com/ansible-community/ansible-lint.git
-    rev: v6.3.0
+    rev: v6.4.0
     hooks:
       - id: ansible-lint
         stages:
@@ -73,7 +73,7 @@ repos:
       - id: fix-ligatures
 
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 2.1.6
+    rev: 3.0.0
     hooks:
       - id: forbid-binary
       - id: git-check # Configure in .gitattributes
