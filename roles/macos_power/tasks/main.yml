@@ -69,7 +69,7 @@
   become: true
   tags: [become]
   # yamllint disable-line rule:line-length
-  when: "(ansible_machine != 'arm64') and (restartpowerfailure_power_settings_results.stdout != 'Restart After Power Failure: On')"
+  when: "(ansible_machine != 'arm64') and (restartpowerfailure_power_settings_results.stdout != 'Restart After Power Failure: On')" # editorconfig-checker-disable-line
 
 - name: Get wakeonnetworkaccess power settings
   ansible.builtin.command: systemsetup -getwakeonnetworkaccess

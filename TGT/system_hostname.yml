@@ -23,7 +23,7 @@
   ansible.builtin.command: scutil --set HostName {{ system.hostname.hostname }}
   become: true
   # yamllint disable-line rule:line-length
-  when: system.hostname.hostname != None and (hostname_result.failed or (system.hostname.hostname not in hostname_result.stdout))
+  when: system.hostname.hostname != None and (hostname_result.failed or (system.hostname.hostname not in hostname_result.stdout)) # editorconfig-checker-disable-line
 
 - name: Hostname - Get current LocalHostName
   ansible.builtin.command: scutil --get LocalHostName

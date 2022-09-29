@@ -6,14 +6,14 @@ echo "##########################################################################
 
 echo ""
 echo "Remove duplicates in the 'Open With' menu (also see 'lscleanup' alias)"
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
+    -kill -r -domain local -domain system -domain user
 
 echo ""
 echo "Set Desktop as the default location for new Finder windows"
 # For other paths, use `PfLo` and `file:///full/path/here/`
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
-defaults write com.apple.finder NewWindowTargetPath -string
-"file://${HOME}/Desktop/"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
 
 echo ""
 echo "Showing all filename extensions in Finder by default"
@@ -43,5 +43,5 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 echo ""
 echo "Show item info to the right of the icons on the desktop"
 /usr/libexec/PlistBuddy -c \
-"Set DesktopViewSettings:IconViewSettings:labelOnBottom false" \
-~/Library/Preferences/com.apple.finder.plist
+    "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" \
+    ~/Library/Preferences/com.apple.finder.plist

@@ -48,9 +48,10 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: github/super-linter@v4 # No rust, dotenv, armttk, pwsh, c# linting.
+        uses: github/super-linter@v4 # Don't use slim - doesn't seem to work for me.
         env:
           VALIDATE_ALL_CODEBASE: true # set to false to check only changed files
+          VALIDATE_EDITORCONFIG: False # FIXME: Figure out why editorconfig-checker complains about indent style?!
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LINTER_RULES_PATH: .

@@ -10,13 +10,13 @@ shopt -s failglob             # Cause globs that don't get expanded to cause err
 shopt -s globstar 2>/dev/null # Match all files and zero or more sub-directories.
 
 case $(hostname -s) in
-    "ilovemovies" )
-        ansible-playbook main.yml --inventory inventory --skip-tags "become" --tags "personal"
-        ;;
-    "intleacht" )
-        ansible-playbook main.yml --inventory inventory --skip-tags "become" --tags "work"
-        ;;
-* )
+"ilovemovies")
+    ansible-playbook main.yml --inventory inventory --skip-tags "become" --tags "personal"
+    ;;
+"intleacht")
+    ansible-playbook main.yml --inventory inventory --skip-tags "become" --tags "work"
+    ;;
+*)
     ansible-playbook main.yml --inventory inventory --skip-tags "become"
     ;;
 esac

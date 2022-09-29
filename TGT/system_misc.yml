@@ -7,10 +7,10 @@
 
 - name: Misc - Enable ssh ({{ system.misc.enable_ssh }}).
   # yamllint disable-line rule:line-length
-  ansible.builtin.command: systemsetup -f -setremotelogin {{ 'on' if system.misc.enable_ssh else 'off' }} /System/Library/LaunchDaemons/ssh.plist
+  ansible.builtin.command: systemsetup -f -setremotelogin {{ 'on' if system.misc.enable_ssh else 'off' }} /System/Library/LaunchDaemons/ssh.plist # editorconfig-checker-disable-line
   become: true
   # yamllint disable-line rule:line-length
-  when: ssh_status.stdout.find("Off") != -1 and system.misc.enable_ssh or ssh_status.stdout.find("On") != -1 and not system.misc.enable_ssh
+  when: ssh_status.stdout.find("Off") != -1 and system.misc.enable_ssh or ssh_status.stdout.find("On") != -1 and not system.misc.enable_ssh # editorconfig-checker-disable-line
   register: enable_ssh_result
   changed_when: not enable_ssh_result.stdout|search('already')
 
@@ -23,9 +23,9 @@
 - name: Misc - Enable hibernation ({{ system.misc.enable_hibernation }}).
   become: true
   # yamllint disable-line rule:line-length
-  ansible.builtin.command: pmset -a hibernatemode {{ 3 if system.misc.enable_hibernation else system.misc.enable_hibernation | int }}
+  ansible.builtin.command: pmset -a hibernatemode {{ 3 if system.misc.enable_hibernation else system.misc.enable_hibernation | int }} # editorconfig-checker-disable-line
   # yamllint disable-line rule:line-length
-  when: (hibernate_status.stdout.find("3") != -1 and not system.misc.enable_hibernation) or (hibernate_status.stdout.find("0") != -1 and system.misc.enable_hibernation)
+  when: (hibernate_status.stdout.find("3") != -1 and not system.misc.enable_hibernation) or (hibernate_status.stdout.find("0") != -1 and system.misc.enable_hibernation) # editorconfig-checker-disable-line
 
 - name: Misc - Read sudden motion sensor setting.
   ansible.builtin.command: pmset -g | grep sms
@@ -39,4 +39,4 @@
   when:
     - sms_status.stdout != ""
     # yamllint disable-line rule:line-length
-    - (sms_status.stdout.find("1") != -1 and not system.misc.enable_sudden_motion_sensor) or (sms_status.stdout.find("0") != -1 and system.misc.enable_sudden_motion_sensor)
+    - (sms_status.stdout.find("1") != -1 and not system.misc.enable_sudden_motion_sensor) or (sms_status.stdout.find("0") != -1 and system.misc.enable_sudden_motion_sensor) # editorconfig-checker-disable-line

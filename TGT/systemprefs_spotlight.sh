@@ -31,17 +31,20 @@ echo "##########################################################################
 
 echo ""
 echo "Make sure indexing is enabled for the main volume"
-mdutil -i on / > /dev/null
+mdutil -i on / >/dev/null
 
 echo ""
 echo "Want to rebuild the Spotlight index?"
 select yn in "Yes" "No"; do
-  case $yn in
-    Yes ) echo "Load new settings before rebuilding the index"
-      killall mds > /dev/null 2>&1
-      echo "Rebuild the index from scratch"
-      mdutil -E / > /dev/null
-      break;;
-    No ) exit;;
-  esac
+    case "${yn}" in
+    Yes)
+        echo "Load new settings before rebuilding the index"
+        killall mds >/dev/null 2>&1
+        echo "Rebuild the index from scratch"
+        mdutil -E / >/dev/null
+        break
+        ;;
+    No) exit ;;
+    *) ;;
+    esac
 done

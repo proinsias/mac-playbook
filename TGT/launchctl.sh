@@ -19,8 +19,8 @@ echo ""
 echo "This changes need to be done manually."
 echo "First disable System Integrity Protection (SIP):"
 echo "* Reboot your Mac into Recovery Mode by restarting your " \
-     "computer and holding down cmd+R until the Apple logo appears " \
-     "onyour screen."
+    "computer and holding down cmd+R until the Apple logo appears " \
+    "onyour screen."
 echo "* In the menubar click Utilities > Terminal."
 echo "* In the Terminal window, type in csrutil disable."
 echo "* Restart your Mac."

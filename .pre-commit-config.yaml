@@ -84,6 +84,7 @@ repos:
           - id: git-check # Configure in .gitattributes
           - id: shellcheck
             args: [--external-sources, --format=gcc, --shell=bash]
+          - id: shfmt
 
     - repo: https://github.com/Lucas-C/pre-commit-hooks
       rev: v1.3.1

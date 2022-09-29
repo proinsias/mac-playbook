@@ -1,6 +1,8 @@
 # To Dos
 
--   Use import instead of include tasks - issue with variable files - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#defining-variables-in-included-files-and-roles
+-   Use import instead of include tasks - issue with variable files -
+    <https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#defining-variables-in-included-files-and-roles>
+    .
 
     -   better for task and tags!
 

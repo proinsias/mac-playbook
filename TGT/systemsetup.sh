@@ -27,4 +27,4 @@ systemsetup -setrestartfreeze on
 echo ""
 echo "Set the timezone"
 #See `sudo systemsetup -listtimezones` for other values
-systemsetup -settimezone "America/New_York" > /dev/null
+systemsetup -settimezone "America/New_York" >/dev/null
