@@ -25,5 +25,30 @@ nodejs_global_packages:
   - standard
   - svgo
   # - terminalizer  # Not maintained.
+  - textlint
+  - textlint-plugin-latex2e
+  - textlint-filter-rule-comments
+  - textlint-rule-alex
+  - textlint-rule-apostrophe
+  - textlint-rule-common-misspellings
+  - textlint-rule-diacritics
+  - textlint-rule-doubled-spaces
+  - textlint-rule-editorconfig
+  - textlint-rule-en-capitalization
+  - textlint-rule-en-spell
+  - textlint-rule-max-number-of-lines
+  - textlint-rule-no-dead-link
+  - textlint-rule-no-empty-section
+  - textlint-rule-no-start-duplicated-conjunction
+  - textlint-rule-no-todo
+  - textlint-rule-stop-word
+  - textlint-rule-terminology
+  - textlint-rule-write-good
+  - textlint-rule-unexpanded-acronym
+  - textlint-rule/textlint-rule-no-duplicate-abbr
+  - textlint-rule/textlint-rule-no-invalid-control-character
   - tldr # http://tldr.sh/
   - yarn
+
+plugins:
+  - latex2e

@@ -109,3 +109,8 @@ repos:
       rev: v1.6.19
       hooks:
           - id: actionlint
+
+    - repo: https://github.com/RyoWakabayashi/pre-commit-mirrors-textlint
+      rev: v12.2.1
+      hooks:
+          - id: textlint
