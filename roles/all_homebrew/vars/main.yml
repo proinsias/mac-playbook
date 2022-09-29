@@ -211,6 +211,7 @@ homebrew_installed_packages:
   - mpfr
   - mypy
   - nano
+  - neofetch
   - nettle
   - nmap
   - node
