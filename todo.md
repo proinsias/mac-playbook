@@ -1,74 +1,74 @@
 # To Dos
 
-- Use import instead of include tasks - issue with variable files - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#defining-variables-in-included-files-and-roles
+-   Use import instead of include tasks - issue with variable files - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#defining-variables-in-included-files-and-roles
 
-  - better for task and tags!
+    -   better for task and tags!
 
-- add change to /etc/pam.d/sudo to include touchid
+-   add change to /etc/pam.d/sudo to include touchid
 
-  - <https://docs.ansible.com/ansible/latest/collections/community/general/pamd_module.html>
+    -   <https://docs.ansible.com/ansible/latest/collections/community/general/pamd_module.html>
 
-- GT TGT files.
+-   GT TGT files.
 
-- <https://michaelheap.com/cowsay-and-ansible/>
-- <https://github.com/bluxmit/alnoda-workspaces/tree/main/workspaces/ansible-terraform-workspace>
+-   <https://michaelheap.com/cowsay-and-ansible/>
+-   <https://github.com/bluxmit/alnoda-workspaces/tree/main/workspaces/ansible-terraform-workspace>
 
-- Document use of --skip-tags always --tags become --ask-become-pass
+-   Document use of --skip-tags always --tags become --ask-become-pass
 
-- <https://github.com/macsible/macsible>
-- <https://github.com/geerlingguy/dotfiles/blob/master/.osx>
+-   <https://github.com/macsible/macsible>
+-   <https://github.com/geerlingguy/dotfiles/blob/master/.osx>
 
-- Replace most of lingon script with call to bin/lingon.sh!
+-   Replace most of lingon script with call to bin/lingon.sh!
 
-  - I need a way to skip 'become' tasks like gcloud and also run only those tasks.
-  - `brew update upgrade cleanup`
-  - `pyenv rehash` add?
-  - `docker cleanup` add?
-  - `build docker` maybe?
-  - install and update `gcloud` (keep list of outdated)
-  - install `dotfiles` via `stow`
+    -   I need a way to skip 'become' tasks like gcloud and also run only those tasks.
+    -   `brew update upgrade cleanup`
+    -   `pyenv rehash` add?
+    -   `docker cleanup` add?
+    -   `build docker` maybe?
+    -   install and update `gcloud` (keep list of outdated)
+    -   install `dotfiles` via `stow`
 
-* Confirm README.md installation steps.
-* Update list of tags in README.md
-* Try `--check` (with `--diff`?) to just report differences.
-* <https://github.com/ansible/ansible-modules-core/issues/960>
-* ansible-playbook site.yml --forks 10 --ask-become-pass --check
-* Executing one role - <https://stackoverflow.com/a/38384205>
+*   Confirm README.md installation steps.
+*   Update list of tags in README.md
+*   Try `--check` (with `--diff`?) to just report differences.
+*   <https://github.com/ansible/ansible-modules-core/issues/960>
+*   ansible-playbook site.yml --forks 10 --ask-become-pass --check
+*   Executing one role - <https://stackoverflow.com/a/38384205>
 
-- softwareupdate --all --install --force
+-   softwareupdate --all --install --force
 
-- Add more `changed_when`s if necessary - review log output.
+-   Add more `changed_when`s if necessary - review log output.
 
-- Test all of this on:
+-   Test all of this on:
 
-  - intleacht
-    - work.sh
-    - become.sh - make sure all become tasks get executed
-  - ilovemovies
-    - personal.sh
-  - GCE VM
-    - work.sh
+    -   intleacht
+        -   work.sh
+        -   become.sh - make sure all become tasks get executed
+    -   ilovemovies
+        -   personal.sh
+    -   GCE VM
+        -   work.sh
 
-- Finish ci.yml - GT FIXMEs
+-   Finish ci.yml - GT FIXMEs
 
-- To go through:
+-   To go through:
 
-  - <https://github.com/danbohea/ansible-role-macos-dock>
-  - <https://github.com/fubarhouse/ansible-role-macdock>
-  - <https://github.com/danbohea/ansible-role-macos-spelling>
-  - <https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html>
-  - <https://github.com/geerlingguy/ansible-role-dotfiles>
-  - <https://github.com/hnakamur/macbook_setup>
-  - <https://github.com/hnakamur/ansible-playbooks>
-  - ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
-  - <https://github.com/mego22/ansible-role-osx-settings>
-  - <https://github.com/drew-kun/ansible-dnscrypt>
-  - <https://github.com/feffi/ansible-macos-git-repos>
-  - <https://github.com/fubarhouse/ansible-role-macdock>
-  - <https://github.com/danbohea/ansible-role-macos-dock>
-  - <https://github.com/juju4/ansible-harden-darwin>
+    -   <https://github.com/danbohea/ansible-role-macos-dock>
+    -   <https://github.com/fubarhouse/ansible-role-macdock>
+    -   <https://github.com/danbohea/ansible-role-macos-spelling>
+    -   <https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html>
+    -   <https://github.com/geerlingguy/ansible-role-dotfiles>
+    -   <https://github.com/hnakamur/macbook_setup>
+    -   <https://github.com/hnakamur/ansible-playbooks>
+    -   ansible Liquid Prompt ala drew-kun/ansible-ohmyzsh
+    -   <https://github.com/mego22/ansible-role-osx-settings>
+    -   <https://github.com/drew-kun/ansible-dnscrypt>
+    -   <https://github.com/feffi/ansible-macos-git-repos>
+    -   <https://github.com/fubarhouse/ansible-role-macdock>
+    -   <https://github.com/danbohea/ansible-role-macos-dock>
+    -   <https://github.com/juju4/ansible-harden-darwin>
 
-- What are the relevant osx defaults for 1password 8? Are there any?
+-   What are the relevant osx defaults for 1password 8? Are there any?
 
 ```shell
 # https://docs.ansible.com/ansible/2.5/modules/npm_module.html

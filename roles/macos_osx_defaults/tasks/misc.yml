@@ -116,7 +116,7 @@
 - name: Disk Images - Disable verification
   community.general.osx_defaults:
     domain: com.apple.frameworks.diskimages
-    key: "{{ item }}"
+    key: '{{ item }}'
     type: bool
     value: true
   with_items:

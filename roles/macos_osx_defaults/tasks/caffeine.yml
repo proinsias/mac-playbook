@@ -24,7 +24,7 @@
     domain: com.lightheadsw.caffeine
     key: DefaultDuration
     type: string
-    value: "0"
+    value: '0'
     state: present
   notify: Restart Caffeine
   tags: [always]

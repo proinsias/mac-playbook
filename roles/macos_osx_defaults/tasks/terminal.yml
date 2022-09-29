@@ -5,7 +5,7 @@
     key: StringEncodings
     type: array
     value:
-      - "4"
+      - '4'
     state: present
   notify: Restart Terminal
   tags: [always]

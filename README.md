@@ -6,11 +6,11 @@ This playbook installs and configures most of the software I use on my Mac.
 
 <!-- toc -->
 
-- [Installation](#installation)
-- [Running playbook](#running-playbook)
-  - [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
-- [Updating the Table of Contents of this file](#updating-the-table-of-contents-of-this-file)
-- [Thanks](#thanks)
+-   [Installation](#installation)
+-   [Running playbook](#running-playbook)
+    -   [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
+-   [Updating the Table of Contents of this file](#updating-the-table-of-contents-of-this-file)
+-   [Thanks](#thanks)
 
 <!-- tocstop -->
 
@@ -19,7 +19,8 @@ This playbook installs and configures most of the software I use on my Mac.
 Setup this repo and its dependencies:
 
 ```bash
-curl --location --remote-name https://raw.githubusercontent.com/proinsias/mac-playbook/master/bin/setup.sh && bash setup.sh
+curl --location --remote-name https://raw.githubusercontent.com/proinsias/mac-playbook/master/bin/setup.sh \
+&& bash setup.sh
 ```
 
 ## Running the entire playbook
@@ -42,9 +43,9 @@ You can filter which part of the provisioning process to run
 by specifying a set of tags using `ansible-playbook`'s `--tags` flag.
 The tags available are:
 
-- `become`
-- `personal`
-- `work`
+-   `become`
+-   `personal`
+-   `work`
 
 For example:
 
@@ -68,12 +69,12 @@ markdown-toc -i README.md
 
 Thanks to the authors of the many ansible roles and collections I borrowed from:
 
-- [appian.macos-power](https://github.com/appian/ansible-role-macos-power)
-- [danbohea.rbenv](https://github.com/danbohea/ansible-role-rbenv)
-- [feffi.macos-defaults](https://github.com/feffi/ansible-macos-defaults.git)
-- [feffi.macos-standby](https://github.com/feffi/ansible-macos-standby.git)
-- [fubarhouse.macdock](https://github.com/fubarhouse/ansible-role-macdock)
-- [geerlingguy.mac](https://github.com/geerlingguy/ansible-collection-mac)
-- [geerlingguy,mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook/)
-- [kinglouie.macos](https://github.com/kinglouie/ansible-role-macos)
-- [lafarer.osx-defaults](https://github.com/lafarer/ansible-role-osx-defaults)
+-   [appian.macos-power](https://github.com/appian/ansible-role-macos-power)
+-   [danbohea.rbenv](https://github.com/danbohea/ansible-role-rbenv)
+-   [feffi.macos-defaults](https://github.com/feffi/ansible-macos-defaults.git)
+-   [feffi.macos-standby](https://github.com/feffi/ansible-macos-standby.git)
+-   [fubarhouse.macdock](https://github.com/fubarhouse/ansible-role-macdock)
+-   [geerlingguy.mac](https://github.com/geerlingguy/ansible-collection-mac)
+-   [geerlingguy,mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook/)
+-   [kinglouie.macos](https://github.com/kinglouie/ansible-role-macos)
+-   [lafarer.osx-defaults](https://github.com/lafarer/ansible-role-osx-defaults)

@@ -41,6 +41,7 @@ homebrew_installed_packages:
   - { name: emacs, restart_service: true }
   - svn
   - ack
+  - actionlint
   - advancecomp
   - ag
   - ansible
@@ -232,6 +233,7 @@ homebrew_installed_packages:
   - pngcrush
   - pngquant
   - poppler
+  - prettier
   - pre-commit
   - proselint
   - pstoedit

@@ -54,7 +54,7 @@
     domain: com.dayoneapp.dayone
     key: FontSize
     type: string
-    value: "16"
+    value: '16'
     state: present
   notify: Restart Day One
   tags: [always]
@@ -104,7 +104,7 @@
     domain: com.dayoneapp.dayone
     key: SecurityIdleLockTime
     type: string
-    value: "20"
+    value: '20'
     state: present
   notify: Restart Day One
   tags: [always]

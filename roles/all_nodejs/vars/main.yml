@@ -21,7 +21,6 @@ nodejs_global_packages:
   - markdown-toc
   - npm-check
   - npm-check-updates
-  - prettier
   - semistandard
   - standard
   - svgo

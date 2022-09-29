@@ -11,6 +11,7 @@ pipx_packages:
   - dead
   - detect-secrets
   - docstr-coverage
+  - editorconfig-checker
   # - eg
   - em-keyboard
   - flake8

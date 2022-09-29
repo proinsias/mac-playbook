@@ -10,6 +10,6 @@ shopt -s failglob             # Cause globs that don't get expanded to cause err
 # Barfs on GitHub Actions.
 #shopt -s globstar 2>/dev/null # Match all files and zero or more sub-directories.
 
-yamllint .
-ansible-lint
+# yamllint .  # via super-linter
+# ansible-lint  # via super-linter
 ansible-playbook main.yml --inventory inventory --syntax-check

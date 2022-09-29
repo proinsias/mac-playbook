@@ -86,7 +86,7 @@
     domain: NSGlobalDomain
     key: AppleFirstWeekday
     type: string
-    value: "{gregorian = 2;}"
+    value: '{gregorian = 2;}'
     state: present
   tags: [always]
 

@@ -2,15 +2,15 @@
 # https://github.com/geerlingguy/ansible-collection-mac/blob/master/roles/homebrew/tasks/main.yml
 - name: Determine Homebrew ownership variables
   ansible.builtin.set_fact:
-    homebrew_user: "{{ homebrew_user | default(ansible_user_id) }}"
-    homebrew_group: "{{ homebrew_group | default(ansible_user_gid) }}"
+    homebrew_user: '{{ homebrew_user | default(ansible_user_id) }}'
+    homebrew_group: '{{ homebrew_group | default(ansible_user_gid) }}'
   tags: [always]
 
 # Homebrew setup prerequisites.
 - name: Ensure Homebrew parent directory has correct permissions.
   ansible.builtin.file:
-    path: "{{ homebrew_prefix }}"
-    owner: "{{ homebrew_user }}"
+    path: '{{ homebrew_prefix }}'
+    owner: '{{ homebrew_user }}'
     state: directory
     mode: 0775
   become: true
@@ -19,9 +19,9 @@
 
 - name: Ensure Homebrew directory exists.
   ansible.builtin.file:
-    path: "{{ homebrew_install_path }}"
-    owner: "{{ homebrew_user }}"
-    group: "{{ homebrew_group }}"
+    path: '{{ homebrew_install_path }}'
+    owner: '{{ homebrew_user }}'
+    group: '{{ homebrew_group }}'
     state: directory
     mode: 0775
   become: true
@@ -32,37 +32,37 @@
   ansible.builtin.git:
     repo: https://github.com/Homebrew/brew
     version: master
-    dest: "{{ homebrew_install_path }}"
+    dest: '{{ homebrew_install_path }}'
     update: false
     depth: 1
   become: true
-  become_user: "{{ homebrew_user }}"
+  become_user: '{{ homebrew_user }}'
   tags: [become]
 
 # Adjust Homebrew permissions.
 - name: Ensure proper permissions and ownership on homebrew_brew_bin_path dirs.
   ansible.builtin.file:
-    path: "{{ homebrew_brew_bin_path }}"
+    path: '{{ homebrew_brew_bin_path }}'
     state: directory
-    owner: "{{ homebrew_user }}"
-    group: "{{ homebrew_group }}"
+    owner: '{{ homebrew_user }}'
+    group: '{{ homebrew_group }}'
     mode: 0775
   become: true
   tags: [become]
 
 - name: Ensure proper ownership on homebrew_install_path subdirs.
   ansible.builtin.file:
-    path: "{{ homebrew_install_path }}"
+    path: '{{ homebrew_install_path }}'
     state: directory
-    owner: "{{ homebrew_user }}"
-    group: "{{ homebrew_group }}"
+    owner: '{{ homebrew_user }}'
+    group: '{{ homebrew_group }}'
     recurse: true
   become: true
   tags: [become]
 
 # Place brew binary in proper location and complete setup.
 - name: Check if homebrew binary is already in place.
-  ansible.builtin.stat: "path={{ homebrew_brew_bin_path }}/brew"
+  ansible.builtin.stat: 'path={{ homebrew_brew_bin_path }}/brew'
   register: homebrew_binary
   check_mode: false
   become: true
@@ -70,8 +70,8 @@
 
 - name: Symlink brew to homebrew_brew_bin_path.
   ansible.builtin.file:
-    src: "{{ homebrew_install_path }}/bin/brew"
-    dest: "{{ homebrew_brew_bin_path }}/brew"
+    src: '{{ homebrew_install_path }}/bin/brew'
+    dest: '{{ homebrew_brew_bin_path }}/brew'
     state: link
   when: not homebrew_binary.stat.exists
   become: true
@@ -79,22 +79,22 @@
 
 - name: Ensure proper homebrew folders are in place.
   ansible.builtin.file:
-    path: "{{ homebrew_prefix }}/{{ item }}"
+    path: '{{ homebrew_prefix }}/{{ item }}'
     state: directory
-    owner: "{{ homebrew_user }}"
-    group: "{{ homebrew_group }}"
+    owner: '{{ homebrew_user }}'
+    group: '{{ homebrew_group }}'
     mode: 0775
   become: true
-  loop: "{{ homebrew_folders_base }}"
+  loop: '{{ homebrew_folders_base }}'
   tags: [become]
 
 - name: Force update brew after installation.
-  ansible.builtin.command: "{{ homebrew_brew_bin_path }}/brew update --force"
+  ansible.builtin.command: '{{ homebrew_brew_bin_path }}/brew update --force'
   when: not homebrew_binary.stat.exists
 
 - name: Set authorized keys from GitHub
   ansible.posix.authorized_key:
-    user: "{{ ansible_user_id }}"
+    user: '{{ ansible_user_id }}'
     state: present
     key: https://github.com/proinsias.keys
   tags: [always]

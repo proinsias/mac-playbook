@@ -7,11 +7,11 @@
 
 - name: Install latest available version of global ruby packages
   community.general.gem:
-    name: "{{ item }}"
+    name: '{{ item }}'
     user_install: false
     state: latest
   # ansible.builtin.command: gem install {{ item }}
-  with_items: "{{ ruby_install_gems }}"
+  with_items: '{{ ruby_install_gems }}'
   tags: [always]
 
 - name: Cleanup gems

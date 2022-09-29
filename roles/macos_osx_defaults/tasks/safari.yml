@@ -47,7 +47,7 @@
 - name: Safari - Show favorites bar
   community.general.osx_defaults:
     domain: com.apple.Safari
-    key: "{{ item }}"
+    key: '{{ item }}'
     type: bool
     value: true
   with_items:

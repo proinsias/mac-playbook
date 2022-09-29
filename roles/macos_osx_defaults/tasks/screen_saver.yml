@@ -54,7 +54,7 @@
     domain: com.apple.screensaver
     key: path
     type: string
-    value: "/Users/ftod/Library/Screen Savers/Aerial.saver"
+    value: '/Users/ftod/Library/Screen Savers/Aerial.saver'
   tags: [always]
 
 - name: Screensaver - Set type

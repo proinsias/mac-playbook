@@ -1,7 +1,7 @@
 ---
 # https://github.com/geerlingguy/ansible-collection-mac/blob/master/roles/homebrew/
 
-homebrew_install_path: "{{ homebrew_prefix }}/Homebrew"
+homebrew_install_path: '{{ homebrew_prefix }}/Homebrew'
 homebrew_folders_base:
   - Cellar
   - Homebrew

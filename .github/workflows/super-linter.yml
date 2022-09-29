@@ -1,0 +1,58 @@
+---
+#################################
+#################################
+## Super Linter GitHub Actions ##
+#################################
+#################################
+name: Lint Code Base
+
+######################################################################
+## minute         0-59
+## hour           0-23
+## day of month   1-31
+## month          1-12
+## day of week    0-7
+######################################################################
+on:
+  schedule:
+    - cron: 16 3 * * 5
+  # Run workflow manually (without waiting for the cron to be called),
+  # through the Github Actions Workflow page directly.
+  workflow_dispatch:
+
+###############
+# Set the Job #
+###############
+jobs:
+  build:
+    # Name the Job
+    name: Lint Code Base
+    # Set the agent to run on
+    runs-on: ubuntu-latest
+
+    ##################
+    # Load all steps #
+    ##################
+    steps:
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          # Full git history is needed to get a proper
+          # list of changed files within `super-linter`
+          fetch-depth: 0
+
+      ################################
+      # Run Linter against code base #
+      ################################
+      - name: Lint Code Base
+        uses: github/super-linter/slim@v4 # No rust, dotenv, armttk, pwsh, c# linting.
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          # Change to 'master' if your main branch differs
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MARKDOWN_CONFIG_FILE: .markdownlint.json
+          YAML_CONFIG_FILE: .yamllint.yml

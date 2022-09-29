@@ -1,0 +1,16 @@
+{
+  "default": true,
+  "line-length": {
+    "line_length": 120
+  },
+  "no-trailing-punctuation": {
+    "punctuation": ",.,:;"
+  },
+  "ol-prefix": {
+    "style": "ordered"
+  },
+  "ul-indent": {
+    "indent": 4
+  },
+  "ul-style": false
+}

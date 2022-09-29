@@ -9,7 +9,7 @@
 - name: Add login shell if missing
   ansible.builtin.lineinfile:
     dest: /etc/shells
-    line: "{{ item }}"
+    line: '{{ item }}'
     state: present
     owner: root
     group: wheel

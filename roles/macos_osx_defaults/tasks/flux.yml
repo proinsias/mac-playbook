@@ -24,7 +24,7 @@
     domain: org.herf.Flux.plist
     key: location
     type: string
-    value: "42.5,-71.2"
+    value: '42.5,-71.2'
     state: present
   notify: Restart Flux
   tags: [always]
@@ -34,7 +34,7 @@
     domain: org.herf.Flux.plist
     key: locationTextField
     type: string
-    value: "02474"
+    value: '02474'
     state: present
   notify: Restart Flux
   tags: [always]

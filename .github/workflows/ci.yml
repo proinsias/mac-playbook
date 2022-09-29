@@ -55,9 +55,9 @@ jobs:
       - name: Test the playbook.
         run: ./bin/ci.sh
         env:
-          ANSIBLE_FORCE_COLOR: "1"
+          ANSIBLE_FORCE_COLOR: '1'
 
       - name: Idempotence check.
         run: ./bin/ci_idempotence.sh
         env:
-          ANSIBLE_FORCE_COLOR: "1"
+          ANSIBLE_FORCE_COLOR: '1'

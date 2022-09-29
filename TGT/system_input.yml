@@ -4,7 +4,7 @@
 
 - name: Input - Set space changing hotkeys (Read settings).
   # yamllint disable-line rule:line-length
-  ansible.builtin.command: /usr/libexec/PlistBuddy -c "Print :AppleSymbolicHotKeys:{{ item + 117 }}:enabled" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+  ansible.builtin.command: /usr/libexec/PlistBuddy -c "Print :AppleSymbolicHotKeys:{{ item + 117 }}:enabled" ~/Library/Preferences/com.apple.symbolichotkeys.plist # editorconfig-checker-disable-line
   with_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
   register: space_changing_hotkey_status
   failed_when: false
@@ -12,18 +12,19 @@
 
 - name: Input - Set space changing hotkeys (Create vars).
   set_fact:
-    hk_tmp_item: "{{ item.stdout | bool }}"
-  with_items: "{{ space_changing_hotkey_status.results }}"
+    hk_tmp_item: '{{ item.stdout | bool }}'
+  with_items: '{{ space_changing_hotkey_status.results }}'
   register: hk_tmp_items
   no_log: true
 
 - name: Input - Set space changing hotkeys (Create vars).
   set_fact:
     # yamllint disable-line rule:line-length
-    space_changing_hotkey_status_parsed: "{{ hk_tmp_items.results | map(attribute='ansible_facts.hk_tmp_item') | list }}"
+    space_changing_hotkey_status_parsed: "{{ hk_tmp_items.results | map(attribute='ansible_facts.hk_tmp_item') | list }}" # editorconfig-checker-disable-line
 
 - name: Input - Set space changing hotkeys (Create dict).
   # yamllint disable
+  # editorconfig-checker-disable
   ansible.builtin.command: >
     /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist
     -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }} dict"
@@ -36,14 +37,14 @@
     }}"
     -c "Add :AppleSymbolicHotKeys:{{ item.1 + 117 }}:value:parameters: integer 262144"
   # yamllint enable
+  # editorconfig-checker-enable
   with_indexed_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
   when: space_changing_hotkey_status.results[item.0].stderr != ""
 
 - name: Input - Set space changing hotkeys (Update dict).
   # yamllint disable-line rule:line-length
-  ansible.builtin.command: /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:{{ item.1 + 117 }}:enabled {{ system.input.enable_space_hotkeys | bool }}" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+  ansible.builtin.command: /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:{{ item.1 + 117 }}:enabled {{ system.input.enable_space_hotkeys | bool }}" ~/Library/Preferences/com.apple.symbolichotkeys.plist # editorconfig-checker-disable-line
   with_indexed_items: [1, 2, 3, 4, 5, 6, 7, 8, 9]
   when:
     # yamllint disable-line rule:line-length
-    space_changing_hotkey_status_parsed[item.0] != system.input.enable_space_hotkeys and space_changing_hotkey_status.results[item.0].stderr ==
-    ""
+    space_changing_hotkey_status_parsed[item.0] != system.input.enable_space_hotkeys and space_changing_hotkey_status.results[item.0].stderr == "" # editorconfig-checker-disable-line
