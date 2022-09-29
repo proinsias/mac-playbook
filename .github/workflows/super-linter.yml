@@ -48,7 +48,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: github/super-linter/slim@v4 # No rust, dotenv, armttk, pwsh, c# linting.
+        uses: github/super-linter@v4 # No rust, dotenv, armttk, pwsh, c# linting.
         env:
           VALIDATE_ALL_CODEBASE: true # set to false to check only changed files
           DEFAULT_BRANCH: master
