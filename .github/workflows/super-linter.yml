@@ -54,5 +54,6 @@ jobs:
           # Change to 'master' if your main branch differs
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINTER_RULES_PATH: .
           MARKDOWN_CONFIG_FILE: .markdownlint.json
           YAML_CONFIG_FILE: .yamllint.yml
