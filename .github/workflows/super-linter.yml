@@ -50,8 +50,7 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter/slim@v4 # No rust, dotenv, armttk, pwsh, c# linting.
         env:
-          VALIDATE_ALL_CODEBASE: false
-          # Change to 'master' if your main branch differs
+          VALIDATE_ALL_CODEBASE: true # set to false to check only changed files
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LINTER_RULES_PATH: .
