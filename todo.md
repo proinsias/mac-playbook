@@ -105,22 +105,22 @@ select yn in "Yes" "No"; do
     Yes ) open -a "Google Chrome" \
           https://agilebits.com/onepassword/extensions \
           https://chrome.google.com/webstore/detail/bookmark-manager/gmlllbghnfkpflemihljekbapjopfjik \
-          https://chrome.google.com/webstore/detail/buffer/noojglkidnpfjbincgijbaiedldjfbhh?utm_source=chrome-ntp-icon \
+          https://chrome.google.com/webstore/detail/buffer/noojglkidnpfjbincgijbaiedldjfbhh \
           https://chrome.google.com/webstore/detail/chromebleed/eeoekjnjgppnaegdjbcafdggilajhpic \
           https://chrome.google.com/webstore/detail/feedly/hipbfijinpcgfogaopmgehiegacbhmob \
-          https://chrome.google.com/webstore/detail/google-calendar/ejjicmeblgpmajnghnpcppodonldlgfn?utm_source=chrome-ntp-launcher \
+          https://chrome.google.com/webstore/detail/google-calendar/ejjicmeblgpmajnghnpcppodonldlgfn \
           https://chrome.google.com/webstore/detail/google-docs-offline/ghbmnnjooekpmoecnnnilnnbdlolhkhi \
-          https://chrome.google.com/webstore/detail/google-docs/aohghmighlieiainnegkcijnfilokake?utm_source=chrome-ntp-launcher \
+          https://chrome.google.com/webstore/detail/google-docs/aohghmighlieiainnegkcijnfilokake \
           https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp \
           https://chrome.google.com/webstore/detail/motivation/ofdgfpchbidcgncgfpdlpclnpaemakoj \
           https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj \
           https://chrome.google.com/webstore/detail/serum/ffboflhdigfmnnokjjcmfipgehggjhlj \
           https://chrome.google.com/webstore/detail/smile-always/jgpmhnmjbhgkhpbgelalfpplebgfjmbf \
           https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg \
-          https://chrome.google.com/webstore/detail/throttle/klmapenfmenbohghcdlilacfhckhcbnn?utm_source=chrome-ntp-icon \
+          https://chrome.google.com/webstore/detail/throttle/klmapenfmenbohghcdlilacfhckhcbnn \
           https://chrome.google.com/webstore/detail/use-https/kbkgnojednemejclpggpnhlhlhkmfidi \
           https://chrome.google.com/webstore/detail/wakatime/jnbbnacmeggbgdjgaoojpmhdlkkpblgi \
-          https://chrome.google.com/webstore/detail/gmail-offline/ejidjjhkpiempkbhmpbfngldlkglhimk?utm_source=chrome-ntp-launcher
+          https://chrome.google.com/webstore/detail/gmail-offline/ejidjjhkpiempkbhmpbfngldlkglhimk
       break;;
     No ) exit;;
   esac
@@ -150,7 +150,7 @@ readonly PLAYBOOK=setup.yml
 ansible-pull -U "${PLAYBOOK_REPO}" -i localhost, "${PLAYBOOK}" --ask-become-pass  # FIXME: Note I can run script directly!
 ```
 
-```
+```shell
 # at least on jan6 2019, the osx_defaults module does not allow to READ values (shame).
 # alternatively run 'killall cfprefsd' command
 - name: Read new iTerm profile after copying

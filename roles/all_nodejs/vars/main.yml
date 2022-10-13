@@ -3,6 +3,7 @@ nodejs_global_packages:
   # Example of specifying pinned version.
   # - name: jslint
   #   version: 0.9.3
+  - cspell
   - csslint
   - dockerlint
   - dockerfilelint # https://github.com/replicatedhq/dockerfilelint
@@ -13,12 +14,14 @@ nodejs_global_packages:
   - git-guilt
   # - how2  # https://github.com/santinic/how2
   - htmlhint
+  - jscpd
   - jscs
   - jshint
   - jslint
   - markdownlint-cli
   - markdown-link-check
   - markdown-toc
+  - mega-linter-runner
   - npm-check
   - npm-check-updates
   - semistandard
@@ -41,13 +44,14 @@ nodejs_global_packages:
   - textlint-rule-no-empty-section
   - textlint-rule-no-start-duplicated-conjunction
   - textlint-rule-no-todo
-  - textlint-rule-stop-word
+  - textlint-rule-stop-words
   - textlint-rule-terminology
   - textlint-rule-write-good
   - textlint-rule-unexpanded-acronym
   - textlint-rule/textlint-rule-no-duplicate-abbr
   - textlint-rule/textlint-rule-no-invalid-control-character
   - tldr # http://tldr.sh/
+  - v8r
   - yarn
 
 plugins:

@@ -3,3 +3,6 @@ config.yml
 *.retry
 *.vagrant
 /.ansible
+
+megalinter-reports/
+report/

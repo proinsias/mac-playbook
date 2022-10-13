@@ -74,6 +74,7 @@ homebrew_installed_packages:
   - certbot
   - chafa
   - cheat # Conflicts with bash-snippets.
+  - checkmake
   - checkstyle
   - cloog
   - cmake
@@ -94,6 +95,8 @@ homebrew_installed_packages:
   - docker-clean
   # - docker-completion # Now included in docker
   - dos2unix
+  - dotenv-linter
+  - dotnet
   - dvc
   - ed
   - editorconfig
@@ -122,6 +125,7 @@ homebrew_installed_packages:
   - ghostscript
   - gifsicle
   - git
+  - gitleaks
   - git-branch-status
   - git-ftp
   - git-filter-repo
@@ -246,6 +250,7 @@ homebrew_installed_packages:
   - pyenv-virtualenv
   - pygments
   - pyqt
+  - pyright
   - python
   - p7zip
   - qhull
@@ -273,6 +278,7 @@ homebrew_installed_packages:
   - speedtest
   - sqlfluff
   - sqlite
+  - sql-lint
   - ssh-copy-id
   - starship
   - stormssh
@@ -295,6 +301,7 @@ homebrew_installed_packages:
   - tmux
   - tmuxinator-completion
   - tree
+  - aquasecurity/trivy/trivy
   - ttygif
   - ttyrec
   - unzip

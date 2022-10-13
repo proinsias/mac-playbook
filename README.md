@@ -7,7 +7,7 @@ This playbook installs and configures most of the software I use on my Mac.
 <!-- toc -->
 
 -   [Installation](#installation)
--   [Running playbook](#running-playbook)
+-   [Running the entire playbook](#running-the-entire-playbook)
     -   [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
 -   [Updating the Table of Contents of this file](#updating-the-table-of-contents-of-this-file)
 -   [Thanks](#thanks)
