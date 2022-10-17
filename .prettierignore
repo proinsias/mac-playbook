@@ -3,3 +3,6 @@
 *.retry
 *.vagrant
 /.ansible
+
+megalinter-reports/
+report/
