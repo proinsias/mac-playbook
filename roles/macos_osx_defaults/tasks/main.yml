@@ -1,120 +1,160 @@
 ---
-- import_tasks: activity_monitor.yml
+- name: Import activity monitor
+  ansible.builtin.import_tasks: activity_monitor.yml
   tags: [always]
 
-- import_tasks: address_book.yml
+- name: Import address book
+  ansible.builtin.import_tasks: address_book.yml
   tags: [always]
 
-- import_tasks: alf.yml
+- name: Import alf
+  ansible.builtin.import_tasks: alf.yml
   tags: [always]
 
-- import_tasks: app_store.yml
+- name: Import app store
+  ansible.builtin.import_tasks: app_store.yml
   tags: [always]
 
-- import_tasks: bartender.yml
+- name: Import bartender
+  ansible.builtin.import_tasks: bartender.yml
   tags: [always]
 
-- import_tasks: bezel_services.yml
+- name: Import bezel services
+  ansible.builtin.import_tasks: bezel_services.yml
   tags: [always]
 
-- import_tasks: caffeine.yml
+- name: Import caffeine
+  ansible.builtin.import_tasks: caffeine.yml
   tags: [always]
 
-- import_tasks: dayone.yml
+- name: Import dayone
+  ansible.builtin.import_tasks: dayone.yml
   tags: [always]
 
-- import_tasks: dictionary.yml
+- name: Import dictionary
+  ansible.builtin.import_tasks: dictionary.yml
   tags: [always]
 
-- import_tasks: disk_utility.yml
+- name: Import disk utility
+  ansible.builtin.import_tasks: disk_utility.yml
   tags: [always]
 
-- import_tasks: dock.yml
+- name: Import dock
+  ansible.builtin.import_tasks: dock.yml
   tags: [always]
 
-- import_tasks: finder.yml
+- name: Import finder
+  ansible.builtin.import_tasks: finder.yml
   tags: [always]
 
-- import_tasks: flux.yml
+- name: Import flux
+  ansible.builtin.import_tasks: flux.yml
   tags: [always]
 
-- import_tasks: gpg_mail.yml
+- name: Import gpg mail
+  ansible.builtin.import_tasks: gpg_mail.yml
   tags: [always]
 
-- import_tasks: help_viewer.yml
+- name: Import help viewer
+  ansible.builtin.import_tasks: help_viewer.yml
   tags: [always]
 
-- import_tasks: ical.yml
+- name: Import iCal
+  ansible.builtin.import_tasks: ical.yml
   tags: [always]
 
-- import_tasks: image_capture.yml
+- name: Import image capture
+  ansible.builtin.import_tasks: image_capture.yml
   tags: [always]
 
-- import_tasks: iterm2.yml
+- name: Import iTerm2
+  ansible.builtin.import_tasks: iterm2.yml
   tags: [always]
 
-- import_tasks: launch_services.yml
+- name: Import launch services
+  ansible.builtin.import_tasks: launch_services.yml
   tags: [always]
 
-- import_tasks: login_window.yml
+- name: Import login window
+  ansible.builtin.import_tasks: login_window.yml
   tags: [always]
 
-- import_tasks: mail.yml
+- name: Import mail
+  ansible.builtin.import_tasks: mail.yml
   tags: [always]
 
-- import_tasks: menu_extras.yml
+- name: Import menu extras
+  ansible.builtin.import_tasks: menu_extras.yml
   tags: [always]
 
-- import_tasks: menu_meters.yml
+- name: Import menu meters
+  ansible.builtin.import_tasks: menu_meters.yml
   tags: [always]
 
-- import_tasks: misc.yml
+- name: Import misc
+  ansible.builtin.import_tasks: misc.yml
   tags: [always]
 
-- import_tasks: ns_global_domain.yml
+- name: Import nsGlobalDomain
+  ansible.builtin.import_tasks: ns_global_domain.yml
   tags: [always]
 
-- import_tasks: photo_booth.yml
+- name: Import photo booth
+  ansible.builtin.import_tasks: photo_booth.yml
   tags: [always]
 
-- import_tasks: preview.yml
+- name: Import preview
+  ansible.builtin.import_tasks: preview.yml
   tags: [always]
 
-- import_tasks: printingprefs.yml
+- name: Import printing preferences
+  ansible.builtin.import_tasks: printingprefs.yml
   tags: [always]
 
-- import_tasks: quicktime_player.yml
+- name: Import quicktime player
+  ansible.builtin.import_tasks: quicktime_player.yml
   tags: [always]
 
-- import_tasks: reminders.yml
+- name: Import reminders
+  ansible.builtin.import_tasks: reminders.yml
   tags: [always]
 
-- import_tasks: safari.yml
+- name: Import safari
+  ansible.builtin.import_tasks: safari.yml
   tags: [always]
 
-- import_tasks: screen_capture.yml
+- name: Import screen capture
+  ansible.builtin.import_tasks: screen_capture.yml
   tags: [always]
 
-- import_tasks: screen_saver.yml
+- name: Import screen saver
+  ansible.builtin.import_tasks: screen_saver.yml
   tags: [always]
 
-- import_tasks: screen_sharing.yml
+- name: Import screen sharing
+  ansible.builtin.import_tasks: screen_sharing.yml
   tags: [always]
 
-- import_tasks: skype.yml
+- name: Import skype
+  ansible.builtin.import_tasks: skype.yml
   tags: [always]
 
-- import_tasks: terminal.yml
+- name: Import terminal
+  ansible.builtin.import_tasks: terminal.yml
   tags: [always]
 
-- import_tasks: text_edit.yml
+- name: Import text edit
+  ansible.builtin.import_tasks: text_edit.yml
   tags: [always]
 
-- import_tasks: time_machine.yml
+- name: Import time machine
+  ansible.builtin.import_tasks: time_machine.yml
   tags: [always]
 
-- import_tasks: xcode.yml
+- name: Import xcode
+  ansible.builtin.import_tasks: xcode.yml
   tags: [always]
 
-- import_tasks: x11.yml
+- name: Import x11
+  ansible.builtin.import_tasks: x11.yml
   tags: [always]

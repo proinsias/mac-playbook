@@ -48,6 +48,7 @@ ignore-failures:
         - pyasn1-modules
         - pylev
         - pytz-deprecation-shim
+        - semver
         - send2trash
         - sklearn
         - sphinxcontrib-applehelp

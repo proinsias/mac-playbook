@@ -1,5 +1,5 @@
 ---
-- name: iTerm2 - Enable automatic updates
+- name: Update iTerm2 - Enable automatic updates
   community.general.osx_defaults:
     domain: com.googlecode.iterm2
     key: SUEnableAutomaticChecks
@@ -8,7 +8,7 @@
   notify: Restart iTerm2
   tags: [always]
 
-- name: iTerm2 - Set custom preferences folder
+- name: Update iTerm2 - Set custom preferences folder
   community.general.osx_defaults:
     domain: com.googlecode.iterm2
     key: PrefsCustomFolder
@@ -18,7 +18,7 @@
   notify: Restart iTerm2
   tags: [always]
 
-- name: iTerm2 - Enable custom preferences folder
+- name: Update iTerm2 - Enable custom preferences folder
   community.general.osx_defaults:
     domain: com.googlecode.iterm2
     key: LoadPrefsFromCustomFolder
@@ -29,7 +29,7 @@
   tags: [always]
 
 # See: https://security.stackexchange.com/a/47786/8918
-- name: iTerm2 - Disable Secure Keyboard Entry
+- name: Update iTerm2 - Disable Secure Keyboard Entry
   community.general.osx_defaults:
     domain: com.googlecode.iterm2
     key: Secure Input
