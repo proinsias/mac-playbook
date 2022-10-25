@@ -30,6 +30,7 @@ ignore-failures:
         - future
         - google-pasta
         - imagesize
+        - iniconfig
         - ipython-genutils
         - jupyter
         - jupyter-contrib-core
@@ -57,6 +58,7 @@ ignore-failures:
         - sphinxcontrib-qthelp
         - termcolor
         - testpath
+        - toml
         - vobject
         - wcwidth
         - webencodings

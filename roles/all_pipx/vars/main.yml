@@ -3,6 +3,7 @@ prefix: "{{ '/opt/homebrew' if ansible_machine == 'arm64' else '/usr/local' }}"
 
 pipx_packages:
   - absolufy-imports
+  - auto-walrus
   - bandit
   # - clf
   - copier
@@ -69,7 +70,6 @@ pipx_flake8_packages: # FIXME: Make flake518?
   - flake8-annotations-complexity
   - flake8-annotations-coverage
   - flake8-assertive
-  - flake8-bandit
   - flake8-broken-line
   - flake8-bugbear
   - flake8-builtins

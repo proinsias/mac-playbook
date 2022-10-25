@@ -60,6 +60,7 @@ homebrew_cask_installed_apps:
   - 1password
   - 1password-cli
   - adobe-acrobat-reader
+  - anki
   - apppolice
   - apptrap
   - bartender
