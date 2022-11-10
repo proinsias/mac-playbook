@@ -228,10 +228,12 @@ homebrew_installed_packages:
   - packer-completion
   - pandoc
   - pcre
+  - pdfgrep
   - knqyf263/pet/pet
-  - pip-completion
   - pipenv
   - pipx
+  - pip-audit
+  - pip-completion
   - pixman
   - pkg-config
   - plotutils
@@ -321,6 +323,7 @@ homebrew_installed_packages:
   - yamllint
   - yasm
   - youtube-dl
+  - yg # Uses jq syntax but works with yaml/json/xml/properties/csv/tsv.
   - zlib # For pyenv.
   - zopfli
   - zsh

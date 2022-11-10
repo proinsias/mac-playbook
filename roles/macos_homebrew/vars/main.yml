@@ -95,7 +95,8 @@ homebrew_cask_installed_apps:
   - google-drive
   - go2shell
   - go64
-  - gpg-suite
+  # - gpg-suite
+  - gpg-suite-no-mail
   - grammarly
   - grandperspective
   - ibettercharge

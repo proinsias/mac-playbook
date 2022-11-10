@@ -5,17 +5,22 @@ pipx_packages:
   - absolufy-imports
   - auto-walrus
   - bandit
+  - blacken-docs
   # - clf
   - copier
   - coverage
   - csvkit
+  - darglint
   - dead
+  - deptry
   - detect-secrets
   - docstr-coverage
+  - docformatter
   - editorconfig-checker
   # - eg
   - em-keyboard
   - flake8
+  - flynt
   - future
   - gif-for-cli
   - gitlint-core
@@ -26,6 +31,7 @@ pipx_packages:
   - http-prompt
   # - howdoi
   - identify
+  - interrogate
   - ipython
   - kaggle
   - linkcheckmd
@@ -49,6 +55,7 @@ pipx_packages:
   - pytest
   - pyupgrade
   - python-slugify
+  - refurb
   - safety
   - searchcmd
   - shrynk
