@@ -53,6 +53,7 @@ homebrew_installed_packages:
   - arpack
   - asciinema
   - aspell
+  - atuin
   - autoconf
   - automake
   - autopep8
@@ -136,6 +137,7 @@ homebrew_installed_packages:
   - glances
   - gl2ps
   - glib
+  - glow
   - glpk
   - gmp
   - gnu-getopt
@@ -327,6 +329,7 @@ homebrew_installed_packages:
   - zlib # For pyenv.
   - zopfli
   - zsh
+  - zsh-completions
 
 work_homebrew_installed_packages:
   - { name: mysql, restart_service: true }

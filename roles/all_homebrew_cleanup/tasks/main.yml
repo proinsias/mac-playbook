@@ -27,9 +27,23 @@
   when: ansible_machine == 'arm64'
   tags: [always]
 
+- name: Ensure arm64 homebrew zsh is an authorized shell
+  ansible.builtin.include_tasks: login_shell.yml
+  with_items:
+    - /opt/homebrew/bin/zsh
+  when: ansible_machine == 'arm64'
+  tags: [always]
+
 - name: Ensure amd64 homebrew bash is an authorized shell
   ansible.builtin.include_tasks: login_shell.yml
   with_items:
     - /usr/local/bin/bash
+  when: ansible_machine != 'arm64'
+  tags: [always]
+
+- name: Ensure amd64 homebrew zsh is an authorized shell
+  ansible.builtin.include_tasks: login_shell.yml
+  with_items:
+    - /usr/local/bin/zsh
   when: ansible_machine != 'arm64'
   tags: [always]
