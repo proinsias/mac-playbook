@@ -328,6 +328,7 @@ homebrew_installed_packages:
   - yg # Uses jq syntax but works with yaml/json/xml/properties/csv/tsv.
   - zlib # For pyenv.
   - zopfli
+  - zoxide
   - zsh
   - zsh-completions
 

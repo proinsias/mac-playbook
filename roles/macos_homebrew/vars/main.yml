@@ -162,6 +162,7 @@ homebrew_cask_installed_apps:
   - sublime-text
   - suspicious-package
   - the-unarchiver
+  - threema
   - tigervnc-viewer
   - tripmode
   - typora
