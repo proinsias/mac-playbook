@@ -50,7 +50,7 @@ The tags available are:
 For example:
 
 ```bash
-ansible-playbook main.yml --ask-become-pass --inventory inventory --skip-tags "become" --tags "personal"
+ansible-playbook main.yml --inventory inventory --skip-tags "become" --tags "personal"
 ```
 
 ## Updating the Table of Contents of this file

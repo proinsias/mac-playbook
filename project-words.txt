@@ -459,3 +459,12 @@ yasm
 yubico
 yubikey
 zopfli
+atuin
+pdfgrep
+darglint
+deptry
+docformatter
+flynt
+refurb
+plantronics
+anki

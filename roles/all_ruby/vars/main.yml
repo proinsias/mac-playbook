@@ -13,6 +13,5 @@ ruby_install_gems:
   - rubocop # https://github.com/bbatsov/rubocop
   - sqlint
   - terminal-notifier
-  - textlint
   - travis
   - w3c_validators

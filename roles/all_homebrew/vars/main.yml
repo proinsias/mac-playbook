@@ -25,7 +25,6 @@ homebrew_uninstalled_packages:
   - flake8 # Via pipx instead.
   - gpg-agent
   - howdoi
-  - luajit
   - pandoc-citeproc
   - parallel # Conflicts with moreuilts.
   - docmunch/pdftk/pdftk
@@ -325,7 +324,7 @@ homebrew_installed_packages:
   - yamllint
   - yasm
   - youtube-dl
-  - yg # Uses jq syntax but works with yaml/json/xml/properties/csv/tsv.
+  - yq # Uses jq syntax but works with yaml/json/xml/properties/csv/tsv.
   - zlib # For pyenv.
   - zopfli
   - zoxide
