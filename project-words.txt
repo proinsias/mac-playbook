@@ -468,3 +468,6 @@ flynt
 refurb
 plantronics
 anki
+threema
+datamodel
+zoxide
