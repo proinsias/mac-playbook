@@ -7,16 +7,16 @@
 
 - name: Install global pipx packages
   community.general.pipx:
-    executable: '{{ prefix }}/bin/pipx'
+    executable: '{{ homebrew_prefix }}/bin/pipx'
     name: '{{ item }}'
-    python: '{{ prefix }}/bin/python3'
-  # ansible.builtin.command: pipx install {{ item }} --python {{ prefix }}/bin/python3
+    python: '{{ homebrew_prefix }}/bin/python3'
+  # ansible.builtin.command: pipx install {{ item }} --python {{ homebrew_prefix }}/bin/python3
   with_items: '{{ pipx_packages }}'
   tags: [always]
 
 - name: Install global pipx bandit packages
   community.general.pipx:
-    executable: '{{ prefix }}/bin/pipx'
+    executable: '{{ homebrew_prefix }}/bin/pipx'
     inject_packages: '{{ item }}'
     name: bandit
     state: inject
@@ -26,7 +26,7 @@
 
 - name: Install global pipx flake8 packages
   community.general.pipx:
-    executable: '{{ prefix }}/bin/pipx'
+    executable: '{{ homebrew_prefix }}/bin/pipx'
     inject_packages: '{{ item }}'
     name: flake8
     state: inject
@@ -36,7 +36,7 @@
 
 - name: Install global pipx mdformat packages
   community.general.pipx:
-    executable: '{{ prefix }}/bin/pipx'
+    executable: '{{ homebrew_prefix }}/bin/pipx'
     inject_packages: '{{ item }}'
     name: mdformat
     state: inject
@@ -46,7 +46,7 @@
 
 - name: Install global pipx nbdime packages
   community.general.pipx:
-    executable: '{{ prefix }}/bin/pipx'
+    executable: '{{ homebrew_prefix }}/bin/pipx'
     inject_packages: '{{ item }}'
     name: nbdime
     state: inject
@@ -56,7 +56,7 @@
 
 - name: Install global pipx ntfy packages
   community.general.pipx:
-    executable: '{{ prefix }}/bin/pipx'
+    executable: '{{ homebrew_prefix }}/bin/pipx'
     inject_packages: '{{ item }}'
     name: ntfy
     state: inject
@@ -66,7 +66,7 @@
 
 - name: Install global pipx pydocstyle packages
   community.general.pipx:
-    executable: '{{ prefix }}/bin/pipx'
+    executable: '{{ homebrew_prefix }}/bin/pipx'
     inject_packages: '{{ item }}'
     name: pydocstyle
     state: inject
@@ -76,7 +76,7 @@
 
 - name: Install global pipx pytest packages
   community.general.pipx:
-    executable: '{{ prefix }}/bin/pipx'
+    executable: '{{ homebrew_prefix }}/bin/pipx'
     inject_packages: '{{ item }}'
     name: pytest
     state: inject
@@ -86,7 +86,7 @@
 
 - name: Update pipx packages
   community.general.pipx:
-    executable: '{{ prefix }}/bin/pipx'
+    executable: '{{ homebrew_prefix }}/bin/pipx'
     state: upgrade_all
-    python: '{{ prefix }}/bin/python3'
+    python: '{{ homebrew_prefix }}/bin/python3'
   tags: [always]
