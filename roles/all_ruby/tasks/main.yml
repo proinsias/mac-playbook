@@ -12,7 +12,10 @@
     state: latest
   # ansible.builtin.command: gem install {{ item }}
   with_items: '{{ ruby_install_gems }}'
-  tags: [always]
+  become: true
+  tags:
+    - always
+    - become
 
 - name: Cleanup gems
   ansible.builtin.command: gem cleanup # Do I need `yes n | gem cleanup` here?
