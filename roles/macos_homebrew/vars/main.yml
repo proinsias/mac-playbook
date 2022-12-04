@@ -189,7 +189,7 @@ personal_homebrew_cask_installed_apps:
   - steam
   - subler
   - virtualbox
-  - virtualbox-extension-pack
+  # - virtualbox-extension-pack
   - wireshark
 
 work_homebrew_cask_installed_apps:
