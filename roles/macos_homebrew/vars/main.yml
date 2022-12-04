@@ -47,7 +47,6 @@ homebrew_cask_uninstalled_apps:
   - chrome-remote-desktop-host
   - diskwave
   - expressvpn
-  - firefox
   - goodsync
   - handylock
   - intel-power-gadget
@@ -84,6 +83,7 @@ homebrew_cask_installed_apps:
   - dropbox
   - fantastical
   - filebot
+  - firefox
   - font-jetbrains-mono-nerd-font
   - font-ntr
   - font-rubik
