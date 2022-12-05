@@ -16,4 +16,4 @@ chmod +x ./uninstall.sh
 sudo ./uninstall.sh --force
 
 # Clean up Homebrew directories.
-sudo rm -rf /usr/local/Homebrew /usr/local/Caskroom /usr/local/bin/brew /opt/homebrew/
+sudo rm -rf /usr/local/Homebrew /usr/local/Caskroom /usr/local/bin/brew /opt/homebrew/ /home/linuxbrew/.linuxbrew/
