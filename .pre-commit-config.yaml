@@ -25,6 +25,8 @@ repos:
       rev: v2.3.0
       hooks:
           - id: add-trailing-comma
+            args:
+                - --py36-plus
 
     - repo: https://github.com/Yelp/detect-secrets
       rev: v1.4.0

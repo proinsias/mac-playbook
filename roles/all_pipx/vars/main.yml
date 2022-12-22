@@ -1,6 +1,7 @@
 ---
 pipx_packages:
   - absolufy-imports
+  - add-trailing-comma
   - auto-walrus
   - bandit
   - blacken-docs
