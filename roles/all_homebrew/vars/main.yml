@@ -220,6 +220,7 @@ homebrew_installed_packages:
   - nano
   - neofetch
   - nettle
+  - ngrok/ngrok/ngrok
   - nmap
   - node
   - open-completion

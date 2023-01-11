@@ -3,34 +3,28 @@
   community.general.mas:
     id:
       - 1569813296 # 1Password for Safari
-      - 937984704 # Amphetamine
-      - 523620159 # CleanMyDrive 2
-      - 1055511498 # Day One
-      - 672206759 # Disk Diag
-      - 549083868 # Display Menu
-      # - 1435957248 # Drafts
       - 1482920575 # DuckDuckGo Privacy for Safari
       # - 524373870 # Due
       - 405399194 # Kindle
       - 1532419400 # MeetingBar
-      - 784801555 # Microsoft OneNote
-      - 1295203466 # Microsoft Remote Desktop
+      # - 784801555 # Microsoft OneNote
+      # - 1295203466 # Microsoft Remote Desktop
       - 1464122853 # NextDNS
-      - 1604176982 # One Thing
-      - 1143513744 # Paper
-      - 1532271726 # Ping
-      - 1496833156 # Playgrounds
-      - 568494494 # Pocket
+      # - 1604176982 # One Thing
+      # - 1143513744 # Paper
+      # - 1532271726 # Ping
+      # - 1496833156 # Playgrounds
+      # - 568494494 # Pocket
       - 1477385213 # Save to Pocket
       - 1549370672 # Save to Raindrop.io
-      - 496437906 # Shush
+      # - 496437906 # Shush
       - 1494051017 # SimpleLogin
-      - 1153157709 # Speedtest
-      - 488764545 # The Clock
-      - 423123087 # UnPlugged
-      - 1225570693 # Ulysses
-      - 1472432422 # Wayback Machine
-      - 488709442 # VisualJSON
+      # - 1153157709 # Speedtest
+      # - 488764545 # The Clock
+      # - 423123087 # UnPlugged
+      # - 1225570693 # Ulysses
+      # - 1472432422 # Wayback Machine
+      # - 488709442 # VisualJSON
       - 899972312 # WordService
     state: present
   tags: [always]
@@ -50,9 +44,15 @@
 - name: Install personal specific apps
   community.general.mas:
     id:
+      - 937984704 # Amphetamine
       - 1453365242 # Brother P-touch Editor
+      - 523620159 # CleanMyDrive 2  # FIXME: Remove
+      - 1055511498 # Day One
+      - 672206759 # Disk Diag
+      - 549083868 # Display Menu
+      # - 1435957248 # Drafts
       - 586862299 # Duplicate Cleaner For iPhoto
-      - 963642514 # Duplicate Photos Fixer Pro
+      # - 963642514 # Duplicate Photos Fixer Pro
       - 1315583175 # Recipe Keeper
       - 1451685025 # WireGuard
       - 415139197 # WhiteNoise

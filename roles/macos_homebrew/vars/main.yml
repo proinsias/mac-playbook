@@ -59,11 +59,41 @@ homebrew_cask_uninstalled_apps:
 homebrew_cask_installed_apps:
   - 1password
   - 1password-cli
+  - bartender
+  - firefox
+  - font-jetbrains-mono-nerd-font
+  - font-ntr
+  - font-rubik
+  - google-chrome
+  - google-drive
+  - gpg-suite-no-mail
+  - lingon-x
+  - meetingbar
+  - menumeters
+  - microsoft-auto-update
+  - microsoft-office
+  - muzzle
+  - omnidisksweeper
+  - omnifocus
+  - raindropio
+  - raycast
+  - slack
+  - smartreporter-free
+  - tripmode
+  - typora
+  - xquartz
+  - yubico-authenticator
+  - yubico-yubikey-manager
+  - yubico-yubikey-personalization-gui
+  - yubico-yubikey-piv-manager
+
+personal_homebrew_cask_installed_apps:
   - adobe-acrobat-reader
   - anki
   - apppolice
   - apptrap
-  - bartender
+  - backblaze
+  - backblaze-downloader
   - bbedit
   - bettertouchtool
   - betterzip
@@ -74,32 +104,27 @@ homebrew_cask_installed_apps:
   - controlplane
   - cord
   - daisydisk
-  - dbeaver-community
-  - dbvisualizer
   - discord
   - diskmaker-x
-  - hpedrorodrigues/tools/dockutil
+  - docker-toolbox
   - drivedx
   - dropbox
   - fantastical
   - filebot
-  - firefox
-  - font-jetbrains-mono-nerd-font
-  - font-ntr
-  - font-rubik
+  - fs-uae
   - ganttproject
   - geektool
   - gephi
   - gimp
   - gmvault
-  - google-chrome
-  - google-drive
+  - google-backup-and-sync
   - go2shell
   - go64
   # - gpg-suite
-  - gpg-suite-no-mail
   - grammarly
   - grandperspective
+  - handbrake
+  - hpedrorodrigues/tools/dockutil
   - ibettercharge
   - iina
   - imageoptim
@@ -108,90 +133,65 @@ homebrew_cask_installed_apps:
   # - intellij-idea-ce
   - itch
   - iterm2
-  - jupyter-notebook-viewer
   - keka
   - keybase
   - kitty
   - lepton
-  - lingon-x # FIXME: Issue?
   - macdown
-  - mactex
   - makemkv
+  - mactex
   - mark-text
-  - meetingbar
-  - menumeters
   - metaz
-  - microsoft-auto-update
-  - microsoft-office
-  - microsoft-teams
   - monitorcontrol
-  - muzzle
-  - netnewswire
   - nightowl
   - no-ip-duc
-  - omnidisksweeper
-  - omnifocus
-  - onyx # FIXME: Issue?
+  - netnewswire
+  - onyx
+  - openaudible
   - oversight
   - pacifist
+  - plex-media-server
   - podcastmenu
+  - pycharm-ce
   - qlcolorcode
   - qlmarkdown
   - qlprettypatch
   - qlstephen
   - quicklook-csv
   - quicklook-json
-  - raindropio
-  - raycast
   - roaringapps
   - send-to-kindle
-  - sequel-pro
   - signal
   - skyfonts
   - skype
-  - slack
   - slimbatterymonitor
-  - smartreporter-free
+  - spotify
   - soundcloud-downloader
   - sourcetrail
   - sourcetree
   - spectacle
-  - spotify
   - steamcmd
-  - stretchly
-  - sublime-text
-  - suspicious-package
-  - the-unarchiver
-  - threema
-  - tigervnc-viewer
-  - tripmode
-  - typora
-  - ultimaker-cura
-  - unclack
-  - vlc
-  - webpquicklook
-  - xquartz
-  - yubico-authenticator
-  - yubico-yubikey-manager
-  - yubico-yubikey-personalization-gui
-  - yubico-yubikey-piv-manager
-
-personal_homebrew_cask_installed_apps:
-  - backblaze
-  - backblaze-downloader
-  - docker-toolbox
-  - fs-uae
-  - google-backup-and-sync
-  - handbrake
-  - openaudible
-  - plex-media-server
-  - pycharm-ce
   - steam
+  - stretchly
   - subler
   - virtualbox
   # - virtualbox-extension-pack
   - wireshark
+  - suspicious-package
+  - the-unarchiver
+  - threema
+  - tigervnc-viewer
+  - ultimaker-cura
+  - unclack
+  - vlc
+  - webpquicklook
 
 work_homebrew_cask_installed_apps:
+  # - dbeaver-community
+  # - dbvisualizer
+  # - jupyter-notebook-viewer
+  # - microsoft-teams
   - mysqlworkbench
   - pycharm
+  # - sequel-pro
+  # - sublime-text
