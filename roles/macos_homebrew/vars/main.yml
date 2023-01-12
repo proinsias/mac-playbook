@@ -79,8 +79,7 @@ homebrew_cask_installed_apps:
   - raycast
   - slack
   - smartreporter-free
-  - tripmode
-  - typora
+  # - typora
   - xquartz
   - yubico-authenticator
   - yubico-yubikey-manager
@@ -174,6 +173,7 @@ personal_homebrew_cask_installed_apps:
   - steam
   - stretchly
   - subler
+  - tripmode
   - virtualbox
   # - virtualbox-extension-pack
   - wireshark
