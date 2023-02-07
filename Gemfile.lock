@@ -159,14 +159,6 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tomlrb (2.0.1)
-    travis (1.11.1)
-      faraday (~> 1.0)
-      faraday_middleware (~> 1.0)
-      gh (~> 0.13)
-      highline (~> 2.0)
-      json_pure (~> 2.3)
-      launchy (~> 2.1, < 2.5.0)
-      pusher-client (~> 0.4)
     tzinfo (1.2.10)
       thread_safe (~> 0.1)
     unicode-display_width (1.8.0)
@@ -186,7 +178,6 @@ DEPENDENCIES
   rubocop
   rubocop-performance
   ruby-lint
-  travis (>= 1.11.0)
 
 BUNDLED WITH
   2.1.4
