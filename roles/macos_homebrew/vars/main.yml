@@ -124,6 +124,7 @@ personal_homebrew_cask_installed_apps:
   - grandperspective
   - handbrake
   - hpedrorodrigues/tools/dockutil
+  - httpie
   - ibettercharge
   - iina
   - imageoptim
@@ -132,6 +133,8 @@ personal_homebrew_cask_installed_apps:
   # - intellij-idea-ce
   - itch
   - iterm2
+  - jupyter-notebook-viewer
+  - kap
   - keka
   - keybase
   - kitty
@@ -147,6 +150,9 @@ personal_homebrew_cask_installed_apps:
   - netnewswire
   - onyx
   - openaudible
+  - numi
+  - omnidisksweeper
+  - omnifocus
   - oversight
   - pacifist
   - plex-media-server
@@ -158,6 +164,9 @@ personal_homebrew_cask_installed_apps:
   - qlstephen
   - quicklook-csv
   - quicklook-json
+  - raindropio
+  - raycast
+  - recordit
   - roaringapps
   - send-to-kindle
   - signal

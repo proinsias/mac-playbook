@@ -22,7 +22,7 @@ repos:
     # General
 
     - repo: https://github.com/asottile/add-trailing-comma
-      rev: v2.3.0
+      rev: v2.4.0
       hooks:
           - id: add-trailing-comma
             args:
@@ -36,7 +36,7 @@ repos:
             exclude: package.lock.json
 
     - repo: https://github.com/pre-commit/mirrors-prettier
-      rev: v3.0.0-alpha.4
+      rev: v3.0.0-alpha.9-for-vscode
       hooks:
           - id: prettier
             stages: [commit]
@@ -44,7 +44,7 @@ repos:
     # Ansible
 
     - repo: https://github.com/ansible-community/ansible-lint.git
-      rev: v6.9.0
+      rev: v6.15.0
       hooks:
           - id: ansible-lint
             stages:
@@ -54,14 +54,14 @@ repos:
     # Git
 
     - repo: https://github.com/jorisroovers/gitlint
-      rev: v0.18.0
+      rev: v0.19.1
       hooks:
           - id: gitlint
 
     # YAML
 
     - repo: https://github.com/adrienverge/yamllint
-      rev: v1.28.0
+      rev: v1.31.0
       hooks:
           - id: yamllint
             args: [-c=.yamllint.yml]
@@ -75,7 +75,7 @@ repos:
     #          - id: editorconfig-checker
 
     - repo: https://github.com/sirosen/texthooks
-      rev: 0.4.0
+      rev: 0.5.0
       hooks:
           - id: fix-smartquotes
           - id: fix-ligatures
@@ -90,26 +90,26 @@ repos:
           - id: shfmt
 
     - repo: https://github.com/Lucas-C/pre-commit-hooks
-      rev: v1.3.1
+      rev: v1.5.1
       hooks:
           - id: remove-crlf
           - id: remove-tabs
             exclude: .git/COMMIT_EDITMSG
 
     - repo: https://github.com/sirosen/check-jsonschema
-      rev: 0.19.2
+      rev: 0.23.0
       hooks:
           - id: check-github-actions
           - id: check-github-workflows
           - id: check-readthedocs
 
     - repo: https://github.com/zricethezav/gitleaks
-      rev: v8.15.2
+      rev: v8.16.3
       hooks:
           - id: gitleaks
 
     - repo: https://github.com/rhysd/actionlint
-      rev: v1.6.22
+      rev: v1.6.24
       hooks:
           - id: actionlint
 

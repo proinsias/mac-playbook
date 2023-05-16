@@ -1,15 +1,26 @@
 ---
-#- name: Install work specific apps
-#  community.general.mas:
-#    id:
-#      - 409183694 # Keynote
-#      - 409203825 # Numbers
-#      - 409201541 # Pages
-#      - 497799835 # Xcode
-#    state: present
-#  tags: # This won't run unless you specify the 'work' tag.
-#    - never
-#    - work
+- name: Install specific apps
+  community.general.mas:
+    id:
+      - 937984704 # Amphetamine
+      - 523620159 # CleanMyDrive 2
+      - 672206759 # Disk Diag
+      - 1435957248 # Drafts
+      - 524373870 # Due
+      - 963642514 # Duplicate Photos Fixer Pro
+      - 668208984 # GIPHY Capture
+      - 1452453066 # Hidden Bar
+      - 405399194 # Kindle
+      - 1532419400 # MeetingBar
+      - 784801555 # Microsoft OneNote
+      - 1295203466 # Microsoft Remote Desktop
+      - 1464122853 # NextDNS
+      - 1604176982 # One Thing
+      - 568494494 # Pocket
+      - 496437906 # Shush
+      - 423123087 # UnPlugged
+    state: present
+  tags: [always]
 
 - name: Install personal specific apps
   community.general.mas:
@@ -38,7 +49,6 @@
       # - 1472432422 # Wayback Machine
       # - 488709442 # VisualJSON
       - 899972312 # WordService
-
       - 937984704 # Amphetamine
       - 1453365242 # Brother P-touch Editor
       - 523620159 # CleanMyDrive 2  # FIXME: Remove
