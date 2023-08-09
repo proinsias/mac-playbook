@@ -6,6 +6,7 @@ pipx_packages:
   - bandit
   - black
   - blacken-docs
+  - chkcrontab
   # - clf
   - copier
   - coverage

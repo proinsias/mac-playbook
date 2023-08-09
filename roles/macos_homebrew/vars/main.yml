@@ -54,6 +54,7 @@ homebrew_cask_uninstalled_apps:
   - krisp
   - lastpass
   - macfusion
+  - nightowl
   - plantronics-hub # Use instead https://www.poly.com/us/en/products/services/cloud/poly-lens/app
 
 homebrew_cask_installed_apps:
@@ -73,6 +74,7 @@ homebrew_cask_installed_apps:
   - microsoft-auto-update
   - microsoft-office
   - muzzle
+  - obsidian
   - omnidisksweeper
   - omnifocus
   - raindropio
@@ -142,7 +144,6 @@ personal_homebrew_cask_installed_apps:
   - mark-text
   - metaz
   - monitorcontrol
-  - nightowl
   - no-ip-duc
   - netnewswire
   - onyx

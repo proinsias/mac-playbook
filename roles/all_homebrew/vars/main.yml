@@ -265,6 +265,7 @@ homebrew_installed_packages:
   - qt
   - rbenv
   - readline # For pyenv.
+  - reattach-to-user-namespace
   - restview
   - rst-lint
   - rsync
@@ -304,7 +305,8 @@ homebrew_installed_packages:
   - tig
   - tivodecode
   - tmux
-  - tmuxinator-completion
+  - tmuxinator
+  # - tmuxinator-completion
   - tree
   - aquasecurity/trivy/trivy
   - ttygif
