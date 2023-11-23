@@ -48,6 +48,7 @@ pipx_packages:
   - pip-tools
   # - poetry  # Install manually as per webpage.
   - pre-commit
+  - pre-commit-hooks
   - proselint
   - pweave
   - pycln
