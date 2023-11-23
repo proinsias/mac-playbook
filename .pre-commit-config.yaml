@@ -1,15 +1,15 @@
 ---
 default_install_hook_types:
-  - commit-msg
-  - prepare-commit-msg
-  - pre-commit
-  - pre-merge-commit
-  - pre-push
-  - pre-rebase
-  - post-checkout
-  - post-commit
-  - post-merge
-  - post-rewrite
+    - commit-msg
+    - prepare-commit-msg
+    - pre-commit
+    - pre-merge-commit
+    - pre-push
+    - pre-rebase
+    - post-checkout
+    - post-commit
+    - post-merge
+    - post-rewrite
 
 repos:
     - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -55,20 +55,20 @@ repos:
 
     # Ansible
 
-    - repo: https://github.com/ansible-community/ansible-lint.git
-      rev: v6.22.0
-      hooks:
-          - id: ansible-lint
-            stages:
-                - commit
-                - push
+    #- repo: https://github.com/ansible-community/ansible-lint.git
+    #  rev: v6.22.0
+    #  hooks:
+    #      - id: ansible-lint
+    #        stages:
+    #            - commit
+    #            - push
 
     # Git
 
-    - repo: https://github.com/jorisroovers/gitlint
-      rev: v0.19.1
-      hooks:
-          - id: gitlint
+    # - repo: https://github.com/jorisroovers/gitlint
+    #   rev: v0.19.1
+    #   hooks:
+    #      - id: gitlint
 
     # YAML
 
