@@ -133,6 +133,7 @@ homebrew_installed_packages:
   - git-lfs
   - git-sizer
   - git-standup
+  - git-town
   - glances
   - gl2ps
   - glib
@@ -310,6 +311,7 @@ homebrew_installed_packages:
   - tmuxinator
   # - tmuxinator-completion
   - tokei
+  - topgrade
   - tree
   - aquasecurity/trivy/trivy
   - ttygif

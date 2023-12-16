@@ -61,6 +61,7 @@ homebrew_cask_installed_apps:
   - 1password
   - 1password-cli
   - bartender
+  - choosy
   - firefox
   - font-jetbrains-mono-nerd-font
   - font-ntr

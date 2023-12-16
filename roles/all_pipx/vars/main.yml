@@ -36,6 +36,7 @@ pipx_packages:
   - interrogate
   - ipython
   - isort
+  - jupytext
   - kaggle
   - linkcheckmd
   - mdformat
