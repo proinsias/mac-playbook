@@ -61,6 +61,7 @@ pipx_packages:
   - pytest
   - pyupgrade
   - python-slugify
+  - readwise-reader-cli
   - refurb
   - ruff
   - safety
