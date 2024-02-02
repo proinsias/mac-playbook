@@ -2,6 +2,7 @@
 pipx_packages:
   - absolufy-imports
   - add-trailing-comma
+  - audible-cli
   - auto-walrus
   - bandit
   - black
