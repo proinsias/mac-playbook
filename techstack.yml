@@ -2,7 +2,7 @@ repo_name: proinsias/mac-playbook
 report_id: 818464634e8c342c3fbde8fba70cb7e2
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:47:05+00:00'
+timestamp: '2024-02-29T18:42:01+00:00'
 requested_by: proinsias
 provider: github
 branch: master
@@ -32,7 +32,7 @@ tools:
   last_updated_by: Francis T. O'Donovan
   last_updated_on: 2022-10-13 19:10:24.000000000 Z
 - name: Bundler
-  description: 'A consistent environment for tracking and installing  gems and versions '
+  description: A consistent environment for tracking and installing  gems and versions
   website_url: http://bundler.io
   open_source: false
   hosted_saas: false
