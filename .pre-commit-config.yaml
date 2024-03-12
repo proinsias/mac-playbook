@@ -53,16 +53,6 @@ repos:
           - id: prettier
             stages: [commit]
 
-    # Ansible
-
-    #- repo: https://github.com/ansible-community/ansible-lint.git
-    #  rev: v6.22.0
-    #  hooks:
-    #      - id: ansible-lint
-    #        stages:
-    #            - commit
-    #            - push
-
     # Git
 
     # - repo: https://github.com/jorisroovers/gitlint
@@ -73,7 +63,7 @@ repos:
     # YAML
 
     - repo: https://github.com/adrienverge/yamllint
-      rev: v1.33.0
+      rev: v1.35.1
       hooks:
           - id: yamllint
             args: [-c=.yamllint.yml]
@@ -102,64 +92,11 @@ repos:
           - id: shfmt
 
     - repo: https://github.com/Lucas-C/pre-commit-hooks
-      rev: v1.5.4
+      rev: v1.5.5
       hooks:
           - id: remove-crlf
           - id: remove-tabs
             exclude: .git/COMMIT_EDITMSG
 
     - repo: https://github.com/sirosen/check-jsonschema
-      rev: 0.27.4
-      hooks:
-          - id: check-github-actions
-          - id: check-github-workflows
-          - id: check-readthedocs
-
-    - repo: https://github.com/zricethezav/gitleaks
-      rev: v8.18.1
-      hooks:
-          - id: gitleaks
-
-    - repo: https://github.com/rhysd/actionlint
-      rev: v1.6.26
-      hooks:
-          - id: actionlint
-
-    - repo: https://github.com/RyoWakabayashi/pre-commit-mirrors-textlint
-      rev: v12.2.1
-      hooks:
-          - id: textlint
-            additional_dependencies:
-                [
-                    'textlint',
-                    'textlint-plugin-latex2e',
-                    'textlint-filter-rule-comments',
-                    'textlint-rule-alex',
-                    'textlint-rule-apostrophe',
-                    'textlint-rule-common-misspellings',
-                    'textlint-rule-diacritics',
-                    'textlint-rule-doubled-spaces',
-                    'textlint-rule-editorconfig',
-                    'textlint-rule-en-capitalization',
-                    'textlint-rule-en-spell',
-                    'textlint-rule-max-number-of-lines',
-                    'textlint-rule-no-dead-link',
-                    'textlint-rule-no-empty-section',
-                    'textlint-rule-no-start-duplicated-conjunction',
-                    'textlint-rule-no-todo',
-                    'textlint-rule-stop-words',
-                    'textlint-rule-terminology',
-                    'textlint-rule-write-good',
-                    'textlint-rule-unexpanded-acronym',
-                    '@textlint-rule/textlint-rule-no-duplicate-abbr',
-                    '@textlint-rule/textlint-rule-no-invalid-control-character',
-                ]
-
-    - repo: https://github.com/mxab/pre-commit-trivy.git
-      rev: V0.10.0
-      hooks:
-          - id: trivyfs-docker
-            args:
-                - --ignore-unfixed
-                - . # last arg indicates the path/file to scan
-            stages: [push]
+      rev: 0.28.0

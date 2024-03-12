@@ -80,6 +80,7 @@ homebrew_cask_installed_apps:
   - omnidisksweeper
   - omnifocus
   - raindropio
+  - raspberry-pi-imager
   - raycast
   - slack
   - smartreporter-free
@@ -101,15 +102,12 @@ personal_homebrew_cask_installed_apps:
   - bettertouchtool
   - betterzip
   - box-sync
-  - cakebrew
   - cheatsheet
   - coconutbattery
-  - controlplane
   - cord
   - daisydisk
   - discord
   - diskmaker-x
-  - docker-toolbox
   - drivedx
   - dropbox
   - fantastical
@@ -179,12 +177,10 @@ personal_homebrew_cask_installed_apps:
   - spotify
   - soundcloud-downloader
   - sourcetrail
-  - sourcetree
-  - spectacle
-  - steamcmd
   - steam
   - stretchly
   - subler
+  - swiftbar
   - tripmode
   - virtualbox
   # - virtualbox-extension-pack

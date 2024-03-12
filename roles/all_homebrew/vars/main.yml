@@ -82,7 +82,6 @@ homebrew_installed_packages:
   - colordiff
   - cookiecutter
   - coreutils
-  - cowsay
   - cscope
   - csvkit
   - d-bus
@@ -103,8 +102,8 @@ homebrew_installed_packages:
   - editorconfig
   - eg-examples
   - epstool
-  - exa
   - exiftool
+  - eza
   - faac
   - ffmpeg
   - fftw
@@ -227,8 +226,6 @@ homebrew_installed_packages:
   - open-completion
   - openjpeg
   - optipng
-  - packer
-  - packer-completion
   - pandoc
   - pcre
   - pdfgrep
@@ -317,7 +314,6 @@ homebrew_installed_packages:
   - ttygif
   - ttyrec
   - unzip
-  - vagrant-completion
   - vitorgalvao/tiny-scripts/cask-repair
   - watch
   - wdiff
@@ -331,7 +327,6 @@ homebrew_installed_packages:
   - x264
   - yamllint
   - yasm
-  - youtube-dl
   - yq # Uses jq syntax but works with yaml/json/xml/properties/csv/tsv.
   - zlib # For pyenv.
   - zopfli
