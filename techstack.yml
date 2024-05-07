@@ -1,7 +1,8 @@
 repo_name: proinsias/mac-playbook
-report_id: 93bf3d81ccffe956338e61dc1a8f0dab
+report_id: 818464634e8c342c3fbde8fba70cb7e2
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T10:34:05+00:00'
+timestamp: '2024-02-29T18:42:01+00:00'
 requested_by: proinsias
 provider: github
 branch: master
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/proinsias/mac-playbook
   detection_source: Repo Metadata
 - name: pgvector
   description: Open-source vector similarity search for Postgres
@@ -25,17 +27,19 @@ tools:
   category: Data Stores
   sub_category: Database Tools
   image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/proinsias/mac-playbook/blob/master/project-words.txt
   detection_source: project-words.txt
   last_updated_by: Francis T. O'Donovan
   last_updated_on: 2022-10-13 19:10:24.000000000 Z
 - name: Bundler
-  description: 'A consistent environment for tracking and installing  gems and versions '
+  description: A consistent environment for tracking and installing  gems and versions
   website_url: http://bundler.io
   open_source: false
   hosted_saas: false
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/2988/4e77LXIo_400x400.png
+  detection_source_url: https://github.com/proinsias/mac-playbook/blob/master/Gemfile
   detection_source: Gemfile
   last_updated_by: Francis T. O'Donovan
   last_updated_on: 2019-05-03 18:23:48.000000000 Z
@@ -58,6 +62,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/proinsias/mac-playbook/blob/master/.github/workflows/ci.yml
   detection_source: ".github/workflows/ci.yml"
   last_updated_by: Francis T. O'Donovan
   last_updated_on: 2022-12-05 03:14:50.000000000 Z
@@ -83,6 +88,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source_url: https://github.com/proinsias/mac-playbook/blob/master/Gemfile
   detection_source: Gemfile
   last_updated_by: Francis T. O'Donovan
   last_updated_on: 2019-05-03 18:23:48.000000000 Z
@@ -94,6 +100,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/proinsias/mac-playbook/blob/master/project-words.txt
   detection_source: project-words.txt
   last_updated_by: Francis T. O'Donovan
   last_updated_on: 2022-10-13 19:10:24.000000000 Z
@@ -106,6 +113,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/proinsias/mac-playbook
   detection_source: Repo Metadata
 - name: bundler-audit
   description: Bundler-audit provides patch-level verification for Bundled apps
