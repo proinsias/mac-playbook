@@ -7,7 +7,7 @@ pipx_packages:
   - bandit
   - black
   - blacken-docs
-  - chkcrontab
+  # - chkcrontab
   # - clf
   - copier
   - coverage
@@ -48,7 +48,8 @@ pipx_packages:
   - ntfy
   - pip-check
   - pip-tools
-  # - poetry  # Install manually as per webpage.
+  - ploomber
+  - poetry # Install manually as per webpage.
   - pre-commit
   - pre-commit-hooks
   - proselint
@@ -67,7 +68,8 @@ pipx_packages:
   - ruff
   - safety
   - searchcmd
-  - shrynk
+  # - shrynk
+  - soorgeon
   - texthooks
   # - tldr  # Use npm version instead.
   - tox

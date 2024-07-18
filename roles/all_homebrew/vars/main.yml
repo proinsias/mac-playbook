@@ -1,33 +1,27 @@
----
 homebrew_taps:
   - alehouse/unofficial
   - alexdavid/tap
+  - aquasecurity/trivy
   - eddieantonio/eddieantonio
   - heroku/brew
   - homebrew/bundle
-  - homebrew/cask
-  - homebrew/cask-drivers
   - homebrew/cask-fonts
   - homebrew/command-not-found
-  - homebrew/core
   - homebrew/services
   - iterative/dvc
+  - jonof/kenutils
   - jzaleski/jzaleski
   - knqyf263/pet
+  - ngrok/ngrok
   - teamookla/speedtest
   - vitorgalvao/tiny-scripts
 
 homebrew_uninstalled_packages:
-  - archey # Use archey4 instead.
   - bench
-  - docker-completion
   - fasd # Use fzf instead.
   - flake8 # Via pipx instead.
-  - gpg-agent
   - howdoi
-  - pandoc-citeproc
   - parallel # Conflicts with moreuilts.
-  - docmunch/pdftk/pdftk
   - sponge # Installed by moreutils.
   - sshfs
   - vim
@@ -37,7 +31,7 @@ homebrew_installed_packages:
   - openssl
   - openssh
   - curl
-  - { name: emacs, restart_service: true }
+  - { name: homebrew/core/emacs, restart_service: true }
   - svn
   - ack
   - actionlint
@@ -78,25 +72,26 @@ homebrew_installed_packages:
   - checkstyle
   - checkov
   - cloog
-  - cmake
+  - homebrew/core/cmake
   - colordiff
   - cookiecutter
   - coreutils
+  - cowsay
   - cscope
   - csvkit
-  - d-bus
+  - dbus
   - daq
-  - dash
+  - homebrew/core/dash
   - ddgr
   - diffutils
   - direnv
   - dive # For docker layer analysis.
-  - docker
+  - homebrew/core/docker
   - docker-clean
   # - docker-completion # Now included in docker
   - dos2unix
   - dotenv-linter
-  - dotnet
+  - homebrew/core/dotnet
   - dvc
   - ed
   - editorconfig
@@ -163,7 +158,7 @@ homebrew_installed_packages:
   - heroku/brew/heroku
   - hexyl
   - htop
-  - httpie
+  - homebrew/core/httpie
   - hub
   - hunspell
   - icdiff
@@ -184,7 +179,7 @@ homebrew_installed_packages:
   # - jzaleski/homebrew-jzaleski/apg
   - keychain
   - lame
-  - languagetool
+  - homebrew/core/languagetool
   - launchctl-completion
   - less
   - libdnet
@@ -205,19 +200,19 @@ homebrew_installed_packages:
   - lolcat
   - lsof
   - lua
-  - lynx
+  - homebrew/core/lynx
   - lzip
   - m4
   - mackup
   - make
   - makedepend
-  - mediainfo
+  - homebrew/core/mediainfo
   - mkdocs
   - moreutils
   - mosh
   - mpfr
   - mypy
-  - nano
+  - homebrew/core/nano
   - neofetch
   - nettle
   - ngrok/ngrok/ngrok
@@ -255,6 +250,7 @@ homebrew_installed_packages:
   - pyqt
   - pyright
   - python
+  - python-argcomplete
   - p7zip
   - qhull
   - qpdf
@@ -276,8 +272,9 @@ homebrew_installed_packages:
   - shellcheck
   - shellharden
   - shfmt
-  - sip
+  - homebrew/core/sip
   - sl
+  - slackcat
   - snort
   - sonar-completion
   - sox
@@ -287,9 +284,7 @@ homebrew_installed_packages:
   - sql-lint
   - ssh-copy-id
   - starship
-  - stormssh
   - stress
-  - stormssh-completion
   - stow
   - subversion
   - suite-sparse

@@ -81,14 +81,14 @@
     state: present
   tags: [always]
 
-- name: Use Monday as the first day of the week
-  community.general.osx_defaults:
-    domain: NSGlobalDomain
-    key: AppleFirstWeekday
-    type: string
-    value: '{gregorian = 2;}'
-    state: present
-  tags: [always]
+#- name: Use Monday as the first day of the week
+#  community.general.osx_defaults:
+#    domain: NSGlobalDomain
+#    key: AppleFirstWeekday
+#    type: string
+#    value: '{gregorian = 2;}'
+#    state: present
+#  tags: [always]
 
 - name: Show fast user switching menu as [Icon]
   community.general.osx_defaults:

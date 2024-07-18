@@ -100,3 +100,17 @@ repos:
 
     - repo: https://github.com/sirosen/check-jsonschema
       rev: 0.28.0
+      hooks:
+          - id: check-github-actions
+          - id: check-github-workflows
+          - id: check-readthedocs
+
+    - repo: https://github.com/zricethezav/gitleaks
+      rev: v8.18.1
+      hooks:
+          - id: gitleaks
+
+    - repo: https://github.com/rhysd/actionlint
+      rev: v1.6.26
+      hooks:
+          - id: actionlint

@@ -2,13 +2,11 @@
 homebrew_taps:
   - alehouse/unofficial
   - alexdavid/tap
-  - hpedrorodrigues/tools
+  - gbeine/java
+  # - hpedrorodrigues/tools
   - homebrew/bundle
-  - homebrew/cask
-  - homebrew/cask-drivers
   - homebrew/cask-fonts
   - homebrew/command-not-found
-  - homebrew/core
   - homebrew/services
   - iterative/dvc
   - jzaleski/jzaleski
@@ -17,16 +15,12 @@ homebrew_taps:
 homebrew_uninstalled_packages:
   - apache-spark
   - gbeine/homebrew-java/postgresql-jdbc
-  - google-photos-backup-and-sync
   - growlnotify
   - hadoop
-  - homebrew/science/r
-  - homebrew/versions/perl518
-  - macvim
-  - mongodb
+  - homebrew/core/macvim
   - newman # Command-line collection runner for Postman.
   - octave
-  - postgresql
+  - postgresql@14
   - postman
   - scala
   - sequel-pro
@@ -43,7 +37,6 @@ homebrew_installed_packages:
   - wifi-password
 
 homebrew_cask_uninstalled_apps:
-  - choosy
   - chrome-remote-desktop-host
   - diskwave
   - expressvpn
@@ -61,8 +54,10 @@ homebrew_cask_installed_apps:
   - 1password
   - 1password-cli
   - bartender
+  - basictex
   - camo-studio
   - choosy
+  - docker
   - firefox
   - font-jetbrains-mono-nerd-font
   - font-ntr
@@ -79,6 +74,7 @@ homebrew_cask_installed_apps:
   - obsidian
   - omnidisksweeper
   - omnifocus
+  - quitter
   - raindropio
   - raspberry-pi-imager
   - raycast
@@ -88,8 +84,9 @@ homebrew_cask_installed_apps:
   - xquartz
   - yubico-authenticator
   - yubico-yubikey-manager
-  - yubico-yubikey-personalization-gui
-  - yubico-yubikey-piv-manager
+  # - yubico-yubikey-personalization-gui
+  # - yubico-yubikey-piv-manager
+  - zoom
 
 personal_homebrew_cask_installed_apps:
   - adobe-acrobat-reader
@@ -107,7 +104,7 @@ personal_homebrew_cask_installed_apps:
   - cord
   - daisydisk
   - discord
-  - diskmaker-x
+  # - diskmaker-x
   - drivedx
   - dropbox
   - fantastical
@@ -118,14 +115,14 @@ personal_homebrew_cask_installed_apps:
   - gephi
   - gimp
   - gmvault
-  - google-backup-and-sync
+  # - google-backup-and-sync
   - go2shell
   - go64
   # - gpg-suite
   - grammarly
   - grandperspective
   - handbrake
-  - hpedrorodrigues/tools/dockutil
+  # - hpedrorodrigues/tools/dockutil
   - httpie
   - ibettercharge
   - iina
@@ -143,7 +140,7 @@ personal_homebrew_cask_installed_apps:
   - lepton
   - macdown
   - makemkv
-  - mactex
+  # - mactex  # basictex
   - mark-text
   - metaz
   - monitorcontrol
@@ -167,7 +164,8 @@ personal_homebrew_cask_installed_apps:
   - quicklook-json
   - raindropio
   - raycast
-  - recordit
+  # - recordit
+  - reader
   - roaringapps
   - send-to-kindle
   - signal
@@ -175,24 +173,25 @@ personal_homebrew_cask_installed_apps:
   - skype
   - slimbatterymonitor
   - spotify
-  - soundcloud-downloader
+  # - soundcloud-downloader
   - sourcetrail
   - steam
   - stretchly
   - subler
-  - swiftbar
-  - tripmode
-  - virtualbox
-  # - virtualbox-extension-pack
-  - wireshark
+  - superduper
   - suspicious-package
+  - swiftbar
   - the-unarchiver
   - threema
   - tigervnc-viewer
+  - tripmode
   - ultimaker-cura
   - unclack
+  # - virtualbox
+  # - virtualbox-extension-pack
   - vlc
   - webpquicklook
+  - wireshark
 
 work_homebrew_cask_installed_apps:
   # - dbeaver-community

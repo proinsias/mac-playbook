@@ -3,7 +3,6 @@ nodejs_global_packages:
   # Example of specifying pinned version.
   # - name: jslint
   #   version: 0.9.3
-  - @microsoft/inshellisense
   - cspell
   - csslint
   - dockerlint

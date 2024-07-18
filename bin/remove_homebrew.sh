@@ -7,8 +7,6 @@ set -o noclobber  # Don't allow overwriting files.
 set -o nounset    # Don't allow use of undefined vars. Use ${VAR:-} to use an undefined VAR.
 set -o pipefail   # Produce a failure return code if any pipeline command errors.
 shopt -s failglob # Cause globs that don't get expanded to cause errors.
-# Barfs on GitHub Actions.
-#shopt -s globstar 2>/dev/null # Match all files and zero or more sub-directories.
 
 # Download and run the uninstall script.
 curl -sLO https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh
