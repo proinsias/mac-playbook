@@ -72,8 +72,10 @@ homebrew_cask_installed_apps:
   - microsoft-office
   - muzzle
   - obsidian
+  - ollama
   - omnidisksweeper
   - omnifocus
+  - quarto
   - quitter
   - raindropio
   - raspberry-pi-imager

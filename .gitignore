@@ -8,3 +8,4 @@ megalinter-reports/
 report/
 .pre-commit-trivv-cache
 .pre-commit-trivy-cache
+.aider*

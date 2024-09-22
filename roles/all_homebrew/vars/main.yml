@@ -197,6 +197,7 @@ homebrew_installed_packages:
   - libvo-aacenc
   - libyaml
   - little-cms2
+  - llm
   - lolcat
   - lsof
   - lua
