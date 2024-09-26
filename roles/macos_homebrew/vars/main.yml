@@ -10,7 +10,7 @@ homebrew_taps:
   - homebrew/services
   - iterative/dvc
   - jzaleski/jzaleski
-  - teamookla/speedtest
+  - melonamin/formulae
 
 homebrew_uninstalled_packages:
   - apache-spark
@@ -58,6 +58,7 @@ homebrew_cask_installed_apps:
   - camo-studio
   - choosy
   - docker
+  - esse
   - firefox
   - font-jetbrains-mono-nerd-font
   - font-ntr
@@ -83,6 +84,7 @@ homebrew_cask_installed_apps:
   - slack
   - smartreporter-free
   # - typora
+  # - vscodium
   - xquartz
   - yubico-authenticator
   - yubico-yubikey-manager
