@@ -212,6 +212,7 @@ homebrew_installed_packages:
   - moreutils
   - mosh
   - mpfr
+  - mupdf
   - mypy
   - homebrew/core/nano
   - neofetch
