@@ -46,6 +46,7 @@ pipx_packages:
   - nbpreview
   - nbstripout
   - ntfy
+  - pdfplumber
   - pip-check
   - pip-tools
   - ploomber
