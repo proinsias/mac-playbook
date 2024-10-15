@@ -61,6 +61,7 @@ homebrew_installed_packages:
   - brew-cask-completion
   - broot
   - bundler-completion
+  - bakks/bakks/butterfish
   - c-ares
   - cairo
   - catimg
@@ -311,6 +312,7 @@ homebrew_installed_packages:
   - ttygif
   - ttyrec
   - unzip
+  - uv
   - vitorgalvao/tiny-scripts/cask-repair
   - watch
   - wdiff
