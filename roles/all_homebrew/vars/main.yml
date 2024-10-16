@@ -31,7 +31,10 @@ homebrew_installed_packages:
   - openssl
   - openssh
   - curl
-  - { name: homebrew/core/emacs, restart_service: true }
+  # - { name: homebrew/core/emacs, restart_service: true }
+  # brew tap railwaycat/emacsmacport
+  # brew install emacs-mac --with-modules
+  # ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
   - svn
   - ack
   - actionlint
@@ -101,6 +104,7 @@ homebrew_installed_packages:
   - exiftool
   - eza
   - faac
+  - fd
   - ffmpeg
   - fftw
   - figlet
@@ -182,6 +186,7 @@ homebrew_installed_packages:
   - lame
   - homebrew/core/languagetool
   - launchctl-completion
+  - latexindent
   - less
   - libdnet
   - libdvdcss
@@ -265,6 +270,7 @@ homebrew_installed_packages:
   - reattach-to-user-namespace
   - restview
   - rig
+  - ripgrep
   - rst-lint
   - rsync
   - ruby
@@ -297,6 +303,7 @@ homebrew_installed_packages:
   - tesseract
   - texi2html
   - texinfo
+  - texlab
   - the_silver_searcher
   - thefuck
   - tidy-html5
