@@ -7,4 +7,3 @@
     value: true
     state: present
   notify: Restart Dictionary
-  tags: [always]

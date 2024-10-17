@@ -1,160 +1,120 @@
 ---
 - name: Import activity monitor
   ansible.builtin.import_tasks: activity_monitor.yml
-  tags: [always]
 
 - name: Import address book
   ansible.builtin.import_tasks: address_book.yml
-  tags: [always]
 
 - name: Import alf
   ansible.builtin.import_tasks: alf.yml
-  tags: [always]
 
 - name: Import app store
   ansible.builtin.import_tasks: app_store.yml
-  tags: [always]
 
 - name: Import bartender
   ansible.builtin.import_tasks: bartender.yml
-  tags: [always]
 
 - name: Import bezel services
   ansible.builtin.import_tasks: bezel_services.yml
-  tags: [always]
 
 - name: Import caffeine
   ansible.builtin.import_tasks: caffeine.yml
-  tags: [always]
 
 - name: Import dayone
   ansible.builtin.import_tasks: dayone.yml
-  tags: [always]
 
 - name: Import dictionary
   ansible.builtin.import_tasks: dictionary.yml
-  tags: [always]
 
 - name: Import disk utility
   ansible.builtin.import_tasks: disk_utility.yml
-  tags: [always]
 
 - name: Import dock
   ansible.builtin.import_tasks: dock.yml
-  tags: [always]
 
 - name: Import finder
   ansible.builtin.import_tasks: finder.yml
-  tags: [always]
 
 - name: Import flux
   ansible.builtin.import_tasks: flux.yml
-  tags: [always]
 
 - name: Import gpg mail
   ansible.builtin.import_tasks: gpg_mail.yml
-  tags: [always]
 
 - name: Import help viewer
   ansible.builtin.import_tasks: help_viewer.yml
-  tags: [always]
 
 - name: Import iCal
   ansible.builtin.import_tasks: ical.yml
-  tags: [always]
 
 - name: Import image capture
   ansible.builtin.import_tasks: image_capture.yml
-  tags: [always]
 
 - name: Import iTerm2
   ansible.builtin.import_tasks: iterm2.yml
-  tags: [always]
 
 - name: Import launch services
   ansible.builtin.import_tasks: launch_services.yml
-  tags: [always]
 
 - name: Import login window
   ansible.builtin.import_tasks: login_window.yml
-  tags: [always]
 
 - name: Import mail
   ansible.builtin.import_tasks: mail.yml
-  tags: [always]
 
 - name: Import menu extras
   ansible.builtin.import_tasks: menu_extras.yml
-  tags: [always]
 
 - name: Import menu meters
   ansible.builtin.import_tasks: menu_meters.yml
-  tags: [always]
 
 - name: Import misc
   ansible.builtin.import_tasks: misc.yml
-  tags: [always]
 
 - name: Import nsGlobalDomain
   ansible.builtin.import_tasks: ns_global_domain.yml
-  tags: [always]
 
 - name: Import photo booth
   ansible.builtin.import_tasks: photo_booth.yml
-  tags: [always]
 
 - name: Import preview
   ansible.builtin.import_tasks: preview.yml
-  tags: [always]
 
 - name: Import printing preferences
   ansible.builtin.import_tasks: printingprefs.yml
-  tags: [always]
 
 - name: Import quicktime player
   ansible.builtin.import_tasks: quicktime_player.yml
-  tags: [always]
 
 - name: Import reminders
   ansible.builtin.import_tasks: reminders.yml
-  tags: [always]
 
 - name: Import safari
   ansible.builtin.import_tasks: safari.yml
-  tags: [always]
 
 - name: Import screen capture
   ansible.builtin.import_tasks: screen_capture.yml
-  tags: [always]
 
 - name: Import screen saver
   ansible.builtin.import_tasks: screen_saver.yml
-  tags: [always]
 
 - name: Import screen sharing
   ansible.builtin.import_tasks: screen_sharing.yml
-  tags: [always]
 
 - name: Import skype
   ansible.builtin.import_tasks: skype.yml
-  tags: [always]
 
 - name: Import terminal
   ansible.builtin.import_tasks: terminal.yml
-  tags: [always]
 
 - name: Import text edit
   ansible.builtin.import_tasks: text_edit.yml
-  tags: [always]
 
 - name: Import time machine
   ansible.builtin.import_tasks: time_machine.yml
-  tags: [always]
 
 - name: Import xcode
   ansible.builtin.import_tasks: xcode.yml
-  tags: [always]
 
 - name: Import x11
   ansible.builtin.import_tasks: x11.yml
-  tags: [always]

@@ -4,18 +4,16 @@
   register: osx_login_shell_exists_in_etc_shells
   changed_when: false
   failed_when: osx_login_shell_exists_in_etc_shells.rc not in [0, 1]
-  tags: [always]
 
 - name: Add login shell if missing
   ansible.builtin.lineinfile:
     dest: /etc/shells
-    line: '{{ item }}'
+    line: "{{ item }}"
     state: present
     owner: root
     group: wheel
     mode: 0644
   when: osx_login_shell_exists_in_etc_shells.rc == 1
-  tags: [always]
 
 - name: Change user shell if necessary
   ansible.builtin.command: chsh -s {{ item }}

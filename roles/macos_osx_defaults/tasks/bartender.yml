@@ -6,7 +6,6 @@
     type: bool
     value: true
     state: present
-  tags: [always]
 
 - name: Bartender - Show menu bar at startup
   community.general.osx_defaults:
@@ -15,4 +14,3 @@
     type: bool
     value: true
     state: present
-  tags: [always]

@@ -7,7 +7,6 @@
     value: true
     state: present
   notify: Restart Disk Utility
-  tags: [always]
 
 - name: DiskUtility - Enable advanced image options
   community.general.osx_defaults:
@@ -17,7 +16,6 @@
     value: true
     state: present
   notify: Restart Disk Utility
-  tags: [always]
 
 - name: DiskUtility - Hide hidden partitions
   community.general.osx_defaults:
@@ -27,4 +25,3 @@
     value: false
     state: present
   notify: Restart Disk Utility
-  tags: [always]

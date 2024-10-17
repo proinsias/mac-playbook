@@ -7,7 +7,6 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Enable correct spelling in editor
   community.general.osx_defaults:
@@ -17,7 +16,6 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Enable grammar check in editor
   community.general.osx_defaults:
@@ -27,7 +25,6 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Enable spell check in editor
   community.general.osx_defaults:
@@ -37,7 +34,6 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Enable embedded media
   community.general.osx_defaults:
@@ -47,17 +43,15 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Set font size
   community.general.osx_defaults:
     domain: com.dayoneapp.dayone
     key: FontSize
     type: string
-    value: '16'
+    value: "16"
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Enable inspirational messages
   community.general.osx_defaults:
@@ -67,7 +61,6 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Link twitter handles
   community.general.osx_defaults:
@@ -77,7 +70,6 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Enable markdown support
   community.general.osx_defaults:
@@ -87,7 +79,6 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Lock if idle
   community.general.osx_defaults:
@@ -97,17 +88,15 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Set lock time
   community.general.osx_defaults:
     domain: com.dayoneapp.dayone
     key: SecurityIdleLockTime
     type: string
-    value: '20'
+    value: "20"
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Enable password protection
   community.general.osx_defaults:
@@ -117,7 +106,6 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]
 
 - name: Dayone - Enable lock on sleep
   community.general.osx_defaults:
@@ -127,4 +115,3 @@
     value: true
     state: present
   notify: Restart Day One
-  tags: [always]

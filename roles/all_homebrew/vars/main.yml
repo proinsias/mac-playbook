@@ -18,7 +18,6 @@ homebrew_taps:
 
 homebrew_uninstalled_packages:
   - bench
-  - fasd # Use fzf instead.
   - flake8 # Via pipx instead.
   - howdoi
   - parallel # Conflicts with moreuilts.
@@ -220,6 +219,7 @@ homebrew_installed_packages:
   - mpfr
   - mupdf
   - mypy
+  - mysql
   - homebrew/core/nano
   - neofetch
   - nettle
@@ -242,6 +242,7 @@ homebrew_installed_packages:
   - plotutils
   - pngcrush
   - pngquant
+  - pop
   - poppler
   - prettier
   - pre-commit
@@ -339,9 +340,6 @@ homebrew_installed_packages:
   - zoxide
   - zsh
   - zsh-completions
-
-work_homebrew_installed_packages:
-  - { name: mysql, restart_service: true }
 
 linux_homebrew_installed_packages:
   - wireshark # Use cask form on Mac.

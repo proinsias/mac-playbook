@@ -6,7 +6,6 @@
     type: string
     value: /Users/ftod/Desktop
     state: present
-  tags: [always]
 
 - name: Screen Capture - Save screenshots in PNG formats
   community.general.osx_defaults:
@@ -15,4 +14,3 @@
     type: string
     value: png # other options: BMP, GIF, JPG, PDF, TIFF.
     state: present
-  tags: [always]

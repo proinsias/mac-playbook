@@ -2,54 +2,29 @@
 # https://github.com/geerlingguy/ansible-collection-mac/blob/master/roles/homebrew/tasks/main.yml
 - name: Ensure configured taps are tapped.
   community.general.homebrew_tap:
-    tap: '{{ item.name | default(item) }}'
-    url: '{{ item.url | default(omit) }}'
+    tap: "{{ item.name | default(item) }}"
+    url: "{{ item.url | default(omit) }}"
     state: present
-  loop: '{{ homebrew_taps }}'
-  tags: [always]
+  loop: "{{ homebrew_taps }}"
 
 - name: Ensure blacklisted homebrew packages are not installed
-  community.general.homebrew: 'name={{ item }} state=absent'
-  loop: '{{ homebrew_uninstalled_packages }}'
-  tags: [always]
+  community.general.homebrew: "name={{ item }} state=absent"
+  loop: "{{ homebrew_uninstalled_packages }}"
 
 - name: Ensure configured homebrew packages are installed
   community.general.homebrew:
-    name: '{{ item.name | default(item) }}'
-    install_options: '{{ item.install_options | default(omit) }}'
+    name: "{{ item.name | default(item) }}"
+    install_options: "{{ item.install_options | default(omit) }}"
     state: "{{ item.state | default('latest') }}"
-  loop: '{{ homebrew_installed_packages }}'
-  tags: [always]
+  loop: "{{ homebrew_installed_packages }}"
 
 - name: Ensure blacklisted cask applications are not installed
-  homebrew_cask: 'name={{ item }} state=absent'
-  loop: '{{ homebrew_cask_uninstalled_apps }}'
-  tags: [always]
+  homebrew_cask: "name={{ item }} state=absent"
+  loop: "{{ homebrew_cask_uninstalled_apps }}"
 
 - name: Install configured cask applications
   homebrew_cask:
-    name: '{{ item.name | default(item) }}'
+    name: "{{ item.name | default(item) }}"
     state: present
-    install_options: '{{ item.install_options | default(omit) }}'
-  loop: '{{ homebrew_cask_installed_apps }}'
-  tags: [always]
-
-- name: Install personal configured cask applications
-  homebrew_cask:
-    name: '{{ item.name | default(item) }}'
-    state: present
-    install_options: '{{ item.install_options | default(omit) }}'
-  loop: '{{ personal_homebrew_cask_installed_apps }}'
-  tags: # This won't run unless you specify the 'personal' tag.
-    - never
-    - personal
-
-- name: Install work configured cask applications
-  homebrew_cask:
-    name: '{{ item.name | default(item) }}'
-    state: present
-    install_options: '{{ item.install_options | default(omit) }}'
-  loop: '{{ work_homebrew_cask_installed_apps }}'
-  tags: # This won't run unless you specify the 'work' tag.
-    - never
-    - work
+    install_options: "{{ item.install_options | default(omit) }}"
+  loop: "{{ homebrew_cask_installed_apps }}"

@@ -6,7 +6,6 @@
     type: bool
     value: true
     state: present
-  tags: [always]
 
 - name: Screensaver - Set activation delay for screensaver
   community.general.osx_defaults:
@@ -15,7 +14,6 @@
     key: idleTime
     type: int
     value: 0
-  tags: [always]
 
 - name: Screensaver - Ask for a password when leaving the screensaver
   community.general.osx_defaults:
@@ -23,7 +21,6 @@
     key: askForPassword
     type: int
     value: 1
-  tags: [always]
 
 - name: Screensaver - Set ask password delay
   community.general.osx_defaults:
@@ -31,7 +28,6 @@
     key: askForPasswordDelay
     type: float
     value: 0
-  tags: [always]
 
 - name: Screensaver - Set module name
   community.general.osx_defaults:
@@ -39,7 +35,6 @@
     key: moduleName
     type: string
     value: Aerial
-  tags: [always]
 
 - name: Screensaver - Set display name
   community.general.osx_defaults:
@@ -47,15 +42,13 @@
     key: displayName
     type: string
     value: Aerial
-  tags: [always]
 
 - name: Screensaver - Set path
   community.general.osx_defaults:
     domain: com.apple.screensaver
     key: path
     type: string
-    value: '/Users/ftod/Library/Screen Savers/Aerial.saver'
-  tags: [always]
+    value: "/Users/ftod/Library/Screen Savers/Aerial.saver"
 
 - name: Screensaver - Set type
   community.general.osx_defaults:
@@ -63,4 +56,3 @@
     key: type
     type: int
     value: 0
-  tags: [always]

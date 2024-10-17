@@ -2,29 +2,24 @@
 - name: Run macos homebrew role
   ansible.builtin.include_role:
     name: macos_homebrew
-  tags: [always] # Always run, even when tags specified.
   when: ansible_os_family == "Darwin"
 
 - name: Run macos mas role
   ansible.builtin.include_role:
     name: macos_mas
-  tags: [always] # Always run, even when tags specified.
   when: ansible_os_family == "Darwin"
 
 - name: Run macos osx defaults role
   ansible.builtin.include_role:
     name: macos_osx_defaults
   when: ansible_os_family == "Darwin"
-  tags: [always] # Always run, even when tags specified.
 
 - name: Run macos power role
   ansible.builtin.include_role:
     name: macos_power
   when: ansible_os_family == "Darwin"
-  tags: [always] # Always run, even when tags specified.
 
 - name: Run macos misc role
   ansible.builtin.include_role:
     name: macos_misc
   when: ansible_os_family == "Darwin"
-  tags: [always] # Always run, even when tags specified.

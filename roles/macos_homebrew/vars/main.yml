@@ -47,94 +47,83 @@ homebrew_cask_uninstalled_apps:
   - krisp
   - lastpass
   - macfusion
+  - mactex # use basictex instead
   - nightowl
   - plantronics-hub # Use instead https://www.poly.com/us/en/products/services/cloud/poly-lens/app
 
 homebrew_cask_installed_apps:
-  - 1password
-  - 1password-cli
-  - bartender
-  - basictex
-  - camo-studio
-  - choosy
-  - docker
-  - esse
-  - firefox
-  - font-jetbrains-mono-nerd-font
-  - font-ntr
-  - font-rubik
-  - google-chrome
-  - google-drive
-  - gpg-suite-no-mail
-  - lingon-x
-  - meetingbar
-  - menumeters
-  - microsoft-auto-update
-  - microsoft-office
-  - muzzle
-  - obsidian
-  - ollama
-  - omnidisksweeper
-  - omnifocus
-  - quarto
-  - quitter
-  - raindropio
-  - raspberry-pi-imager
-  - raycast
-  - slack
-  - smartreporter-free
+  # - dbeaver-community
+  # - dbvisualizer
+  # - diskmaker-x
+  # - google-backup-and-sync
+  # - gpg-suite
+  # - hpedrorodrigues/tools/dockutil
+  # - intellij-idea-ce
+  # - jupyter-notebook-viewer
+  # - mactex  # basictex
+  # - microsoft-teams
+  # - recordit
+  # - sequel-pro
+  # - soundcloud-downloader
+  # - sublime-text
   # - typora
+  # - virtualbox
+  # - virtualbox-extension-pack
   # - vscodium
-  - xquartz
-  - yubico-authenticator
-  - yubico-yubikey-manager
   # - yubico-yubikey-personalization-gui
   # - yubico-yubikey-piv-manager
-  - zoom
-
-personal_homebrew_cask_installed_apps:
+  - 1password
+  - 1password-cli
   - adobe-acrobat-reader
   - anki
   - apppolice
   - apptrap
   - backblaze
   - backblaze-downloader
+  - bartender
+  - basictex
   - bbedit
   - bettertouchtool
   - betterzip
   - box-sync
   - bruno
+  - camo-studio
   - cheatsheet
+  - choosy
   - coconutbattery
   - cord
   - daisydisk
   - discord
-  # - diskmaker-x
+  - docker
   - drivedx
   - dropbox
+  - esse
   - fantastical
   - filebot
+  - firefox
+  - font-jetbrains-mono-nerd-font
+  - font-ntr
+  - font-rubik
   - fs-uae
   - ganttproject
   - geektool
   - gephi
   - gimp
   - gmvault
-  # - google-backup-and-sync
   - go2shell
   - go64
-  # - gpg-suite
+  - google-chrome
+  - google-drive
+  - gpg-suite-no-mail
   - grammarly
   - grandperspective
   - handbrake
-  # - hpedrorodrigues/tools/dockutil
   - httpie
   - ibettercharge
   - iina
   - imageoptim
   - imazing
   - install-disk-creator
-  # - intellij-idea-ce
   - itch
   - iterm2
   - jupyter-notebook-viewer
@@ -143,43 +132,59 @@ personal_homebrew_cask_installed_apps:
   - keybase
   - kitty
   - lepton
+  - lingon-x
   - macdown
   - makemkv
-  # - mactex  # basictex
   - mark-text
+  - meetingbar
+  - menumeters
   - metaz
+  - microsoft-auto-update
+  - microsoft-office
   - monitorcontrol
-  - no-ip-duc
+  - muzzle
+  - mysqlworkbench
   - netnewswire
-  - onyx
-  - openaudible
+  - no-ip-duc
   - numi
+  - obsidian
+  - ollama
+  - omnidisksweeper
   - omnidisksweeper
   - omnifocus
+  - omnifocus
+  - onyx
+  - openaudible
   - oversight
   - pacifist
   - plex-media-server
   - podcastmenu
+  - pycharm
   - pycharm-ce
   - qlcolorcode
   - qlmarkdown
   - qlprettypatch
   - qlstephen
+  - quarto
   - quicklook-csv
   - quicklook-json
+  - quitter
   - raindropio
+  - raindropio
+  - raspberry-pi-imager
   - raycast
-  # - recordit
+  - raycast
   - reader
   - roaringapps
   - send-to-kindle
   - signal
   - skyfonts
   - skype
+  - slack
   - slimbatterymonitor
-  - spotify
-  # - soundcloud-downloader
+  - smartreporter-free
   - sourcetrail
+  - spotify
   - steam
   - stretchly
   - subler
@@ -192,18 +197,10 @@ personal_homebrew_cask_installed_apps:
   - tripmode
   - ultimaker-cura
   - unclack
-  # - virtualbox
-  # - virtualbox-extension-pack
   - vlc
   - webpquicklook
   - wireshark
-
-work_homebrew_cask_installed_apps:
-  # - dbeaver-community
-  # - dbvisualizer
-  # - jupyter-notebook-viewer
-  # - microsoft-teams
-  - mysqlworkbench
-  - pycharm
-  # - sequel-pro
-  # - sublime-text
+  - xquartz
+  - yubico-authenticator
+  - yubico-yubikey-manager
+  - zoom

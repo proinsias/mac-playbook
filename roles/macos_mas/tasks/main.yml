@@ -19,12 +19,6 @@
       - 568494494 # Pocket
       - 496437906 # Shush
       - 423123087 # UnPlugged
-    state: present
-  tags: [always]
-
-- name: Install personal specific apps
-  community.general.mas:
-    id:
       - 1569813296 # 1Password for Safari
       - 1482920575 # DuckDuckGo Privacy for Safari
       # - 524373870 # Due
@@ -63,11 +57,7 @@
       - 415139197 # WhiteNoise
       - 494803304 # WiFi Explorer
     state: present
-  tags: # This won't run unless you specify the 'personal' tag.
-    - never
-    - personal
 
 - name: Upgrade all apps
   community.general.mas:
     upgrade_all: true
-  tags: [always]

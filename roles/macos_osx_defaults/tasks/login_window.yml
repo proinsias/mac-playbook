@@ -6,4 +6,3 @@
     type: string
     value: HostName
     state: present
-  tags: [always]

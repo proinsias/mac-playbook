@@ -6,7 +6,6 @@
     type: int
     value: 2
     state: present
-  tags: [always]
 
 - name: Mouse - Setting speed to a reasonable number
   community.general.osx_defaults:
@@ -15,7 +14,6 @@
     type: float
     value: 2.5
     state: present
-  tags: [always]
 
 - name: Trackpad - enable tap to click for this user and for the login screen
   community.general.osx_defaults:
@@ -24,7 +22,6 @@
     type: bool
     value: true
     state: present
-  tags: [always]
 
 - name: Sound - Disable beeps on level change
   community.general.osx_defaults:
@@ -33,7 +30,6 @@
     type: int
     value: 0
     state: present
-  tags: [always]
 
 - name: Set language and text formats
   community.general.osx_defaults:
@@ -43,7 +39,6 @@
     value:
       - en
     state: present
-  tags: [always]
 
 - name: Set currency formats
   community.general.osx_defaults:
@@ -52,7 +47,6 @@
     type: string
     value: en_US@currency=USD
     state: present
-  tags: [always]
 
 - name: Set measurement formats
   community.general.osx_defaults:
@@ -61,7 +55,6 @@
     type: string
     value: Inches
     state: present
-  tags: [always]
 
 - name: Set unit formats
   community.general.osx_defaults:
@@ -70,7 +63,6 @@
     type: bool
     value: false
     state: present
-  tags: [always]
 
 - name: Use 24-hour format
   community.general.osx_defaults:
@@ -79,7 +71,6 @@
     type: bool
     value: true
     state: present
-  tags: [always]
 
 #- name: Use Monday as the first day of the week
 #  community.general.osx_defaults:
@@ -88,8 +79,7 @@
 #    type: string
 #    value: '{gregorian = 2;}'
 #    state: present
-#  tags: [always]
-
+#
 - name: Show fast user switching menu as [Icon]
   community.general.osx_defaults:
     domain: NSGlobalDomain
@@ -97,7 +87,6 @@
     type: int
     value: 2
     state: present
-  tags: [always]
 
 - name: Displaying ASCII control characters using caret notation in standard text views
   community.general.osx_defaults:
@@ -106,7 +95,6 @@
     type: bool
     value: true
     state: present
-  tags: [always]
 
 - name: Set sidebar icon size to 'medium'
   community.general.osx_defaults:
@@ -115,7 +103,6 @@
     type: int
     value: 2
     state: present
-  tags: [always]
 
 - name: Add a context menu item for showing the Web Inspector in web views
   community.general.osx_defaults:
@@ -124,7 +111,6 @@
     type: bool
     value: true
     state: present
-  tags: [always]
 
 - name: UI - Expand save panel by default
   community.general.osx_defaults:
@@ -133,7 +119,6 @@
     type: bool
     value: true
   notify: Restart Finder
-  tags: [always]
 
 - name: UI - Expand print panel by default
   community.general.osx_defaults:
@@ -142,7 +127,6 @@
     type: bool
     value: true
   notify: Restart Finder
-  tags: [always]
 
 - name: Springing - Enable spring loading for directories
   community.general.osx_defaults:
@@ -150,7 +134,6 @@
     key: com.apple.springing.enabled
     type: bool
     value: true
-  tags: [always]
 
 - name: Springing - Set delay for spring loading directories
   community.general.osx_defaults:
@@ -158,7 +141,6 @@
     key: com.apple.springing.delay
     type: float
     value: 2
-  tags: [always]
 
 - name: UI - Set action for double click on titlebar
   community.general.osx_defaults:
@@ -166,7 +148,6 @@
     key: AppleActionOnDoubleClick
     type: string
     value: Maximize # "Maximize", "Minimize".
-  tags: [always]
 
 - name: UI - Set interface style
   community.general.osx_defaults:
@@ -174,7 +155,6 @@
     key: AppleInterfaceStyle
     type: string
     value: Dark # "Light", "Dark".
-  tags: [always]
 
 - name: UI - Enable subpixel font rendering on non-Apple LCDs
   community.general.osx_defaults:
@@ -183,7 +163,6 @@
     key: AppleFontSmoothing
     type: int
     value: 1
-  tags: [always]
 
 - name: UI - Show all file extensions
   community.general.osx_defaults:
@@ -191,7 +170,6 @@
     key: AppleShowAllExtensions
     type: bool
     value: true
-  tags: [always]
 
 - name: UI - Enable focus ring
   community.general.osx_defaults:
@@ -199,7 +177,6 @@
     key: NSUseAnimatedFocusRing
     type: bool
     value: false
-  tags: [always]
 
 - name: UI - Enable menubar transparency
   community.general.osx_defaults:
@@ -207,7 +184,6 @@
     key: AppleEnableMenuBarTransparency
     type: bool
     value: true
-  tags: [always]
 
 - name: UI - Show scrollbars
   community.general.osx_defaults:
@@ -215,7 +191,6 @@
     key: AppleShowScrollBars
     type: string
     value: WhenScrolling # Values: "WhenScrolling", "Always".
-  tags: [always]
 
 - name: UI - Enable opening and closing window animations
   community.general.osx_defaults:
@@ -223,7 +198,6 @@
     key: NSAutomaticWindowAnimationsEnabled
     type: bool
     value: true
-  tags: [always]
 
 - name: UI - Set window resize speed for Cocoa applications
   community.general.osx_defaults:
@@ -231,7 +205,6 @@
     key: NSWindowResizeTime
     type: float
     value: 0.2
-  tags: [always]
 
 - name: Input - Enable auto correct
   community.general.osx_defaults:
@@ -239,7 +212,6 @@
     key: NSAutomaticSpellingCorrectionEnabled
     type: bool
     value: true
-  tags: [always]
 
 - name: Input - Disable smart quotes
   community.general.osx_defaults:
@@ -247,7 +219,6 @@
     key: NSAutomaticQuoteSubstitutionEnabled
     type: bool
     value: false
-  tags: [always]
 
 - name: Input - Disable smart dashes
   community.general.osx_defaults:
@@ -255,7 +226,6 @@
     key: NSAutomaticDashSubstitutionEnabled
     type: bool
     value: false
-  tags: [always]
 
 - name: Input - Enable automatic capitalization
   community.general.osx_defaults:
@@ -263,7 +233,6 @@
     key: NSAutomaticCapitalizationEnabled
     type: bool
     value: true
-  tags: [always]
 
 - name: Input - Enable automatic period substitution
   community.general.osx_defaults:
@@ -271,7 +240,6 @@
     key: NSAutomaticPeriodSubstitutionEnabled
     type: bool
     value: true
-  tags: [always]
 
 - name: Input - Enable continuous spell checking
   community.general.osx_defaults:
@@ -279,7 +247,6 @@
     key: NSAllowContinuousSpellChecking
     type: bool
     value: true
-  tags: [always]
 
 # 1 : Text boxes and lists only
 # 3 : All controls
@@ -289,7 +256,6 @@
     key: AppleKeyboardUIMode
     type: int
     value: 3
-  tags: [always]
 
 - name: Input - Set key repeat rate
   community.general.osx_defaults:
@@ -297,7 +263,6 @@
     key: KeyRepeat
     type: int
     value: 2
-  tags: [always]
 
 - name: Input - Set initial key repeat delay
   community.general.osx_defaults:
@@ -305,7 +270,6 @@
     key: InitialKeyRepeat
     type: int
     value: 22
-  tags: [always]
 
 - name: Input - Enable press-and-hold for special characters
   community.general.osx_defaults:
@@ -313,7 +277,6 @@
     key: ApplePressAndHoldEnabled
     type: bool
     value: true
-  tags: [always]
 
 - name: Misc - Save application state on quit
   community.general.osx_defaults:
@@ -321,7 +284,6 @@
     key: NSQuitAlwaysKeepsWindows
     type: bool
     value: true
-  tags: [always]
 
 - name: Misc - Save new docs to icloud by default
   community.general.osx_defaults:
@@ -329,4 +291,3 @@
     key: NSDocumentSaveNewDocumentsToCloud
     type: bool
     value: true
-  tags: [always]

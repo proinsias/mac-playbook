@@ -6,7 +6,6 @@
     type: string
     value: EEE HH:mm # Other values, e.g., "EEE MMM d  h:mm a".
     state: present
-  tags: [always]
 
 - name: Menu Extra - Show battery percentage
   community.general.osx_defaults:
@@ -15,4 +14,3 @@
     type: string
     value: YES # yamllint disable-line rule:truthy
     state: present
-  tags: [always]

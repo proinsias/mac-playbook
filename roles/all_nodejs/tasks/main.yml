@@ -1,11 +1,10 @@
 ---
 - name: Check node is installed and upgraded
   community.general.homebrew:
-    name: ['{{ item }}']
+    name: ["{{ item }}"]
     state: latest
   with_items:
     - node
-  tags: [always]
 
 - name: Install latest version of global nodejs packages
   community.general.npm:
@@ -13,5 +12,4 @@
     global: true
     state: latest
   # ansible.builtin.command: npm install --global {{ item }}
-  with_items: '{{ nodejs_global_packages }}'
-  tags: [always]
+  with_items: "{{ nodejs_global_packages }}"

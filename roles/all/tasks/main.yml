@@ -7,24 +7,19 @@
 - name: Run all homebrew role
   ansible.builtin.include_role:
     name: all_homebrew
-  tags: [always] # Always run, even when tags specified.
 
 - name: Run all nodejs role
   ansible.builtin.include_role:
     name: all_nodejs
-  tags: [always] # Always run, even when tags specified.
 
 - name: Run all pipx role
   ansible.builtin.include_role:
     name: all_pipx
-  tags: [always] # Always run, even when tags specified.
 
 - name: Run all pre-commit role
   ansible.builtin.include_role:
     name: all_pre_commit
-  tags: [always] # Always run, even when tags specified.
 
 - name: Run all ruby role
   ansible.builtin.include_role:
     name: all_ruby
-  tags: [always] # Always run, even when tags specified.

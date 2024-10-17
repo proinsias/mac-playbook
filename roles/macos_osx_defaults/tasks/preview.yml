@@ -7,7 +7,6 @@
     value: true
     state: present
   notify: Restart Preview
-  tags: [always]
 
 - name: Preview - Auto-rotate by default when printing
   community.general.osx_defaults:
@@ -17,7 +16,6 @@
     value: true
     state: present
   notify: Restart Preview
-  tags: [always]
 
 - name: Preview - Quit Always Keeps Windows
   community.general.osx_defaults:
@@ -27,4 +25,3 @@
     value: true
     state: present
   notify: Restart Preview
-  tags: [always]
