@@ -13,7 +13,7 @@ default_install_hook_types:
 
 repos:
     - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v4.5.0
+      rev: v5.0.0
       hooks:
           # General
           - id: check-added-large-files
@@ -41,7 +41,7 @@ repos:
                 - --py36-plus
 
     - repo: https://github.com/Yelp/detect-secrets
-      rev: v1.4.0
+      rev: v1.5.0
       hooks:
           - id: detect-secrets
             args: [--baseline, .secrets.baseline]
@@ -77,7 +77,7 @@ repos:
     #          - id: editorconfig-checker
 
     - repo: https://github.com/sirosen/texthooks
-      rev: 0.6.4
+      rev: 0.6.7
       hooks:
           - id: fix-smartquotes
           - id: fix-ligatures
@@ -99,18 +99,18 @@ repos:
             exclude: .git/COMMIT_EDITMSG
 
     - repo: https://github.com/sirosen/check-jsonschema
-      rev: 0.28.0
+      rev: 0.29.4
       hooks:
           - id: check-github-actions
           - id: check-github-workflows
           - id: check-readthedocs
 
     - repo: https://github.com/zricethezav/gitleaks
-      rev: v8.18.1
+      rev: v8.21.1
       hooks:
           - id: gitleaks
 
     - repo: https://github.com/rhysd/actionlint
-      rev: v1.6.26
+      rev: v1.7.3
       hooks:
           - id: actionlint
