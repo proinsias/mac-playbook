@@ -80,7 +80,7 @@ homebrew_cask_installed_apps:
   - apptrap
   - backblaze
   - backblaze-downloader
-  - bartender
+  # - bartender
   - basictex
   - bbedit
   - bettertouchtool
@@ -96,9 +96,9 @@ homebrew_cask_installed_apps:
   - discord
   - docker
   - drivedx
-  - dropbox
+  # - dropbox
   - esse
-  - fantastical
+  # - fantastical
   - filebot
   - firefox
   - font-jetbrains-mono-nerd-font
@@ -162,7 +162,7 @@ homebrew_cask_installed_apps:
   - pycharm
   - pycharm-ce
   - qlcolorcode
-  - qlmarkdown
+  # - qlmarkdown
   - qlprettypatch
   - qlstephen
   - quarto

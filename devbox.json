@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.5/.schema/devbox.schema.json",
+  "packages": [
+    "nodePackages.cspell@latest",
+    "python310Packages.editorconfig@latest",
+    "gitlint@latest",
+    "gitleaks@latest",
+    "markdown-link-check@latest",
+    "nodePackages.prettier@latest",
+    "pre-commit@latest",
+    "shellcheck@latest",
+    "textlint@latest",
+    "yamllint@latest",
+    "hub@latest",
+    "markdownlint-cli@latest",
+    "mdl@latest",
+    "ruby@3.2",
+    "bundler@latest",
+    "coreutils@latest",
+    "ansible@latest"
+  ],
+  "shell": {
+    "init_hook": ["bundle install --quiet"],
+    "scripts": {
+      "test": ["echo \"Error: no test specified\" && exit 1"]
+    }
+  }
+}

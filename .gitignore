@@ -9,3 +9,4 @@ report/
 .pre-commit-trivv-cache
 .pre-commit-trivy-cache
 .aider*
+vault.yml

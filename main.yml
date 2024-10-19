@@ -4,6 +4,8 @@
     - common
   connection: local
   gather_facts: true
+  vars_files:
+    - vault.yml
 
   tasks:
     - name: Run all role
