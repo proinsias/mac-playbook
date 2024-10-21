@@ -1,16 +1,18 @@
 ---
 ruby_install_gems:
-  - bundle-audit
-  - bundler # http://bundler.io/
-  - danger
-  - html-proofer
-  - image_optim
+  # - bundle-audit
+  # - bundler # http://bundler.io/
+  # - danger
+  # - html-proofer
+  # - image_optim
   - image_optim_pack
   - jekyll
   - json
-  - overcommit # https://github.com/brigade/overcommit
+  # - mdl
+  # - overcommit # https://github.com/brigade/overcommit
   - rspec
-  - rubocop # https://github.com/bbatsov/rubocop
+  # - rubocop # https://github.com/bbatsov/rubocop
+  # - rubocop-performance
   - sqlint
   - terminal-notifier
   - travis

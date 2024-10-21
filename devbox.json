@@ -17,10 +17,17 @@
     "ruby@3.2",
     "bundler@latest",
     "coreutils@latest",
-    "ansible@latest"
+    "ansible@latest",
+    "rubocop@latest",
+    "bundler-audit@latest",
+    "python311Packages.add-trailing-comma@latest",
+    "detect-secrets@latest",
+    "shfmt@latest",
+    "danger-gitlab@latest",
+    "rubyPackages.rubocop-performance@latest",
+    "checkov@latest"
   ],
   "shell": {
-    "init_hook": ["bundle install --quiet"],
     "scripts": {
       "test": ["echo \"Error: no test specified\" && exit 1"]
     }

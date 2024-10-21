@@ -1,33 +1,34 @@
 ---
 pipx_packages:
-  - absolufy-imports
-  - add-trailing-comma
+  # - absolufy-imports
+  # - add-trailing-comma
   - argcomplete
-  - audible-cli
-  - auto-walrus
+  # - audible-cli
+  # - auto-walrus
   - bandit
-  - black
-  - blacken-docs
+  # - black
+  # - blacken-docs
   # - chkcrontab
   # - clf
-  - copier
-  - coverage
-  - csvkit
-  - darglint
-  - datamodel-code-generator
-  - dead
-  - deptry
-  - detect-secrets
-  - docstr-coverage
-  - docformatter
-  - editorconfig-checker
+  # - copier
+  # - coverage
+  # - csvkit
+  # - darglint
+  # - datamodel-code-generator
+  # - dead
+  # - deptry
+  # - detect-secrets
+  # - docstr-coverage
+  # - docformatter
+  # - editorconfig-checker
   # - eg
-  - em-keyboard
+  # - em-keyboard
   - flake8
+
   - flynt
   - future
   - gif-for-cli
-  - gitlint-core
+  # - gitlint-core
   - gittyleaks
   - glances
   - hashin
@@ -41,6 +42,7 @@ pipx_packages:
   - jupytext
   - kaggle
   - linkcheckmd
+
   - mdformat
   - mog
   - nbdime
@@ -51,8 +53,8 @@ pipx_packages:
   - pip-check
   - pip-tools
   - ploomber
-  - poetry # Install manually as per webpage.
-  - pre-commit
+  # - poetry # Install manually as per webpage.
+  # - pre-commit
   - pre-commit-hooks
   - proselint
   - pweave

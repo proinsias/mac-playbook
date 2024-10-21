@@ -18,9 +18,9 @@ nodejs_global_packages:
   - jscs
   - jshint
   - jslint
-  - markdownlint-cli
-  - markdown-link-check
-  - markdown-toc
+  # - markdownlint-cli
+  # - markdown-link-check
+  # - markdown-toc
   - mega-linter-runner
   - npm-check
   - npm-check-updates

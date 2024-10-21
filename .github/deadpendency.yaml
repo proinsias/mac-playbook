@@ -1,7 +1,5 @@
 ---
 additional-dependency-files:
-    - type: bundler-gemfile
-      path: Gemfile
     - type: pip-requirements-txt
       path: requirements-dev.txt
 

@@ -73,7 +73,7 @@ homebrew_cask_installed_apps:
   # - yubico-yubikey-personalization-gui
   # - yubico-yubikey-piv-manager
   - 1password
-  - 1password-cli
+  # - 1password-cli
   - adobe-acrobat-reader
   - anki
   - apppolice

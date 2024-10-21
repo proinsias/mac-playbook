@@ -29,102 +29,102 @@ homebrew_installed_packages:
   - java
   - openssl
   - openssh
-  - curl
+  # - curl
   # - { name: homebrew/core/emacs, restart_service: true }
   # brew tap railwaycat/emacsmacport
   # brew install emacs-mac --with-modules
   # ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
-  - svn
-  - ack
-  - actionlint
-  - advancecomp
-  - ag
-  - ansible
-  - ansible-lint
-  - ant
-  - ant-contrib
-  - antiword
+  # - svn
+  # - ack
+  # - actionlint
+  # - advancecomp
+  # - ag
+  # - ansible
+  # - ansible-lint
+  #- ant
+  # - ant-contrib
+  # - antiword
   - archey4
-  - arpack
-  - asciinema
-  - aspell
-  - atuin
-  - autoconf
-  - automake
-  - autopep8
-  - aws-shell
-  - awscli
+  # - arpack
+  # - asciinema
+  # - aspell
+  # - atuin
+  # - autoconf
+  # - automake
+  # - autopep8
+  # - aws-shell
+  # - awscli
   - bash
   # - bash-snippets
-  - bat
-  - bfg
-  - binutils
-  - black
+  # - bat
+  # - bfg
+  # - binutils
+  # - black
   - brew-cask-completion
   - broot
   - bundler-completion
   - bakks/bakks/butterfish
-  - c-ares
-  - cairo
-  - catimg
+  # - c-ares
+  # - cairo
+  # - catimg
   - ccache # For pyenv-ccache.
-  - certbot
-  - chafa
-  - cheat # Conflicts with bash-snippets.
-  - checkmake
-  - checkstyle
-  - checkov
-  - cloog
-  - homebrew/core/cmake
-  - colordiff
-  - cookiecutter
-  - coreutils
-  - cowsay
-  - cscope
+  # - certbot
+  # - chafa
+  # - cheat # Conflicts with bash-snippets.
+  # - checkmake
+  # - checkstyle
+  # - checkov
+  # - cloog
+  # - homebrew/core/cmake
+  # - colordiff
+  # - cookiecutter
+  # - coreutils
+  # - cowsay
+  # - cscope
   - csvkit
-  - dbus
-  - daq
-  - homebrew/core/dash
-  - ddgr
-  - diffutils
-  - direnv
-  - dive # For docker layer analysis.
-  - homebrew/core/docker
+  # - dbus
+  # - daq
+  # - homebrew/core/dash
+  # - ddgr
+  # - diffutils
+  # - direnv
+  # - dive # For docker layer analysis.
+  # - homebrew/core/docker
   - docker-clean
   # - docker-completion # Now included in docker
-  - dos2unix
-  - dotenv-linter
+  # - dos2unix
+  # - dotenv-linter
   - homebrew/core/dotnet
-  - dvc
-  - ed
-  - editorconfig
-  - eg-examples
-  - epstool
-  - exiftool
-  - eza
-  - faac
-  - fd
-  - ffmpeg
-  - fftw
-  - figlet
-  - file-formula
-  - findutils
-  - fontconfig
-  - fortune
-  - freetype
-  - fzf
-  - gawk
+  # - dvc
+  # - ed
+  # - editorconfig
+  # - eg-examples
+  # - epstool
+  # - exiftool
+  # - eza
+  # - faac
+  # - fd
+  # - ffmpeg
+  # - fftw
+  # - figlet
+  # - file-formula
+  # - findutils
+  # - fontconfig
+  # - fortune
+  # - freetype
+  # - fzf
+  # - gawk
   - gcc
-  - gd
-  - gdbm
+  # - gd
+  # - gdbm
   - gem-completion
-  - geoip
-  - gettext
-  - gh
-  - ghostscript
-  - gifsicle
-  - git
-  - gitleaks
+  # - geoip
+  # - gettext
+  # - gh
+  # - ghostscript
+  # - gifsicle
+  # - git
+  # - gitleaks
   - git-branch-status
   - git-ftp
   - git-filter-repo
@@ -157,31 +157,30 @@ homebrew_installed_packages:
   - gsmartcontrol
   - gwt
   - gzip
-  - hadolint
-  - hdf5
-  - heroku/brew/heroku
-  - hexyl
-  - htop
-  - homebrew/core/httpie
-  - hub
-  - hunspell
-  - icdiff
-  - icu4c
-  - imagemagick
-  - eddieantonio/eddieantonio/imgcat
-  - isl
-  - isort
-  - ivy
-  - jbig2dec
-  - jenv
-  - jhead
-  - jonof/kenutils/pngout
-  - jpeg
-  - jpegoptim
-  - jq
-  - jsonlint
+  # - hadolint
+  # - hdf5
+  # - heroku/brew/heroku
+  # - hexyl
+  # - htop
+  # - homebrew/core/httpie
+  # - hub
+  # - hunspell
+  # - icdiff
+  # - icu4c
+  # - imagemagick
+  # - eddieantonio/eddieantonio/imgcat
+  # - isl
+  # - isort
+  # - ivy
+  # - jbig2dec
+  # - jenv
+  # - jhead
+  # - jpeg
+  # - jpegoptim
+  # - jq
+  # - jsonlint
   # - jzaleski/homebrew-jzaleski/apg
-  - keychain
+  # - keychain
   - lame
   - homebrew/core/languagetool
   - launchctl-completion
@@ -227,61 +226,62 @@ homebrew_installed_packages:
   - nmap
   - node
   - open-completion
-  - openjpeg
-  - optipng
-  - pandoc
-  - pcre
-  - pdfgrep
-  - knqyf263/pet/pet
-  - pipenv
+  # - openjpeg
+  # - optipng
+  # - pandoc
+  # - pcre
+  # - pdfgrep
+  # - knqyf263/pet/pet
+  # - pipenv
   - pipx
-  - pip-audit
+  # - pip-audit
   - pip-completion
-  - pixman
-  - pkg-config
-  - plotutils
-  - pngcrush
-  - pngquant
-  - pop
-  - poppler
-  - prettier
-  - pre-commit
-  - proselint
-  - pstoedit
-  - pv
-  - pwgen
-  - pycodestyle
-  - pyenv
-  - pyenv-ccache
-  - pyenv-pip-migrate
-  - pyenv-virtualenv
-  - pygments
-  - pyqt
-  - pyright
+  #  pixman
+  # - pkg-config
+  # - plotutils
+  # - pngcrush
+  # - jonof/kenutils/pngout
+  # - pngquant
+  # - pop
+  # - poppler
+  # - prettier
+  # - pre-commit
+  # - proselint
+  # - pstoedit
+  # - pv
+  # - pwgen
+  # - pycodestyle
+  # - pyenv
+  # - pyenv-ccache
+  # - pyenv-pip-migrate
+  # - pyenv-virtualenv
+  # - pygments
+  # - pyqt
+  # - pyright
   - python
   - python-argcomplete
-  - p7zip
-  - qhull
-  - qpdf
-  - qrupdate
-  - qscintilla2
-  - qt
-  - rbenv
-  - readline # For pyenv.
-  - reattach-to-user-namespace
-  - restview
-  - rig
-  - ripgrep
-  - rst-lint
-  - rsync
+  # - p7zip
+  # - qhull
+  # - qpdf
+  # - qrupdate
+  # - qscintilla2
+  # - qt
+  # - rbenv
+  # - readline # For pyenv.
+  # - reattach-to-user-namespace
+  # - restview
+  # - rig
+  # - ripgrep
+  # - rst-lint
+  # - rsync
   - ruby
-  - ruby-build
+  # - ruby-build
   - ruby-completion
-  - screen
-  - screenfetch
-  - shellcheck
-  - shellharden
-  - shfmt
+  # - screen
+  # - screenfetch
+  # - shellcheck
+  # - shellharden
+  # - shfmt
   - homebrew/core/sip
   - sl
   - slackcat
@@ -317,27 +317,27 @@ homebrew_installed_packages:
   - topgrade
   - tree
   - aquasecurity/trivy/trivy
-  - ttygif
-  - ttyrec
-  - unzip
-  - uv
+  # - ttygif
+  # - ttyrec
+  # - unzip
+  # - uv
   - vitorgalvao/tiny-scripts/cask-repair
-  - watch
-  - wdiff
-  - wget
-  - whalebrew
+  # - watch
+  # - wdiff
+  # - wget
+  # - whalebrew
   - winetricks
-  - wireguard-tools
-  - xsv
-  - xvid
-  - xz # For pyenv.
-  - x264
-  - yamllint
-  - yasm
-  - yq # Uses jq syntax but works with yaml/json/xml/properties/csv/tsv.
-  - zlib # For pyenv.
-  - zopfli
-  - zoxide
+  # - wireguard-tools
+  # - xsv
+  # - xvid
+  # - xz # For pyenv.
+  # - x264
+  # - yamllint
+  # - yasm
+  # - yq # Uses jq syntax but works with yaml/json/xml/properties/csv/tsv.
+  # - zlib # For pyenv.
+  # - zopfli
+  # - zoxide
   - zsh
   - zsh-completions
 
