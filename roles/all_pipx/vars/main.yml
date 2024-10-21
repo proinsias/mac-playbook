@@ -47,7 +47,7 @@ pipx_packages:
   - mdformat
   - mog
   - nbdime
-  - nbpreview
+  # - nbpreview  # Breaks on GitHub Actions.
   - nbstripout
   - ntfy
   - pdfplumber
