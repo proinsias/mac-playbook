@@ -2,6 +2,7 @@ homebrew_taps:
   - alehouse/unofficial
   - alexdavid/tap
   - aquasecurity/trivy
+  - bakks/bakks
   - eddieantonio/eddieantonio
   - heroku/brew
   - homebrew/bundle
