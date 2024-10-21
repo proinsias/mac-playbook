@@ -15,5 +15,5 @@ ruby_install_gems:
   # - rubocop-performance
   - sqlint
   - terminal-notifier
-  - travis
+  # - travis
   - w3c_validators
