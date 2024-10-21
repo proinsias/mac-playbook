@@ -5,7 +5,7 @@ homebrew_taps:
   - eddieantonio/eddieantonio
   - heroku/brew
   - homebrew/bundle
-  - homebrew/cask-fonts
+  # - homebrew/cask-fonts
   - homebrew/command-not-found
   - homebrew/services
   - iterative/dvc
