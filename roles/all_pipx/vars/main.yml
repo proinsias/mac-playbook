@@ -2,6 +2,7 @@
 pipx_packages:
   # - absolufy-imports
   # - add-trailing-comma
+  # - aider-chat
   - argcomplete
   # - audible-cli
   # - auto-walrus
@@ -84,7 +85,6 @@ pipx_packages:
   # - wifi_qrcode
   - xlsx2csv
   - yapf
-  - aider-chat
 
 pipx_bandit_packages:
   - toml

@@ -2,6 +2,7 @@
 homebrew_taps:
   - alehouse/unofficial
   - alexdavid/tap
+  - bakks/bakks
   - gbeine/java
   # - hpedrorodrigues/tools
   - homebrew/bundle
@@ -11,6 +12,7 @@ homebrew_taps:
   - iterative/dvc
   - jzaleski/jzaleski
   - melonamin/formulae
+  - ngrok/ngrok
 
 homebrew_uninstalled_packages:
   - apache-spark
@@ -28,7 +30,10 @@ homebrew_uninstalled_packages:
 
 homebrew_installed_packages:
   - bash-completion # Conflicts with util-linux.
+  - bakks/bakks/butterfish
   - mas
+  - ngrok/ngrok/ngrok
+  - open-completion
   - pinentry-mac
   - rename # Conflicts with util-linux.
   - trash

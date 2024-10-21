@@ -2,7 +2,6 @@ homebrew_taps:
   - alehouse/unofficial
   - alexdavid/tap
   - aquasecurity/trivy
-  - bakks/bakks
   - eddieantonio/eddieantonio
   - heroku/brew
   - homebrew/bundle
@@ -13,7 +12,6 @@ homebrew_taps:
   - jonof/kenutils
   - jzaleski/jzaleski
   - knqyf263/pet
-  - ngrok/ngrok
   - teamookla/speedtest
   - vitorgalvao/tiny-scripts
 
@@ -64,7 +62,6 @@ homebrew_installed_packages:
   - brew-cask-completion
   - broot
   - bundler-completion
-  - bakks/bakks/butterfish
   # - c-ares
   # - cairo
   # - catimg
@@ -223,10 +220,8 @@ homebrew_installed_packages:
   - homebrew/core/nano
   - neofetch
   - nettle
-  - ngrok/ngrok/ngrok
   - nmap
   - node
-  - open-completion
   # - openjpeg
   # - optipng
   # - pandoc
