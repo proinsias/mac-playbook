@@ -71,7 +71,7 @@ pipx_packages:
   - readwise-reader-cli
   - refurb
   - ruff
-  - safety
+  # - safety
   - searchcmd
   # - shrynk
   - soorgeon

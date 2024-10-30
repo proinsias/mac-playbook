@@ -123,6 +123,7 @@ homebrew_cask_installed_apps:
   - grammarly
   - grandperspective
   - handbrake
+  - huggingchat
   - httpie
   - ibettercharge
   - iina

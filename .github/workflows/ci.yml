@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Disable for now.
       #      - name: Uninstall GitHub Actions' built-in Homebrew.
@@ -41,7 +41,7 @@ jobs:
       #          sudo rm -rf /Applications/Firefox.app /Applications/Google\ Chrome.app
 
       - name: Set up Python 3.
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: 3.x
 
@@ -54,9 +54,9 @@ jobs:
       - name: Test the playbook.
         run: ./bin/ci.sh
         env:
-          ANSIBLE_FORCE_COLOR: '1'
+          ANSIBLE_FORCE_COLOR: "1"
 
       - name: Idempotence check.
         run: ./bin/ci_idempotence.sh
         env:
-          ANSIBLE_FORCE_COLOR: '1'
+          ANSIBLE_FORCE_COLOR: "1"
