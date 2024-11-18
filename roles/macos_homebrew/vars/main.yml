@@ -204,6 +204,7 @@ homebrew_cask_installed_apps:
   - ultimaker-cura
   - unclack
   - vlc
+  - wakatime
   - webpquicklook
   - wireshark
   - xquartz

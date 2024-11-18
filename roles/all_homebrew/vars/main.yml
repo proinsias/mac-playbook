@@ -122,7 +122,7 @@ homebrew_installed_packages:
   # - ghostscript
   # - gifsicle
   # - git
-  # - gitleaks
+  - gitleaks # Keep
   - git-branch-status
   - git-ftp
   - git-filter-repo
@@ -333,9 +333,11 @@ homebrew_installed_packages:
   # - yq # Uses jq syntax but works with yaml/json/xml/properties/csv/tsv.
   # - zlib # For pyenv.
   # - zopfli
-  # - zoxide
+  - zoxide # Keep
   - zsh
+  - zsh-autosuggestions
   - zsh-completions
+  - zsh-syntax-highlighting
 
 linux_homebrew_installed_packages:
   - wireshark # Use cask form on Mac.
