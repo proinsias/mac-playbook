@@ -106,7 +106,7 @@ homebrew_installed_packages:
   # - fftw
   # - figlet
   # - file-formula
-  # - findutils
+  - findutils
   # - fontconfig
   # - fortune
   # - freetype
