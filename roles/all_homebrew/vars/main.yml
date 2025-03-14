@@ -157,6 +157,7 @@ homebrew_installed_packages:
   - aquasecurity/trivy/trivy
   - vitorgalvao/tiny-scripts/cask-repair
   - winetricks
+  - yt-dlp
   - zoxide
   - zsh
   - zsh-autosuggestions
