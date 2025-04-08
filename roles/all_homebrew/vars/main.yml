@@ -4,9 +4,7 @@ homebrew_taps:
   - aquasecurity/trivy
   - eddieantonio/eddieantonio
   - heroku/brew
-  - homebrew/bundle
   - homebrew/command-not-found
-  - homebrew/services
   - iterative/dvc
   - jonof/kenutils
   - jzaleski/jzaleski
@@ -28,15 +26,21 @@ homebrew_installed_packages:
   - openssl
   - openssh
   - archey4
+  - atuin
   - bash
+  - bat
   - brew-cask-completion
   - broot
   - bundler-completion
   - ccache
+  - cowsay
   - csvkit
+  - direnv
   - docker-clean
   - dotnet
+  - eza
   - findutils
+  - fortune
   - gcc
   - gem-completion
   - gitleaks
@@ -46,7 +50,7 @@ homebrew_installed_packages:
   - git-lfs
   - git-sizer
   - git-standup
-  - git-town
+  # - git-town
   - glances
   - gl2ps
   - glib
@@ -155,6 +159,7 @@ homebrew_installed_packages:
   - topgrade
   - tree
   - aquasecurity/trivy/trivy
+  - uv
   - vitorgalvao/tiny-scripts/cask-repair
   - winetricks
   - yt-dlp
