@@ -43,6 +43,7 @@ homebrew_installed_packages:
   - fortune
   - gcc
   - gem-completion
+  - git
   - gitleaks
   - git-branch-status
   - git-ftp
@@ -119,12 +120,16 @@ homebrew_installed_packages:
   - nettle
   - nmap
   - node
+  - pandoc
   - pipx
   - pip-completion
+  - pre-commit
+  - prettier
   - python
   - python-argcomplete
   - ruby
   - ruby-completion
+  - shfmt
   - sip
   - sl
   - slackcat
@@ -161,6 +166,7 @@ homebrew_installed_packages:
   - aquasecurity/trivy/trivy
   - uv
   - vitorgalvao/tiny-scripts/cask-repair
+  - yamllint
   - winetricks
   - yt-dlp
   - zoxide
