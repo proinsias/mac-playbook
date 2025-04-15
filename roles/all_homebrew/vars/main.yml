@@ -26,6 +26,7 @@ homebrew_installed_packages:
   - openssl
   - openssh
   - archey4
+  - awscli
   - atuin
   - bash
   - bat
@@ -38,6 +39,7 @@ homebrew_installed_packages:
   - direnv
   - docker-clean
   - dotnet
+  - emacs
   - eza
   - findutils
   - fortune
@@ -77,6 +79,7 @@ homebrew_installed_packages:
   - gsmartcontrol
   - gwt
   - gzip
+  - jq
   - lame
   - languagetool
   - launchctl-completion
