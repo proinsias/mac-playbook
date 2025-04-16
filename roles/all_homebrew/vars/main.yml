@@ -25,37 +25,72 @@ homebrew_installed_packages:
   - java
   - openssl
   - openssh
+  - 1password-cli
+  - actionlint
+  - aider
+  - ansible
+  - aquasecurity/trivy/trivy
   - archey4
+  - aspell
   - awscli
   - atuin
+  - bandit
   - bash
+  - bash-completion
   - bat
   - brew-cask-completion
   - broot
   - bundler-completion
+  - catimg
   - ccache
+  - charmbracelet/tap/vhs
+  - cheat
+  - checkov
+  - cmake
+  - colordiff
+  - cookiecutter
+  - coreutils
   - cowsay
+  - cspell
   - csvkit
+  - curl
+  - ddgr
+  - detect-secrets
+  - diffutils
   - direnv
+  - dive
+  - docker
   - docker-clean
+  - dos2unix
+  - dotenv-linter
   - dotnet
+  - editorconfig
   - emacs
+  - exiftool
   - eza
+  - fabric-ai
+  - ffmpeg
+  - figlet
   - findutils
   - fortune
+  - fzf
+  - gawk
   - gcc
   - gem-completion
+  - ghostscript
   - git
   - gitleaks
+  - gitlint
   - git-branch-status
-  - git-ftp
   - git-filter-repo
+  - git-ftp
   - git-lfs
   - git-sizer
   - git-standup
   # - git-town
   - glances
   - gl2ps
+  - glances
   - glib
   - glow
   - glpk
@@ -75,15 +110,28 @@ homebrew_installed_packages:
   - gpg
   - graphicsmagick
   - graphviz
+  - grc
   - grep
   - gsmartcontrol
   - gwt
   - gzip
+  - hadolint
+  - has
+  - htop
+  - httpie
+  - hub
+  - hunspell
+  - imagemagick
+  - imageoptim-cli
+  - isort
+  - isort
+  - jpegoptim
   - jq
+  - keychain
   - lame
   - languagetool
-  - launchctl-completion
   - latexindent
+  - launchctl-completion
   - less
   - libdnet
   - libdvdcss
@@ -101,15 +149,18 @@ homebrew_installed_packages:
   - libyaml
   - little-cms2
   - llm
+  - llm
   - lolcat
   - lsof
   - lua
+  - lychee
   - lynx
   - lzip
   - m4
   - mackup
   - make
   - makedepend
+  - markdownlint-cli
   - mediainfo
   - mkdocs
   - moreutils
@@ -124,29 +175,42 @@ homebrew_installed_packages:
   - nmap
   - node
   - pandoc
-  - pipx
   - pip-completion
+  - pip-tools
+  - pipx
+  - pngcrush
+  - pop
   - pre-commit
   - prettier
+  - pv
+  - pydocstyle
+  - pylint
   - python
   - python-argcomplete
+  - pyupgrade
+  - ripgrep
   - ruby
   - ruby-completion
+  - ruff
+  - safety
+  - screenfetch
+  - shellcheck
   - shfmt
   - sip
   - sl
   - slackcat
+  - slugify
   - snort
   - sonar-completion
   - sox
   - speedtest
+  - sql-lint
   - sqlfluff
   - sqlite
-  - sql-lint
   - ssh-copy-id
   - starship
-  - stress
   - stow
+  - stress
   - subversion
   - suite-sparse
   - svn
@@ -167,10 +231,17 @@ homebrew_installed_packages:
   - topgrade
   - tree
   - aquasecurity/trivy/trivy
+  - ttygif
+  - ttyrec
+  - unzip
   - uv
   - vitorgalvao/tiny-scripts/cask-repair
-  - yamllint
+  - watch
+  - wget
   - winetricks
+  - xsv
+  - yamlfmt
+  - yamllint
   - yt-dlp
   - zoxide
   - zsh
