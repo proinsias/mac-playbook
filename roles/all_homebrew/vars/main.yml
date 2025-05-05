@@ -78,6 +78,7 @@ homebrew_installed_packages:
   - gcc
   - gem-completion
   - ghostscript
+  - gh
   - git
   - gitleaks
   - gitlint
