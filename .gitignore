@@ -10,3 +10,6 @@ report/
 .pre-commit-trivy-cache
 .aider*
 vault.yml
+
+# Lychee cache
+.lycheecache

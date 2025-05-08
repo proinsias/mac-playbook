@@ -4,15 +4,18 @@ This playbook installs and configures most of the software I use on my Mac.
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- Table of contents updated via md_toc's pre-commit hook.-->
+<!--TOC-->
 
+- [Mac Ansible Playbook](#mac-ansible-playbook)
+- [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Running the entire playbook](#running-the-entire-playbook)
-    - [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
+- [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
 - [Updating the Table of Contents of this file](#updating-the-table-of-contents-of-this-file)
 - [Thanks](#thanks)
 
-<!-- tocstop -->
+<!--TOC-->
 
 ## Installation
 

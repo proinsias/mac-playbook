@@ -12,10 +12,11 @@ default_install_hook_types:
     - post-rewrite
 
 repos:
+    # General
+
     - repo: https://github.com/pre-commit/pre-commit-hooks
       rev: v5.0.0
       hooks:
-          # General
           - id: check-added-large-files
           - id: check-case-conflict
           - id: check-docstring-first
@@ -31,8 +32,6 @@ repos:
           - id: mixed-line-ending # Replaces or checks mixed line ending.
           - id: trailing-whitespace
 
-    # General
-
     - repo: https://github.com/asottile/add-trailing-comma
       rev: v3.1.0
       hooks:
@@ -46,35 +45,6 @@ repos:
           - id: detect-secrets
             args: [--baseline, .secrets.baseline]
             exclude: package.lock.json
-
-    - repo: https://github.com/pre-commit/mirrors-prettier
-      rev: v4.0.0-alpha.8
-      hooks:
-          - id: prettier
-            stages: [pre-commit]
-
-    # Git
-
-    # - repo: https://github.com/jorisroovers/gitlint
-    #   rev: v0.19.1
-    #   hooks:
-    #      - id: gitlint
-
-    # YAML
-
-    - repo: https://github.com/adrienverge/yamllint
-      rev: v1.37.1
-      hooks:
-          - id: yamllint
-            args: [-c=.yamllint.yml]
-
-    # Mixed
-
-    # FIXME:
-    #    - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    #      rev: 2.6.1
-    #      hooks:
-    #          - id: editorconfig-checker
 
     - repo: https://github.com/sirosen/texthooks
       rev: 0.6.8
@@ -114,3 +84,40 @@ repos:
       rev: v1.7.7
       hooks:
           - id: actionlint
+
+    - repo: https://github.com/lycheeverse/lychee.git
+      rev: nightly
+      hooks:
+          - id: lychee
+            args: ["--cache", "--suggest"]
+
+    # Markdown
+
+    - repo: https://codeberg.org/frnmst/md-toc
+      rev: 9.0.0
+      hooks:
+          - id: md-toc
+            args: [--in-place, --no-indentation, github]
+
+    # YAML
+
+    - repo: https://github.com/adrienverge/yamllint
+      rev: v1.37.1
+      hooks:
+          - id: yamllint
+            args: [-c=.yamllint.yml]
+
+    # Do after md_toc
+
+    - repo: https://github.com/pre-commit/mirrors-prettier
+      rev: v4.0.0-alpha.8
+      hooks:
+          - id: prettier
+            stages: [pre-commit]
+
+    # Do after prettier
+
+    - repo: https://github.com/proinsias/mado
+      rev: 1.0.0
+      hooks:
+          - id: mado
