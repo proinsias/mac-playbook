@@ -4,7 +4,10 @@ This playbook installs and configures most of the software I use on my Mac.
 
 ## Table of Contents
 
-<!-- Table of contents updated via md_toc's pre-commit hook.-->
+<!--
+Table of contents updated via:
+uvx --from md-toc md_toc --in-place github -- README.md
+-->
 <!--TOC-->
 
 - [Mac Ansible Playbook](#mac-ansible-playbook)

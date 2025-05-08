@@ -91,13 +91,11 @@ repos:
           - id: lychee
             args: ["--cache", "--suggest"]
 
-    # Markdown
-
-    - repo: https://codeberg.org/frnmst/md-toc
-      rev: 9.0.0
+    - repo: https://github.com/pre-commit/mirrors-prettier
+      rev: v4.0.0-alpha.8
       hooks:
-          - id: md-toc
-            args: [--in-place, --no-indentation, github]
+          - id: prettier
+            stages: [pre-commit]
 
     # YAML
 
@@ -106,14 +104,6 @@ repos:
       hooks:
           - id: yamllint
             args: [-c=.yamllint.yml]
-
-    # Do after md_toc
-
-    - repo: https://github.com/pre-commit/mirrors-prettier
-      rev: v4.0.0-alpha.8
-      hooks:
-          - id: prettier
-            stages: [pre-commit]
 
     # Do after prettier
 
