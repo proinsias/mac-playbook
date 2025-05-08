@@ -1,4 +1,5 @@
 homebrew_taps:
+  - akiomik/mado # https://github.com/akiomik/mado.git
   - alehouse/unofficial
   - alexdavid/tap
   - aquasecurity/trivy
@@ -159,8 +160,10 @@ homebrew_installed_packages:
   - lzip
   - m4
   - mackup
+  - akiomik/mado
   - make
   - makedepend
+  - man-db
   - markdownlint-cli
   - mediainfo
   - mkdocs
