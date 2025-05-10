@@ -1,7 +1,7 @@
 ---
 pipx_packages:
   # - absolufy-imports
-  # - add-trailing-comma
+  - add-trailing-comma
   # - aider-chat
   - argcomplete
   # - audible-cli

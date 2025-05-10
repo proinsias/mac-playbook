@@ -22,7 +22,7 @@ homebrew_uninstalled_packages:
   - sshfs
   - vim
 
-homebrew_installed_packages:
+homebrew_installed_package
   - java
   - openssl
   - openssh
@@ -32,7 +32,13 @@ homebrew_installed_packages:
   - ansible
   - aquasecurity/trivy/trivy
   - archey4
+  # - arpack
+  # - asciinema
   - aspell
+  # - autoconf
+  # - automake
+  # - autopep8
+  # - aws-shell
   - awscli
   - atuin
   - bandit
