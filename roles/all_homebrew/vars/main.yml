@@ -173,6 +173,7 @@ homebrew_installed_package
   - markdownlint-cli
   - mediainfo
   - mkdocs
+  - monolith # Save complete web pages as a single HTML file.
   - moreutils
   - mosh
   - mpfr

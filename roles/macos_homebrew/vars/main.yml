@@ -197,6 +197,7 @@ homebrew_cask_installed_apps:
   - vlc
   - wakatime
   - webpquicklook
+  - windsurf
   - wireshark
   - xquartz
   - yubico-authenticator
