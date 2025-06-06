@@ -90,6 +90,7 @@ homebrew_installed_packages:
   - git
   - gitleaks
   - gitlint
+  - git-auto-sync
   - git-branch-status
   - git-filter-repo
   - git-ftp
