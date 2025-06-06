@@ -1,3 +1,4 @@
+---
 homebrew_taps:
   - akiomik/mado # https://github.com/akiomik/mado.git
   - alehouse/unofficial
@@ -22,7 +23,7 @@ homebrew_uninstalled_packages:
   - sshfs
   - vim
 
-homebrew_installed_package
+homebrew_installed_packages:
   - java
   - openssl
   - openssh
