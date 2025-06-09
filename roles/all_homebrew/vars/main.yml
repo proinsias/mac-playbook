@@ -255,7 +255,7 @@ homebrew_installed_packages:
   - xsv
   - yamlfmt
   - yamllint
-  - yt-dlp
+  - yt-dlp # Replacement for youtube-dl.
   - zoxide
   - zsh
   - zsh-autosuggestions
