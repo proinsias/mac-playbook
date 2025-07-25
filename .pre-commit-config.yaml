@@ -33,7 +33,7 @@ repos:
           - id: trailing-whitespace
 
     - repo: https://github.com/asottile/add-trailing-comma
-      rev: v3.1.0
+      rev: v3.2.0
       hooks:
           - id: add-trailing-comma
             args:
@@ -47,7 +47,7 @@ repos:
             exclude: package.lock.json
 
     - repo: https://github.com/sirosen/texthooks
-      rev: 0.6.8
+      rev: 0.7.1
       hooks:
           - id: fix-smartquotes
           - id: fix-ligatures
@@ -59,7 +59,7 @@ repos:
           - id: git-check # Configure in .gitattributes
 
     - repo: https://github.com/scop/pre-commit-shfmt
-      rev: v3.11.0-1
+      rev: v3.12.0-2
       hooks:
           - id: shfmt
 
@@ -77,14 +77,14 @@ repos:
             exclude: .git/COMMIT_EDITMSG
 
     - repo: https://github.com/sirosen/check-jsonschema
-      rev: 0.33.0
+      rev: 0.33.2
       hooks:
           - id: check-github-actions
           - id: check-github-workflows
           - id: check-readthedocs
 
     - repo: https://github.com/zricethezav/gitleaks
-      rev: v8.25.1
+      rev: v8.28.0
       hooks:
           - id: gitleaks
 
@@ -94,7 +94,7 @@ repos:
           - id: actionlint
 
     - repo: https://github.com/lycheeverse/lychee.git
-      rev: lychee-v0.18.1
+      rev: nightly
       hooks:
           - id: lychee
             args: ["--cache", "--suggest"]

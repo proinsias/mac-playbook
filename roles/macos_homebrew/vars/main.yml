@@ -145,6 +145,7 @@ homebrew_cask_installed_apps:
   - monitorcontrol
   - muzzle
   - mysqlworkbench
+  - neohtop
   - netnewswire
   - no-ip-duc
   - numi
