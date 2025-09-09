@@ -193,7 +193,7 @@ homebrew_installed_packages:
   - pipx
   - pngcrush
   - pop
-  - pre-commit
+  # - pre-commit
   - prettier
   - pv
   - pydocstyle

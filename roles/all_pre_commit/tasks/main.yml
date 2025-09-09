@@ -1,8 +1,9 @@
 ---
-- name: Check pre-commit is installed and updated
-  community.general.homebrew:
-    name: [pre-commit]
-    state: latest
+# FIXME: Use `uv tool install pre-commit --with pre-commit-uv` instead.
+# - name: Check pre-commit is installed and updated
+#   community.general.homebrew:
+#     name: [pre-commit]
+#     state: latest
 # FIXME: Move this to after dotfiles installation!
 # - name: Auto update all pre-commit hooks
 #   ansible.builtin.command: ~/.local/bin/pre-commit-autoupdate

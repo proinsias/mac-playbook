@@ -1,4 +1,5 @@
 ---
+# Replace with uv tool install
 pipx_packages:
   # - absolufy-imports
   - add-trailing-comma
@@ -56,7 +57,7 @@ pipx_packages:
   - ploomber
   # - poetry # Install manually as per webpage.
   # - pre-commit
-  - pre-commit-hooks
+  # - pre-commit-hooks
   - proselint
   - pweave
   - pycln
