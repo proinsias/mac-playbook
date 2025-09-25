@@ -77,7 +77,7 @@ repos:
             exclude: .git/COMMIT_EDITMSG
 
     - repo: https://github.com/sirosen/check-jsonschema
-      rev: 0.33.3
+      rev: 0.34.0
       hooks:
           - id: check-github-actions
           - id: check-github-workflows
@@ -97,7 +97,7 @@ repos:
       rev: nightly
       hooks:
           - id: lychee
-            args: ["--cache", "--suggest"]
+            args: ['--cache', '--suggest']
 
     - repo: https://github.com/pre-commit/mirrors-prettier
       rev: v4.0.0-alpha.8
